@@ -17,6 +17,9 @@
   "bugs": {
     "url": "https://github.com/PortolioFL/1stFL/issues"
   },
+  "engines": {
+    "node": "10.x"
+  },
   "homepage": "https://github.com/PortolioFL/1stFL#readme",
   "dependencies": {
     "express": "^4.17.1",
