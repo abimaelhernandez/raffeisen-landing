@@ -7,7 +7,8 @@ export default class App extends Component {
     return (
       <div className="parent-container">
         <h1>Hello World we are here are we</h1>
-        <h2> hi there here we are</h2>
+        <h2> hi there here we are are tou </h2>
+          <span> hey im </span>
       </div>
     )
   }
