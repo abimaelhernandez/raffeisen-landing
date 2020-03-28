@@ -1,0 +1,15 @@
+.parent-container {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+
+  h1 {
+    border-style: dashed;
+    border-color: red;
+  }
+  
+  h2 {
+    border-style: dashed;
+    border-color: blue;
+  }
+}
