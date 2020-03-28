@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --config webpack.config.js --watch --mode development",
-    "start": "node server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "hot-reload": "webpack-dev-server --open --mode development"
   },
   "repository": {
     "type": "git",
@@ -44,6 +43,7 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
