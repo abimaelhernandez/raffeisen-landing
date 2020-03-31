@@ -2,47 +2,85 @@ html {
   width:100%;
   height: 100%;
   font-size: 62.5%;
+}
 
-  body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 1.7;
-    width: 100%;
-  }
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
 }
 
 .parent-container {
   position: relative;
-  witdth:100%;
+  width: 100%;
 }
 
 //Navigation Bar
 .navigation {
-  width: 100%;
-  background-color: rgb(255, 255, 255);
-  display: inline-flex;
-  height: 8%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
   opacity: .8;
-  overflow: hidden;
   position: fixed;
   width: 100%;
-  z-index: 99;
+  z-index: 1;
 
-  &__list {
+  &__mainLogo {
+    width: 37rem;
+
+    &-img{
+      width: 100%;
+
+    }
+  }
+
+  &__items {
     display: flex;
-    list-style: none;
-    margin-top: 1%;
+    justify-content: space-evenly;
+    width: 74rem;
   }
 
-  &__item {
-    margin-right: 1rem;
+  &__search{
+    width: 38.8rem;
+
+    &-box {
+      border: none;
+      border-bottom: .5px solid blacK;
+      position: relative;
+      width: 34rem;
+    }
+
+    &-button {
+      height: 1.73rem;
+      width: 1.73rem;
+      margin-left: 1rem;
+    }
   }
 
-  &-search{
-    &__box {
-      display: flex;
-      margin-top: 8%;
+  &__icons {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 30rem;
+
+    &-individual{
+
+      &__share{
+        height: 2.3rem;
+        width: 2.3rem;
+      }
+
+      &__twitter{
+        height: 1.93rem;
+        width: 2.35rem;
+      }
+    }
+  }
+
+  @media(max-width: 718px) {
+    &__mainLogo {
+      display: none;
     }
   }
 }
@@ -51,10 +89,9 @@ html {
   position: relative;
   background-color: gray;
   width: 100%;
-  height:70rem;
+  height: 90rem;
 
-
-     .slide .carousel-indicators li{
+     .slide .carousel-indicators li {
        height: 1.5rem;
        width: 1.5rem;
        background-color: #bbb;
@@ -62,15 +99,14 @@ html {
        display: inline-block;
      }
 
-
-    .carousel-caption{
+    .carousel-caption {
       width:100%;
       top: 40%;
       left: 0;
       padding-left: 10rem;
       display: block;
 
-      .headerSlide{
+      .headerSlide {
         height: 14rem;
         width: 61.3rem;
         font-size: 5.8rem;
@@ -89,16 +125,14 @@ html {
       }
     }
     img {
-      position:relative;
-      width:100%;
+      position: relative;
+      width: 100%;
       height: inherit;
       display: block;
-      max-height: 70rem;;
+      max-height: 90rem;;
     }
-
-    @media (max-width: 750px){
+    @media (max-width: 750px) {
       height: 25rem;
-
       img {
         position: relative;
         height: 25rem;
