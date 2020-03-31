@@ -10,7 +10,8 @@ export default class NavBar extends Component {
           <li className="navigation__item"><a href="#inicio">Inicio</a></li>
           <li className="navigation__item"><a href="#nosotros">Nosotros</a></li>
           <li className="navigation__item"><a href="#servicios">Servicios</a></li>
-          <li className="navigation__item"><a href="#herramientas">Herramientas</a></li>
+          <li className="navigation__item"><a href="#herramientas">Herramientas</a>
+          </li>
           <li className="navigation__item"><a href="#cobertura">Cobertura</a></li>
         </ul>
           <Button variant="outline-primary">Primary</Button>
@@ -34,4 +35,3 @@ export default class NavBar extends Component {
     )
   }
 }
-
