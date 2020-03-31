@@ -55,8 +55,8 @@ html {
 
 
      .slide .carousel-indicators li{
-       height: 15px;
-       width: 15px;
+       height: 1.5rem;
+       width: 1.5rem;
        background-color: #bbb;
        border-radius: 50%;
        display: inline-block;
@@ -71,10 +71,9 @@ html {
       display: block;
 
       .headerSlide{
-        height: 140px;
-        width: 613.2px;
-        font-family: Avenir;
-        font-size: 58.2px;
+        height: 14rem;
+        width: 61.3rem;
+        font-size: 5.8rem;
         font-weight: 900;
         line-height: 1.01;
         letter-spacing: normal;
@@ -82,13 +81,9 @@ html {
         color: #ffffff;
       }
       p {
-        width: 575.2px;
-        font-size: 22px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
+        width: 57.5rem;
+        font-size: 2.2rem;
         line-height: 1.2;
-        letter-spacing: normal;
         text-align: left;
         color: #ffffff;
       }
@@ -109,12 +104,4 @@ html {
         height: 25rem;
       }
     }
-}
-
-.footer {
-  position: relative;
-  background-color: #004a98;
-  height: 30rem;
-  color: white;
-  margin:1rem;
 }

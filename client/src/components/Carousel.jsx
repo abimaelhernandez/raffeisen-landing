@@ -7,7 +7,7 @@ export default class Carousela extends Component {
       <div className="carouselOuter">
           <Carousel>
            <Carousel.Item className="item">
-             <img className="img" src="../assets/carousel_first.png" alt="ni here" />
+             <img className="img" src="../assets/carousel_first.png" alt="glass orb" />
              <Carousel.Caption>
                <p className="headerSlide">Generamos procesos que agregan valor</p>
                <p >
@@ -18,7 +18,7 @@ export default class Carousela extends Component {
              </Carousel.Caption>
            </Carousel.Item>
            <Carousel.Item className="item">
-             <img className="img" src="../assets/emerald.jpg" alt="ni here" />
+             <img className="img" src="../assets/emerald.jpg" alt="emerald orb" />
              <Carousel.Caption>
                <p className="headerSlide">Second image</p>
              </Carousel.Caption>
