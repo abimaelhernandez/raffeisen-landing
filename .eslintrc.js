@@ -32,7 +32,7 @@ module.exports = {
     'prefer-const': [
       'error',
       {
-        destructuring: 'all',
+        destructuring: 'any',
       },
     ],
     'arrow-body-style': [2, 'as-needed'],
