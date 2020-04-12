@@ -1,7 +1,25 @@
-import React, { Component } from 'react'
 
 
-export default class NavBar extends Component {
+import React, { useState } from 'react'
+
+ function NavBar(props) {
+   const [test] = useState('')
+
+    console.log('Props in Child :', props)
+
+    return (
+        <div>
+            <h1>Hello World in child {test.name}</h1>
+        </div>
+    )
+}
+
+export default NavBar
+
+
+
+
+/* export default class NavBar extends Component {
   render() {
     return (
       <div className="navigation">
@@ -37,3 +55,4 @@ export default class NavBar extends Component {
     )
   }
 }
+*/
