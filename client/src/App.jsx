@@ -2,6 +2,7 @@ import { IntlProvider, FormattedMessage } from 'react-intl'
 import React, { Component } from 'react'
 import Navbar from './components/Navigation'
 import './components/sass/mains.scss'
+import projectBody from './LangData'
 
 export default class App extends Component {
   constructor(){
@@ -9,20 +10,7 @@ export default class App extends Component {
     this.state = {
       locale: 'en',
       name: '',
-      messages: {
-        en: {
-          greeting: `Hello ! How are you?`,
-          time: 'The time is {t, time, short}.',
-          date: 'The date is {d, date}.',
-          example: 'Example'
-        },
-        es: {
-          greeting: '¡Hola! ¿Cómo estás? somos 24',
-          time: 'La hora es {t, time, short}.',
-          date: 'La fecha es {d, date}.',
-          example: 'ejemplo'
-        }
-      }
+      messages: projectBody
     }
   }
 
