@@ -52,7 +52,7 @@ export default class App extends Component {
         <br />
           <FormattedMessage id="example" values={{ d: Date.now() }} />
         </p>
-          <Navbar tesProp={messages[locale].example}/>
+          <Navbar testProp={messages[locale]}/>
         </IntlProvider>
       </div>
     )
