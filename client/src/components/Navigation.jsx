@@ -7,8 +7,10 @@ export default class NavBar extends Component {
     const {testProp} = this.props
     console.log('in CHILD :', testProp)
     return (
-      <div className="navigation">
-        Hello World {testProp.greeting}
+      <div className="blop">
+        <h1>
+          Hello World {testProp.navigation.inicio} hi ppl ---- {testProp.navigation.herramientas} 
+        </h1>
       </div>
     )
   }

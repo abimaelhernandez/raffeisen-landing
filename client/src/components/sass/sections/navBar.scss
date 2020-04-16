@@ -4,37 +4,47 @@
   align-items: center;
   opacity: .8;
   position: fixed;
+  height: 14.5rem;
   width: 100%;
   z-index: 1;
 
   &__mainLogo {
-    width: 37rem;
+    width: 15%;
+
+    &:hover{
+      cursor: pointer;
+    }
 
     &-img{
-      width: 100%;
-
+      margin-left: 25%;
+      width: 65%;
     }
   }
 
   &__items {
     display: flex;
     justify-content: space-evenly;
-    width: 74rem;
+    width: 35%;
+    
+    &-item{
+      &:hover{
+        cursor: pointer;
+      }
+    }
   }
 
   &__search{
-    width: 38.8rem;
+    width: 20%;
 
     &-box {
       border: none;
       border-bottom: .5px solid blacK;
       position: relative;
-      width: 34rem;
+      width: 85%;
     }
 
     &-button {
-      height: 1.73rem;
-      width: 1.73rem;
+      width: 5%;
       margin-left: 1rem;
     }
   }
@@ -43,18 +53,20 @@
     position: relative;
     display: flex;
     justify-content: space-evenly;
-    width: 30rem;
+    width: 25%;
 
     &-individual{
-
+      &:hover{
+        cursor: pointer;
+      }
       &__share{
         height: 2.3rem;
         width: 2.3rem;
       }
 
       &__twitter{
-        height: 1.93rem;
-        width: 2.35rem;
+        height: 2.35rem;
+        width: 1.95rem;
       }
     }
   }
