@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from './components/Navigation'
-import './components/sass/mains.scss'
+import '../dist/sass/mains.scss'
 import projectBody from './LangData'
 
 export default class App extends Component {
@@ -57,6 +57,9 @@ export default class App extends Component {
             <button type="button" className="navigation-icons-individual" name="es" onClick={this.handleEnglish}>En</button>
             <img src="https://img.icons8.com/offices/30/000000/twitter.png" alt="Twitter" className="navigation-icons-individual-twitter"/>
           </div>
+        </div>
+        <div className="navigation-mobile">
+          
         </div>
         <div>
           <Navbar testProp={messages[locale]}/>
