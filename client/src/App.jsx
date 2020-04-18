@@ -7,7 +7,7 @@ export default class App extends Component {
   constructor(){
     super()
     this.state = {
-      locale: 'en',
+      locale: 'es',
       messages: projectBody
     }
   }
@@ -29,20 +29,20 @@ export default class App extends Component {
     return (
       <div>
         <div className="navigation">
-          <div className="navigation__mainLogo">
-            <img src="../assets/logo-main.svg" alt="Main Logo" className="navigation__mainLogo-img"/>
+          <div className="navigation-mainLogo">
+            <img src="../assets/logo-main.svg" alt="Main Logo" className="navigation-mainLogo-img"/>
           </div>
-          <div className="navigation__items">
-            <span className="navigation__items-item">Inicio</span>
-            <span className="navigation__items-item">Nosotros</span>
-            <span className="navigation__items-item">Servicios</span>
-            <span className="navigation__items-item">Herramientas</span>
-            <span className="navigation__items-item">Cobertura</span>
+          <div className="navigation-items">
+            <button type="button" className="navigation-items-item">{messages[locale].navigation.inicio}</button>
+            <button type="button" className="navigation-items-item">{messages[locale].navigation.nosotros}</button>
+            <button type="button" className="navigation-items-item">{messages[locale].navigation.servicios}</button>
+            <button type="button" className="navigation-items-item">{messages[locale].navigation.herramientas}</button>
+            <button type="button" className="navigation-items-item">{messages[locale].navigation.cobertura}</button>
           </div>
-          <div className="navigation__search">
+          <div className="navigation-search">
             <form action="#">
-              <input type="text" name="search" className="navigation__search-box"/>
-              <span type="submit" className="navigation__search-button">
+              <input type="text" name="search" className="navigation-search-box"/>
+              <span type="submit" className="navigation-search-button">
                 <svg width="1em" height="1em">
                   <path fillRule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clipRule="evenodd"/>
                   <path fillRule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clipRule="evenodd"/>
@@ -50,12 +50,12 @@ export default class App extends Component {
               </span>
             </form>
           </div>
-          <div className="navigation__icons">
-            <span className="navigation__item">Contacto</span>
-            <img src="https://img.icons8.com/small/30/000000/share.png" alt="share" className="navigation__icons-individual__share"/>
-            <button type="button" className="navigation__icons-individual" name="es" onClick={this.handleSpanish}>Es</button>
-            <button type="button" className="navigation__icons-individual" name="es" onClick={this.handleEnglish}>En</button>
-            <img src="https://img.icons8.com/offices/30/000000/twitter.png" alt="Twitter" className="navigation__icons-individual__twitter"/>
+          <div className="navigation-icons">
+            <button type="button"className="navigation-items-item">{messages[locale].navigation.contacto}</button>
+            <img src="https://img.icons8.com/small/30/000000/share.png" alt="share" className="navigation-icons-individual-share"/>
+            <button type="button" className="navigation-icons-individual-lang" name="es" onClick={this.handleSpanish}>Es</button>
+            <button type="button" className="navigation-icons-individual" name="es" onClick={this.handleEnglish}>En</button>
+            <img src="https://img.icons8.com/offices/30/000000/twitter.png" alt="Twitter" className="navigation-icons-individual-twitter"/>
           </div>
         </div>
         <div>
