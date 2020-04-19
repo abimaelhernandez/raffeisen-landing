@@ -11,6 +11,8 @@ export default class App extends Component {
       messages: projectBody
     }
   }
+  
+//  <label htmlFor="navi-toggle" className="navigationn-button" label="" id="navi-toggle"></label>
 
   handleSpanish = (e) => {
     e.preventDefault()
@@ -30,7 +32,7 @@ export default class App extends Component {
       <div>
         <div className="navigation">
           <div className="navigation-mainLogo">
-            <img src="../assets/logo-main.svg" alt="Main Logo" className="navigation-mainLogo-img"/>
+            <img src="../assets/logo-main.svg" alt="Main Logo" className="navigation-mainLogo-large"/>
           </div>
           <div className="navigation-items">
             <button type="button" className="navigation-items-item">{messages[locale].navigation.inicio}</button>
@@ -55,12 +57,43 @@ export default class App extends Component {
             <img src="https://img.icons8.com/small/30/000000/share.png" alt="share" className="navigation-icons-individual-share"/>
             <button type="button" className="navigation-icons-individual-lang" name="es" onClick={this.handleSpanish}>Es</button>
             <button type="button" className="navigation-icons-individual" name="es" onClick={this.handleEnglish}>En</button>
-            <img src="https://img.icons8.com/offices/30/000000/twitter.png" alt="Twitter" className="navigation-icons-individual-twitter"/>
+            <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer">
+              <img src="../assets/Twitter-grey.svg" alt="Twitter" className="navigation-icons-individual-twitter"/>
+            </a>
           </div>
         </div>
-        <div className="navigation-mobile">
-          
+        
+        <div className="navigationn test">
+          <img src="../assets/main-small.svg" alt="Raiffeisen Logo" className="navigationn-mainLogo-small"/>
+
+          <input type="checkbox" className="navigationn-checkbox" id="navi-toggle"/>
+
+          <div className="navigationn-background">
+              &nbsp;
+          </div>
+
+          <nav className="navigationn-nav">
+              <ul className="navigationn-list">
+                  <li className="navigationn-item"><a href="#." className="navigationn-link">{messages[locale].navigation.inicio}</a></li>
+                  <li className="navigationn-item"><a href="#." className="navigationn-link">{messages[locale].navigation.nosotros}</a></li>
+                  <li className="navigationn-item"><a href="#." className="navigationn-link">{messages[locale].navigation.servicios}</a></li>
+                  <li className="navigationn-item"><a href="#." className="navigationn-link">{messages[locale].navigation.herramientas}</a></li>
+                  <li className="navigationn-item"><a href="#." className="navigationn-link">{messages[locale].navigation.cobertura}</a></li>
+                  <li className="navigationn-item"><a href="#." className="navigationn-link">{messages[locale].navigation.buscar}</a></li>
+                  <li className="navigationn-item"><a href="#." className="navigationn-link">{messages[locale].navigation.contacto}</a></li>
+              </ul>
+
+              <div className="navigationn-bottom">
+                <img src="https://img.icons8.com/small/30/000000/share.png" alt="share" className="navigation-icons-individual-share"/>
+                <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer">
+                  <img src="../assets/Twitter-white.svg" alt="Twitter" className="navigation-icons-individual-twitter"/>
+                </a>
+                <button type="button" className="navigationn-lang" name="es" onClick={this.handleSpanish}>Es</button>
+                <button type="button" className="navigationn-lang" name="es" onClick={this.handleEnglish}>En</button>
+              </div>
+          </nav>
         </div>
+
         <div>
           <Navbar testProp={messages[locale]}/>
         </div>

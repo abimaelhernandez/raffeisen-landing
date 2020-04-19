@@ -20,7 +20,7 @@
       cursor: pointer;
     }
 
-    &-img{
+    &-large{
       margin-left: 25%;
       width: 65%;
     }
@@ -81,7 +81,7 @@
     }
   }
 
-  @media(max-width: 718px) {
+  @media(max-width: 767px) {
       display: none;
   }
 }
