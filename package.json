@@ -4,9 +4,10 @@
   "description": "This is a parallax animation/landing page.",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start-dev": "node server/index.js",
     "dev": "webpack --config webpack.config.js --watch --mode development",
-    "hot-reload": "webpack-dev-server --open --mode development"
+    "hot-reload": "webpack-dev-server --open --mode development",
+    "heroku-postbuild": "webpack -p"
   },
   "repository": {
     "type": "git",
