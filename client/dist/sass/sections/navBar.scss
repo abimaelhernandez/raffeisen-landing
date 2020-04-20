@@ -4,27 +4,32 @@
   align-items: center;
   opacity: .8;
   position: fixed;
-  height: 14.5rem;
+  height: 7.5rem;
   width: 100%;
   z-index: 1;
 
-  &__mainLogo {
+  button {
+    background: transparent;
+    border: 0px solid transparent;
+  }
+
+  &-mainLogo {
     width: 15%;
 
     &:hover{
       cursor: pointer;
     }
 
-    &-img{
+    &-large{
       margin-left: 25%;
       width: 65%;
     }
   }
 
-  &__items {
+  &-items {
     display: flex;
     justify-content: space-evenly;
-    width: 35%;
+    width: 40%;
     
     &-item{
       &:hover{
@@ -33,10 +38,11 @@
     }
   }
 
-  &__search{
+  &-search{
     width: 20%;
 
-    &-box {
+    &-box,
+    &:focus {
       border: none;
       border-bottom: .5px solid blacK;
       position: relative;
@@ -49,31 +55,33 @@
     }
   }
 
-  &__icons {
+  &-icons {
     position: relative;
     display: flex;
     justify-content: space-evenly;
     width: 25%;
 
     &-individual{
-      &:hover{
-        cursor: pointer;
-      }
-      &__share{
+      
+      &-share{
+        &:hover{
+          cursor: pointer;
+        }
         height: 2.3rem;
         width: 2.3rem;
       }
 
-      &__twitter{
+      &-twitter{
+        &:hover{
+          cursor: pointer;
+        }
         height: 2.35rem;
         width: 1.95rem;
       }
     }
   }
 
-  @media(max-width: 718px) {
-    &__mainLogo {
+  @media(max-width: 767px) {
       display: none;
-    }
   }
 }
