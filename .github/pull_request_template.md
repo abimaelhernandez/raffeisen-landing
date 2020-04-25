@@ -59,14 +59,8 @@
 | * End-to-end tests have been created/modified                                |
 | * IE11 has been tested when modifying styles                                 |
 |                                                                              |
-| In addition, if your PR changes database migrations, model validations, or   |
-| anything else that affects the application's ability to save database        |
-| objects, you must make sure that the data synthesizer can run. To test this, |
-| make sure that `rake db:synth` runs correctly when your local                |
-| `dv3_development` database is blank. If it fails, you will either need to    |
-|  adjust your PR or change the synthesizer or the synthetic data itself.      |
 |                                                                              |
 | For Draft PRs, you are responsible for marking them as Ready to Review       |
-| when your work is done.
+| when your work is done.                                                      |
 |                                                                              |
 •------------------------------------------------------------------------------>
