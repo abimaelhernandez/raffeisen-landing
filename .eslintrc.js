@@ -39,6 +39,17 @@ module.exports = {
     'consistent-return': 0,
     'react/prefer-stateless-function': 0,
     'react/require-default-props': 0,
+    "jsx-a11y/label-has-for": [ 2, {
+      "required": {
+          "some": [ "nesting", "id" ]
+      }
+    }],
+    "jsx-a11y/label-has-associated-control": [ 2, {
+      "labelComponents": ["CustomLabel"],
+      "labelAttributes": ["inputLabel"],
+      "controlComponents": ["CustomInput"],
+      "depth": 3,
+    }],
     'react/jsx-filename-extension': [
       1,
       {
@@ -62,5 +73,5 @@ module.exports = {
       },
     ],
     'import/no-extraneous-dependencies': 0,
-  },
+  }
 }

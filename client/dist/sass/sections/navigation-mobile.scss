@@ -1,102 +1,151 @@
-.navigationn {
+.navBanner {
+  background-image: linear-gradient(147deg, #0051a6 7%, #004da2 35%, #004296 63%, #002f82 90%, #002476 103%);
+  height: 13rem;
+  width: 100%;
+}
+
+.navigationMobile {
   font-size: 1.4rem;
 
-  &-mainLogo-small {
-    height: 7rem;
-    width: 7rem;
-    top: 4rem;
-    left: 2rem;
-    position: fixed;
-    z-index: 500;
-  }
-
-  button {
+  button { // the es/en lang buttons
     background: transparent;
     border: 0px solid transparent;
   }
 
   &-checkbox {
-    position: fixed;
-    top: 4rem;
-    right: 2rem;
-    z-index: 23;
+      display: none;
   }
-/*
-  &-button {
-    display: none;
-    background-color: white;
+
+  &-mainLogo-small { // logo in the top left corner
     height: 7rem;
     width: 7rem;
+    top: 4.7rem;
+    left: 3.2rem;
     position: fixed;
-    top: 4rem;
-    right: 2rem;
-    border-radius: 50%;
-    z-index: 23;
-    box-shadow: 0 1rem 3rem rgba(black, .1);
+    z-index: 500;
   }
-*/
-  &-background {
-    background-image: linear-gradient(147deg, #0051a6 7%, #004da2 35%, #004296 63%, #002f82 90%, #002476 103%);
-    border-radius: 50%;
-    height: 6rem;
-    right: 2.5rem;
-    top: 4.5rem;
-    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
-    position: fixed;
-    width: 6rem;
-    z-index: 21;
+  
+  &-button { // white circle for menu button
+      height: 7rem;
+      width: 7rem;
+      border-radius: 50%;
+      position: fixed;
+      top: 4.3rem;
+      right: 2.7rem;
+      background-color: $color-white;
+      z-index: 250;
+      box-shadow: 0 1rem 3rem rgba($color-black, .1);
+      text-align: center;
+  }
+
+  &-background { // green circle behind white circle above
+      height: 6rem;
+      width: 6rem;
+      border-radius: 50%;
+      position: fixed;
+      top: 4.5rem;
+      right: 3rem;
+      background-image: linear-gradient(147deg, #0051a6 7%, #004da2 35%, #004296 63%, #002f82 90%, #002476 103%);
+      z-index: 200;
+      transition: transform 1.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 
   &-nav {
-    padding-top: 40%;
-    position: relative;
-    z-index: 22;
-    width: 0;
-
+      padding-top: 19.3rem;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      z-index: 210;
+      text-align: center;
+      opacity: 0;
+      width: 0; // to hide content
+      transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
-  //Bottom section where the share, tw, es & en buttons live
-  &-bottom {
-    margin-top: 40%;
+
+  &-list {
+    margin-left: -2rem;
+    @include center_element; //mixin
+    list-style: none;
+  }
+
+  &-item {
+      margin: 1rem;
+  }
+
+  &-link {
+      &:link,
+      &:visited {
+          display: inline-block; // required for padding and translateX
+          padding: 1rem 2rem;
+          color: $color-white;
+      }
+    }
+
+  &-bottom { // bottom section where the share/tw/es/en icons live
+    position: relative;
+    margin-top: 110%;
     display: flex;
     justify-content: space-evenly;
   }
 
-  &-list {
-    list-style: none;
-    text-align: center;
+  // FUNCTIONALITY
+  &-checkbox:checked ~ &-background {
+      transform: scale(36);
+  }
+
+  &-checkbox:checked ~ &-nav {
+      opacity: 1;
+      width: 100%;
+      left: 0;
+  }
+
+  // ICON
+  &-icon {
+      position: relative;
+      margin-top: 3.5rem;
+
+      &,
+      &::before,
+      &::after {
+          width: 3rem;
+          height: 2px;
+          background-color: $color-grey-dark;
+          display: inline-block;
+      }
+
+      &::before,
+      &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          transition: all .2s;
+      }
+
+      &::before {top: -.8rem;}
+      &::after {top: .8rem;}
   }
 
   &-lang {
-    color: white
+    color: $color-white
   }
 
-  &-link {
-    &:link,
-    &:visited {
-      display: inline-block;
-      padding: 1rem 2rem;
-      color: white;
-      text-decoration: none;
-      background-size: 230%;
-    }
+  @media(min-width: 768px) {
+    display: none;
   }
 
-    &-checkbox:checked ~ &-background {
-      transform: scale(80);
-    }
-
-    &-checkbox:checked ~ &-nav {
-      opacity: 1;
-      width: 100%;
-    }
-
-    @media(min-width: 768px) {
-      display: none;
+  //The following is the hamburger menu icon and X icon
+  &-checkbox:checked + &-button &-icon { // select sibling and then child
+      background-color: transparent; // hide middle dash
   }
-}
 
-.test {
-  background-color: rgba(0, 68, 255, 0.664);
-  height: 13rem;
-  width: 100%;
+  &-checkbox:checked + &-button &-icon::before { 
+      top: 0; // put dash back to middle
+      transform: rotate(135deg); 
+  }
+
+  &-checkbox:checked + &-button &-icon::after { 
+      top: 0; // put dash back to middle
+      transform: rotate(-135deg); 
+  }
 }
