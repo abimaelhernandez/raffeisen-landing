@@ -13,8 +13,6 @@ export default class App extends Component {
     }
   }
   
-//  <label htmlFor="navi-toggle" className="navigationn-button" label="" id="navi-toggle"></label>
-
   handleSpanish = (e) => {
     e.preventDefault()
     this.setState({ locale : 'es'})
@@ -64,34 +62,37 @@ export default class App extends Component {
           </div>
         </div>
         
-        <div className="navigationn test">
-          <img src="../assets/main-small.svg" alt="Raiffeisen Logo" className="navigationn-mainLogo-small"/>
+        <div className="navigationMobile navBanner">
+          <img src="../assets/main-small.svg" alt="Raiffeisen Logo" className="navigationMobile-mainLogo-small"/>
 
-          <input type="checkbox" className="navigationn-checkbox" id="navi-toggle"/>
+          <input type="checkbox" className="navigationMobile-checkbox" id="navi-toggle"/>
 
-          <div className="navigationn-background">
-              &nbsp;
-          </div>
+          <label htmlFor="navi-toggle" className="navigationMobile-button">
+              <span className="navigationMobile-icon">&nbsp;</span>
+          </label>
 
-          <nav className="navigationn-nav">
-              <ul className="navigationn-list">
-                  <li className="navigationn-item"><a href="#." className="navigationn-link">{messages[locale].navigation.inicio}</a></li>
-                  <li className="navigationn-item"><a href="#." className="navigationn-link">{messages[locale].navigation.nosotros}</a></li>
-                  <li className="navigationn-item"><a href="#." className="navigationn-link">{messages[locale].navigation.servicios}</a></li>
-                  <li className="navigationn-item"><a href="#." className="navigationn-link">{messages[locale].navigation.herramientas}</a></li>
-                  <li className="navigationn-item"><a href="#." className="navigationn-link">{messages[locale].navigation.cobertura}</a></li>
-                  <li className="navigationn-item"><a href="#." className="navigationn-link">{messages[locale].navigation.buscar}</a></li>
-                  <li className="navigationn-item"><a href="#." className="navigationn-link">{messages[locale].navigation.contacto}</a></li>
-              </ul>
+          <div className="navigationMobile-background">&nbsp;</div>
 
-              <div className="navigationn-bottom">
-                <img src="https://img.icons8.com/small/30/000000/share.png" alt="share" className="navigation-icons-individual-share"/>
-                <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer">
-                  <img src="../assets/Twitter-white.svg" alt="Twitter" className="navigation-icons-individual-twitter"/>
-                </a>
-                <button type="button" className="navigationn-lang" name="es" onClick={this.handleSpanish}>Es</button>
-                <button type="button" className="navigationn-lang" name="es" onClick={this.handleEnglish}>En</button>
-              </div>
+          <nav className="navigationMobile-nav">
+
+            <ul className="navigationMobile-list">
+              <li className="navigationMobile-item"><a href="#inico" className="navigationMobile-link">{messages[locale].navigation.inicio}</a></li>
+              <li className="navigationMobile-item"><a href="#nosotros" className="navigationMobile-link">{messages[locale].navigation.nosotros}</a></li>
+              <li className="navigationMobile-item"><a href="#servicios" className="navigationMobile-link">{messages[locale].navigation.servicios}</a></li>
+              <li className="navigationMobile-item"><a href="#herramientas" className="navigationMobile-link">{messages[locale].navigation.herramientas}</a></li>
+              <li className="navigationMobile-item"><a href="#cobertura" className="navigationMobile-link">{messages[locale].navigation.cobertura}</a></li>
+              <li className="navigationMobile-item"><a href="#buscar" className="navigationMobile-link">{messages[locale].navigation.buscar}</a></li>
+              <li className="navigationMobile-item"><a href="#contacto" className="navigationMobile-link">{messages[locale].navigation.contacto}</a></li>
+            </ul>
+
+            <div className="navigationMobile-bottom">
+              <img src="https://img.icons8.com/small/30/000000/share.png" alt="share" className="navigation-icons-individual-share"/>
+              <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/Twitter-white.svg" alt="Twitter" className="navigation-icons-individual-twitter"/>
+              </a>
+              <button type="button" className="navigationMobile-lang" name="es" onClick={this.handleSpanish}>Es</button>
+              <button type="button" className="navigationMobile-lang" name="es" onClick={this.handleEnglish}>En</button>
+            </div>
           </nav>
         </div>
 
