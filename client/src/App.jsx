@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Navbar from './components/Navigation'
 import '../dist/sass/mains.scss'
+import Navbar from './components/Navigation'
 import projectBody from './LangData'
 import PageFooter from './components/Footer'
 
