@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import Navbar from './components/Navigation'
 import '../dist/sass/mains.scss'
+import Navbar from './components/Navigation'
 import projectBody from './LangData'
+import PageFooter from './components/Footer'
 
 export default class App extends Component {
   constructor(){
@@ -98,7 +99,7 @@ export default class App extends Component {
         <div>
           <Navbar testProp={messages[locale]}/>
         </div>
-
+        <PageFooter/>
       </div>
     )
   }
