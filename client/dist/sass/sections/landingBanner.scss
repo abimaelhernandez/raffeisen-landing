@@ -1,9 +1,8 @@
 #hideMe {
-  background-color: $color-blue-dark;
-
-  animation: cssAnimation 0s ease-in 200s forwards;
+  animation: cssAnimation 0s ease-in 5s forwards;
   animation-fill-mode: forwards;
 }
+
 @keyframes cssAnimation {
   to {
       width: 0;
@@ -13,18 +12,43 @@
 }
 
 .landingBanner {
+  background-color: $color-blue-dark;
+
   height: 100%;
   width: 100%;
   position: absolute;
   z-index: 1000;
 
-  &-container {
-    margin-top: 35%;
+  &-mainContainer {
+    &-mainLogo {
+      width: 45%;
+    }
+
+    top: 40%;
+    position: relative;
     text-align: center;
     width: 100&;
+  }
 
-    &-mainLogo {
-      width: 45rem;
+  &-secondaryContainer {
+    top: 75%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &-analitica {
+      margin-right: 1.2rem;
+      width: 15%;
+    }
+
+    &-consultoria {
+      margin-right: 1.2rem;
+      width: 15%;
+    }
+
+    &-capacitacion {
+      width: 15%;
     }
   }
 }
