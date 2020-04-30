@@ -8,7 +8,7 @@ export default class LandingBanner extends Component {
     return (
       <div className="landingBanner" id='hideMe'>
         <div className="landingBanner-mainContainer">
-         <img src="../assets/Raiffeisen-White.svg" alt="Main Logo" className="landingBanner-mainContainer-mainLogo"/>
+         <img src="../assets/Raiffeisen-White.svg" alt="Main Logo" className="landingBanner-mainContainer-mainLogo fade-in "/>
         </div>
         <div className="landingBanner-secondaryContainer">
           <img src="../assets/Analitica.svg" alt="Analitica Logo" className="landingBanner-secondaryContainer-analitica"/>
