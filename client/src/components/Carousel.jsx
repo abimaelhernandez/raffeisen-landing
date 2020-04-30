@@ -7,7 +7,7 @@ export default function Slider(){
           <source src="../../assets/desk.mp4" type="video/mp4" />
             Your browser does not support HTML5 video.
         </video>
-        <video className="slider-container-mobileVideo" autoPlay muted loop>
+        <video className="slider-container-mobileVideo" playsInline autoPlay muted loop>
           <source src="../../assets/mobile-video.mp4" type="video/mp4" />
             Your browser does not support HTML5 video.
         </video>
