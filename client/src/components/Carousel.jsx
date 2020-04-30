@@ -21,7 +21,7 @@ export default function Slider(){
             <div className="carousel-item active first-slide">
               <div className="img-container">
                 <img
-                  src="../../assets/icons/asset1.svg"
+                  src="../../assets/icons/Plus-orange.svg"
                   alt="..."/>
               </div>
               <div className="carousel-caption caption-container">
