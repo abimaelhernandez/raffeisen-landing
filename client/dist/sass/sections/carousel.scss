@@ -1,54 +1,364 @@
-.carouselOuter {
+.slider-container {
   position: relative;
-  background-color: $color-grey;
   width: 100%;
-  height: 90rem;
+  height: 100vh;
+  overflow: hidden;
+  // border: groove red 3px;
 
-     .slide .carousel-indicators li {
-       height: 1.5rem;
-       width: 1.5rem;
-       background-color: #bbb;
-       border-radius: 50%;
-       display: inline-block;
-     }
+  &-webVideo {
+    position: absolute;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: fill;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-    .carousel-caption {
-      width:100%;
-      top: 40%;
-      left: 0;
-      padding-left: 10rem;
-      display: block;
+  &-mobileVideo {
+    position: absolute;
+    width: 173%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: fill;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+  }
 
-      .headerSlide {
-        height: 14rem;
-        width: 61.3rem;
-        font-size: 5.8rem;
-        font-weight: 900;
-        line-height: 1.01;
-        letter-spacing: normal;
-        text-align: left;
-        color: #ffffff;
-      }
-      p {
-        width: 57.5rem;
-        font-size: 2.2rem;
-        line-height: 1.2;
-        text-align: left;
-        color: #ffffff;
-      }
+  #carouselExampleIndicators {
+    height: 100%;
+    // border: groove green 3px;
+
+    .carousel-inner {
+      height: inherit;
     }
-    img {
+
+    .carousel-item {
+      position: relative;
+    }
+// slide one
+    .first-slide {
       position: relative;
       width: 100%;
       height: inherit;
-      display: block;
-      max-height: 90rem;;
-    }
-    @media (max-width: 750px) {
-      height: 25rem;
-      img {
+      // border: groove blue 3px;
+
+      .img-container {
         position: relative;
-        height: 25rem;
+        width: 100%;
+
+        img {
+          position: relative;
+          float: right;
+          width: 35vw;
+          height: 35vh;
+          top: 13rem;
+          right: 9rem;
+        }
+      }
+
+      .caption-container {
+        position: relative;
+        width: 45vw;
+        height: auto;
+        min-height: 20vh;
+        max-height: 100vh;
+        top: 38%;
+        left: 8rem;
+        text-align: left;
+        bottom: 8rem;
+        // border: orange 1px dotted;
+        padding: 0 0 0 3rem;
+
+        .dot {
+          position: relative;
+          height: 2.5rem;
+          width: 2.5rem;
+          right: 5rem;
+          top: 4rem;
+          background-color: #fc8a33;
+          border-radius: 50%;
+          display: inline-block;
+        }
+
+        &-title {
+          position: relative;
+          padding: 0 0 2rem 0;
+          font-family: Avenir;
+          font-size: 4vw;
+          font-weight: 900;
+          line-height: 1.03;
+          text-align: left;
+          color: #ffffff;
+        }
+
+        &-paragraphContainer {
+          &-paragraph {
+            font-family: Avenir-Roman;
+            font-size: 0.7vw;
+          }
+        }
       }
     }
+// slide two
+    .second-slide {
+      position: relative;
+      width: 100%;
+      height: inherit;
+      // border: groove brown 3px;
+
+      .img-container {
+        position: relative;
+        width: 100%;
+
+        img {
+          position: relative;
+          width: 44vw;
+          height: 49vh;
+          top: 23rem;
+        }
+      }
+
+      .caption-container-2 {
+        position: relative;
+        width: 24vw;
+        left: 68%;
+        height: auto;
+        min-height: 20vh;
+        max-height: 100vh;
+        text-align: left;
+        bottom: 15rem;
+        // border: blue 3px dotted;
+
+        .dot {
+          position: relative;
+          height: 2.5rem;
+          width: 2.5rem;
+          right: 5rem;
+          top: 4rem;
+          background-color: gray;
+          border-radius: 50%;
+          display: inline-block;
+        }
+
+        &-title {
+          position: relative;
+          padding: 0 0 2rem 0;
+          font-family: Avenir;
+          font-size: 4vw;
+          font-weight: 900;
+          line-height: 1.03;
+          text-align: left;
+          color: #ffffff;
+        }
+      }
+    }
+// slide Three
+    .third-slide {
+      position: relative;
+      width: 100%;
+      height: inherit;
+      // border: groove orange 3px;
+
+      .img-container {
+        position: relative;
+        width: 100%;
+
+        img {
+          position: relative;
+          width: 35vw;
+          height: 35vh;
+          top: 23rem;
+        }
+      }
+
+      .caption-container-3 {
+        position: relative;
+        width: 20vw;
+        left: 65%;
+        height: auto;
+        min-height: 20vh;
+        max-height: 100vh;
+        text-align: left;
+        bottom: 6rem;
+        // border: red 3px solid;
+
+        .dot {
+          position: relative;
+          height: 2.5rem;
+          width: 2.5rem;
+          right: 5rem;
+          top: 4rem;
+          background-color: gray;
+          border-radius: 50%;
+          display: inline-block;
+        }
+
+        &-title {
+          width: 153.4px;
+          height: 115px;
+          font-size: 22px;
+          font-weight: 900;
+          line-height: 1.15;
+          text-align: left;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .carousel-indicators li{
+      height: 1.5rem;
+      width: 1.5rem;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  }
+
+  @media( max-width:767px) {
+    #carouselExampleIndicators {
+      .first-slide {
+        .img-container {
+          position: relative;
+          width: 100%;
+          img {
+            position: relative;
+            float: right;
+            width: 39vw;
+            height: 39vh;
+            top: 5rem;
+            right: 5rem;
+          }
+        }
+
+        .caption-container {
+          position: relative;
+          width: auto;
+          max-width: 85%;
+          top: 45%;
+          left: 4rem;
+          padding: 0;
+
+          &-title {
+            width: 294.3px;
+            height: 58.1px;
+            font-family: Avenir;
+            font-size: 21px;
+            font-weight: 900;
+            line-height: 1.15;
+            text-align: left;
+            color: #ffffff;
+          }
+          &-paragraphContainer {
+            &-paragraph{
+              width: 290.8px;
+              height: 72.7px;
+              font-size: 11px;
+              line-height: 1.1;
+              letter-spacing: normal;
+              text-align: left;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+
+      .second-slide {
+        .img-container {
+          position: relative;
+          width: 100%;
+          img {
+            position: relative;
+            float: right;
+            height: 25vh;
+            top: 6rem;
+            right: 2rem;
+          }
+        }
+
+        .caption-container-2 {
+          position: relative;
+          max-width: 85%;
+          top: 45%;
+          left: 11rem;
+          width: min-content;
+
+          .dot {
+            position: relative;
+            width: 1.6rem;
+            height: 1.6rem;
+            right: 2.2rem;
+            top: 2.5rem;
+            background-color: #ffcb03;
+          }
+
+          &-title {
+            width: 159.6px;
+            height: 88.6px;
+            font-family: Avenir;
+            font-size: 22px;
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: normal;
+            color: #ffffff;
+          }
+        }
+      }
+
+      .third-slide {
+        .img-container {
+          position: relative;
+          width: 100%;
+
+          img {
+            position: relative;
+            width: 20vh;
+            top: 6.5rem;
+            float: right;
+            right: 4rem;
+          }
+        }
+
+        .caption-container-3 {
+          position: relative;
+          max-width: 85%;
+          top: 44%;
+          left: 11rem;
+          width: min-content;
+
+          .dot {
+            position: relative;
+            width: 1.6rem;
+            height: 1.6rem;
+            right: 2.2rem;
+            top: 2.5rem;
+            background-color: #82cc60;
+          }
+
+          &-title {
+            width: 159.6px;
+            height: 88.6px;
+            font-family: Avenir;
+            font-size: 22px;
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: normal;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    &-webVideo {
+      display: none
+    }
+  }
+
+  @media (min-width:768px) {
+    &-mobileVideo {
+      display: none;
+    }
+  }
 }

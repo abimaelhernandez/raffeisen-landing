@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import '../dist/sass/mains.scss'
 
 import LandingBanner from './components/LandingBanner'
+import Slider from './components/Carousel'
 import Navbar from './components/Navigation'
 import projectBody from './LangData'
 import PageFooter from './components/Footer'
@@ -14,7 +15,7 @@ export default class App extends Component {
       messages: projectBody
     }
   }
-  
+
   handleSpanish = (e) => {
     e.preventDefault()
     this.setState({ locale : 'es'})
@@ -64,7 +65,7 @@ export default class App extends Component {
             </a>
           </div>
         </div>
-        
+
         <div className="navigationMobile navBanner">
           <img src="../assets/main-small.svg" alt="Raiffeisen Logo" className="navigationMobile-mainLogo-small"/>
 
@@ -98,7 +99,7 @@ export default class App extends Component {
             </div>
           </nav>
         </div>
-
+        <Slider/>
         <div>
           <Navbar testProp={messages[locale]}/>
         </div>

@@ -19,13 +19,6 @@ module.exports = {
   },
   rules: {
     "semi": [ 2, "never"],
-    // 'prettier/prettier': [
-    //   'error',
-    //   {
-    //     singleQuote: true,
-    //     trailingComma: 'all',
-    //   },
-    // ],
     'no-console': 'off',
     strict: ['error', 'global'],
     curly: 'warn',
