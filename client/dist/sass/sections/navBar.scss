@@ -4,7 +4,7 @@
   align-items: center;
   opacity: .8;
   position: fixed;
-  height: 7.5rem;
+  height: 11.5rem;
   width: 100%;
   z-index: 1;
 
@@ -30,7 +30,7 @@
     display: flex;
     justify-content: space-evenly;
     width: 40%;
-    
+
     &-item{
       &:hover{
         cursor: pointer;
@@ -62,7 +62,7 @@
     width: 25%;
 
     &-individual{
-      
+
       &-share{
         &:hover{
           cursor: pointer;

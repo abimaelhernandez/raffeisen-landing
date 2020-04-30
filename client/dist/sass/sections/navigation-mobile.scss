@@ -1,7 +1,9 @@
 .navBanner {
-  background-image: linear-gradient(147deg, #0051a6 7%, #004da2 35%, #004296 63%, #002f82 90%, #002476 103%);
+  position: fixed;
+  // background-image: linear-gradient(147deg, #0051a6 7%, #004da2 35%, #004296 63%, #002f82 90%, #002476 103%);
   height: 13rem;
   width: 100%;
+  z-index: 1;
 }
 
 .navigationMobile {
@@ -24,7 +26,7 @@
     position: fixed;
     z-index: 500;
   }
-  
+
   &-button { // white circle for menu button
       height: 7rem;
       width: 7rem;
@@ -139,13 +141,13 @@
       background-color: transparent; // hide middle dash
   }
 
-  &-checkbox:checked + &-button &-icon::before { 
+  &-checkbox:checked + &-button &-icon::before {
       top: 0; // put dash back to middle
-      transform: rotate(135deg); 
+      transform: rotate(135deg);
   }
 
-  &-checkbox:checked + &-button &-icon::after { 
+  &-checkbox:checked + &-button &-icon::after {
       top: 0; // put dash back to middle
-      transform: rotate(-135deg); 
+      transform: rotate(-135deg);
   }
 }
