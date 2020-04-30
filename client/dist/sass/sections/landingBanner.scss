@@ -1,0 +1,30 @@
+#hideMe {
+  background-color: $color-blue-dark;
+
+  animation: cssAnimation 0s ease-in 200s forwards;
+  animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+  to {
+      width: 0;
+      height: 0;
+      overflow: hidden;
+  }
+}
+
+.landingBanner {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1000;
+
+  &-container {
+    margin-top: 35%;
+    text-align: center;
+    width: 100&;
+
+    &-mainLogo {
+      width: 45rem;
+    }
+  }
+}

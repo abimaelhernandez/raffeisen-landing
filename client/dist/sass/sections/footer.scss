@@ -1,6 +1,6 @@
 .footer {
   //background-image: url('../../../dist/assets/second.jpg');
-  background-color: $color-blue-1;
+  background-color: $color-blue-dark;
   color: $color-white;
 
   a {
@@ -34,7 +34,7 @@
 .dot { // individual color dots color
 
   &-blue {
-    background-color: $color-blue-2;
+    background-color: $color-blue-light;
   }
 
   &-green {

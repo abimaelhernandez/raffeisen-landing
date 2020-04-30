@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import '../dist/sass/mains.scss'
+
+import LandingBanner from './components/LandingBanner'
 import Navbar from './components/Navigation'
 import projectBody from './LangData'
 import PageFooter from './components/Footer'
@@ -29,6 +31,7 @@ export default class App extends Component {
     const { locale, messages } = this.state
     return (
       <div>
+        <LandingBanner/>
         <div className="navigation">
           <div className="navigation-mainLogo">
             <img src="../assets/logo-main.svg" alt="Main Logo" className="navigation-mainLogo-large"/>
