@@ -34,6 +34,8 @@ export default class App extends Component {
     return (
       <div>
         <LandingBanner/>
+
+        {/* Desktop Navigation Bar */}
         <div className="navigation">
           <div className="navigation-mainLogo">
             <img src="../assets/logo-main.svg" alt="Main Logo" className="navigation-mainLogo-large"/>
@@ -58,7 +60,9 @@ export default class App extends Component {
           </div>
           <div className="navigation-icons">
             <button type="button"className="navigation-items-item">{messages[locale].navigation.contacto}</button>
-            <img src="https://img.icons8.com/small/30/000000/share.png" alt="share" className="navigation-icons-individual-share"/>
+            <button type="button" data-toggle="modal" data-target="#myModal">
+              <img src="https://img.icons8.com/small/30/000000/share.png" alt="share" className="navigation-icons-individual-share"/>
+            </button> 
             <button type="button" className="navigation-icons-individual-lang" name="es" onClick={this.handleSpanish}>Es</button>
             <button type="button" className="navigation-icons-individual" name="es" onClick={this.handleEnglish}>En</button>
             <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer">
@@ -67,13 +71,14 @@ export default class App extends Component {
           </div>
         </div>
 
+        {/* Mobile Navigation Bar */}
         <div className="navigationMobile navBanner">
           <img src="../assets/main-small.svg" alt="Raiffeisen Logo" className="navigationMobile-mainLogo-small"/>
 
           <input type="checkbox" className="navigationMobile-checkbox" id="navi-toggle"/>
 
           <label htmlFor="navi-toggle" className="navigationMobile-button">
-              <span className="navigationMobile-icon">&nbsp;</span>
+            <span className="navigationMobile-icon">&nbsp;</span>
           </label>
 
           <div className="navigationMobile-background">&nbsp;</div>
@@ -99,6 +104,24 @@ export default class App extends Component {
               <button type="button" className="navigationMobile-lang" name="es" onClick={this.handleEnglish}>En</button>
             </div>
           </nav>
+        </div>
+
+        {/* This is the share modal */}
+        <div className="container"> 
+          <div className="modal fade" id="myModal" role="dialog">
+            <div className="modal-dialog modal-sm">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h4 className="modal-title">Where would you like to share to?</h4>
+                  <button type="button" className="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div className="modal-body">
+                  <p>This is a small modal.</p>
+                </div>
+                  <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
         </div>
         <Slider/>
         <InovationBanner/>
