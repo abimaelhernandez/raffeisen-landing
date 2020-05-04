@@ -1,0 +1,220 @@
+
+.inovation-banner {
+  position: relative;
+  width: 100%;
+  height: 934px;
+  max-height: 90rem;
+  background-color: $inovation-background;
+
+  .circleImage {
+    position: absolute;
+    height: 15vh;
+    left: 14%;
+    top: 26%;
+  }
+
+  .squareImage {
+    position: absolute;
+    height: 15vh;
+    left: 81%;
+    top: 66%;
+    animation: square 2.5s ease-out 3s forwards;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes square {
+    to {
+      left: 19%;
+      top: 54%;
+    }
+  }
+
+
+  &-main-container {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    text-align: center;
+    top: 40%;
+
+    &-title {
+      position: relative;
+      width: 50%;
+      left: 27%;
+      height: auto;
+      font-size: 4.5vw;
+      font-weight: 500;
+      line-height: 1.19;
+      text-align: left;
+      color: $color-white;
+    }
+  }
+
+  &-contentContainer {
+    position: absolute;
+    width: auto;
+    height: auto;
+    text-align: left;
+    top: 28%;
+    left: 32%;
+
+    .dot {
+      position: relative;
+      width: 27.8px;
+      height: 27.8px;
+      right: 5rem;
+      top: 4rem;
+      border-radius: 50%;
+      display: inline-block;
+      background-color: $color-green;
+    }
+
+    &-title {
+      width: 64vw;
+      height: auto;
+      font-size: 4vw;
+      font-weight: 900;
+      position: relative;
+      color: $color-white;
+    }
+
+    p {
+      position: relative;
+      width: 64vw;
+      height: auto;
+      font-size: 1.8vw;
+      line-height: 1.3;
+      text-align: left;
+      margin-bottom: 3rem;
+      color: $color-white;
+    }
+  }
+
+  #mainTitle {
+    animation: mainTittleAnimation 2s ease-out 2.5s forwards;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes mainTittleAnimation {
+    25% {
+      opacity: .7;
+    }
+    50% {
+      opacity: .3;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #content {
+    animation: contentAnimation 2s ease-out 5s forwards;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  @keyframes contentAnimation {
+    1% {
+      opacity: 0;
+    }
+    25% {
+      opacity: .3;
+    }
+    50% {
+      opacity: .7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+// mobile breakpoint
+@media (max-width: 767px){
+  .inovation-banner {
+    height: 100vh;
+    max-height: 80.12rem;
+    background-image: linear-gradient(147deg, #0051a6 7%, #004da2 35%, #004296 63%, #002f82 90%, #002476 103%);
+
+    .circleImage {
+      position: absolute;
+      left: 12%;
+      top: 21%;
+      height: 9rem;
+      width: 9rem;
+    }
+
+    .squareImage {
+      position: absolute;
+      left: 68%;
+      top: 83%;
+      height: 9rem;
+      width: 9rem;
+      animation: squareMobile 2.5s ease-out 3s forwards;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes squareMobile {
+      to {
+        left: 44%;
+        top: 34%;
+      }
+    }
+
+    &-main-container {
+      position: relative;
+      width: 100%;
+      text-align: center;
+
+      &-title {
+        width: 25rem;
+        height: 110px;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1.29;
+        text-align: center;
+        color: $color-white;
+      }
+    }
+  }
+
+
+  #content {
+    display: block;
+    text-align: left;
+    top: 48%;
+    left: 29%;
+
+    .dot {
+      position: relative;
+      width: 13.8px;
+      height: 13.8px;
+      right: 3rem;
+      top: 3rem;
+    }
+
+    &-title {
+      font-size: 20px;
+      font-weight: 900;
+      width: 274.5px;
+      height: 276.8px;
+      font-size: 12px;
+      line-height: 1.83;
+      text-align: left;
+      color: #ffffff;
+    }
+
+    p {
+      position: relative;
+      width: 274.5px;
+      height: 276.8px;
+      font-size: 12px;
+      line-height: 1.83;
+      text-align: left;
+      height: auto;
+      // font-size: 1.8vw;
+      color:  $color-white;
+    }
+  }
+}

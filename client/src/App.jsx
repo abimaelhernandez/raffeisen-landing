@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import '../dist/sass/mains.scss'
 
-import LandingBanner from './components/LandingBanner'
-import Slider from './components/Carousel'
-import Navbar from './components/Navigation'
 import projectBody from './LangData'
+import LandingBanner from './components/LandingBanner'
+import Navbar from './components/Navigation'
+import Slider from './components/Carousel'
+import InovationBanner from './components/Inovation'
 import PageFooter from './components/Footer'
 
 export default class App extends Component {
@@ -100,6 +101,7 @@ export default class App extends Component {
           </nav>
         </div>
         <Slider/>
+        <InovationBanner/>
         <div>
           <Navbar testProp={messages[locale]}/>
         </div>

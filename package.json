@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/index.js",
     "dev": "webpack --config webpack.config.js --watch --mode development",
-    "hot-reload": "webpack-dev-server --open --mode development",
+    "ciDev": "webpack-dev-server --open --mode development",
     "heroku-postbuild": "webpack -p"
   },
   "repository": {
