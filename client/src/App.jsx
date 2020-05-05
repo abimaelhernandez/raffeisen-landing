@@ -124,7 +124,7 @@ export default class App extends Component {
             <div className="modal-dialog modal-sm mt-modal">
               <div className="modal-content">
                 <div className="modal-header">
-                  <h4 className="modal-title">Where would you like to share to?</h4>
+                  <h4 className="modal-title">{messages[locale].shareto}</h4>
                   <button type="button" className="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div className="modal-body d-flex justify-content-around">
