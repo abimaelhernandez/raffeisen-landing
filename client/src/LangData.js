@@ -1,7 +1,6 @@
 const projectBody = {
       en: {
-      greeting: `Hello ! How are you?`,
-      example: 'Example',
+      copyMe: 'Copy Link',
       navigation: {
         inicio: 'Home',
         nosotros: 'About us',
@@ -13,8 +12,7 @@ const projectBody = {
       }
     },
     es: {
-      greeting: '¡Hola! ¿Cómo estás? popop',
-      example: 'ejemplo',
+      copyMe: 'Copia Enlace',
       navigation: {
         inicio: 'Inicio',
         nosotros: 'Nosotros',

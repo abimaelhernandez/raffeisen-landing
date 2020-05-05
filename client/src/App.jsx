@@ -145,7 +145,7 @@ export default class App extends Component {
                     readOnly
                   />
                   <button type="button" onClick={() => this.copyCodeToClipboard()}>
-                    Copy Link
+                    {messages[locale].copyMe}
                   </button>
                 </div>
               </div>
