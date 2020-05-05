@@ -24,13 +24,11 @@ export default class App extends Component {
   handleSpanish = (e) => {
     e.preventDefault()
     this.setState({ locale : 'es'})
-    console.log('in Change :', this.state)
   }
 
   handleEnglish = (e) => {
     e.preventDefault()
     this.setState({ locale : 'en' })
-    console.log('in Change EN :', this.state)
   }
 
   copyCodeToClipboard = () => {
