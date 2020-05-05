@@ -122,13 +122,13 @@ export default class App extends Component {
                   <button type="button" className="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div className="modal-body d-flex justify-content-around">
-                  <FacebookShareButton className="" url="https://infinite-tor-93660.herokuapp.com">
+                  <FacebookShareButton url="https://infinite-tor-93660.herokuapp.com">
                     <FacebookIcon size={32}/>
                   </FacebookShareButton>
-                  <TwitterShareButton className="" title="Learn more about Raiffeisen!" url={window.location.href} hashtags={['Raiffeisen']}>
+                  <TwitterShareButton title="Learn more about Raiffeisen!" url="https://infinite-tor-93660.herokuapp.com" hashtags={['Raiffeisen']}>
                     <TwitterIcon size={32} />
                   </TwitterShareButton>
-                  <WhatsappShareButton className="" title="Learn more about Raiffeisen!" url="https://infinite-tor-93660.herokuapp.com">
+                  <WhatsappShareButton title="Learn more about Raiffeisen!" url="https://infinite-tor-93660.herokuapp.com">
                     <WhatsappIcon size={32} />
                   </WhatsappShareButton>
                 </div>
