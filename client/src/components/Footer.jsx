@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class PageFooter extends Component {
   render() {
     return (
-      <footer className="footer">
+      <footer className="footer" id="contacto">
         <div className="footer-items">
           <img src="../assets/Twitter-white.svg" alt="twitter-logo" className="footer-icons footer-icons-twitter"/>
           <span><a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer">@RaiffeisenLatam</a></span>

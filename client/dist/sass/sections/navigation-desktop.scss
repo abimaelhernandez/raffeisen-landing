@@ -9,6 +9,10 @@
   height: 11.5rem;
   width: 100%;
   z-index: 1;
+  
+  a {
+    color: $color-black-font;
+  }
 
   button {
     background: transparent;
@@ -79,6 +83,10 @@
         }
         height: 2.35rem;
         width: 1.95rem;
+      }
+
+      &-lang {
+        color: $color-black-font;
       }
     }
   }

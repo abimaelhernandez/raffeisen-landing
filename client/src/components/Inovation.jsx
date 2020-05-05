@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function InovationBanner(){
     return (
-      <div className="inovation-banner">
+      <div className="inovation-banner" id="nosotros">
         <img
           className="circleImage"
           src="../../assets/icons/Plus-orange.svg"
