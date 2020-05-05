@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import '../dist/sass/mains.scss'
+import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share'
+import FacebookIcon from 'react-share/lib/FacebookIcon'
+import TwitterIcon from 'react-share/lib/TwitterIcon'
+import WhatsappIcon from 'react-share/lib/WhatsappIcon'
 
 import projectBody from './LangData'
 import LandingBanner from './components/LandingBanner'
@@ -115,14 +119,22 @@ export default class App extends Component {
                   <h4 className="modal-title">Where would you like to share to?</h4>
                   <button type="button" className="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div className="modal-body">
-                  <p>This is a small modal.</p>
+                <div className="modal-body text-center">
+                  <FacebookShareButton className="mx-3" url="https://infinite-tor-93660.herokuapp.com">
+                    <FacebookIcon size={32}/>
+                  </FacebookShareButton>
+                  <TwitterShareButton className="mx-3" title="Learn more about Raiffeisen!" url={window.location.href} hashtags={['Raiffeisen']}>
+                    <TwitterIcon size={32} />
+                  </TwitterShareButton>
+                  <WhatsappShareButton className="mx-3" title="Learn more about Raiffeisen!" url="https://infinite-tor-93660.herokuapp.com">
+                    <WhatsappIcon size={32} />
+                  </WhatsappShareButton>
                 </div>
-                  <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
         </div>
+
         <Slider/>
         <InovationBanner/>
         <div>
