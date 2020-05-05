@@ -100,10 +100,12 @@ export default class App extends Component {
             </ul>
 
             <div className="navigationMobile-bottom">
+            <button type="button" data-toggle="modal" data-target="#myModal">
               <img src="https://img.icons8.com/small/30/000000/share.png" alt="share" className="navigation-icons-individual-share"/>
-              <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer">
-                <img src="../assets/Twitter-white.svg" alt="Twitter" className="navigation-icons-individual-twitter"/>
-              </a>
+            </button> 
+            <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer">
+              <img src="../assets/Twitter-white.svg" alt="Twitter" className="navigation-icons-individual-twitter"/>
+            </a>
               <button type="button" className="navigationMobile-lang" name="es" onClick={this.handleSpanish}>Es</button>
               <button type="button" className="navigationMobile-lang" name="es" onClick={this.handleEnglish}>En</button>
             </div>
@@ -113,20 +115,20 @@ export default class App extends Component {
         {/* This is the share modal */}
         <div className="container"> 
           <div className="modal fade" id="myModal" role="dialog">
-            <div className="modal-dialog modal-sm">
+            <div className="modal-dialog modal-sm mt-modal">
               <div className="modal-content">
                 <div className="modal-header">
                   <h4 className="modal-title">Where would you like to share to?</h4>
                   <button type="button" className="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div className="modal-body text-center">
-                  <FacebookShareButton className="mx-3" url="https://infinite-tor-93660.herokuapp.com">
+                <div className="modal-body d-flex justify-content-around">
+                  <FacebookShareButton className="" url="https://infinite-tor-93660.herokuapp.com">
                     <FacebookIcon size={32}/>
                   </FacebookShareButton>
-                  <TwitterShareButton className="mx-3" title="Learn more about Raiffeisen!" url={window.location.href} hashtags={['Raiffeisen']}>
+                  <TwitterShareButton className="" title="Learn more about Raiffeisen!" url={window.location.href} hashtags={['Raiffeisen']}>
                     <TwitterIcon size={32} />
                   </TwitterShareButton>
-                  <WhatsappShareButton className="mx-3" title="Learn more about Raiffeisen!" url="https://infinite-tor-93660.herokuapp.com">
+                  <WhatsappShareButton className="" title="Learn more about Raiffeisen!" url="https://infinite-tor-93660.herokuapp.com">
                     <WhatsappIcon size={32} />
                   </WhatsappShareButton>
                 </div>
