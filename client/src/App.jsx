@@ -33,6 +33,12 @@ export default class App extends Component {
     console.log('in Change EN :', this.state)
   }
 
+  copyCodeToClipboard = () => {
+    const el = this.textArea
+    el.select()
+    document.execCommand('copy')
+  }
+
   render(){
     const { locale, messages } = this.state
     return (
@@ -122,7 +128,7 @@ export default class App extends Component {
                   <button type="button" className="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div className="modal-body d-flex justify-content-around">
-                  <FacebookShareButton url="https://infinite-tor-93660.herokuapp.com">
+                  <FacebookShareButton quote="Learn more about Raiffeisen! #Raiffeisen" url="https://infinite-tor-93660.herokuapp.com">
                     <FacebookIcon size={32}/>
                   </FacebookShareButton>
                   <TwitterShareButton title="Learn more about Raiffeisen!" url="https://infinite-tor-93660.herokuapp.com" hashtags={['Raiffeisen']}>
@@ -131,6 +137,16 @@ export default class App extends Component {
                   <WhatsappShareButton title="Learn more about Raiffeisen!" url="https://infinite-tor-93660.herokuapp.com">
                     <WhatsappIcon size={32} />
                   </WhatsappShareButton>
+                </div>
+                <div className="footer-modal">
+                  <input
+                    ref={textarea => {this.textArea = textarea}}
+                    value="https://infinite-tor-93660.herokuapp.com"
+                    readOnly
+                  />
+                  <button type="button" onClick={() => this.copyCodeToClipboard()}>
+                    Copy Link
+                  </button>
                 </div>
               </div>
             </div>

@@ -85,3 +85,16 @@
       display: none;
   }
 }
+
+.mt-modal {
+  margin-top: 40vh;
+}
+
+.footer-modal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: .75rem;
+  border-top: 1px solid $color-grey-light;
+}
