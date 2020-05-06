@@ -1,8 +1,3 @@
-<!-----------------------------------------------------------------------------•
-| 🔵 DO: Include relevant Jira issue key(s) in title.                          |
-| 🔵 DO: use the Draft Pull Request functionality for WIP PRs                  |
-•------------------------------------------------------------------------------>
-
 # Summary <!-- 📍REQUIRED -->
 
 <!-- High-level description of what this PR does. ----------------------------->
@@ -42,25 +37,4 @@
 | 🔵 DO: Explain what needs testing.                                           |
 | 🔵 DO: Explain how it should be tested, if necessary.                        |
 | 🔵 DO: List all necessary steps to run this branch, such as db operations.   |
-•------------------------------------------------------------------------------>
-
-<!--
-🖥 Screenshots
---------------------------------------------------------------------------------
-<!-- Include only if there are noteworthy changes to the UI. ------------------>
-
-<!-----------------------------------------------------------------------------•
-| PULL REQUEST REQUIREMENTS                                                    |
-| =============================================================================|
-|                                                                              |
-| When applicable, this project requires that each PR fulfills the following:  |
-|                                                                              |
-| * Unit tests have been created/modified                                      |
-| * End-to-end tests have been created/modified                                |
-| * IE11 has been tested when modifying styles                                 |
-|                                                                              |
-|                                                                              |
-| For Draft PRs, you are responsible for marking them as Ready to Review       |
-| when your work is done.                                                      |
-|                                                                              |
 •------------------------------------------------------------------------------>

@@ -1,7 +1,7 @@
 const projectBody = {
       en: {
-      greeting: `Hello ! How are you?`,
-      example: 'Example',
+      copyMe: 'Copy Link',
+      shareTo: 'To where would you like to share?',
       navigation: {
         inicio: 'Home',
         nosotros: 'About us',
@@ -13,8 +13,8 @@ const projectBody = {
       }
     },
     es: {
-      greeting: '¡Hola! ¿Cómo estás? popop',
-      example: 'ejemplo',
+      copyMe: 'Copia Enlace',
+      shareTo: '¿A donde quisieras compartirme?',
       navigation: {
         inicio: 'Inicio',
         nosotros: 'Nosotros',

@@ -1,4 +1,6 @@
 .navigation {
+  font-size: 1.65rem;
+  font-family: Avenir-Roman;
   background-color: $color-grey;
   display: flex;
   align-items: center;
@@ -7,6 +9,10 @@
   height: 11.5rem;
   width: 100%;
   z-index: 1;
+  
+  a {
+    color: $color-black-font;
+  }
 
   button {
     background: transparent;
@@ -78,10 +84,31 @@
         height: 2.35rem;
         width: 1.95rem;
       }
+
+      &-lang {
+        color: $color-black-font;
+      }
     }
   }
 
   @media(max-width: 767px) {
       display: none;
   }
+}
+
+.mt-modal {
+  margin-top: 40vh;
+}
+
+.footer-modal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: .75rem;
+  border-top: 1px solid $color-grey-light;
+}
+
+.defaultFont {
+  font-size: 1.6rem;
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Slider(){
     return (
-      <div className="slider-container">
+      <div className="slider-container" id="inicio">
         <video className="slider-container-webVideo" autoPlay muted loop>
           <source src="../../assets/desk.mp4" type="video/mp4" />
             Your browser does not support HTML5 video.
