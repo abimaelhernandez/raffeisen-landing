@@ -129,8 +129,8 @@ export default class App extends Component {
                     <WhatsappIcon size={32} />
                   </WhatsappShareButton>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" className="btn btn-default defaultFont" data-dismiss="modal">Close</button>
+                <div className="modal-footer justify-content-center">
+                  <button type="button" className="btn btn-secondary btn-sm defaultFont" data-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
