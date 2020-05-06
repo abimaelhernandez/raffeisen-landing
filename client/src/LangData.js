@@ -1,7 +1,7 @@
 const projectBody = {
       en: {
       copyMe: 'Copy Link',
-      shareto: 'To where would you like to share?',
+      shareTo: 'To where would you like to share?',
       navigation: {
         inicio: 'Home',
         nosotros: 'About us',
@@ -14,7 +14,7 @@ const projectBody = {
     },
     es: {
       copyMe: 'Copia Enlace',
-      shareto: '¿A donde quisieras compartirme?',
+      shareTo: '¿A donde quisieras compartirme?',
       navigation: {
         inicio: 'Inicio',
         nosotros: 'Nosotros',

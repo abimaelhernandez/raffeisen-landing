@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../dist/sass/mains.scss'
+
 import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share'
 import FacebookIcon from 'react-share/lib/FacebookIcon'
 import TwitterIcon from 'react-share/lib/TwitterIcon'
@@ -11,6 +11,8 @@ import Navbar from './components/Navigation'
 import Slider from './components/Carousel'
 import InovationBanner from './components/Inovation'
 import PageFooter from './components/Footer'
+
+import '../dist/sass/mains.scss'
 
 export default class App extends Component {
   constructor(){
@@ -31,19 +33,12 @@ export default class App extends Component {
     this.setState({ locale : 'en' })
   }
 
-  copyCodeToClipboard = () => {
-    const el = this.textArea
-    el.select()
-    document.execCommand('copy')
-  }
-
   render(){
     const { locale, messages } = this.state
     return (
       <div>
         <LandingBanner/>
 
-        {/* Desktop Navigation Bar */}
         <div className="navigation">
           <div className="navigation-mainLogo">
             <img src="../assets/logo-main.svg" alt="Main Logo" className="navigation-mainLogo-large"/>
@@ -79,7 +74,6 @@ export default class App extends Component {
           </div>
         </div>
 
-        {/* Mobile Navigation Bar */}
         <div className="navigationMobile navBanner">
           <img src="../assets/main-small.svg" alt="Raiffeisen Logo" className="navigationMobile-mainLogo-small"/>
 
@@ -116,13 +110,12 @@ export default class App extends Component {
           </nav>
         </div>
 
-        {/* This is the share modal */}
         <div className="container"> 
           <div className="modal fade" id="myModal" role="dialog">
             <div className="modal-dialog modal-sm mt-modal">
               <div className="modal-content">
                 <div className="modal-header">
-                  <h4 className="modal-title">{messages[locale].shareto}</h4>
+                  <h4 className="modal-title">{messages[locale].shareTo}</h4>
                   <button type="button" className="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div className="modal-body d-flex justify-content-around">
@@ -136,15 +129,8 @@ export default class App extends Component {
                     <WhatsappIcon size={32} />
                   </WhatsappShareButton>
                 </div>
-                <div className="footer-modal">
-                  <input
-                    ref={textarea => {this.textArea = textarea}}
-                    value="https://infinite-tor-93660.herokuapp.com"
-                    readOnly
-                  />
-                  <button type="button" onClick={() => this.copyCodeToClipboard()}>
-                    {messages[locale].copyMe}
-                  </button>
+                <div class="modal-footer">
+                  <button type="button" className="btn btn-default defaultFont" data-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
