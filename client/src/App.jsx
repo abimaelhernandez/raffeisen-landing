@@ -10,6 +10,7 @@ import LandingBanner from './components/LandingBanner'
 import Navbar from './components/Navigation'
 import Slider from './components/Carousel'
 import InovationBanner from './components/Inovation'
+import Servicios from './components/Servicios'
 import PageFooter from './components/Footer'
 
 import '../dist/sass/mains.scss'
@@ -65,7 +66,7 @@ export default class App extends Component {
             <button type="button"className="navigation-items-item"><a href="#contacto">{messages[locale].navigation.contacto}</a></button>
             <button type="button" data-toggle="modal" data-target="#myModal">
               <img src="https://img.icons8.com/small/30/000000/share.png" alt="share" className="navigation-icons-individual-share"/>
-            </button> 
+            </button>
             <button type="button" className="navigation-icons-individual-lang" name="es" onClick={this.handleSpanish}>Es</button>
             <button type="button" className="navigation-icons-individual-lang" name="es" onClick={this.handleEnglish}>En</button>
             <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer">
@@ -100,7 +101,7 @@ export default class App extends Component {
             <div className="navigationMobile-bottom">
             <button type="button" data-toggle="modal" data-target="#myModal">
               <img src="https://img.icons8.com/small/30/000000/share.png" alt="share" className="navigation-icons-individual-share"/>
-            </button> 
+            </button>
             <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer">
               <img src="../assets/Twitter-white.svg" alt="Twitter" className="navigation-icons-individual-twitter"/>
             </a>
@@ -110,7 +111,7 @@ export default class App extends Component {
           </nav>
         </div>
 
-        <div className="container"> 
+        <div className="container">
           <div className="modal fade" id="myModal" role="dialog">
             <div className="modal-dialog modal-sm mt-modal">
               <div className="modal-content">
@@ -136,9 +137,9 @@ export default class App extends Component {
             </div>
           </div>
         </div>
-
         <Slider/>
         <InovationBanner/>
+        <Servicios/>
         <Navbar testProp={messages[locale]}/>
         <PageFooter/>
       </div>

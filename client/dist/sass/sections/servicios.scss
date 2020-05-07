@@ -1,0 +1,34 @@
+
+.servicios-parent {
+  position: relative;
+  width: 100%;
+  height:654px;
+  border: solid 3px red;
+
+  &-child-container {
+    border: solid 1px orange;
+    display: flex;
+
+    &-item {
+      border: solid 1px green;
+      height: inherit;
+
+      &-img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &-logo-container {
+        position: relative;
+        height: auto;
+        bottom: 27%;
+        text-align: center;
+
+        &-asset {
+          height: 60px;
+          border: solid 3px purple;
+        }
+      }
+    }
+  }
+}
