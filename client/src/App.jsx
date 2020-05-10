@@ -36,6 +36,7 @@ export default class App extends Component {
 
   render(){
     const { locale, messages } = this.state
+    console.log('aPP : ', messages[locale].servicesObject)
     return (
       <div>
         <LandingBanner/>
@@ -139,7 +140,7 @@ export default class App extends Component {
         </div>
         <Slider/>
         <InovationBanner/>
-        <Servicios/>
+        <Servicios serviceObj={messages[locale].servicesObject}/>
         <Navbar testProp={messages[locale]}/>
         <PageFooter/>
       </div>

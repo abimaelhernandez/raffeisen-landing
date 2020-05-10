@@ -5,13 +5,27 @@
   height:654px;
   border: solid 3px red;
 
-  &-child-container {
+  &-title {
+    padding: 2rem 0 0 2rem;
+    position: absolute;
+    width: 221.2px;
+    height: 62px;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.01;
+    text-align: left;
+    color: #ffffff;
+  }
+
+  &-container {
     border: solid 1px orange;
     display: flex;
+    height: 100%;
 
     &-item {
       border: solid 1px green;
       height: inherit;
+      overflow: hidden;
 
       &-img {
         width: 100%;
