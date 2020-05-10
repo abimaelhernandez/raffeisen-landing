@@ -6,6 +6,16 @@
   height: auto;
   border: solid green 3px;
   display: flex;
+  background-color: brown;
+
+  button {
+    z-index: 500;
+    
+    span {
+      font-size: 5rem;
+      border: solid 2px $color-green;
+    }
+  }
 
   &-close-button {
     position:absolute;
@@ -22,6 +32,6 @@
   }
 
   &-info-container {
-
+     width: 50%;
   }
 }
