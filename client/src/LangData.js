@@ -15,19 +15,22 @@ const projectBody = {
         id: 1,
         imageBackground: '../../assets/servicios_light_bulm_full.jpg',
         icon: '../assets/icons/Consultoria.svg',
-        button:'Know more'
+        button:'Know more',
+        alt: 'Consulting'
       },
       {
         id: 2,
         imageBackground: '../../assets/servicios_chalk_board.jpg',
         icon: '../assets/icons/Analitica.svg',
-        button:'Know more'
+        button:'Know more',
+        alt: 'Analitics'
       },
       {
         id: 3,
         imageBackground: '../../assets/servicios_wooden_stair.jpg',
         icon: '../assets/icons/Capacitacion.svg',
-        button:'Know more'
+        button:'Know more',
+        alt: 'Training'
       }
     ]
   },
@@ -46,20 +49,23 @@ const projectBody = {
       {
         id: 1,
         imageBackground: '../../assets/servicios_light_bulm_full.jpg',
-        icon: '',
-        button:'CONOCE MAS'
+        icon: '../assets/icons/Consultoria.svg',
+        button:'CONOCE MAS',
+        alt:'Consultoria'
       },
       {
         id: 2,
         imageBackground: '../../assets/servicios_chalk_board.jpg',
-        icon: '',
-        button:'CONOCE MAS'
+        icon: '../assets/icons/Analitica.svg',
+        button:'CONOCE MAS',
+        alt:'Analitica'
       },
       {
         id: 3,
         imageBackground: '../../assets/servicios_wooden_stair.jpg',
-        icon: '',
-        button:'CONOCE MAS'
+        icon: '../assets/icons/Capacitacion.svg',
+        button:'CONOCE MAS',
+        alt:'Capacitacion'
       }
     ]
   }

@@ -2,44 +2,35 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 export default class Servicios extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      example: 'examople this mff'
-    }
-  }
 
-  clickHandler = () => {
-    const {serviceObj} = this.props
-  console.log('youve cliked Me toggler ', serviceObj)
+  clickHandler = (item) => {
+  console.log('Item youve clicked', item)
  }
 
   render(){
-    const { example } = this.state
+    const { serviceObj } = this.props
     return (
       <div className="servicios-parent">
-        <div> {example }</div>
         <div className="servicios-parent-container">
-          <div className="servicios-parent-container-item">
-
-            <img
-              className="servicios-parent-container-item-img"
-              src="../../assets/servicios_light_bulm_full.jpg"
-              alt="no hello"/>
-
-            <div className="servicios-parent-container-item-logo-container">
+          {serviceObj.map((item) =>
+            <div className="servicios-parent-container-item" key={item.id}>
               <img
-                className="servicios-parent-container-item-logo-container-asset"
-                src="../assets/icons/Consultoria.svg"
-                alt="Consultoria"/>
-              <div className="clickHandler">
-                <button type="button" onClick={this.clickHandler}>
-                  click me
-                </button>
+                className="servicios-parent-container-item-img"
+                src={item.imageBackground}
+                alt="no hello"/>
+              <div className="servicios-parent-container-item-logo-container">
+                <img
+                  className="servicios-parent-container-item-logo-container-asset"
+                  src={item.icon}
+                  alt="Consultoria"/>
+                <div className="clickHandler">
+                  <button type="button" onClick={this.clickHandler.bind(this, item.id)}>
+                    {item.button}
+                  </button>
+                </div>
               </div>
             </div>
-
-          </div>
+          )}
         </div>
       </div>
     )
