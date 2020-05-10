@@ -16,11 +16,21 @@ export default class Servicios extends Component {
   this.setState({ hasBeenClicked: true})
  }
 
+ resetProps = (childValue) => {
+   if (childValue) {
+     console.log('childValue Parent is True ', childValue)
+     this.setState({hasBeenClicked: false, clickedId: 0})
+   }
+ }
+
   render(){
     const { clickedId , hasBeenClicked} = this.state
     const { serviceObj } = this.props
-    if (hasBeenClicked) {
-      return <ServicesSlider pasedObj={serviceObj} clickedId={clickedId}/>
+    if (hasBeenClicked && clickedId ) {
+      return <ServicesSlider
+              pasedObj={serviceObj}
+              clickedId={clickedId}
+              resetProps={this.resetProps}/>
     }
     return (
       <div className="servicios-parent">

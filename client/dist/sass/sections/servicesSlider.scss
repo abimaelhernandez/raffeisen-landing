@@ -7,6 +7,16 @@
   border: solid green 3px;
   display: flex;
 
+  &-close-button {
+    position:absolute;
+    right: 0px;
+    width: 30px;
+    top:30%;
+    height: 30px;
+    text-align: center;
+    border: solid green 3px;
+  }
+
   &-img {
    width: 50%;
   }

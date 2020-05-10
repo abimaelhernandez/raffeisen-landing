@@ -20,11 +20,24 @@ export default class ServicesSlider extends Component {
       this.setState({ centerItem: objOfSelected})
   }
 
+  closeSliderView = () => {
+    const {resetProps} = this.props
+    resetProps(true)
+    console.log('should clear data and close slider view', this.props)
+  }
+
   render(){
     const {centerItem} = this.state
     console.log('props passed to child :', centerItem)
     return (
       <div className="servicesSlider-parent">
+        <button
+          type="button"
+          className="close servicesSlider-parent-close-button"
+          aria-label="Close"
+          onClick={this.closeSliderView}>
+          <span aria-hidden="true">&times;</span>
+        </button>
         <img className="servicesSlider-parent-img" alt="..." src={centerItem.imageBackground}/>
         <div className="servicesSlider-parent-info-container">
          <p>{centerItem.mainParahraph}</p>
@@ -37,5 +50,5 @@ export default class ServicesSlider extends Component {
 
 ServicesSlider.propTypes = {
   pasedObj: PropTypes.instanceOf(Object),
-  clickedId:  PropTypes.number
+  clickedId:  PropTypes.number,
 }
