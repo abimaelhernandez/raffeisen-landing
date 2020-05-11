@@ -28,7 +28,7 @@ export default class Servicios extends Component {
     const { serviceObj } = this.props
     if (hasBeenClicked && clickedId ) {
       return <ServicesSlider
-              pasedObj={serviceObj}
+              passedObj={serviceObj}
               clickedId={clickedId}
               resetProps={this.resetProps}/>
     }

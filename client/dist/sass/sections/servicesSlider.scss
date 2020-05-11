@@ -8,9 +8,13 @@
   display: flex;
   background-color: brown;
 
+  #carouselExampleIndicators{
+
+  }
+
   button {
     z-index: 500;
-    
+
     span {
       font-size: 5rem;
       border: solid 2px $color-green;
@@ -27,11 +31,4 @@
     border: solid green 3px;
   }
 
-  &-img {
-   width: 50%;
-  }
-
-  &-info-container {
-     width: 50%;
-  }
 }

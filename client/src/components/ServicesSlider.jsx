@@ -6,40 +6,32 @@ export default class ServicesSlider extends Component {
   constructor() {
     super()
     this.state = {
-      centerItem: {},
-      rightItem: {}
+      centerItem: {}
     }
   }
 
   componentDidMount() {
-    const {clickedId, pasedObj} = this.props
-    this.getClickedId(clickedId, pasedObj)
+    // const {clickedId} = this.props
   }
 
-  getClickedId = (clickedId, passedObj) => {
-    const objLength = clickedId && Object.keys(passedObj).length
-
-    const centerObj = clickedId && passedObj.find(obj => obj.id === clickedId)
-
-    const goRight = clickedId === objLength
-     ? passedObj.find(obj => obj.id === clickedId)
-     : passedObj.find(obj => obj.id === clickedId + 1)
-
-    console.log('Clicked', clickedId, clickedId -1)
-      this.setState({
-        centerItem: centerObj,
-        rightItem: goRight
-      })
-
-  }
 
   closeSliderView = () => {
     const {resetProps} = this.props
     resetProps(true)
   }
 
+  getActive = (item) => {
+    const {clickedId} = this.props
+    console.log('Clicked', clickedId, item)
+    if(clickedId === item.id){
+      return true
+    }
+    return false
+  }
+
   render(){
-    const {centerItem, rightItem} = this.state
+    const {centerItem} = this.state
+    const {passedObj} = this.props
     console.log('props passed to child :', centerItem)
     return (
       <div className="servicesSlider-parent">
@@ -50,47 +42,36 @@ export default class ServicesSlider extends Component {
           onClick={this.closeSliderView}>
           <span aria-hidden="true">&times;</span>
         </button>
-        <div
-          id="carouselExampleIndicators"
-          className="carousel slide"
-          data-ride="carousel"
-        >
+        <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
           <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img className="servicesSlider-parent-img" alt="..." src={centerItem.imageBackground}/>
-              <div className="servicesSlider-parent-info-container">
-               <p>{centerItem.mainParahraph}</p>
-               <p>{centerItem.secondaryParagraph}</p>
+            { passedObj.map((item) =>
+              <div className={`carousel-item ${this.getActive(item) ? 'active': ''}`}>
+               <img src={item.imageBackground} className="d-block w-50" alt="..."/>
+                <div className="carousel-caption d-none d-md-block">
+                  <p>{item.mainParahraph}</p>
+                </div>
               </div>
-            </div>
-
-            <div className="carousel-item">
-              <img className="servicesSlider-parent-img" alt="..." src={rightItem.imageBackground}/>
-              <div className="servicesSlider-parent-info-container">
-               <p>{rightItem.mainParahraph}</p>
-               <p>{rightItem.secondaryParagraph}</p>
-              </div>
-            </div>
+            )}
           </div>
-          <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="sr-only">Previous</span>
           </a>
-          <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="sr-only">Next</span>
           </a>
         </div>
+
       </div>
     )
   }
 }
 
 ServicesSlider.propTypes = {
-  pasedObj: PropTypes.instanceOf(Object),
   clickedId:  PropTypes.number,
 }
-
+// passedObj: PropTypes.instanceOf(Object),
 
 
 // <div className="carousel-item">
