@@ -69,7 +69,7 @@ export default class ServicesSlider extends Component {
 }
 
 ServicesSlider.propTypes = {
-  clickedId:  PropTypes.number,
+  clickedId:  PropTypes.number
 }
 // passedObj: PropTypes.instanceOf(Object),
 
