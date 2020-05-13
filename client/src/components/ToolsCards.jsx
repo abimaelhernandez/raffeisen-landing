@@ -19,15 +19,26 @@ componentDidMount() {
   
 clickHandler = (item) => {
   // const { clickedId } = this.state
-  this.setState({ hasBeenClicked: true })
+  this.setState({ clickedId: item, hasBeenClicked: true })
   console.log(item, 'I am clicked id')
-} 
+}
+
+resetProps = (value) => {
+  if (value) {
+    this.setState({ clickedId: 0, hasBeenClicked: false })
+  }
+  console.log('props cleaned from child', value)
+}
 
   render() {
     const { toolsObject } = this.props
     const { clickedId, hasBeenClicked } = this.state
     if (hasBeenClicked) {
-      return <ToolsSlider/>
+      return <ToolsSlider
+              toolsObject={toolsObject}
+              clickedId={clickedId}
+              resetProps={this.resetProps}
+              />
     }
     return (
       <div className="tools-parent">
