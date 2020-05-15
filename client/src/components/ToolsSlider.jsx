@@ -11,7 +11,6 @@ export default class ToolsSlider extends Component {
 
   getActive = (item) => {
     const { clickedId } = this.props
-    console.log('Cliked', clickedId, item)
     if(clickedId === item.id){
       return true
     }
@@ -19,14 +18,11 @@ export default class ToolsSlider extends Component {
   }
 
   render(){
-    const { clickedId, toolsObject } = this.props
-    console.log(clickedId, 'i amd clicked in child')
-    console.log('I am the props in child', this.props)
+    const { toolsObject } = this.props
     
     return (
       <div className="tools-slider">
-        <button type="button" onClick={this.closeSlider}>Close me</button>
-        {toolsObject[0].mainTitle}
+        <span role="button" tabIndex={0} onClick={this.closeSlider} onKeyDown={this.closeSlider}>Close me</span>
         <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
           <div className="carousel-inner">
             { toolsObject.map((item) =>

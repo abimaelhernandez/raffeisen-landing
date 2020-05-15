@@ -1,35 +1,70 @@
-.tools-parent {
+.toolsParent {
+  background-color: aquamarine;
   position: relative;
-  height: 40rem;
+  height: 100vh;
   width: 100%;
 
-  .cards-container {
+  .fontSize {
+    font-size: 3rem;
+  }
+
+  &-header {
+    padding-top: 5vh;
+    margin-left: 10vw;
+    width: 80%;
+
+    &-title {
+
+      h1 {
+        color: $color-blue-dark;
+        font-size: 5.13rem;
+      }
+    }
+
+    &-subText {
+      margin-top: 4rem;
+      font-size: 3rem;
+    }
+  }
+
+  &-cards {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     width: 100%;
-    //grid-gap: 1em;
-
-    span {
-      height: 3rem;
-      width: 3rem;
-      font-size: 3.2rem;
-      background-color: $color-white;
-      border-radius: 50%;
-    }
+    grid-gap: 1em;
     
-    .card {
-      font-size:  3.161222339304531vh;
+    &-card {
+      //padding: 3vh;
+      font-size: 3.16vh;
       font-weight: 500;
-      height: 32.9rem;
+      height: 30vh;
       //margin: 3.4rem;
       width: 100%;
-      background-color: coral;
+      
+      &-content {
+        position: relative;
+        width: 100%;
+        //margin-top: 15%;
 
-      p {
-        display: grid;
+        &-openButton {
+          
+          span {
+            height: 3rem;
+            width: 3rem;
+            background-color: $color-white;
+            border-radius: 50%;
+            font-size: 3.2rem;
+
+          }
+        }
+
+        &-title {
+          font-size: 3rem;
+        }
       }
     }
-  }
+    }
+
 
   @media(max-width: 767px) {
     display: none;
