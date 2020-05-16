@@ -14,6 +14,13 @@
       .carousel-item{
         min-height: 30rem;
         max-height: 60rem;
+        left: 25%;
+        width: 50%;
+
+        span {
+          position: relative;
+          left: 50%
+        }
       }
     }
   }
