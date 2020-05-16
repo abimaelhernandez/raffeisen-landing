@@ -42,9 +42,7 @@ resetProps = (value) => {
           {toolsObject.map((item) => 
             <div key={item.id} className="toolsParent-cards-card">
               <div className="toolsParent-cards-card-content" style={{ background: item.backgroundColor }}>
-                <div
-                  className="toolsParent-cards-card-content-openButton"
-                >
+                <div className="toolsParent-cards-card-content-openButton">
                   <span 
                     role="button" 
                     tabIndex={0} 

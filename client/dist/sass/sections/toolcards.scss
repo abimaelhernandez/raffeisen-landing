@@ -1,7 +1,7 @@
 .toolsParent {
-  background-color: aquamarine;
+  //background-color: aquamarine;
   position: relative;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 
   .fontSize {
@@ -10,7 +10,7 @@
 
   &-header {
     padding-top: 5vh;
-    margin-left: 10vw;
+    margin-left: 9.5rem;
     width: 80%;
 
     &-title {
@@ -34,32 +34,33 @@
     grid-gap: 1em;
     
     &-card {
-      //padding: 3vh;
       font-size: 3.16vh;
       font-weight: 500;
       height: 30vh;
-      //margin: 3.4rem;
       width: 100%;
       
       &-content {
         position: relative;
+        height: 100%;
         width: 100%;
         //margin-top: 15%;
 
         &-openButton {
+         // color: $color-white;
           
           span {
             height: 3rem;
             width: 3rem;
             background-color: $color-white;
+            opacity: 0.3;
             border-radius: 50%;
             font-size: 3.2rem;
-
           }
         }
 
         &-title {
-          font-size: 3rem;
+          font-size: 3vw;
+          color: $color-white;
         }
       }
     }

@@ -58,61 +58,61 @@ const projectBody = {
       {
         id: 1,
         mainTitle: 'Strategic planning',
-        boydContent: 'It is based on the Balanced Scorecard methodology that facilitates the design and monitoring of strategic and operational planning. It allows documenting and systematizing the planning process, defining the goals and measurement indicators of the objectives and strategies, and promoting the culture of constant monitoring.',
+        bodyContent: 'It is based on the Balanced Scorecard methodology that facilitates the design and monitoring of strategic and operational planning. It allows documenting and systematizing the planning process, defining the goals and measurement indicators of the objectives and strategies, and promoting the culture of constant monitoring.',
         backgroundColor: '#68b4d6'
       },
       {
         id: 2,
         mainTitle: 'Early Warning System',
-        boydContent: 'A system with parameters that allow monitoring the financial situation of the evaluated / supervised entities, through the analysis of financial indicators incorporating signaling system.',
+        bodyContent: 'A system with parameters that allow monitoring the financial situation of the evaluated / supervised entities, through the analysis of financial indicators incorporating signaling system.',
         backgroundColor: '#87c3de'
       },
       {
         id: 3,
         mainTitle: 'Social Balance',
-        boydContent: 'Seeks to make the fulfillment of the organization\'s social role visible by evaluating a set of signalized indicators. It fosters the creation of social responsibility goals and generates a technical report evaluating the compliance with the principles analyzed. It allows adaptation to any type to evaluation methodology.',
+        bodyContent: 'Seeks to make the fulfillment of the organization\'s social role visible by evaluating a set of signalized indicators. It fosters the creation of social responsibility goals and generates a technical report evaluating the compliance with the principles analyzed. It allows adaptation to any type to evaluation methodology.',
         backgroundColor: '#96cae2'
       },
       {
         id: 4,
         mainTitle: 'Measurement of Credit Risk',
-        boydContent: 'It quantifies the risk a credit portfolio is exposed to due to changes in credit operations behavior. Utilizing the database of current loans, expected and unexpected losses are calculated (the Value at Risk) under a model of transition matrices and probability of loss.',
+        bodyContent: 'It quantifies the risk a credit portfolio is exposed to due to changes in credit operations behavior. Utilizing the database of current loans, expected and unexpected losses are calculated (the Value at Risk) under a model of transition matrices and probability of loss.',
         backgroundColor: '#a5d2e6'
       },
       {
         id: 5,
         mainTitle: 'Rural Microscore',
-        boydContent: 'It evaluates the main agricultural and / or livestock products with an expert score supported by profile variables, productive activity, capacity and payment behavior in accordance with the policies and risk levels of each financial institution.',
+        bodyContent: 'It evaluates the main agricultural and / or livestock products with an expert score supported by profile variables, productive activity, capacity and payment behavior in accordance with the policies and risk levels of each financial institution.',
         backgroundColor: '#b4d9ea'
       },
       {
         id: 6,
         mainTitle: 'Financial planning',
-        boydContent: 'It facilitates the development of a financial plan and budget through forecasts based on past data. It allows documenting budgetary spreadsheets, controlling resources and monitoring compliance with the plan.',
+        bodyContent: 'It facilitates the development of a financial plan and budget through forecasts based on past data. It allows documenting budgetary spreadsheets, controlling resources and monitoring compliance with the plan.',
         backgroundColor: '#82ce60'
       },
       {
         id: 7,
         mainTitle: 'Internal Control',
-        boydContent: 'Evaluation of internal control allowing the correction and improvement of different aspects where necessary.  It applies COSO-based questionnaires with parameters that can adapted to any other evaluation methodology.',
+        bodyContent: 'Evaluation of internal control allowing the correction and improvement of different aspects where necessary.  It applies COSO-based questionnaires with parameters that can adapted to any other evaluation methodology.',
         backgroundColor: '#9bd77f'
       },
       {
         id: 8,
         mainTitle: 'Costs and Profitability',
-        boydContent: 'Determines the profitability of products and services, guides the analysis of cost coverage and the definition of rates. It incorporates methodology that assigns costs by offices, departments, products and services, promoting the efficient management of resources.',
+        bodyContent: 'Determines the profitability of products and services, guides the analysis of cost coverage and the definition of rates. It incorporates methodology that assigns costs by offices, departments, products and services, promoting the efficient management of resources.',
         backgroundColor: '#a7dc8f'
       },
       {
         id: 9,
         mainTitle: 'Microscore 4.0',
-        boydContent: 'It constructs a score on the basis of variables assessing profile, capacity and payment behavior, determined by the financial institution in accordance with its policies and risk levels. It supports the mitigation of credit risk and compliance with the microcredit methodology.',
+        bodyContent: 'It constructs a score on the basis of variables assessing profile, capacity and payment behavior, determined by the financial institution in accordance with its policies and risk levels. It supports the mitigation of credit risk and compliance with the microcredit methodology.',
         backgroundColor: '#b4e19f'
       },
       {
         id: 10,
         mainTitle: 'Corporate Audit',
-        boydContent: 'A computer system to support planning, execution and applicable monitoring in internal and external audits and supervision of financial institutions.',
+        bodyContent: 'A computer system to support planning, execution and applicable monitoring in internal and external audits and supervision of financial institutions.',
         backgroundColor: '#c0e6af'
       }
     ]
@@ -176,61 +176,61 @@ const projectBody = {
       {
         id: 1,
         mainTitle: 'Planificación estratégica',
-        boydContent: 'Se fundamentada en el cuadro de mando integral que facilita el diseño y seguimiento de la planificación estratégica y operativa. Permite documentar y sistematizar el proceso de planificación, definir las metas e indicadores de medición de los objetivos y estrategias, y fomentar la cultura del seguimiento constante.',
+        bodyContent: 'Se fundamentada en el cuadro de mando integral que facilita el diseño y seguimiento de la planificación estratégica y operativa. Permite documentar y sistematizar el proceso de planificación, definir las metas e indicadores de medición de los objetivos y estrategias, y fomentar la cultura del seguimiento constante.',
         backgroundColor: '#68b4d6'
       },
       {
         id: 2,
         mainTitle: 'Alerta temprana',
-        boydContent: 'Sistema parametrizable que permite monitorear la situación financiera de las entidades evaluadas/supervisadas, a través del análisis de indicadores financieros semaforizados.',
+        bodyContent: 'Sistema parametrizable que permite monitorear la situación financiera de las entidades evaluadas/supervisadas, a través del análisis de indicadores financieros semaforizados.',
         backgroundColor: '#87c3de'
       },
       {
         id: 3,
         mainTitle: 'Balance social',
-        boydContent: 'Busca visibilizar el cumplimiento del rol social de la organización a través de la evaluación de un set de indicadores semaforizados. Fomenta la creación de metas de responsabilidad social y genera un informe técnico con la interpretación del cumplimiento de los principios analizados. Permite la adaptación a cualquier tipo de metodología de evaluación.',
+        bodyContent: 'Busca visibilizar el cumplimiento del rol social de la organización a través de la evaluación de un set de indicadores semaforizados. Fomenta la creación de metas de responsabilidad social y genera un informe técnico con la interpretación del cumplimiento de los principios analizados. Permite la adaptación a cualquier tipo de metodología de evaluación.',
         backgroundColor: '#96cae2'
       },
       {
         id: 4,
         mainTitle: 'Cuantificación del riesgo de crédito',
-        boydContent: 'Cuantifica la exposición al riesgo de la cartera de crédito, originada por los cambios en el comportamiento de las operaciones crediticias. Tomando la base de datos histórica de créditos vigentes realiza el cálculo de las pérdidas esperadas y no esperadas (Valor en Riesgo), bajo un modelo de matrices de transición y probabilidad de pérdida.',
+        bodyContent: 'Cuantifica la exposición al riesgo de la cartera de crédito, originada por los cambios en el comportamiento de las operaciones crediticias. Tomando la base de datos histórica de créditos vigentes realiza el cálculo de las pérdidas esperadas y no esperadas (Valor en Riesgo), bajo un modelo de matrices de transición y probabilidad de pérdida.',
         backgroundColor: '#a5d2e6'
       },
       {
         id: 5,
         mainTitle: 'Microscore rural',
-        boydContent: 'Evalúa los principales productos agrícolas y/o ganaderos con un score experto soportado en variables de perfil, actividad productiva, capacidad y comportamiento de pago conforme a las políticas y niveles de riesgo de cada entidad financiera.',
+        bodyContent: 'Evalúa los principales productos agrícolas y/o ganaderos con un score experto soportado en variables de perfil, actividad productiva, capacidad y comportamiento de pago conforme a las políticas y niveles de riesgo de cada entidad financiera.',
         backgroundColor: '#b4d9ea'
       },
       {
         id: 6,
         mainTitle: 'Planificación financiera',
-        boydContent: 'Facilita el desarrollo del plan financiero y del presupuesto a través de pronósticos basados en información histórica. Permite documentar las cédulas presupuestarias, controlar los recursos y hacer el seguimiento del cumplimiento del plan.',
+        bodyContent: 'Facilita el desarrollo del plan financiero y del presupuesto a través de pronósticos basados en información histórica. Permite documentar las cédulas presupuestarias, controlar los recursos y hacer el seguimiento del cumplimiento del plan.',
         backgroundColor: '#82ce60'
       },
       {
         id: 7,
         mainTitle: 'Control interno',
-        boydContent: 'Evalúa la razonabilidad del control interno y permitiendo llevar un seguimiento de aspectos que deben subsanarse o mejorar. Aplica cuestionarios basados en COSO, parametrizables a cualquier otra metodología de evaluación.',
+        bodyContent: 'Evalúa la razonabilidad del control interno y permitiendo llevar un seguimiento de aspectos que deben subsanarse o mejorar. Aplica cuestionarios basados en COSO, parametrizables a cualquier otra metodología de evaluación.',
         backgroundColor: '#9bd77f'
       },
       {
         id: 8,
         mainTitle: 'Costos y rentabilidad',
-        boydContent: 'Determina la rentabilidad de productos y servicios, orienta el análisis de la cobertura de costos y la definición de tasas. Trabaja bajo la metodología de asignación de costos por oficinas, departamentos, productos y servicios, propiciando el manejo eficiente de los recursos.',
+        bodyContent: 'Determina la rentabilidad de productos y servicios, orienta el análisis de la cobertura de costos y la definición de tasas. Trabaja bajo la metodología de asignación de costos por oficinas, departamentos, productos y servicios, propiciando el manejo eficiente de los recursos.',
         backgroundColor: '#a7dc8f'
       },
       {
         id: 9,
         mainTitle: 'Microscore 4.0',
-        boydContent: 'Construye un score soportado en variables de perfil, capacidad y comportamiento de pago, determinadas por la entidad financiera conforme a sus políticas y niveles de riesgo. Apuntala la mitigación del riesgo de crédito y el cumplimiento de la metodología de microcrédito.',
+        bodyContent: 'Construye un score soportado en variables de perfil, capacidad y comportamiento de pago, determinadas por la entidad financiera conforme a sus políticas y niveles de riesgo. Apuntala la mitigación del riesgo de crédito y el cumplimiento de la metodología de microcrédito.',
         backgroundColor: '#b4e19f'
       },
       {
         id: 10,
         mainTitle: 'Auditoria corporativa',
-        boydContent: 'Sistema informático para el soporte de la planeación, ejecución y seguimiento aplicable en auditorías internas, externas y supervisión de instituciones financieras.',
+        bodyContent: 'Sistema informático para el soporte de la planeación, ejecución y seguimiento aplicable en auditorías internas, externas y supervisión de instituciones financieras.',
         backgroundColor: '#c0e6af'
       }
     ]

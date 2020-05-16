@@ -21,23 +21,28 @@ export default class ToolsSlider extends Component {
     const { toolsObject } = this.props
     
     return (
-      <div className="tools-slider">
-        <span role="button" tabIndex={0} onClick={this.closeSlider} onKeyDown={this.closeSlider}>Close me</span>
-        <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+      <div className="tools-slider-parent">
+        <div id="tools-slider" className="carousel slide" data-interval="false" data-ride="carousel">
+          
           <div className="carousel-inner">
             { toolsObject.map((item) =>
-              <div className={`carousel-item ${this.getActive(item) ? 'active': ''}`} key={item.id}>
+              <div className={`carousel-item ${this.getActive(item) ? 'active': ''}`} key={item.id}
+              style={{background: item.backgroundColor}}
+              >
+                <span role="button" tabIndex={0} onClick={this.closeSlider} onKeyDown={this.closeSlider}>Close me</span>
                 <div className="carousel-caption d-none d-md-block">
                   <p>{item.mainTitle}</p>
+                  <p>{item.bodyContent}</p>
                 </div>
               </div>
             )}
           </div>
-          <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+
+          <a className="carousel-control-prev" href="#tools-slider" role="button" data-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="sr-only">Previous</span>
           </a>
-          <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <a className="carousel-control-next" href="#tools-slider" role="button" data-slide="next">
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="sr-only">Next</span>
           </a>
