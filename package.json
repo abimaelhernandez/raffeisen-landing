@@ -24,6 +24,7 @@
   "homepage": "https://github.com/PortolioFL/1stFL#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "jquery": "^3.5.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.1",
