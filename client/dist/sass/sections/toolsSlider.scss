@@ -10,11 +10,26 @@
     width: 100%;
 
     .carousel-inner {
+      position: relative;
+      display: flex;
 
-      .carousel-item{
-        min-height: 30rem;
+      .active {
+        border: solid 5px green;
+      }
+
+      .carousel-item {
+        position: relative;
+        display: flex;
+        float: left;
+        width: 100%;
+        margin-right: 0;
+        backface-visibility: hidden;
+        transition: transform .6s ease-in-out;
+
+
+        min-height: 40rem;
         max-height: 60rem;
-        left: 25%;
+        left: 35.5%;
         width: 50%;
 
         span {

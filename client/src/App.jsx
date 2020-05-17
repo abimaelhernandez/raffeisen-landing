@@ -15,6 +15,7 @@ import PageFooter from './components/Footer'
 
 import '../dist/sass/mains.scss'
 import ToolsCard from './components/ToolsCards'
+import MyCarousel from './components/testSlider'
 
 export default class App extends Component {
   constructor(){
@@ -144,6 +145,7 @@ export default class App extends Component {
         <Servicios serviceObj={messages[locale].servicesObject}/>
         <ToolsCard toolsObject={messages[locale].toolsObject}/>
         <Navbar testProp={messages[locale]}/>
+        <MyCarousel/>
         <PageFooter/>
       </div>
     )

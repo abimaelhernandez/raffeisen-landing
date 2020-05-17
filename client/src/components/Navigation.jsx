@@ -9,7 +9,7 @@ export default class NavBar extends Component {
     return (
       <div className="blop">
         <h1>
-          {testProp.navigation.inicio}/I AM THE CHILD COMPONENT in HEroku/{testProp.navigation.herramientas}
+          {testProp.navigation.inicio}/I AM THE CHILD/{testProp.navigation.herramientas}
         </h1>
       </div>
     )

@@ -4,6 +4,10 @@ import PropTypes from 'prop-types'
 
 export default class ToolsSlider extends Component {
 
+
+  componentDidMount() {    
+  }
+
   closeSlider = () => {
     const { resetProps } = this.props
     resetProps(true)
