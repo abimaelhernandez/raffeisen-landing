@@ -1,11 +1,14 @@
 /* eslint react/prop-types: 0 */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Carousel from '@brainhubeu/react-carousel'
+import '@brainhubeu/react-carousel/lib/style.css'
 
 export default class ToolsSlider extends Component {
 
 
-  componentDidMount() {    
+  componentDidMount() {   
+    this.getActive() 
   }
 
   closeSlider = () => {
@@ -13,43 +16,33 @@ export default class ToolsSlider extends Component {
     resetProps(true)
   }
 
-  getActive = (item) => {
+  getActive = () => {
     const { clickedId } = this.props
-    if(clickedId === item.id){
-      return true
-    }
-    return false
+    console.log('i am the cliked id', clickedId)
   }
 
   render(){
     const { toolsObject } = this.props
+
+    const finalArray = [
+      (<div key={1}>
+        <h1>{toolsObject[0].mainTitle}</h1>
+      </div>),
+      (<div key={2}>
+        <h1>{toolsObject[1].mainTitle}</h1>
+      </div>),
+      (<div key={3}>
+        <h1>{toolsObject[2].mainTitle}</h1>
+      </div>)
+    ]
+
+    console.log('I am the toolsObject', finalArray)
     
     return (
       <div className="tools-slider-parent">
         <div id="tools-slider" className="carousel slide" data-interval="false" data-ride="carousel">
-          
-          <div className="carousel-inner">
-            { toolsObject.map((item) =>
-              <div className={`carousel-item ${this.getActive(item) ? 'active': ''}`} key={item.id}
-              style={{background: item.backgroundColor}}
-              >
-                <span role="button" tabIndex={0} onClick={this.closeSlider} onKeyDown={this.closeSlider}>Close me</span>
-                <div className="carousel-caption d-none d-md-block">
-                  <p>{item.mainTitle}</p>
-                  <p>{item.bodyContent}</p>
-                </div>
-              </div>
-            )}
-          </div>
-
-          <a className="carousel-control-prev" href="#tools-slider" role="button" data-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="sr-only">Previous</span>
-          </a>
-          <a className="carousel-control-next" href="#tools-slider" role="button" data-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="sr-only">Next</span>
-          </a>
+          <span role="button" tabIndex={0} onClick={this.closeSlider} onKeyDown={this.closeSlider}>Close me</span>
+          <Carousel arrows infinite slidesPerPage={3} slides={finalArray}/>
         </div>
       </div>
   )}
