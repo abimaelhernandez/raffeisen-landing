@@ -1,0 +1,140 @@
+.tools-parent {
+  //background-color: aquamarine;
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  &-header {
+    padding-top: 11.1rem;
+    margin-left: 5vw;
+    width: 80%;
+
+    @media(max-width: 767px) { 
+      padding-top: 0;
+    }
+
+    &-title {
+
+      h1 {
+        color: $color-blue-dark;
+        font-size: 5.13rem;
+        font-weight: 900;
+        line-height: 1.01;
+
+        @media(max-width: 767px) { 
+          font-size: 2.8rem;
+          line-height: 1.8;
+        }
+      }
+    }
+
+    &-subText {
+      font-size: 3rem;
+      margin-bottom: 2.2rem;
+      line-height: 1.3;
+
+      @media(max-width: 767px) { 
+        font-size: 1.4rem;
+        line-height: 1.57;
+      }
+    }
+  }
+
+  &-desktop {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 0 2vw;
+
+  &-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    gap: 1em;
+
+    @media(max-width: 767px) {
+      display: none;
+    }
+    
+    &-card {
+      font-size: 3.16vh;
+      font-weight: 500;
+      height: 30vh;
+      width: 100%;
+      
+      &-content {
+        position: relative;
+        padding-top: 5vh;
+        padding-right: 2rem;
+        padding-left: 3vw;
+          
+          span {
+            background-color: $color-white;
+            opacity: 0.3;
+            border-radius: 50%;
+            font-size: 3.2rem;
+          }
+
+        &-title {
+          font-size: 3rem;
+          color: $color-white;
+        }
+      }
+    }
+    }  
+
+  }
+
+  &-mobile {
+    position: relative;
+    width: 100%;
+
+    &-dropdown {
+
+      .btn:hover {
+        color: $color-white;
+      }
+
+      &-button {
+        position: relative;
+        text-align: left;
+        color: $color-white;
+        font-size: 1.7rem;
+        font-weight: 500;
+        height: 6rem;
+        width: 100%;
+
+        i {
+          position: relative;
+          left: 9.6vw;
+          font-style: normal;
+        }
+
+        &:focus {
+          color: $color-white;
+        }
+
+        &-drop {
+          position: absolute;
+          right: 15vw;
+          top: 2.3rem;
+        }
+      }
+
+      &-content {
+        color: $color-white;
+        font-size: 1.4rem;
+        
+        p {
+          position: relative;
+          left: 8.6vw;
+          width: 80vw;
+        }
+      }
+    }
+
+    @media(min-width: 768px) {
+      display: none;
+    }
+  }
+}

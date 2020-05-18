@@ -1,0 +1,40 @@
+.tools-slider-parent {
+  width: 100%;
+  position: relative;
+  min-height: 30rem;
+  border: solid 3px purple;
+
+  #tools-slider{
+    position: relative;
+    height: 30rem;
+    width: 100%;
+
+    .carousel-inner {
+
+      .carousel-item{
+        min-height: 30rem;
+        max-height: 60rem;
+        color: $color-white;
+
+
+        span {
+          position: relative;
+          left: 90%;
+          font-size: 4rem;
+          z-index: 100;
+        }
+
+        h1 {
+          font-size: 34px;
+          font-weight: 900;
+          line-height: 1.79;
+        }
+
+        p {
+          font-size: 27px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}

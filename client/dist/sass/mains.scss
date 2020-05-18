@@ -1,13 +1,15 @@
 @import "base/base";
 
 @import "abstracts/variables";
-@import "abstracts/mixins.scss";
+@import "abstracts/mixins";
 
-@import "sections/landingBanner.scss";
+@import "sections/landingBanner";
 @import "sections/navigation-desktop";
-@import "sections/navigation-mobile.scss";
+@import "sections/navigation-mobile";
 @import "sections/carousel";
 @import "sections/inovationBanner";
-@import "sections/Servicios";
+@import "sections/servicios";
 @import "sections/servicesSlider";
-@import "sections/footer.scss";
+@import "sections/toolcards";
+@import "sections/toolsSlider";
+@import "sections/footer";

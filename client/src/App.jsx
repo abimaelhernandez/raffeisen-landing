@@ -13,6 +13,7 @@ import Servicios from './components/Servicios'
 import PageFooter from './components/Footer'
 
 import '../dist/sass/mains.scss'
+import ToolsCard from './components/ToolsCards'
 
 export default class App extends Component {
   constructor(){
@@ -35,7 +36,7 @@ export default class App extends Component {
 
   render(){
     const { locale, messages } = this.state
-    console.log('aPP : ', messages[locale].servicesObject)
+    console.log('aPP : ', messages[locale].toolsObject)
     return (
       <div>
         <LandingBanner/>
@@ -140,6 +141,7 @@ export default class App extends Component {
         <Slider/>
         <InovationBanner/>
         <Servicios serviceObj={messages[locale].servicesObject}/>
+        <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader}/>
         <PageFooter/>
       </div>
     )
