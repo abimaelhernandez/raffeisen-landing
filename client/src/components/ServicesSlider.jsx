@@ -3,12 +3,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 export default class ServicesSlider extends Component {
-  constructor() {
-    super()
-    this.state = {
-      centerItem: {}
-    }
-  }
 
   componentDidMount() {
     // const {clickedId} = this.props
@@ -30,9 +24,7 @@ export default class ServicesSlider extends Component {
   }
 
   render(){
-    const {centerItem} = this.state
     const {passedObj} = this.props
-    console.log('props passed to child :', centerItem)
     return (
       <div className="servicesSlider-parent">
         <button
@@ -42,27 +34,26 @@ export default class ServicesSlider extends Component {
           onClick={this.closeSliderView}>
           <span aria-hidden="true">&times;</span>
         </button>
-        <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+        <div id="servicios-slider-id" className="carousel slide" data-ride="carousel">
           <div className="carousel-inner">
             { passedObj.map((item) =>
               <div className={`carousel-item ${this.getActive(item) ? 'active': ''}`}>
-               <img src={item.imageBackground} className="d-block w-50" alt="..."/>
-                <div className="carousel-caption d-none d-md-block">
+               <img src={item.imageBackground} className="col-sm-12 col-md-6" alt="..."/>
+                <div className="carousel-caption col-sm-12 col-md-6">
                   <p>{item.mainParahraph}</p>
                 </div>
               </div>
             )}
           </div>
-          <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <a className="carousel-control-prev" href="#servicios-slider-id" role="button" data-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="sr-only">Previous</span>
           </a>
-          <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <a className="carousel-control-next" href="#servicios-slider-id" role="button" data-slide="next">
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="sr-only">Next</span>
           </a>
         </div>
-
       </div>
     )
   }
@@ -71,13 +62,3 @@ export default class ServicesSlider extends Component {
 ServicesSlider.propTypes = {
   clickedId:  PropTypes.number
 }
-// passedObj: PropTypes.instanceOf(Object),
-
-
-// <div className="carousel-item">
-//   <img src={leftItem.imageBackground} className="d-block w-100" alt="..."/>
-//   <div className="servicesSlider-parent-info-container">
-//     <p>{leftItem.mainParahraph}</p>
-//     <p>{leftItem.secondaryParagraph}</p>
-//   </div>
-// </div>

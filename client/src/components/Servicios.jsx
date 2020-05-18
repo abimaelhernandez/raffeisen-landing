@@ -30,13 +30,15 @@ export default class Servicios extends Component {
       return <ServicesSlider
               passedObj={serviceObj}
               clickedId={clickedId}
-              resetProps={this.resetProps}/>
+              resetProps={this.resetProps}
+            />
     }
     return (
       <div className="servicios-parent">
-        <div className="servicios-parent-container">
+        <p className="servicios-parent-title">Servicios</p>
+        <div className="container-fluid servicios-parent-container">
           {serviceObj.map((item) =>
-            <div className="servicios-parent-container-item" key={item.id}>
+            <div className="col-sm-12 col-md-4 servicios-parent-container-item" key={item.id}>
               <img
                 className="servicios-parent-container-item-img"
                 src={item.imageBackground}

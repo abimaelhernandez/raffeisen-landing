@@ -7,7 +7,6 @@ import WhatsappIcon from 'react-share/lib/WhatsappIcon'
 
 import projectBody from './LangData'
 import LandingBanner from './components/LandingBanner'
-import Navbar from './components/Navigation'
 import Slider from './components/Carousel'
 import InovationBanner from './components/Inovation'
 import Servicios from './components/Servicios'
@@ -143,7 +142,6 @@ export default class App extends Component {
         <InovationBanner/>
         <Servicios serviceObj={messages[locale].servicesObject}/>
         <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader}/>
-        <Navbar testProp={messages[locale]}/>
         <PageFooter/>
       </div>
     )
