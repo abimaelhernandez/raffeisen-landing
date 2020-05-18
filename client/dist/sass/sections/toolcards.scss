@@ -1,12 +1,8 @@
-.toolsParent {
+.tools-parent {
   //background-color: aquamarine;
   position: relative;
   height: 100%;
   width: 100%;
-
-  .fontSize {
-    font-size: 3rem;
-  }
 
   &-header {
     padding-top: 5vh;
@@ -27,11 +23,20 @@
     }
   }
 
+  &-desktop {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
   &-cards {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     width: 100%;
     grid-gap: 1em;
+
+    @media(max-width: 767px) {
+      display: none;
+    }
     
     &-card {
       font-size: 3.16vh;
@@ -64,10 +69,60 @@
         }
       }
     }
+    }  
+
+  }
+
+  &-mobile {
+    position: relative;
+    width: 100%;
+
+    &-dropdown {
+
+      .btn:hover {
+        color: $color-white;
+      }
+
+      &-button {
+        position: relative;
+        text-align: left;
+        color: $color-white;
+        font-size: 1.7rem;
+        font-weight: 500;
+        height: 6rem;
+        width: 100%;
+
+        i {
+          position: relative;
+          left: 9.6vw;
+          font-style: normal;
+        }
+
+        &:focus {
+          color: $color-white;
+        }
+
+        &-drop {
+          position: absolute;
+          right: 15vw;
+          top: 2.3rem;
+        }
+      }
+
+      &-content {
+        color: $color-white;
+        font-size: 1.4rem;
+        
+        p {
+          position: relative;
+          left: 8.6vw;
+          width: 80vw;
+        }
+      }
     }
 
-
-  @media(max-width: 767px) {
-    display: none;
+    @media(min-width: 768px) {
+      display: none;
+    }
   }
 }
