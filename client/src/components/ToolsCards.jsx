@@ -42,20 +42,20 @@ resetProps = (value) => {
         <div className="tools-parent-desktop">
           <div className="tools-parent-desktop-cards card-body">
           {toolsObject.map((item) => 
-            <div key={item.id} className="tools-parent-desktop-cards-card">
-              <div className="tools-parent-desktop-cards-card-content" style={{ background: item.backgroundColor }}>
-                <div className="tools-parent-desktop-cards-card-content-openButton">
-                  <span 
-                    role="button" 
-                    tabIndex={0} 
-                    onKeyDown={this.clickHandler.bind(this, item.id)} 
-                    onClick={this.clickHandler.bind(this, item.id)}
-                    >
-                    &gt;
-                  </span>
+            <div key={item.id} className="tools-parent-desktop-cards-card" style={{ background: item.backgroundColor }}>
+              <div className="tools-parent-desktop-cards-card-content" >
+                <span 
+                  role="button" 
+                  tabIndex={0} 
+                  onKeyDown={this.clickHandler.bind(this, item.id)} 
+                  onClick={this.clickHandler.bind(this, item.id)}
+                  >
+                  &gt;
+                </span>
+                <div>
+                  <p className="tools-parent-desktop-cards-card-content-title">{item.mainTitle}</p>
                 </div>
-                <p className="tools-parent-desktop-cards-card-content-title">{item.mainTitle}</p>
-                </div>
+              </div>
             </div>
           )}
         </div>
