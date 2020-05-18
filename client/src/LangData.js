@@ -54,6 +54,10 @@ const projectBody = {
         }
       }
     ],
+    toolsHeader: {
+      title: 'Tools',
+      subText: 'Seeking to consolidate management processes and comprehensive consulting, Raiffeisen Latina proposes a group of systematized tools conceptualized and developed by DGRV for the cooperative and inclusive finance sector.'
+    },
     toolsObject: [
       {
         id: 1,
@@ -182,6 +186,10 @@ const projectBody = {
         }
       }
     ],
+    toolsHeader: {
+      title: 'Herramientas',
+      subText: 'Buscando consolidar los procesos de gestión y consultoría integral, Raiffeisen Latina propone un grupo de herramientas sistematizadas conceptualizadas y desarrolladas por DGRV para el sector cooperativo y de finanzas incluyentes.'
+    },
     toolsObject: [
       {
         id: 1,

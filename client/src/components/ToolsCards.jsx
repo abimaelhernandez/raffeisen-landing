@@ -24,6 +24,7 @@ resetProps = (value) => {
 
   render() {
     const { toolsObject } = this.props
+    const { toolsHeader } = this.props
     const { clickedId, hasBeenClicked } = this.state
     if (hasBeenClicked) { 
       return <ToolsSlider toolsObject={toolsObject} clickedId={clickedId} resetProps={this.resetProps}/>
@@ -32,10 +33,10 @@ resetProps = (value) => {
       <div className="tools-parent" id="herramientas">
         <div className="tools-parent-header">
           <div className="tools-parent-header-title">
-            <h1>Herramientas</h1>
+            <h1>{toolsHeader.title}</h1>
           </div>
           <div className="tools-parent-header-subText">
-            <p>Buscando consolidar los procesos de gestión y consultoría integral, Raiffeisen Latina propone un grupo de herramientas sistematizadas conceptualizadas y desarrolladas por DGRV para el sector cooperativo y de finanzas incluyentes.</p>
+            <p>{toolsHeader.subText}</p>
           </div>
         </div>
         <div className="tools-parent-desktop">
@@ -83,5 +84,6 @@ resetProps = (value) => {
 }
 
 ToolsCard.propTypes = {
-  toolsObject: PropTypes.instanceOf(Object)
+  toolsObject: PropTypes.instanceOf(Object),
+  toolsHeader: PropTypes.instanceOf(Object)
 }
