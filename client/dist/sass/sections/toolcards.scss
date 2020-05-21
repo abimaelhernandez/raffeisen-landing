@@ -70,13 +70,18 @@
           color: $color-white;
           width: 80%;
         }
+
+        .btn {
+          background-color: rgba($color-white, .3);
+          border-radius: 50%;
+          height: 2vw;
+          width: 2vw;
           
-          span {
-            background-color: $color-white;
-            opacity: 0.3;
-            border-radius: 50%;
-            font-size: 3.2rem;
+          .nextArrrow {
+            color: $color-white;
+            width: 1.5vw;
           }
+        }
       }
     }
     }  
