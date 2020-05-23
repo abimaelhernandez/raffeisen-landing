@@ -2,12 +2,11 @@
 .servicios-parent {
   position: relative;
   width: 100%;
-  height:654px;
-  border: solid 3px red;
+  // height:600px;
 
   &-title {
-    padding: 2rem 0 0 2rem;
     position: absolute;
+    padding: 2rem 0 0 2rem;
     width: 221.2px;
     height: 62px;
     font-size: 50px;
@@ -15,32 +14,69 @@
     line-height: 1.01;
     text-align: left;
     color: #ffffff;
+    z-index: 1;
   }
 
   &-container {
-    border: solid 1px orange;
     display: flex;
-    height: 100%;
+    padding: 0;
 
     &-item {
-      border: solid 1px green;
       height: inherit;
+      padding: 0;
       overflow: hidden;
 
       &-img {
         width: 100%;
+        min-height: 364px;
+        max-height: 600px;
         height: 100%;
       }
 
       &-logo-container {
-        position: relative;
+        position: absolute;
         height: auto;
-        bottom: 27%;
         text-align: center;
+        top: 60%;
+        left: 10%;
 
         &-asset {
-          height: 60px;
-          border: solid 3px purple;
+          width: 25vw;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    &-title {
+    }
+
+    &-container {
+      position: relative;
+      width: 100%;
+      padding: 0.1rem;
+      display: block;
+
+      &-item {
+        border: solid 1px red;
+        height: inherit;
+        width:100%;
+        overflow: hidden;
+
+        &-img {
+          width: 100%;
+          min-height: 364px;
+          max-height: 600px;
+        }
+
+        &-logo-container {
+          left: 0;
+          width: 100%;
+          top:25%;
+
+          &-asset {
+            width: 60vw;
+          }
         }
       }
     }
