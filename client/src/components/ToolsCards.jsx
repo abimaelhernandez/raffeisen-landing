@@ -10,10 +10,7 @@ export default class ToolsCard extends Component {
       hasBeenClicked: false
     }
   }
-
-componentDidMount() {
-}
-  
+   
 clickHandler = (item) => {
   this.setState({ clickedId: item, hasBeenClicked: true })
 }
@@ -23,9 +20,8 @@ resetProps = (value) => {
 }
 
   render() {
-    const { toolsObject } = this.props
-    const { toolsHeader } = this.props
     const { clickedId, hasBeenClicked } = this.state
+    const { toolsObject, toolsHeader } = this.props
     if (hasBeenClicked) { 
       return <ToolsSlider toolsObject={toolsObject} clickedId={clickedId} resetProps={this.resetProps}/>
     }
@@ -40,20 +36,22 @@ resetProps = (value) => {
           </div>
         </div>
         <div className="tools-parent-desktop">
-          <div className="tools-parent-desktop-cards card-body">
+          <div className="tools-parent-desktop-cards">
           {toolsObject.map((item) => 
             <div key={item.id} className="tools-parent-desktop-cards-card" style={{ background: item.backgroundColor }}>
-              <div className="tools-parent-desktop-cards-card-content" >
-                <span 
-                  role="button" 
-                  tabIndex={0} 
-                  onKeyDown={this.clickHandler.bind(this, item.id)} 
+              <div className="tools-parent-desktop-cards-card-content" > 
+                <button 
+                  type="button" 
+                  className="btn"
                   onClick={this.clickHandler.bind(this, item.id)}
-                  >
-                  &gt;
-                </span>
-                <div>
-                  <p className="tools-parent-desktop-cards-card-content-title">{item.mainTitle}</p>
+                >
+                  <svg className="bi bi-chevron-right nextArrrow" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M4.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L10.293 8 4.646 2.354a.5.5 0 010-.708z"/>
+                  </svg>
+                </button>
+                
+                <div className="card-title">
+                  <p>{item.mainTitle}</p>
                 </div>
               </div>
             </div>

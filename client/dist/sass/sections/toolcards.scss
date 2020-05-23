@@ -1,8 +1,8 @@
 .tools-parent {
-  //background-color: aquamarine;
   position: relative;
   height: 100%;
   width: 100%;
+  padding-bottom: 3rem;
 
   &-header {
     padding-top: 11.1rem;
@@ -41,43 +41,47 @@
   }
 
   &-desktop {
-    position: relative;
-    height: 100%;
     width: 100%;
     padding: 0 2vw;
 
-  &-cards {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    width: 100%;
-    gap: 1em;
+    &-cards {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 18vw);
+      gap: 1.5vw;
+
 
     @media(max-width: 767px) {
       display: none;
     }
     
     &-card {
-      font-size: 3.16vh;
       font-weight: 500;
-      height: 30vh;
       width: 100%;
       
       &-content {
         position: relative;
-        padding-top: 5vh;
-        padding-right: 2rem;
-        padding-left: 3vw;
-          
-          span {
-            background-color: $color-white;
-            opacity: 0.3;
-            border-radius: 50%;
-            font-size: 3.2rem;
-          }
+        top: 4vw;
+        left: 2vw;
 
-        &-title {
-          font-size: 3rem;
+        .card-title {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+          font-size: 2vw;
           color: $color-white;
+          width: 80%;
+        }
+
+        .btn {
+          background-color: rgba($color-white, .3);
+          border-radius: 50%;
+          height: 2vw;
+          width: 2vw;
+          
+          .nextArrrow {
+            color: $color-white;
+            width: 1.5vw;
+          }
         }
       }
     }
