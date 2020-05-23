@@ -8,16 +8,9 @@ export default class ToolsSlider extends Component {
   constructor(){
     super()
     this.state = {
-      centerItem: {},
       leftItem: {},
-      rightItem: {},
-      fourthItem: {},
-      fithItem: {},
-      sixthItem: {},
-      seventhItem: {},
-      eightItem: {},
-      ninthItem: {},
-      thenthItem: {}
+      centerItem: {},
+      rightItem: {}
     }
   }
 
@@ -25,7 +18,6 @@ export default class ToolsSlider extends Component {
     this.getCenterItem()
     this.getLeftItem()
     this.getRightItem()
-    this.getFourthItem()
   }
 
   closeSlider = () => {
@@ -35,69 +27,30 @@ export default class ToolsSlider extends Component {
 
   getLeftItem = () => {
     const { clickedId, toolsObject } = this.props
-    // const length = Object.values(toolsObject).length  === clickedId
-    const test2 = toolsObject.find(x => x.id === clickedId - 1)
-    this.setState({ leftItem: test2})
+    const { length } = toolsObject
+    // left item = 1
+      // cli array.length - 1
+      console.log('ten ? ', clickedId === 1 ? 10 : clickedId - 1 )
+    const left = toolsObject.find(x => x.id === (clickedId === 1 ? length : clickedId - 1))
+    console.log('clickedId left', left )
+    this.setState({ leftItem: left})
   }
 
   getCenterItem = () => {
     const { clickedId, toolsObject } = this.props
-    const test = toolsObject.find(x => x.id === clickedId)
-    this.setState({ centerItem: test})
+    const center = toolsObject.find(x => x.id === clickedId)
+    this.setState({ centerItem: center })
   }
 
-  getRightItem = () => {
-    const { clickedId, toolsObject } = this.props
-    const length = Object.values(toolsObject).length === clickedId
-    const test3 = length ? toolsObject.find(x => x.id === 1) : toolsObject.find(x => x.id === clickedId + 1)
-    this.setState({ rightItem: test3})
-  }
-
-  getFourthItem = () => {
-    const { clickedId, toolsObject } = this.props
-    const test4 = toolsObject.find(x => x.id === clickedId + 2)
-    this.setState({ fourthItem: test4})
-  }
-
-  getFithItem = () => {
-    const { clickedId, toolsObject } = this.props
-    const test5 = toolsObject.find(x => x.id === clickedId + 3)
-    this.setState({ fithItem: test5})
-  }
-
-  getsixthItem = () => {
-    const { clickedId, toolsObject } = this.props
-    const test6 = toolsObject.find(x => x.id === clickedId + 4)
-    this.setState({ sixthItem: test6})
-  }
-
-  getSeventhItem = () => {
-    const { clickedId, toolsObject } = this.props
-    const test7 = toolsObject.find(x => x.id === clickedId  + 5)
-    this.setState({ seventhItem: test7})
-  }
-
-  getEightItem = () => {
-    const { clickedId, toolsObject } = this.props
-    const test8 = toolsObject.find(x => x.id === clickedId + 6)
-    this.setState({ eightItem: test8})
-  }
-
-  getNithItem = () => {
-    const { clickedId, toolsObject } = this.props
-    const test9 = toolsObject.find(x => x.id === clickedId + 8)
-    this.setState({ fithItem: test9})
-  }
-
-  getTenthItem = () => {
-    const { clickedId, toolsObject } = this.props
-    const test5 = toolsObject.find(x => x.id === clickedId + 9)
-    this.setState({ fithItem: test5})
-  }
+   getRightItem = () => {
+     const { clickedId, toolsObject } = this.props
+     const right = toolsObject.find(x => x.id === clickedId + 1)
+     this.setState({ rightItem: right })
+   }
 
   render(){
-    const { leftItem, centerItem, rightItem, fourthItem, fithItem, sixthItem, seventhItem, eightItem, ninthItem,thenthItem } = this.state
-    console.log('hello', leftItem, centerItem, rightItem, fourthItem, fithItem, sixthItem, seventhItem, eightItem, ninthItem,thenthItem)
+    const { leftItem, centerItem, rightItem } = this.state
+    // console.log('hello', leftItem.id, centerItem.id, rightItem.id)
     const finalArray = [
       (<div key={1}>
         <h1>{leftItem.mainTitle}</h1>
@@ -107,13 +60,8 @@ export default class ToolsSlider extends Component {
       </div>),
       (<div key={3}>
         <h1>{rightItem.mainTitle}</h1>
-      </div>),
-      (<div key={4}>
-        <h1>{fourthItem.mainTitle}</h1>
       </div>)
     ]
-
-    console.log('I am the toolsObject', finalArray)
 
     return (
       <div className="tools-slider-parent">
