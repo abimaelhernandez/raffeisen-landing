@@ -7,10 +7,13 @@ import '@brainhubeu/react-carousel/lib/style.css'
 export default class ToolsSlider extends Component {
   constructor() {
     super()
-    this.state = { 
-      value: -1
-    }
+    this.state = { value: 0 }
     this.onChange = this.onChange.bind(this)
+  }
+
+  componentDidMount(){
+    const { clickedId } = this.props
+    this.setState({ value: clickedId - 1 })
   }
 
   onChange(value) {
@@ -23,14 +26,12 @@ export default class ToolsSlider extends Component {
   }
 
   render(){
-    const { toolsObject, clickedId } = this.props
+    const { toolsObject } = this.props
     const { value } = this.state
-    console.log('I am in the slider and clicked id', clickedId)
     
     return (
       <div className="tools-slider-parent">
         <div id="tools-slider" className="carousel slide" data-interval="false" data-ride="carousel">
-          <span role="button" tabIndex={0} onClick={this.closeSlider} onKeyDown={this.closeSlider}>Close me</span>
           <Carousel
             value={value}
             onChange={this.onChange}
@@ -39,7 +40,18 @@ export default class ToolsSlider extends Component {
                 <h1>{toolsObject[0].mainTitle}</h1>
               </div>),
               (<div key={2}>
-                <h1>{toolsObject[1].mainTitle}</h1>
+                <div className="card individual-slide" >
+                  <span className="individual-slide-close" role="button" tabIndex={0} onClick={this.closeSlider} onKeyDown={this.closeSlider}>
+                    <svg className="bi bi-x" viewBox="0 0 16 16" fill="white">
+                      <path fillRule="evenodd" d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
+                      <path fillRule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
+                    </svg>
+                  </span>
+                  <div className="card-body">
+                  <h1 className="individual-slide-title">{toolsObject[1].mainTitle}</h1>
+                    <p className="card-text individual-slide-body">{toolsObject[1].bodyContent}</p>
+                  </div>
+                </div>
               </div>),
               (<div key={3}>
                 <h1>{toolsObject[2].mainTitle}</h1>
@@ -68,6 +80,8 @@ export default class ToolsSlider extends Component {
             ]}
             arrows
             infinite
+            centered
+            slidesPerPage={3}
           />
         </div>
       </div>

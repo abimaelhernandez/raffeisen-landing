@@ -10,9 +10,6 @@ export default class ToolsCard extends Component {
       hasBeenClicked: false
     }
   }
-
-componentDidMount() {
-}
   
 clickHandler = (item) => {
   this.setState({ clickedId: item, hasBeenClicked: true })
