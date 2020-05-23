@@ -10,7 +10,10 @@ export default class ToolsSlider extends Component {
     this.state = {
       leftItem: {},
       centerItem: {},
-      rightItem: {}
+      rightItem: {},
+      fourthItem: {},
+      fifthItem: {},
+      sixthItem: {}
     }
   }
 
@@ -18,6 +21,9 @@ export default class ToolsSlider extends Component {
     this.getCenterItem()
     this.getLeftItem()
     this.getRightItem()
+    this.getFourthItem()
+    this.getFifththItem()
+    this.getSixthItem()
   }
 
   closeSlider = () => {
@@ -28,11 +34,7 @@ export default class ToolsSlider extends Component {
   getLeftItem = () => {
     const { clickedId, toolsObject } = this.props
     const { length } = toolsObject
-    // left item = 1
-      // cli array.length - 1
-      console.log('ten ? ', clickedId === 1 ? 10 : clickedId - 1 )
     const left = toolsObject.find(x => x.id === (clickedId === 1 ? length : clickedId - 1))
-    console.log('clickedId left', left )
     this.setState({ leftItem: left})
   }
 
@@ -42,14 +44,32 @@ export default class ToolsSlider extends Component {
     this.setState({ centerItem: center })
   }
 
-   getRightItem = () => {
-     const { clickedId, toolsObject } = this.props
-     const right = toolsObject.find(x => x.id === clickedId + 1)
-     this.setState({ rightItem: right })
-   }
+  getRightItem = () => {
+    const { clickedId, toolsObject } = this.props
+    const right = toolsObject.find(x => x.id === (clickedId === 10 ? 1 : clickedId + 1))
+    this.setState({ rightItem: right })
+  }
+
+  getFourthItem = () => {
+    const { clickedId, toolsObject  } = this.props
+    const fourth = toolsObject.find(x => x.id === (clickedId === 10 ? 2 : clickedId + 2))
+    this.setState({ fourthItem: fourth })
+  }
+
+  getFifththItem = () => {
+    const { clickedId, toolsObject } = this.props
+    const fifth = toolsObject.find(x => x.id === (clickedId === 10 ? 3 : clickedId + 3))
+    this.setState({ fifthItem: fifth })
+  }
+
+  getSixthItem = () => {
+    const { clickedId, toolsObject } = this.props
+    const sixth = toolsObject.find(x => x.id === (clickedId === 10 ? 4 : clickedId + 4))
+    this.setState({ sixthItem: sixth })
+  }
 
   render(){
-    const { leftItem, centerItem, rightItem } = this.state
+    const { leftItem, centerItem, rightItem, fourthItem, fifthItem, sixthItem } = this.state
     // console.log('hello', leftItem.id, centerItem.id, rightItem.id)
     const finalArray = [
       (<div key={1}>
@@ -60,6 +80,15 @@ export default class ToolsSlider extends Component {
       </div>),
       (<div key={3}>
         <h1>{rightItem.mainTitle}</h1>
+      </div>),
+      (<div key={4}>
+        <h1>{fourthItem.mainTitle}</h1>
+      </div>),
+      (<div key={5}>
+        <h1>{fifthItem.mainTitle}</h1>
+      </div>),
+      (<div key={6}>
+        <h1>{sixthItem.mainTitle}</h1>
       </div>)
     ]
 
