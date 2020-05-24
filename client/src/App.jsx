@@ -10,10 +10,11 @@ import LandingBanner from './components/LandingBanner'
 import Slider from './components/Carousel'
 import InovationBanner from './components/Inovation'
 import Servicios from './components/Servicios'
+import ToolsCard from './components/ToolsCards'
+import GoogleApiWrapper from './components/GoogleMap'
 import PageFooter from './components/Footer'
 
 import '../dist/sass/mains.scss'
-import ToolsCard from './components/ToolsCards'
 
 export default class App extends Component {
   constructor(){
@@ -142,6 +143,7 @@ export default class App extends Component {
         <InovationBanner/>
         <Servicios serviceObj={messages[locale].servicesObject}/>
         <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader}/>
+        <GoogleApiWrapper/>
         <PageFooter/>
       </div>
     )
