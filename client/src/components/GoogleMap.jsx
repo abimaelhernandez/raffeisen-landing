@@ -34,16 +34,22 @@ class GoogleMap extends Component {
       width: '100%',
       height: '100%'
     }
+
     const { google } = this.props
     return (
-        <Map
-          google={google}
-          zoom={8}
-          style={mapStyles}
-          initialCenter={{ lat: 47.444, lng: -122.176}}
-        >
-          {this.displayMarkers()}
-        </Map>
+      <div className="maps-parent">
+
+        <div className="maps-parent-container">
+          <Map
+            google={google}
+            zoom={2.3}
+            style={mapStyles}
+            initialCenter={{ lat: 21.707964, lng: -98.295435}}
+          >
+            {this.displayMarkers()}
+          </Map>
+        </div>
+      </div>
     )
   }
 }
