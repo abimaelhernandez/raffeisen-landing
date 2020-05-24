@@ -181,6 +181,7 @@ export default class ToolsSlider extends Component {
             infinite
             centered
             slidesPerPage={3}
+            animationSpeed={2000}
           />
         </div>
         <div className="tools-parent-mobile">
