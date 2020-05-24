@@ -13,11 +13,13 @@
     }
   }
 }
+
 .individual-slide {
   height: 35vw;
   width: 35vw;
   color: $color-white;
   transform: scale(.7);
+  opacity: 0.4;
 
   &-close {
     position: absolute;
@@ -89,4 +91,28 @@
 .BrainhubCarouselItem--active {
   transform: scale(1.2) !important;
   z-index: 1;
+  
+  .individual-slide {
+    opacity: 1;
+  }
+}
+
+.BrainhubCarousel {
+
+  &__arrows {
+  background-color: transparent !important;
+  z-index: 2 !important;
+
+  &:focus {
+    outline: none;
+  }
+  }
+
+  &__arrowLeft {
+    left: 35%;
+  }
+
+  &__arrowRight {
+    right: 35%;
+  }
 }
