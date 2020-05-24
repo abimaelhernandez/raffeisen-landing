@@ -2,7 +2,6 @@
   position: relative;
   height: 100%;
   width: 100%;
-  padding-bottom: 3rem;
 
   &-header {
     padding-top: 11.1rem;
@@ -43,6 +42,7 @@
   &-desktop {
     width: 100%;
     padding: 0 2vw;
+    margin-bottom: 3vh;
 
     &-cards {
       display: grid;
