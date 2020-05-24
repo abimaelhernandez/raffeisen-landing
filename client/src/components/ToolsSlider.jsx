@@ -7,8 +7,7 @@ import '@brainhubeu/react-carousel/lib/style.css'
 export default class ToolsSlider extends Component {
   constructor() {
     super()
-    this.state = { value: 0 }
-    this.onChange = this.onChange.bind(this)
+    this.state = { value: null }
   }
 
   componentDidMount = () => {
@@ -28,10 +27,10 @@ export default class ToolsSlider extends Component {
   render(){
     const { toolsObject } = this.props
     const { value } = this.state
-    
+
     return (
       <div className="tools-slider-parent">
-        <div id="tools-slider" className="carousel slide" data-interval="false" data-ride="carousel">
+        <div id="tools-slider">
           <Carousel
             value={value}
             onChange={this.onChange}
