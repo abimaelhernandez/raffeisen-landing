@@ -22,8 +22,21 @@ resetProps = (value) => {
   render() {
     const { clickedId, hasBeenClicked } = this.state
     const { toolsObject, toolsHeader } = this.props
+    
     if (hasBeenClicked) { 
-      return <ToolsSlider toolsObject={toolsObject} clickedId={clickedId} resetProps={this.resetProps}/>
+      return (
+        <div className="tools-parent" id="herramientas">
+          <div className="tools-parent-header">
+            <div className="tools-parent-header-title">
+              <h1>{toolsHeader.title}</h1>
+            </div>
+            <div className="tools-parent-header-subText">
+              <p>{toolsHeader.subText}</p>
+            </div>
+          </div>
+          <ToolsSlider toolsObject={toolsObject} clickedId={clickedId} resetProps={this.resetProps}/>
+        </div>
+      )
     }
     return (
       <div className="tools-parent" id="herramientas">

@@ -34,7 +34,7 @@ export default class Servicios extends Component {
             />
     }
     return (
-      <div className="servicios-parent">
+      <div className="servicios-parent" id="servicios">
         <p className="servicios-parent-title">Servicios</p>
         <div className="container-fluid servicios-parent-container">
           {serviceObj.map((item) =>

@@ -2,39 +2,118 @@
   width: 100%;
   position: relative;
   min-height: 30rem;
-  border: solid 3px purple;
 
   #tools-slider{
-    position: relative;
-    height: 30rem;
-    width: 100%;
-
-    .carousel-inner {
-
-      .carousel-item{
-        min-height: 30rem;
-        max-height: 60rem;
-        color: $color-white;
-
-
-        span {
-          position: relative;
-          left: 90%;
-          font-size: 4rem;
-          z-index: 100;
-        }
-
-        h1 {
-          font-size: 34px;
-          font-weight: 900;
-          line-height: 1.79;
-        }
-
-        p {
-          font-size: 27px;
-          line-height: 1.5;
-        }
-      }
+    @media(max-width: 768px) {
+      display: none;
     }
+  }
+}
+
+.individual-slide {
+  height: 35vw;
+  width: 35vw;
+  color: $color-white;
+  transform: scale(.7);
+  opacity: 0.4;
+
+  &-close {
+    display: none;
+    position: absolute;
+    top: 3vh;
+    right: 2vw;
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+  }
+
+  &-body {
+    padding: 5vw;
+
+    &-title {
+      font-weight: 900;
+      line-height: 1.79;
+      font-size: 3rem;
+    }
+    
+    &-subText {
+      line-height: 1.5;
+    }
+
+    &-1 {
+      padding-top: 5.5vw;
+      font-size: 1.5vw;
+    }
+
+    &-2 {
+      padding-top: 7.5vw;
+      font-size: 1.7vw;
+    }
+
+    &-3 {
+      padding-top: 6vw;
+      font-size: 1.4vw;
+    }
+
+    &-4 {
+      padding-top: 6.5vw;
+      font-size: 1.3vw;
+    }
+
+    &-5, 
+    &-6,
+    &-7 {
+      padding-top: 7vw;
+      font-size: 1.6vw;
+    }
+
+    &-8 {
+      padding-top: 6vw;
+      font-size: 1.6vw;
+    }
+
+    &-9 {
+      padding-top: 6.5vw;
+      font-size: 1.6vw;
+    }
+
+    &-10 {
+      font-size: 1.7vw;
+      padding-top: 9vw;
+    }
+    
+  }
+}
+
+.BrainhubCarouselItem--active {
+  transform: scale(1.2) !important;
+  z-index: 1;
+  
+  .individual-slide {
+    opacity: 1;
+  }
+
+  .individual-slide-close {
+    display: initial;
+  }
+}
+
+.BrainhubCarousel {
+
+  &__arrows {
+  background-color: transparent !important;
+  z-index: 2 !important;
+
+  &:focus {
+    outline: none;
+  }
+  }
+
+  &__arrowLeft {
+    left: 35%;
+  }
+
+  &__arrowRight {
+    right: 35%;
   }
 }
