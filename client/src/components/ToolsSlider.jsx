@@ -28,7 +28,7 @@ export default class ToolsSlider extends Component {
     const { toolsObject } = this.props
     const { value } = this.state
 
-    if (value === null) return true
+    if (value === null) return <p>Loading...</p>
 
     return (
       <div className="tools-slider-parent">
