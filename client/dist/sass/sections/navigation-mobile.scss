@@ -1,6 +1,5 @@
 .navBanner {
   position: fixed;
-  // background-image: linear-gradient(147deg, #0051a6 7%, #004da2 35%, #004296 63%, #002f82 90%, #002476 103%);
   height: 13rem;
   width: 100%;
   z-index: 1;
@@ -59,7 +58,7 @@
       position: absolute;
       top: 0;
       left: -100%;
-      z-index: 210;
+      z-index: 200;
       text-align: center;
       opacity: 0;
       width: 0; // to hide content
@@ -94,7 +93,7 @@
 
   // FUNCTIONALITY
   &-checkbox:checked ~ &-background {
-      transform: scale(36);
+      transform: scale(50);
   }
 
   &-checkbox:checked ~ &-nav {

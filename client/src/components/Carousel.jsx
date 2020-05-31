@@ -4,11 +4,11 @@ export default function Slider(){
     return (
       <div className="slider-container" id="inicio">
         <video className="slider-container-webVideo" autoPlay muted loop>
-          <source src="../../assets/desk.mp4" type="video/mp4" />
+          <source src="../../assets/videos/RowingBoats.mp4" type="video/mp4" />
             Your browser does not support HTML5 video.
         </video>
         <video className="slider-container-mobileVideo" playsInline autoPlay muted loop>
-          <source src="../../assets/mobile-video.mp4" type="video/mp4" />
+          <source src="../../assets/videos/GlassSphere.mp4" type="video/mp4" />
             Your browser does not support HTML5 video.
         </video>
         <div
@@ -21,7 +21,7 @@ export default function Slider(){
             <div className="carousel-item active first-slide">
               <div className="img-container">
                 <img
-                  src="../../assets/icons/Plus-orange.svg"
+                  src="../../assets/icons/Orange-Plus.svg"
                   alt="..."/>
               </div>
               <div className="carousel-caption caption-container">
@@ -44,7 +44,7 @@ export default function Slider(){
               <div className="img-container">
                 <img
                   className="d-block w-50"
-                  src="../../assets/icons/asset3.svg"
+                  src="../../assets/icons/Yellow-Plant.svg"
                   alt="..."/>
               </div>
               <div className="carousel-caption caption-container-2">
@@ -57,7 +57,7 @@ export default function Slider(){
             <div className="carousel-item third-slide">
               <div className="img-container">
                 <img
-                  src="../../assets/icons/asset2.svg"
+                  src="../../assets/icons/Green-Arrows.svg"
                   alt="..."/>
               </div>
               <div className="carousel-caption caption-container-3">
