@@ -4,11 +4,6 @@ import PropTypes from 'prop-types'
 
 export default class ServicesSlider extends Component {
 
-  componentDidMount() {
-    // const {clickedId} = this.props
-  }
-
-
   closeSliderView = () => {
     const {resetProps} = this.props
     resetProps(true)
@@ -16,7 +11,6 @@ export default class ServicesSlider extends Component {
 
   getActive = (item) => {
     const {clickedId} = this.props
-    console.log('Clicked', clickedId, item)
     if(clickedId === item.id){
       return true
     }
@@ -37,10 +31,20 @@ export default class ServicesSlider extends Component {
         <div id="servicios-slider-id" className="carousel slide" data-ride="carousel">
           <div className="carousel-inner">
             { passedObj.map((item) =>
-              <div className={`carousel-item ${this.getActive(item) ? 'active': ''}`}>
+              <div key={item.id} className={`carousel-item ${this.getActive(item) ? 'active': ''}`}>
                <img src={item.imageBackground} className="col-sm-12 col-md-6" alt="..."/>
-                <div className="carousel-caption col-sm-12 col-md-6">
-                  <p>{item.mainParahraph}</p>
+                <div className={`caption ${item.id} col-sm-12 col-md-6`} style={{background : item.backgroundColor}}>
+                  <img
+                    className="icon"
+                    src={item.icon}
+                    alt={item.alt}/>
+                  <p className="paragraph">{item.mainParahraph}</p>
+                  <div className="list-items-container">
+                    <li>{Object.values(item.listItems)[0]}</li>
+                    <li>{Object.values(item.listItems)[1]}</li>
+                    <li>{Object.values(item.listItems)[2]}</li>
+                  </div>
+                  <p className="clause">{item.mainParahraph}</p>
                 </div>
               </div>
             )}

@@ -36,7 +36,6 @@ export default class App extends Component {
 
   render(){
     const { locale, messages } = this.state
-    console.log('aPP : ', messages[locale].toolsObject)
     return (
       <div>
         <LandingBanner/>
@@ -138,8 +137,8 @@ export default class App extends Component {
             </div>
           </div>
         </div>
-        <Slider/>
-        <InovationBanner/>
+        <Slider slidesInfo={messages[locale].mainCarouselInfo}/>
+        <InovationBanner inovationInfo={messages[locale].inovationBanner}/>
         <Servicios serviceObj={messages[locale].servicesObject}/>
         <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader}/>
         <PageFooter/>

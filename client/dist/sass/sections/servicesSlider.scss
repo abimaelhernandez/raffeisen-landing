@@ -18,9 +18,9 @@
 
   &-close-button {
     position:absolute;
-    right: 0px;
+    right: .4rem;
     width: 30px;
-    top: 10%;
+    top: 5%;
     height: 30px;
     text-align: center;
     border: solid green 3px;
@@ -31,37 +31,45 @@
     img{
       padding: 0;
       max-height: 40rem;
-      height: 40rem;
     }
 
-    .carousel-caption {
-      position: absolute;
-      bottom: 20%;
-      left: 40%;
-      z-index: 1;
+    .caption {
+      z-index: 0;
       padding-top: 2rem;
       padding-bottom: 2rem;
-      color: #fff;
-      text-align: left;
+      color: $color-white;
+      max-width: 50%;
+      right: 0;
+      position: relative;
+      float: right;
+      padding: 6.2rem 10.5rem 4rem 4rem;
+      min-height: 40rem;
+      max-height: 100%;
+
+      .icon {
+        position: relative;
+        height: 3rem;
+      }
     }
   }
 
   @media (max-width: 767px){
+    height: auto;
+    max-height: none;
+
     #servicios-slider-id{
 
       img{
         height: 40rem;
       }
 
-      .carousel-caption {
+      .caption {
         position: relative;
         min-height: 400px;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-        padding: 1rem;
-        color: #fff;
-        text-align: center;
+        z-index: 0;
+        color: $color-white;
+        max-width: 100%;
+        padding: 3rem;
       }
     }
   }

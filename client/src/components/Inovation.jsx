@@ -1,33 +1,41 @@
-import React from 'react'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 
-export default function InovationBanner(){
+export default class InovationBanner extends Component {
+  render (){
+    const {inovationInfo} = this.props
     return (
       <div className="inovation-banner" id="nosotros">
         <img
           className="circleImage"
           src="../../assets/icons/Orange-Plus.svg"
-          alt="..."/>
+          alt="Orange Plus Sign"/>
         <div id="mainTitle" className="inovation-banner-main-container">
             <span className="inovation-banner-main-container-title">
-              Innovación para <br/> el desarrollo estratégico
+              {inovationInfo.topPhrase}
             </span>
           </div>
           <div id="content" className="inovation-banner-contentContainer">
             <span className="dot"></span>
             <div className="inovation-banner-contentContainer-title">
-             Modelo de gestión
+             {inovationInfo.title}
             </div>
             <p className="inovation-banner-contentContainer-paragraph">
-             Basamos nuestra oferta de servicios en metodologías probadas y apegadas a la realidad de nuestros clientes, resultado de años de experiencia en el sector, acompañado del profesionalismo de un equipo de consultoría especializado.
+             {inovationInfo.mainParahraph}
             </p>
             <p>
-             Soportamos nuestros procesos en la innovación tecnológica a través de herramientas que promueven la gestión estratégica integral.
+             {inovationInfo.secondaryParagraph}
             </p>
           </div>
           <img
             className="squareImage"
             src="../../assets/icons/Yellow-Plant.svg"
-            alt="..."/>
+            alt="ellow Plant Icon"/>
       </div>
     )
+  }
+}
+
+InovationBanner.propTypes = {
+  inovationInfo: PropTypes.instanceOf(Object)
 }

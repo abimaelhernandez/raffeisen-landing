@@ -10,26 +10,50 @@ const projectBody = {
       contacto: 'Contact',
       buscar: 'Search'
     },
+    mainCarouselInfo: [
+      {
+        id: 1,
+        title : 'We generate processes that add value',
+        mainParahraph: 'Established in 2009 according to the standards of the German Confederation of Cooperatives (DGRV).',
+        secondaryParagraph: 'We support the development and strengthening of the inclusive finance sector in Latin America.'
+      },
+      {
+        id: 2,
+        title: 'Smart planning of decision-making processes-DGRV'
+      },
+      {
+        id: 3,
+        title: 'Design of customized solutions-DGRV'
+      }
+    ],
+    inovationBanner: {
+      title: 'Modelo de gestión',
+      mainParahraph: 'We base our services on tested methods that are tailored to the needs of our clients resulting from years of experience in the sector and a dedicated, specialized team of consultants.',
+      secondaryParagraph: 'Supporting our process are technologically innovative tools that promote strategic and integral management.',
+      topPhrase: 'Innovation for strategic development-DGRV'
+    },
     servicesObject: [
       {
         id: 1,
+        backgroundColor: '#81cc60',
         imageBackground: '../../assets/images/servicios_light_bulm_full.jpg',
         icon: '../assets/icons/Consultoria.svg',
-        button:'Know more',
+        button:'KNOW MORE',
         alt: 'Consulting',
         mainParahraph: 'Based on balanced scorecard methodology, four key perspectives strategically cover:',
         secondaryParagraph: 'that together promote reasoned and intelligent decision-making at all levels.',
         listItems: {
-          1: 'processes of diagnosis',
-          2: 'the definition of objectives and strategies',
-          3: 'projects or plans of action'
+          1: 'Processes of diagnosis',
+          2: 'The definition of objectives and strategies',
+          3: 'Projects or plans of action'
         }
       },
       {
         id: 2,
+        backgroundColor: '#ff8300',
         imageBackground: '../../assets/images/servicios_chalk_board.jpg',
         icon: '../assets/icons/Analitica.svg',
-        button:'Know more',
+        button:'KNOW MORE',
         alt: 'Analitics',
         mainParahraph: 'Platforms for the analysis of information accurately representing the operative, commercial, and financial reality of the organization.',
         secondaryParagraph: 'Through the design of dashboards, the visualization of information enables timely and efficient decision-making that favorably impacts the reality analyzed.',
@@ -41,9 +65,10 @@ const projectBody = {
       },
       {
         id: 3,
+        backgroundColor: '#6ab3d5',
         imageBackground: '../../assets/images/servicios_wooden_stair.jpg',
         icon: '../assets/icons/Capacitacion.svg',
-        button:'Know more',
+        button:'KNOW MORE',
         alt: 'Training',
         mainParahraph: 'Portfolio of modular topics that promote capacitation in strategic areas relevant to cooperatives.',
         secondaryParagraph: 'Three formats of knowledge transfer that can be are adapted to all levels and profiles:',
@@ -142,23 +167,47 @@ const projectBody = {
       contacto: 'Contacto',
       buscar: 'Buscar'
     },
+    mainCarouselInfo: [
+      {
+        id: 1,
+        title : 'Generamos procesos que agregan valor',
+        mainParahraph: 'Establecida en 2009 bajo estándares de la Confederación Alemana de Cooperativas -DGRV-.',
+        secondaryParagraph: 'Apoyamos el desarrollo y fortalecimiento del sector de las finanzas incluyentes en Latinoamérica.'
+      },
+      {
+        id: 2,
+        title: 'Diseño de soluciones a medida'
+      },
+      {
+        id: 3,
+        title: 'Planeación inteligente para la toma de decisiones'
+      }
+    ],
+    inovationBanner: {
+      title: 'Modelo de gestión',
+      mainParahraph: 'Basamos nuestra oferta de servicios en metodologías probadas y apegadas a la realidad de nuestros clientes, resultado de años de experiencia en el sector, acompañado del profesionalismo de un equipo de consultoría especializado.',
+      secondaryParagraph: 'Soportamos nuestros procesos en la innovación tecnológica a través de herramientas que promueven la gestión estratégica e integral.',
+      topPhrase: 'Innovación para el desarrollo estratégico'
+    },
     servicesObject: [
       {
         id: 1,
+        backgroundColor: '#81cc60',
         imageBackground: '../../assets/images/servicios_light_bulm_full.jpg',
         icon: '../assets/icons/Consultoria.svg',
         button:'CONOCE MAS',
         alt:'Consultoria',
-        mainParahraph: 'Con fundamento en la metodología de cuadro de mando integral, desde cuatro perspectivas claves que busca cubrir de manera estratégica::',
+        mainParahraph: 'Con fundamento en la metodología de cuadro de mando integral, desde cuatro perspectivas claves que busca cubrir de manera estratégica:',
         secondaryParagraph: 'Que soporten de manera argumentada e inteligente la toma de decisiones a distintos niveles.',
         listItems: {
           1: 'Procesos de diagnóstico',
           2: 'La definición de objetivos y estrategias',
-          3: ' Proyectos o planes de acción'
+          3: 'Proyectos o planes de acción'
         }
       },
       {
         id: 2,
+        backgroundColor: '#ff8300',
         imageBackground: '../../assets/images/servicios_chalk_board.jpg',
         icon: '../assets/icons/Analitica.svg',
         button:'CONOCE MAS',
@@ -173,10 +222,11 @@ const projectBody = {
       },
       {
         id: 3,
+        backgroundColor: '#6ab3d5',
         imageBackground: '../../assets/images/servicios_wooden_stair.jpg',
         icon: '../assets/icons/Capacitacion.svg',
         button:'CONOCE MAS',
-        alt:'Capacitacion',
+        alt:'Capacitación',
         mainParahraph: 'Portafolio de temas modulares para la promoción de competencias y habilidades, en áreas estratégicas corporativas.',
         secondaryParagraph: 'Tres formatos de transferencia de conocimientos que se adaptan a todos los niveles y perfiles:',
         listItems: {

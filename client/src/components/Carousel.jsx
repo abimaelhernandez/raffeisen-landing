@@ -1,9 +1,12 @@
-import React from 'react'
+import React,{ Component } from 'react'
+import PropTypes from 'prop-types'
 
-export default function Slider(){
+export default class Slider extends Component {
+  render (){
+    const { slidesInfo } = this.props
     return (
       <div className="slider-container" id="inicio">
-        <video className="slider-container-webVideo" autoPlay muted loop>
+        <video className="slider-container-webVideo" playsInline autoPlay muted loop>
           <source src="../../assets/videos/RowingBoats.mp4" type="video/mp4" />
             Your browser does not support HTML5 video.
         </video>
@@ -27,15 +30,14 @@ export default function Slider(){
               <div className="carousel-caption caption-container">
                 <span className="dot"></span>
                 <div className="caption-container-title">
-                  Generamos procesos que agregan valor
+                  {slidesInfo[0].title}
                 </div>
                 <div className="caption-container-paragraphContainer">
                   <p className="caption-container-paragraph">
-                    Establecida en 2009 bajo estándares de la Confederación Alemana de Cooperativas -DGRV-.
+                    {slidesInfo[0].mainParahraph}
                   </p>
                   <p className="caption-container-paragraph">
-                    Apoyamos el desarrolloy fortalecimiento del sector de las finanzas
-                    incluyentes en Latinoamérica.
+                    {slidesInfo[0].secondaryParagraph}
                   </p>
                 </div>
               </div>
@@ -50,7 +52,7 @@ export default function Slider(){
               <div className="carousel-caption caption-container-2">
                 <span className="dot"></span>
                 <div className="caption-container-2-title">
-                  Diseño de soluciones a medida
+                  {slidesInfo[1].title}
                 </div>
               </div>
             </div>
@@ -63,7 +65,7 @@ export default function Slider(){
               <div className="carousel-caption caption-container-3">
                 <span className="dot"></span>
                 <div className="caption-container-3-title">
-                  Planeación inteligente para la toma de decisiones
+                  {slidesInfo[2].title}
                 </div>
               </div>
             </div>
@@ -79,4 +81,10 @@ export default function Slider(){
         </div>
       </div>
     )
+  }
+}
+
+
+Slider.propTypes = {
+  slidesInfo: PropTypes.instanceOf(Object)
 }
