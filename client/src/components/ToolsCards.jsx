@@ -10,7 +10,7 @@ export default class ToolsCard extends Component {
       hasBeenClicked: false
     }
   }
-   
+
 clickHandler = (item) => {
   this.setState({ clickedId: item, hasBeenClicked: true })
 }
@@ -22,8 +22,8 @@ resetProps = (value) => {
   render() {
     const { clickedId, hasBeenClicked } = this.state
     const { toolsObject, toolsHeader } = this.props
-    
-    if (hasBeenClicked) { 
+
+    if (hasBeenClicked) {
       return (
         <div className="tools-parent" id="herramientas">
           <div className="tools-parent-header">
@@ -52,9 +52,9 @@ resetProps = (value) => {
           <div className="tools-parent-desktop-cards">
           {toolsObject.map((item) => 
             <div key={item.id} className="tools-parent-desktop-cards-card" style={{ background: item.backgroundColor }}>
-              <div className="tools-parent-desktop-cards-card-content" > 
-                <button 
-                  type="button" 
+              <div className="tools-parent-desktop-cards-card-content" >
+                <button
+                  type="button"
                   className="btn"
                   onClick={this.clickHandler.bind(this, item.id)}
                 >
@@ -62,7 +62,7 @@ resetProps = (value) => {
                     <path d="M4.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L10.293 8 4.646 2.354a.5.5 0 010-.708z"/>
                   </svg>
                 </button>
-                
+
                 <div className="card-title">
                   <p>{item.mainTitle}</p>
                 </div>

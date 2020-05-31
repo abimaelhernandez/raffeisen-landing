@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Fade from 'react-reveal/Fade'
 
 import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share'
 import FacebookIcon from 'react-share/lib/FacebookIcon'
@@ -39,7 +40,6 @@ export default class App extends Component {
     return (
       <div>
         <LandingBanner/>
-
         <div className="navigation">
           <div className="navigation-mainLogo">
             <img src="../assets/logos/Raiffeisen-Blue.svg" alt="Main Logo" className="navigation-mainLogo-large"/>
@@ -138,7 +138,9 @@ export default class App extends Component {
           </div>
         </div>
         <Slider slidesInfo={messages[locale].mainCarouselInfo}/>
-        <InovationBanner inovationInfo={messages[locale].inovationBanner}/>
+        <Fade right>
+          <InovationBanner inovationInfo={messages[locale].inovationBanner}/>
+        </Fade>
         <Servicios serviceObj={messages[locale].servicesObject}/>
         <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader}/>
         <PageFooter/>
