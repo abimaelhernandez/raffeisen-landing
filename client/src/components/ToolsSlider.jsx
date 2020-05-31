@@ -28,6 +28,8 @@ export default class ToolsSlider extends Component {
     const { toolsObject } = this.props
     const { value } = this.state
 
+    if (value === null) return true
+
     return (
       <div className="tools-slider-parent">
         <div id="tools-slider">
@@ -180,7 +182,7 @@ export default class ToolsSlider extends Component {
             infinite
             centered
             slidesPerPage={3}
-            animationSpeed={2000}
+            animationSpeed={1000}
           />
         </div>
         <div className="tools-parent-mobile">
