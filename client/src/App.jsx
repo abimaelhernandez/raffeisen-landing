@@ -104,7 +104,7 @@ export default class App extends Component {
               <img src="../assets/icons/Mobile-share.svg" alt="share" className="navigation-icons-individual-share"/>
             </button>
             <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer">
-              <img src="../assets/Twitter-white.svg" alt="Twitter" className="navigation-icons-individual-twitter"/>
+              <img src="../assets/icons/Twitter-white.svg" alt="Twitter" className="navigation-icons-individual-twitter"/>
             </a>
               <button type="button" className="navigationMobile-lang" name="es" onClick={this.handleSpanish}>Es</button>
               <button type="button" className="navigationMobile-lang" name="es" onClick={this.handleEnglish}>En</button>
