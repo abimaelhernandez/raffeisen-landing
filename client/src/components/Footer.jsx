@@ -16,7 +16,7 @@ export default class PageFooter extends Component {
 
         <div className="footer-items displayFlex addressD">
 
-          <img src="../assets/Phone.svg" alt="phone-logo" className="footer-icons footer-icons-phone"/>
+          <img src="../assets/icons/Phone.svg" alt="phone-logo" className="footer-icons footer-icons-phone"/>
 
           <div>
             <span>Ciudad de México, México 
