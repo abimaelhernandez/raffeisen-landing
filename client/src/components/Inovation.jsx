@@ -5,7 +5,7 @@ export default function InovationBanner(){
       <div className="inovation-banner" id="nosotros">
         <img
           className="circleImage"
-          src="../../assets/icons/Plus-orange.svg"
+          src="../../assets/icons/Orange-Plus.svg"
           alt="..."/>
         <div id="mainTitle" className="inovation-banner-main-container">
             <span className="inovation-banner-main-container-title">
@@ -26,7 +26,7 @@ export default function InovationBanner(){
           </div>
           <img
             className="squareImage"
-            src="../../assets/icons/asset3.svg"
+            src="../../assets/icons/Yellow-Plant.svg"
             alt="..."/>
       </div>
     )

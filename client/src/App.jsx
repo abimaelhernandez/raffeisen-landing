@@ -43,7 +43,7 @@ export default class App extends Component {
 
         <div className="navigation">
           <div className="navigation-mainLogo">
-            <img src="../assets/logo-main.svg" alt="Main Logo" className="navigation-mainLogo-large"/>
+            <img src="../assets/logos/Raiffeisen-Blue.svg" alt="Main Logo" className="navigation-mainLogo-large"/>
           </div>
           <div className="navigation-items">
             <button type="button" className="navigation-items-item"><a href="#inicio">{messages[locale].navigation.inicio}</a></button>
@@ -66,18 +66,18 @@ export default class App extends Component {
           <div className="navigation-icons">
             <button type="button"className="navigation-items-item"><a href="#contacto">{messages[locale].navigation.contacto}</a></button>
             <button type="button" data-toggle="modal" data-target="#myModal">
-              <img src="https://img.icons8.com/small/30/000000/share.png" alt="share" className="navigation-icons-individual-share"/>
+              <img src="../assets/icons/Desktop-share.svg" alt="share" className="navigation-icons-individual-share"/>
             </button>
             <button type="button" className="navigation-icons-individual-lang" name="es" onClick={this.handleSpanish}>Es</button>
             <button type="button" className="navigation-icons-individual-lang" name="es" onClick={this.handleEnglish}>En</button>
             <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer">
-              <img src="../assets/Twitter-grey.svg" alt="Twitter" className="navigation-icons-individual-twitter"/>
+              <img src="../assets/icons/Twitter-grey.svg" alt="Twitter" className="navigation-icons-individual-twitter"/>
             </a>
           </div>
         </div>
 
         <div className="navigationMobile navBanner">
-          <img src="../assets/main-small.svg" alt="Raiffeisen Logo" className="navigationMobile-mainLogo-small"/>
+          <img src="../assets/logos/Mobile-R.svg" alt="Raiffeisen Logo" className="navigationMobile-mainLogo-small"/>
 
           <input type="checkbox" className="navigationMobile-checkbox" id="navi-toggle"/>
 
@@ -101,7 +101,7 @@ export default class App extends Component {
 
             <div className="navigationMobile-bottom">
             <button type="button" data-toggle="modal" data-target="#myModal">
-              <img src="https://img.icons8.com/small/30/000000/share.png" alt="share" className="navigation-icons-individual-share"/>
+              <img src="../assets/icons/Mobile-share.svg" alt="share" className="navigation-icons-individual-share"/>
             </button>
             <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer">
               <img src="../assets/Twitter-white.svg" alt="Twitter" className="navigation-icons-individual-twitter"/>

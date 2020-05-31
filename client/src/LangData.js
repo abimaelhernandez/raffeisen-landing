@@ -13,7 +13,7 @@ const projectBody = {
     servicesObject: [
       {
         id: 1,
-        imageBackground: '../../assets/servicios_light_bulm_full.jpg',
+        imageBackground: '../../assets/images/servicios_light_bulm_full.jpg',
         icon: '../assets/icons/Consultoria.svg',
         button:'Know more',
         alt: 'Consulting',
@@ -27,7 +27,7 @@ const projectBody = {
       },
       {
         id: 2,
-        imageBackground: '../../assets/servicios_chalk_board.jpg',
+        imageBackground: '../../assets/images/servicios_chalk_board.jpg',
         icon: '../assets/icons/Analitica.svg',
         button:'Know more',
         alt: 'Analitics',
@@ -41,7 +41,7 @@ const projectBody = {
       },
       {
         id: 3,
-        imageBackground: '../../assets/servicios_wooden_stair.jpg',
+        imageBackground: '../../assets/images/servicios_wooden_stair.jpg',
         icon: '../assets/icons/Capacitacion.svg',
         button:'Know more',
         alt: 'Training',
@@ -145,7 +145,7 @@ const projectBody = {
     servicesObject: [
       {
         id: 1,
-        imageBackground: '../../assets/servicios_light_bulm_full.jpg',
+        imageBackground: '../../assets/images/servicios_light_bulm_full.jpg',
         icon: '../assets/icons/Consultoria.svg',
         button:'CONOCE MAS',
         alt:'Consultoria',
@@ -159,7 +159,7 @@ const projectBody = {
       },
       {
         id: 2,
-        imageBackground: '../../assets/servicios_chalk_board.jpg',
+        imageBackground: '../../assets/images/servicios_chalk_board.jpg',
         icon: '../assets/icons/Analitica.svg',
         button:'CONOCE MAS',
         alt:'Analitica',
@@ -173,7 +173,7 @@ const projectBody = {
       },
       {
         id: 3,
-        imageBackground: '../../assets/servicios_wooden_stair.jpg',
+        imageBackground: '../../assets/images/servicios_wooden_stair.jpg',
         icon: '../assets/icons/Capacitacion.svg',
         button:'CONOCE MAS',
         alt:'Capacitacion',
