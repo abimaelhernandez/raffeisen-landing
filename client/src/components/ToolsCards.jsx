@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Slide from 'react-reveal/Flip'
 import Jump from 'react-reveal/Jump'
+import Roll from 'react-reveal/Roll'
 import ToolsSlider from './ToolsSlider'
 
 export default class ToolsCard extends Component {
@@ -81,19 +82,21 @@ resetProps = (value) => {
         <div className="tools-parent-mobile">
           {
             toolsObject.map((item) =>
-              <div key={item.id} className="tools-parent-mobile-dropdown">
-                <button className="btn tools-parent-mobile-dropdown-button" style={{ background: item.backgroundColor }} type="button" data-toggle="collapse" data-target={`#${item.mobileId}`} aria-expanded="false">
-                  <i>{item.mainTitle}</i>
-                  <svg className="bi bi-chevron-down tools-parent-mobile-dropdown-button-drop" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clipRule="evenodd"/>
-                  </svg>
-                </button>
-                <div className="collapse tools-parent-mobile-dropdown-content" id={`${item.mobileId}`}>
-                  <div className="card card-body" style={{ background: item.backgroundColor }}>
-                    <p>{item.bodyContent}</p>
+            <Roll bottom cascade>
+                <div key={item.id} className="tools-parent-mobile-dropdown">
+                  <button className="btn tools-parent-mobile-dropdown-button" style={{ background: item.backgroundColor }} type="button" data-toggle="collapse" data-target={`#${item.mobileId}`} aria-expanded="false">
+                    <i>{item.mainTitle}</i>
+                    <svg className="bi bi-chevron-down tools-parent-mobile-dropdown-button-drop" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clipRule="evenodd"/>
+                    </svg>
+                  </button>
+                  <div className="collapse tools-parent-mobile-dropdown-content" id={`${item.mobileId}`}>
+                    <div className="card card-body" style={{ background: item.backgroundColor }}>
+                      <p>{item.bodyContent}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Roll>
             )
           }
         </div>
