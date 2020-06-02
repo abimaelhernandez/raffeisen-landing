@@ -1,4 +1,6 @@
 import React,{ Component } from 'react'
+import Fade from 'react-reveal/Fade'
+import Roll from 'react-reveal/Roll'
 import PropTypes from 'prop-types'
 
 export default class Slider extends Component {
@@ -22,52 +24,64 @@ export default class Slider extends Component {
           >
           <div className="carousel-inner">
             <div className="carousel-item active first-slide">
-              <div className="img-container">
-                <img
-                  src="../../assets/icons/Orange-Plus.svg"
-                  alt="..."/>
-              </div>
-              <div className="carousel-caption caption-container">
-                <span className="dot"></span>
-                <div className="caption-container-title">
-                  {slidesInfo[0].title}
+              <Fade left>
+                <div className="img-container">
+                  <img
+                    src="../../assets/icons/Orange-Plus.svg"
+                    alt="..."/>
                 </div>
-                <div className="caption-container-paragraphContainer">
-                  <p className="caption-container-paragraph">
-                    {slidesInfo[0].mainParahraph}
-                  </p>
-                  <p className="caption-container-paragraph">
-                    {slidesInfo[0].secondaryParagraph}
-                  </p>
+              </Fade>
+              <Fade left>
+                <div className="carousel-caption caption-container">
+                  <span className="dot"></span>
+                  <div className="caption-container-title">
+                    {slidesInfo[0].title}
+                  </div>
+                  <div className="caption-container-paragraphContainer">
+                    <p className="caption-container-paragraph">
+                      {slidesInfo[0].mainParahraph}
+                    </p>
+                    <p className="caption-container-paragraph">
+                      {slidesInfo[0].secondaryParagraph}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Fade>
             </div>
             <div className="carousel-item second-slide">
               <div className="img-container">
-                <img
-                  className="d-block w-50"
-                  src="../../assets/icons/Yellow-Plant.svg"
-                  alt="..."/>
+                <Fade down>
+                  <img
+                    className="d-block w-50"
+                    src="../../assets/icons/Yellow-Plant.svg"
+                    alt="..."/>
+                </Fade>
               </div>
-              <div className="carousel-caption caption-container-2">
-                <span className="dot"></span>
-                <div className="caption-container-2-title">
-                  {slidesInfo[1].title}
+              <Fade up>
+                <div className="carousel-caption caption-container-2">
+                  <span className="dot"></span>
+                  <div className="caption-container-2-title">
+                    {slidesInfo[1].title}
+                  </div>
                 </div>
-              </div>
+              </Fade>
             </div>
             <div className="carousel-item third-slide">
               <div className="img-container">
-                <img
-                  src="../../assets/icons/Green-Arrows.svg"
-                  alt="..."/>
+                <Fade left>
+                  <img
+                    src="../../assets/icons/Green-Arrows.svg"
+                    alt="..."/>
+                </Fade>
               </div>
-              <div className="carousel-caption caption-container-3">
-                <span className="dot"></span>
-                <div className="caption-container-3-title">
-                  {slidesInfo[2].title}
+              <Roll right>
+                <div className="carousel-caption caption-container-3">
+                  <span className="dot"></span>
+                  <div className="caption-container-3-title">
+                    {slidesInfo[2].title}
+                  </div>
                 </div>
-              </div>
+              </Roll >
             </div>
           </div>
           <ol className="carousel-indicators">

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Fade from 'react-reveal/Fade'
+import Slide from 'react-reveal/Slide'
 import ServicesSlider from './ServicesSlider'
 
 export default class Servicios extends Component {
@@ -35,26 +37,30 @@ export default class Servicios extends Component {
     }
     return (
       <div className="servicios-parent" id="servicios">
-        <p className="servicios-parent-title">Servicios</p>
+        <Slide left>
+          <p className="servicios-parent-title">Servicios</p>
+        </Slide>
         <div className="container-fluid servicios-parent-container">
           {serviceObj.map((item) =>
-            <div className="col-sm-12 col-md-4 servicios-parent-container-item" key={item.id}>
-              <img
-                className="servicios-parent-container-item-img"
-                src={item.imageBackground}
-                alt="no hello"/>
-              <div className="servicios-parent-container-item-logo-container">
+            <Fade top>
+              <div className="col-sm-12 col-md-4 servicios-parent-container-item" key={item.id}>
                 <img
-                  className="servicios-parent-container-item-logo-container-asset"
-                  src={item.icon}
-                  alt={item.alt}/>
-                <div className="clickHandler">
-                  <button type="button" onClick={this.clickHandler.bind(this, item.id)}>
-                    {item.button}
-                  </button>
+                  className="servicios-parent-container-item-img"
+                  src={item.imageBackground}
+                  alt="no hello"/>
+                <div className="servicios-parent-container-item-logo-container">
+                  <img
+                    className="servicios-parent-container-item-logo-container-asset"
+                    src={item.icon}
+                    alt={item.alt}/>
+                  <div className="clickHandler">
+                    <button type="button" onClick={this.clickHandler.bind(this, item.id)}>
+                      {item.button}
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Fade>
           )}
         </div>
       </div>
