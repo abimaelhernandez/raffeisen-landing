@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Fade from 'react-reveal/Fade'
+// import Fade from 'react-reveal/Fade'
 
 import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share'
 import FacebookIcon from 'react-share/lib/FacebookIcon'
@@ -23,30 +23,6 @@ export default class App extends Component {
       locale: 'es',
       messages: projectBody
     }
-  }
-
-  componentDidMount(){
-    console.log('mounted app', window.addEventListener)
-    let lastPosition = 0
-    let ticking = false
-
-    function doSomething(scroll) {
-      // Do something with the scroll position
-      console.log('do somthing', scroll)
-    }
-
-    window.addEventListener('scroll', () => {
-      lastPosition = window.scrollY
-
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          doSomething(lastPosition)
-          ticking = false
-        })
-
-        ticking = true
-      }
-    })
   }
 
   handleSpanish = (e) => {
@@ -98,7 +74,6 @@ export default class App extends Component {
             </a>
           </div>
         </div>
-
         <div className="navigationMobile navBanner">
           <img src="../assets/logos/Mobile-R.svg" alt="Raiffeisen Logo" className="navigationMobile-mainLogo-small"/>
 
@@ -134,7 +109,6 @@ export default class App extends Component {
             </div>
           </nav>
         </div>
-
         <div className="container">
           <div className="modal fade" id="myModal" role="dialog">
             <div className="modal-dialog modal-sm mt-modal">
@@ -162,9 +136,7 @@ export default class App extends Component {
           </div>
         </div>
         <Slider slidesInfo={messages[locale].mainCarouselInfo}/>
-        <Fade right>
-         <InovationBanner inovationInfo={messages[locale].inovationBanner}/>
-        </Fade>
+        <InovationBanner inovationInfo={messages[locale].inovationBanner}/>
         <Servicios serviceObj={messages[locale].servicesObject}/>
         <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader}/>
         <PageFooter/>

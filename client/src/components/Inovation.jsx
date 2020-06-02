@@ -2,9 +2,20 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 
 export default class InovationBanner extends Component {
+
+  renderInovation = () => {
+    let lastPosition = 0
+
+    window.addEventListener('scroll', () => {
+      lastPosition = window.scrollY
+      return lastPosition > 300 && true
+    })
+  }
+
   render (){
     const {inovationInfo} = this.props
-    return (
+    if(window.scrollY > 300) {
+    return(
       <div className="inovation-banner" id="nosotros">
         <img
           className="circleImage"
@@ -32,7 +43,8 @@ export default class InovationBanner extends Component {
             src="../../assets/icons/Yellow-Plant.svg"
             alt="ellow Plant Icon"/>
       </div>
-    )
+    )}
+   return (<h1> hello world </h1>)
   }
 }
 
