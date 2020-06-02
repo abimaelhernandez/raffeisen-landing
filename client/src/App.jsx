@@ -25,6 +25,30 @@ export default class App extends Component {
     }
   }
 
+  componentDidMount(){
+    console.log('mounted app', window.addEventListener)
+    let lastPosition = 0
+    let ticking = false
+
+    function doSomething(scroll) {
+      // Do something with the scroll position
+      console.log('do somthing', scroll)
+    }
+
+    window.addEventListener('scroll', () => {
+      lastPosition = window.scrollY
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          doSomething(lastPosition)
+          ticking = false
+        })
+
+        ticking = true
+      }
+    })
+  }
+
   handleSpanish = (e) => {
     e.preventDefault()
     this.setState({ locale : 'es'})
@@ -34,8 +58,6 @@ export default class App extends Component {
     e.preventDefault()
     this.setState({ locale : 'en' })
   }
-
-  inovation = (poop) => <InovationBanner inovationInfo={poop}/>
 
   render(){
     const { locale, messages } = this.state
@@ -141,7 +163,7 @@ export default class App extends Component {
         </div>
         <Slider slidesInfo={messages[locale].mainCarouselInfo}/>
         <Fade right>
-         {this.inovation(messages[locale].inovationBanner)}
+         <InovationBanner inovationInfo={messages[locale].inovationBanner}/>
         </Fade>
         <Servicios serviceObj={messages[locale].servicesObject}/>
         <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader}/>
