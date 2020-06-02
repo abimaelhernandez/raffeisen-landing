@@ -55,9 +55,9 @@ resetProps = (value) => {
 
         <div className="tools-parent-desktop">
           <div className="tools-parent-desktop-cards">
-          {toolsObject.map((item) => 
-            <Flip right>
-              <div key={item.id} className="tools-parent-desktop-cards-card" style={{ background: item.backgroundColor }}>
+          {toolsObject.map((item) =>
+            <Flip  key={item.id} right>
+              <div className="tools-parent-desktop-cards-card" style={{ background: item.backgroundColor }}>
                 <div className="tools-parent-desktop-cards-card-content" >
                   <button
                     type="button"
@@ -78,7 +78,7 @@ resetProps = (value) => {
           )}
         </div>
         </div>
-        
+
         <div className="tools-parent-mobile">
           {
             toolsObject.map((item) =>

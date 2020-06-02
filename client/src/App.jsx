@@ -35,6 +35,8 @@ export default class App extends Component {
     this.setState({ locale : 'en' })
   }
 
+  inovation = (poop) => <InovationBanner inovationInfo={poop}/>
+
   render(){
     const { locale, messages } = this.state
     return (
@@ -139,7 +141,7 @@ export default class App extends Component {
         </div>
         <Slider slidesInfo={messages[locale].mainCarouselInfo}/>
         <Fade right>
-          <InovationBanner inovationInfo={messages[locale].inovationBanner}/>
+         {this.inovation(messages[locale].inovationBanner)}
         </Fade>
         <Servicios serviceObj={messages[locale].servicesObject}/>
         <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader}/>

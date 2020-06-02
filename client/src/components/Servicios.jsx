@@ -42,8 +42,8 @@ export default class Servicios extends Component {
         </Slide>
         <div className="container-fluid servicios-parent-container">
           {serviceObj.map((item) =>
-            <Fade top>
-              <div className="col-sm-12 col-md-4 servicios-parent-container-item" key={item.id}>
+            <Fade top key={item.id}>
+              <div className="col-sm-12 col-md-4 servicios-parent-container-item">
                 <img
                   className="servicios-parent-container-item-img"
                   src={item.imageBackground}
