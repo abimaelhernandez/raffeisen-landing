@@ -75,7 +75,8 @@ resetProps = (value) => {
                   </div>
                 </div>
               </div>
-            </Slide>)}
+            </Slide>
+          )}
         </div>
         </div>
         
