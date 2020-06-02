@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Slide from 'react-reveal/Flip'
+import Slide from 'react-reveal/Slide'
 import Jump from 'react-reveal/Jump'
-import Roll from 'react-reveal/Roll'
+import Flip from 'react-reveal/Flip'
 import ToolsSlider from './ToolsSlider'
 
 export default class ToolsCard extends Component {
@@ -82,7 +82,7 @@ resetProps = (value) => {
         <div className="tools-parent-mobile">
           {
             toolsObject.map((item) =>
-            <Roll bottom cascade>
+            <Flip top>
                 <div key={item.id} className="tools-parent-mobile-dropdown">
                   <button className="btn tools-parent-mobile-dropdown-button" style={{ background: item.backgroundColor }} type="button" data-toggle="collapse" data-target={`#${item.mobileId}`} aria-expanded="false">
                     <i>{item.mainTitle}</i>
@@ -96,7 +96,7 @@ resetProps = (value) => {
                     </div>
                   </div>
                 </div>
-              </Roll>
+              </Flip>
             )
           }
         </div>
