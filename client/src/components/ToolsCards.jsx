@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Slide from 'react-reveal/Slide'
 import Jump from 'react-reveal/Jump'
 import Flip from 'react-reveal/Flip'
 import ToolsSlider from './ToolsSlider'
@@ -57,7 +56,7 @@ resetProps = (value) => {
         <div className="tools-parent-desktop">
           <div className="tools-parent-desktop-cards">
           {toolsObject.map((item) => 
-            <Slide right>
+            <Flip right>
               <div key={item.id} className="tools-parent-desktop-cards-card" style={{ background: item.backgroundColor }}>
                 <div className="tools-parent-desktop-cards-card-content" >
                   <button
@@ -75,7 +74,7 @@ resetProps = (value) => {
                   </div>
                 </div>
               </div>
-            </Slide>
+            </Flip>
           )}
         </div>
         </div>
