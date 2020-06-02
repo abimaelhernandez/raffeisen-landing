@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Slide from 'react-reveal/Flip'
+import Jump from 'react-reveal/Jump'
 import ToolsSlider from './ToolsSlider'
 
 export default class ToolsCard extends Component {
@@ -40,37 +42,42 @@ resetProps = (value) => {
     }
     return (
       <div className="tools-parent" id="herramientas">
-        <div className="tools-parent-header">
-          <div className="tools-parent-header-title">
-            <h1>{toolsHeader.title}</h1>
+        <Jump>
+          <div className="tools-parent-header">
+            <div className="tools-parent-header-title">
+              <h1>{toolsHeader.title}</h1>
+            </div>
+            <div className="tools-parent-header-subText">
+              <p>{toolsHeader.subText}</p>
+            </div>
           </div>
-          <div className="tools-parent-header-subText">
-            <p>{toolsHeader.subText}</p>
-          </div>
-        </div>
+          </Jump>
+
         <div className="tools-parent-desktop">
           <div className="tools-parent-desktop-cards">
           {toolsObject.map((item) => 
-            <div key={item.id} className="tools-parent-desktop-cards-card" style={{ background: item.backgroundColor }}>
-              <div className="tools-parent-desktop-cards-card-content" >
-                <button
-                  type="button"
-                  className="btn"
-                  onClick={this.clickHandler.bind(this, item.id)}
-                >
-                  <svg className="bi bi-chevron-right nextArrrow" viewBox="0 0 16 16" fill="currentColor">
-                    <path d="M4.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L10.293 8 4.646 2.354a.5.5 0 010-.708z"/>
-                  </svg>
-                </button>
+            <Slide right>
+              <div key={item.id} className="tools-parent-desktop-cards-card" style={{ background: item.backgroundColor }}>
+                <div className="tools-parent-desktop-cards-card-content" >
+                  <button
+                    type="button"
+                    className="btn"
+                    onClick={this.clickHandler.bind(this, item.id)}
+                  >
+                    <svg className="bi bi-chevron-right nextArrrow" viewBox="0 0 16 16" fill="currentColor">
+                      <path d="M4.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L10.293 8 4.646 2.354a.5.5 0 010-.708z"/>
+                    </svg>
+                  </button>
 
-                <div className="card-title">
-                  <p>{item.mainTitle}</p>
+                  <div className="card-title">
+                    <p>{item.mainTitle}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            </Slide>)}
         </div>
         </div>
+        
         <div className="tools-parent-mobile">
           {
             toolsObject.map((item) =>

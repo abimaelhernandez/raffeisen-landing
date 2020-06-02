@@ -68,7 +68,7 @@ export default class Slider extends Component {
             </div>
             <div className="carousel-item third-slide">
               <div className="img-container">
-                <Fade down>
+                <Fade left>
                   <img
                     src="../../assets/icons/Green-Arrows.svg"
                     alt="..."/>

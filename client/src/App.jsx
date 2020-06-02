@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+// import Pulse from 'react-reveal/Pulse'
 import Fade from 'react-reveal/Fade'
 
 import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share'
