@@ -1,8 +1,7 @@
-
 .inovation-banner {
   position: relative;
   width: 100%;
-  height: 934px;
+  height: 93.4rem;
   max-height: 90rem;
   background-color: $inovation-background;
 
@@ -28,7 +27,6 @@
       top: 54%;
     }
   }
-
 
   &-main-container {
     position: absolute;
@@ -100,9 +98,11 @@
     25% {
       opacity: .7;
     }
+
     50% {
       opacity: .3;
     }
+
     100% {
       opacity: 0;
     }
@@ -118,12 +118,15 @@
     1% {
       opacity: 0;
     }
+
     25% {
       opacity: .3;
     }
+
     50% {
       opacity: .7;
     }
+
     100% {
       opacity: 1;
     }
@@ -131,7 +134,7 @@
 }
 
 // mobile breakpoint
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .inovation-banner {
     height: 100vh;
     max-height: 80.12rem;
@@ -169,8 +172,8 @@
 
       &-title {
         width: 25rem;
-        height: 110px;
-        font-size: 28px;
+        height: 11rem;
+        font-size: 2.8rem;
         font-weight: 500;
         line-height: 1.29;
         text-align: center;
@@ -194,11 +197,11 @@
     }
 
     &-title {
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: 900;
       width: 245.5px;
       height: 276.8px;
-      font-size: 12px;
+      font-size: 1.2rem;
       line-height: 1.83;
       text-align: left;
       color: #ffffff;
@@ -208,12 +211,11 @@
       position: relative;
       width: 274.5px;
       height: 276.8px;
-      font-size: 12px;
+      font-size: 1.2rem;
       line-height: 1.83;
       text-align: left;
       height: auto;
-      // font-size: 1.8vw;
-      color:  $color-white;
+      color: $color-white;
     }
   }
 }

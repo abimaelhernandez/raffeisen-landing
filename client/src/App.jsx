@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Fade from 'react-reveal/Fade'
-
 import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share'
 import FacebookIcon from 'react-share/lib/FacebookIcon'
 import TwitterIcon from 'react-share/lib/TwitterIcon'
@@ -17,100 +16,103 @@ import '../dist/sass/mains.scss'
 import ToolsCard from './components/ToolsCards'
 
 export default class App extends Component {
-  constructor(){
+  constructor() {
     super()
     this.state = {
       locale: 'es',
-      messages: projectBody
+      messages: projectBody,
+      openMenu: false
     }
   }
 
   handleSpanish = (e) => {
     e.preventDefault()
-    this.setState({ locale : 'es'})
+    this.setState({ locale: 'es' })
   }
 
   handleEnglish = (e) => {
     e.preventDefault()
-    this.setState({ locale : 'en' })
+    this.setState({ locale: 'en' })
   }
 
-  render(){
-    const { locale, messages } = this.state
+  toggleMenu = () => {
+    const { openMenu } = this.state
+    this.setState({ openMenu: !openMenu })
+  }
+
+  render() {
+    const { locale, messages, openMenu } = this.state
     return (
       <div>
-        <LandingBanner/>
-        <div className="navigation">
-          <div className="navigation-mainLogo">
-            <img src="../assets/logos/Raiffeisen-Blue.svg" alt="Main Logo" className="navigation-mainLogo-large"/>
-          </div>
-          <div className="navigation-items">
-            <button type="button" className="navigation-items-item"><a href="#inicio">{messages[locale].navigation.inicio}</a></button>
-            <button type="button" className="navigation-items-item"><a href="#nosotros">{messages[locale].navigation.nosotros}</a></button>
-            <button type="button" className="navigation-items-item"><a href="#servicios">{messages[locale].navigation.servicios}</a></button>
-            <button type="button" className="navigation-items-item"><a href="#herramientas">{messages[locale].navigation.herramientas}</a></button>
-            <button type="button" className="navigation-items-item"><a href="#cobertura">{messages[locale].navigation.cobertura}</a></button>
-          </div>
-          <div className="navigation-search">
-            <form action="#">
-              <input type="text" name="search" className="navigation-search-box"/>
-              <span type="submit" className="navigation-search-button">
-                <svg width="1em" height="1em">
-                  <path fillRule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clipRule="evenodd"/>
-                  <path fillRule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clipRule="evenodd"/>
-                </svg>
-              </span>
-            </form>
-          </div>
-          <div className="navigation-icons">
-            <button type="button"className="navigation-items-item"><a href="#contacto">{messages[locale].navigation.contacto}</a></button>
-            <button type="button" data-toggle="modal" data-target="#myModal">
-              <img src="../assets/icons/Desktop-share.svg" alt="share" className="navigation-icons-individual-share"/>
-            </button>
-            <button type="button" className="navigation-icons-individual-lang" name="es" onClick={this.handleSpanish}>Es</button>
-            <button type="button" className="navigation-icons-individual-lang" name="es" onClick={this.handleEnglish}>En</button>
-            <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer">
-              <img src="../assets/icons/Twitter-grey.svg" alt="Twitter" className="navigation-icons-individual-twitter"/>
+        <LandingBanner />
+        <div className="rl-navigation-bar">
+          <div className="rl-navigation-bar-wrapper">
+            <a className="rl-navigation-bar-logo" href="/">
+              <img src="../assets/logos/Raiffeisen-Blue.svg" alt="Raiffeisen Main Logo" className="rl-navigation-bar-logo-large" />
+              <img src="../assets/logos/Blue-R.svg" alt="Raiffeisen Main Logo" className="rl-navigation-bar-logo-medium" />
+              <img src="../assets/logos/Mobile-R.svg" alt="Raiffeisen Main Logo" className="rl-navigation-bar-logo-small" />
             </a>
-          </div>
-        </div>
-
-        <div className="navigationMobile navBanner">
-          <img src="../assets/logos/Mobile-R.svg" alt="Raiffeisen Logo" className="navigationMobile-mainLogo-small"/>
-
-          <input type="checkbox" className="navigationMobile-checkbox" id="navi-toggle"/>
-
-          <label htmlFor="navi-toggle" className="navigationMobile-button">
-            <span className="navigationMobile-icon">&nbsp;</span>
-          </label>
-
-          <div className="navigationMobile-background">&nbsp;</div>
-
-          <nav className="navigationMobile-nav">
-
-            <ul className="navigationMobile-list">
-              <li className="navigationMobile-item"><a href="#inicio" className="navigationMobile-link">{messages[locale].navigation.inicio}</a></li>
-              <li className="navigationMobile-item"><a href="#nosotros" className="navigationMobile-link">{messages[locale].navigation.nosotros}</a></li>
-              <li className="navigationMobile-item"><a href="#servicios" className="navigationMobile-link">{messages[locale].navigation.servicios}</a></li>
-              <li className="navigationMobile-item"><a href="#herramientas" className="navigationMobile-link">{messages[locale].navigation.herramientas}</a></li>
-              <li className="navigationMobile-item"><a href="#cobertura" className="navigationMobile-link">{messages[locale].navigation.cobertura}</a></li>
-              <li className="navigationMobile-item"><a href="#buscar" className="navigationMobile-link">{messages[locale].navigation.buscar}</a></li>
-              <li className="navigationMobile-item"><a href="#contacto" className="navigationMobile-link">{messages[locale].navigation.contacto}</a></li>
-            </ul>
-
-            <div className="navigationMobile-bottom">
-            <button type="button" data-toggle="modal" data-target="#myModal">
-              <img src="../assets/icons/Mobile-share.svg" alt="share" className="navigation-icons-individual-share"/>
-            </button>
-            <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer">
-              <img src="../assets/icons/Twitter-white.svg" alt="Twitter" className="navigation-icons-individual-twitter"/>
-            </a>
-              <button type="button" className="navigationMobile-lang" name="es" onClick={this.handleSpanish}>Es</button>
-              <button type="button" className="navigationMobile-lang" name="es" onClick={this.handleEnglish}>En</button>
+            <div className="rl-navigation-bar-items">
+              <a className="rl-navigation-bar-items-single" href="/">{messages[locale].navigation.inicio}</a>
+              <a className="rl-navigation-bar-items-single" href="#nosotros">{messages[locale].navigation.nosotros}</a>
+              <a className="rl-navigation-bar-items-single" href="#servicios">{messages[locale].navigation.servicios}</a>
+              <a className="rl-navigation-bar-items-single" href="#herramientas">{messages[locale].navigation.herramientas}</a>
+              <a className="rl-navigation-bar-items-single" href="#cobertura">{messages[locale].navigation.cobertura}</a>
             </div>
-          </nav>
-        </div>
+            <div className="rl-navigation-bar-search">
+              <form action="#">
+                <input type="text" name="search" className="rl-navigation-bar-search-box" />
+                <span type="submit" className="rl-navigation-bar-search-button">
+                  <svg width="1em" height="1em">
+                    <path fillRule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clipRule="evenodd" />
+                    <path fillRule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clipRule="evenodd" />
+                  </svg>
+                </span>
+              </form>
+            </div>
+            <div className="rl-navigation-bar-contacts">
+              <a className="rl-navigation-bar-items-single" href="#contacto">{messages[locale].navigation.contacto}</a>
+              <button type="button" data-toggle="modal" data-target="#myModal" >
+                <img src="../assets/icons/Desktop-share.svg" alt="Raiffeisen page share" className="rl-navigation-bar-contacts-share" />
+              </button>
+              <button type="button" className="rl-navigation-bar-items-single" name="es" onClick={this.handleSpanish}>Es</button>
+              <button type="button" className="rl-navigation-bar-items-single" name="es" onClick={this.handleEnglish}>En</button>
+              <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer" className="rl-navigation-bar-items-single">
+                <img src="../assets/icons/Twitter-grey.svg" alt="Raiffeisen Twitter" className="rl-navigation-bar-contacts-share" />
+              </a>
+            </div>
 
+            <div className="rl-navigation-bar-menu">
+              <input type="checkbox" onChange={this.toggleMenu} checked={openMenu} className="rl-navigation-bar-menu-checkbox" id="navi-toggle" />
+              <label htmlFor="navi-toggle" className="rl-navigation-bar-menu-button">
+                <span className="rl-navigation-bar-menu-icon" />
+              </label>
+              <div className="rl-navigation-bar-menu-background" />
+              <nav className="rl-navigation-bar-menu-nav">
+                <button type="button" name="button" onClick={this.toggleMenu}>
+                  <div className="rl-navigation-bar-menu-items">
+                    <a className="rl-navigation-bar-items-single" href="/">{messages[locale].navigation.inicio}</a>
+                    <a className="rl-navigation-bar-items-single" href="#nosotros">{messages[locale].navigation.nosotros}</a>
+                    <a className="rl-navigation-bar-items-single" href="#servicios">{messages[locale].navigation.servicios}</a>
+                    <a className="rl-navigation-bar-items-single" href="#herramientas">{messages[locale].navigation.herramientas}</a>
+                    <a className="rl-navigation-bar-items-single" href="#buscar">{messages[locale].navigation.buscar}</a>
+                    <a className="rl-navigation-bar-items-single" href="#cobertura">{messages[locale].navigation.cobertura}</a>
+                  </div>
+                </button>
+                <div className="rl-navigation-bar-menu-bottom">
+                  <button type="button" data-toggle="modal" data-target="#myModal" >
+                    <img src="../assets/icons/Mobile-share.svg" alt="Raiffeisen page share" className="rl-navigation-bar-contacts-share" />
+                  </button>
+                  <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer" className="rl-navigation-bar-items-single">
+                    <img src="../assets/icons/Twitter-white.svg" alt="Raiffeisen Twitter" className="rl-navigation-bar-contacts-share" />
+                  </a>
+                  <button type="button" className="rl-navigation-bar-items-single" name="es" onClick={this.handleSpanish}>Es</button>
+                  <button type="button" className="rl-navigation-bar-items-single" name="es" onClick={this.handleEnglish}>En</button>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
         <div className="container">
           <div className="modal fade" id="myModal" role="dialog">
             <div className="modal-dialog modal-sm mt-modal">
@@ -121,7 +123,7 @@ export default class App extends Component {
                 </div>
                 <div className="modal-body d-flex justify-content-around">
                   <FacebookShareButton quote="Learn more about Raiffeisen! #Raiffeisen" url="https://infinite-tor-93660.herokuapp.com">
-                    <FacebookIcon size={32}/>
+                    <FacebookIcon size={32} />
                   </FacebookShareButton>
                   <TwitterShareButton title="Learn more about Raiffeisen!" url="https://infinite-tor-93660.herokuapp.com" hashtags={['Raiffeisen']}>
                     <TwitterIcon size={32} />
@@ -137,13 +139,13 @@ export default class App extends Component {
             </div>
           </div>
         </div>
-        <Slider slidesInfo={messages[locale].mainCarouselInfo}/>
+        <Slider slidesInfo={messages[locale].mainCarouselInfo} />
         <Fade right>
-          <InovationBanner inovationInfo={messages[locale].inovationBanner}/>
+          <InovationBanner inovationInfo={messages[locale].inovationBanner} />
         </Fade>
-        <Servicios serviceObj={messages[locale].servicesObject}/>
-        <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader}/>
-        <PageFooter/>
+        <Servicios serviceObj={messages[locale].servicesObject} />
+        <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader} />
+        <PageFooter />
       </div>
     )
   }

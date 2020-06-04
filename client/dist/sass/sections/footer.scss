@@ -1,5 +1,4 @@
 .footer {
-  //background-image: url('../../../dist/assets/second.jpg');
   background-color: $color-blue-dark;
   color: $color-white;
 
@@ -10,7 +9,7 @@
   &-items {
     margin-left: 5%;
     margin-top: 2%;
-    
+
     &:last-child {
       margin-bottom: 2%;
     }
@@ -23,16 +22,15 @@
     &-dot {
       border-radius: 50%;
       display: inline-block;
-      
+
       &:not(:last-child) {
         margin-right: 1.4rem;
-      }    
+      }
     }
   }
 }
 
-.dot { // individual color dots color
-
+.dot {
   &-blue {
     background-color: $color-blue-light;
   }
@@ -58,7 +56,8 @@
   display: flex;
 }
 
-@media(min-width: 767px) { // this is for the desktop version
+@media (min-width: 767px) {
+  // this is for the desktop version
   .footer {
     font-size: 2.4rem;
     padding-top: 8rem;
@@ -67,7 +66,7 @@
     &-dots {
       margin-top: 4rem;
       margin-right: 10%;
-      
+
       &-dot {
         height: 1.4rem;
         width: 1.4rem;
@@ -81,18 +80,18 @@
         height: 2.46rem;
         width: 2.97rem;
       }
-  
+
       &-email {
         height: 2.13rem;
         width: 3.35rem;
       }
-  
+
       &-phone {
         margin-top: 1rem;
         height: 3.15rem;
         width: 2.41rem;
       }
-  
+
       &-globe {
         height: 2.86rem;
         width: 2.86rem;
@@ -105,7 +104,8 @@
   }
 }
 
-@media(max-width: 767px) { //this is for the mobile version
+@media (max-width: 767px) {
+  //this is for the mobile version
   .footer {
     font-size: 1.4rem;
     padding-top: 3.47rem;
@@ -128,17 +128,17 @@
         height: 1.35rem;
         width: 1.63rem;
       }
-  
+
       &-email {
         height: 1.17rem;
         width: 1.84rem;
       }
-  
+
       &-phone {
         height: 1.73rem;
         width: 1.32rem;
       }
-  
+
       &-globe {
         height: 1.66rem;
         width: 1.66rem;
@@ -146,7 +146,7 @@
     }
   }
 
-  .addressD{
+  .addressD {
     display: none;
   }
 }

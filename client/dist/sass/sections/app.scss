@@ -1,0 +1,349 @@
+#app {
+  @media (max-width: 330px) {
+    min-width: 105%;
+  }
+}
+
+.mt-modal {
+  margin-top: 40vh;
+}
+
+.footer-modal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: .75rem;
+  border-top: 1px solid $color-grey-light;
+}
+
+.defaultFont {
+  font-size: $font-size-m;
+}
+
+.rl-navigation-bar-menu {
+  display: none;
+}
+
+.rl-navigation-bar {
+  display: block;
+  position: fixed;
+  max-height: 14.5rem;
+  width: 100%;
+  opacity: 0.8;
+  text-align: left;
+  background-color: $color-white;
+  z-index: 200;
+
+  &-logo {
+    width: 17%;
+    height: auto;
+
+    &-large {
+      display: block;
+      cursor: pointer;
+      margin-right: 1.5rem;
+      object-fit: fill;
+    }
+
+    &-medium,
+    &-small,
+    &-menu {
+      display: none;
+    }
+  }
+
+  &-search {
+    width: 18%;
+    margin: 0 0.5rem;
+
+    &-box,
+    &:focus {
+      border: none;
+      border-bottom: .5px solid blacK;
+      position: relative;
+      width: 85%;
+    }
+
+    &-button {
+      width: 5%;
+      margin-left: 1rem;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 3rem 4rem;
+  }
+
+  &-items {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin: 0 1rem;
+
+    &-single {
+      font-size: $font-size-ml;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1.2;
+      text-align: left;
+      height: 2.2rem;
+      margin: auto;
+      color: $color-black-font;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-blue-dark;
+      }
+    }
+  }
+
+  &-contacts {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    margin-left: 0.5rem;
+
+    button {
+      background: transparent;
+      border: none;
+    }
+
+    &-share {
+      height: 2.2rem;
+      width: 2.2rem;
+      display: block;
+      cursor: pointer;
+    }
+
+    &-lang {
+      color: $color-black-font;
+      cursor: pointer;
+      font-size: $font-size-ml;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1.2;
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .rl-navigation-bar {
+    &-logo {
+      width: auto;
+
+      &-large {
+        display: none;
+      }
+
+      &-medium {
+        cursor: pointer;
+        margin-right: 0.5rem;
+        object-fit: fill;
+        width: 1.9rem;
+        display: block;
+      }
+    }
+
+    &-search {
+      width: 14%;
+
+      &-button {
+        margin-left: 0.5rem;
+      }
+    }
+
+    &-wrapper {
+      justify-content: space-between;
+      margin: 2rem 2rem;
+    }
+
+    &-items {
+      width: 58%;
+      margin: 0 0.5rem;
+    }
+
+    &-contacts {
+      width: 28%;
+      margin-left: 0.8rem;
+
+      &-share {
+        height: 2rem;
+        width: 2rem;
+      }
+
+      &-lang {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 705px) {
+  .rl-navigation-bar {
+    opacity: 1;
+    text-align: left;
+    background-color: transparent;
+    z-index: 200;
+
+    &-contacts-share {
+      margin-left: 0;
+    }
+
+    &-items,
+    &-search,
+    &-contacts,
+    &-logo-medium {
+      display: none;
+    }
+
+    &-items-single {
+      display: block;
+      margin: 3.5rem 0;
+      text-align: center;
+      color: $color-white;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-white;
+      }
+    }
+
+    &-wrapper {
+      margin: 4.5rem 3rem;
+      justify-content: space-between;
+    }
+
+    &-logo {
+      width: auto;
+      z-index: 500;
+
+      &-small {
+        cursor: pointer;
+        object-fit: fill;
+        width: 4rem;
+        display: block;
+      }
+    }
+
+    &-menu {
+      display: block;
+
+      button {
+        background: transparent;
+        border: none;
+      }
+
+      &-button {
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 4.3rem;
+        right: 2.7rem;
+        background-color: $color-white;
+        z-index: 250;
+        box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+        text-align: center;
+      }
+
+      &-icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+          width: 3rem;
+          height: 0.2rem;
+          background-color: $color-grey-dark;
+          display: inline-block;
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          transition: all .2s;
+        }
+
+        &::before {
+          top: -.8rem;
+        }
+
+        &::after {
+          top: .8rem;
+        }
+      }
+
+      &-background {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        background-image: linear-gradient(147deg, #0051a6 7%, #004da2 35%, #004296 63%, #002f82 90%, #002476 103%);
+        z-index: 200;
+        right: 3rem;
+        display: inline;
+        transition: transform 1.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+
+      &-bottom {
+        cursor: pointer;
+        object-fit: fill;
+        margin: 15%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-checkbox {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+      }
+
+      &-checkbox:checked ~ &-background {
+        transform: scale(50);
+        visibility: visible;
+      }
+
+      &-checkbox:checked ~ &-nav {
+        opacity: 1;
+        width: 100%;
+        left: 0;
+      }
+
+      &-checkbox:checked + &-button &-icon {
+        background-color: transparent;
+      }
+
+      &-checkbox:checked + &-button &-icon::before {
+        top: 0;
+        transform: rotate(135deg);
+      }
+
+      &-checkbox:checked + &-button &-icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+      }
+
+      &-nav {
+        padding-top: 35%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        z-index: 200;
+        text-align: center;
+        opacity: 0;
+        width: 0;
+        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+    }
+  }
+}

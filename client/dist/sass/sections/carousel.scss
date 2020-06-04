@@ -4,7 +4,6 @@
   height: 100vh;
   overflow: hidden;
   z-index: 0;
-  // border: groove red 3px;
 
   &-webVideo {
     position: absolute;
@@ -30,7 +29,6 @@
 
   #carouselExampleIndicators {
     height: 100%;
-    // border: groove green 3px;
 
     .carousel-inner {
       height: inherit;
@@ -39,12 +37,12 @@
     .carousel-item {
       position: relative;
     }
-// slide one
+
+    // slide one
     .first-slide {
       position: relative;
       width: 100%;
       height: inherit;
-      // border: groove blue 3px;
 
       .img-container {
         position: relative;
@@ -70,7 +68,6 @@
         left: 8rem;
         text-align: left;
         bottom: 8rem;
-        // border: orange 1px dotted;
         padding: 0 0 0 3rem;
 
         .dot {
@@ -103,12 +100,12 @@
         }
       }
     }
-// slide two
+
+    // slide two
     .second-slide {
       position: relative;
       width: 100%;
       height: inherit;
-      // border: groove brown 3px;
 
       .img-container {
         position: relative;
@@ -131,7 +128,6 @@
         max-height: 100vh;
         text-align: left;
         bottom: 15rem;
-        // border: blue 3px dotted;
 
         .dot {
           position: relative;
@@ -156,12 +152,12 @@
         }
       }
     }
-// slide Three
+
+    // slide Three
     .third-slide {
       position: relative;
       width: 100%;
       height: inherit;
-      // border: groove orange 3px;
 
       .img-container {
         position: relative;
@@ -184,7 +180,6 @@
         max-height: 100vh;
         text-align: left;
         bottom: 6rem;
-        // border: red 3px solid;
 
         .dot {
           position: relative;
@@ -199,8 +194,8 @@
 
         &-title {
           width: 153.4px;
-          height: 115px;
-          font-size: 22px;
+          height: 11.5rem;
+          font-size: 2.2rem;
           font-weight: 900;
           line-height: 1.15;
           text-align: left;
@@ -209,7 +204,7 @@
       }
     }
 
-    .carousel-indicators li{
+    .carousel-indicators li {
       height: 1.5rem;
       width: 1.5rem;
       background-color: #bbb;
@@ -218,12 +213,13 @@
     }
   }
 
-  @media( max-width:767px) {
+  @media (max-width: 767px) {
     #carouselExampleIndicators {
       .first-slide {
         .img-container {
           position: relative;
           width: 100%;
+
           img {
             position: relative;
             float: right;
@@ -246,17 +242,18 @@
             width: 294.3px;
             height: 58.1px;
             font-family: Avenir;
-            font-size: 21px;
+            font-size: 2.1rem;
             font-weight: 900;
             line-height: 1.15;
             text-align: left;
             color: #ffffff;
           }
+
           &-paragraphContainer {
-            &-paragraph{
+            &-paragraph {
               width: 290.8px;
               height: 72.7px;
-              font-size: 11px;
+              font-size: 1.1rem;
               line-height: 1.1;
               letter-spacing: normal;
               text-align: left;
@@ -270,6 +267,7 @@
         .img-container {
           position: relative;
           width: 100%;
+
           img {
             position: relative;
             float: right;
@@ -299,7 +297,7 @@
             width: 159.6px;
             height: 88.6px;
             font-family: Avenir;
-            font-size: 22px;
+            font-size: 2.2rem;
             font-weight: 900;
             line-height: 1.15;
             letter-spacing: normal;
@@ -342,7 +340,7 @@
             width: 159.6px;
             height: 88.6px;
             font-family: Avenir;
-            font-size: 22px;
+            font-size: 2.2rem;
             font-weight: 900;
             line-height: 1.15;
             letter-spacing: normal;
@@ -353,11 +351,11 @@
     }
 
     &-webVideo {
-      display: none
+      display: none;
     }
   }
 
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
     &-mobileVideo {
       display: none;
     }
