@@ -1,5 +1,5 @@
 .footer {
-  background-color: $color-blue-dark;
+  background-color: $cobalt-blue;
   color: $color-white;
 
   a {
@@ -32,23 +32,23 @@
 
 .dot {
   &-blue {
-    background-color: $color-blue-light;
+    background-color: $light-picton-blue;
   }
 
   &-green {
-    background-color: $color-green;
+    background-color: $mantis-green;
   }
 
   &-yellow {
-    background-color: $color-yellow;
+    background-color: $tangerine-yellow;
   }
 
   &-orange {
-    background-color: $color-orange;
+    background-color: $neon-carrot-orange;
   }
 
   &-red {
-    background-color: $color-red;
+    background-color: $sunset-orange;
   }
 }
 

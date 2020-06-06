@@ -5,6 +5,17 @@
   overflow: hidden;
   z-index: 0;
 
+  &-overlay {
+    background-color: $inovation-blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+    z-index: 1;
+  }
+
   &-webVideo {
     position: absolute;
     width: 100%;
@@ -27,11 +38,18 @@
     transform: translate(-50%, -50%);
   }
 
-  #carouselExampleIndicators {
+  #carousel_slide_indicator {
     height: 100%;
+
+    .slide-one-img {
+      height: 5rem;
+      width: 12rem;
+      display: block;
+    }
 
     .carousel-inner {
       height: inherit;
+      z-index: 2;
     }
 
     .carousel-item {
@@ -53,7 +71,7 @@
           float: right;
           width: 35vw;
           height: 35vh;
-          top: 13rem;
+          top: 23rem;
           right: 9rem;
         }
       }
@@ -76,7 +94,7 @@
           width: 2.5rem;
           right: 5rem;
           top: 4rem;
-          background-color: #fc8a33;
+          background-color: $neon-carrot-orange;
           border-radius: 50%;
           display: inline-block;
         }
@@ -84,12 +102,11 @@
         &-title {
           position: relative;
           padding: 0 0 2rem 0;
-          font-family: Avenir;
-          font-size: 4vw;
+          font-size: $font-size-4w;
           font-weight: 900;
           line-height: 1.03;
           text-align: left;
-          color: #ffffff;
+          color: $color-white;
         }
 
         &-paragraphContainer {
@@ -113,21 +130,21 @@
 
         img {
           position: relative;
-          width: 44vw;
-          height: 49vh;
+          width: 30vw;
+          height: 35vh;
+          left: 8rem;
           top: 23rem;
         }
       }
 
       .caption-container-2 {
         position: relative;
-        width: 24vw;
-        left: 68%;
+        width: 22vw;
+        left: 60%;
         height: auto;
         min-height: 20vh;
         max-height: 100vh;
         text-align: left;
-        bottom: 15rem;
 
         .dot {
           position: relative;
@@ -137,18 +154,17 @@
           top: 4rem;
           border-radius: 50%;
           display: inline-block;
-          background-color: #ffca03;
+          background-color: $color-light-yellow;
         }
 
         &-title {
           position: relative;
           padding: 0 0 2rem 0;
-          font-family: Avenir;
-          font-size: 4vw;
+          font-size: $font-size-4w;
           font-weight: 900;
           line-height: 1.03;
           text-align: left;
-          color: #ffffff;
+          color: $color-white;
         }
       }
     }
@@ -165,21 +181,22 @@
 
         img {
           position: relative;
-          width: 35vw;
-          height: 35vh;
-          top: 23rem;
+          width: 30vw;
+          height: 30vh;
+          left: 8rem;
+          top: 30rem;
         }
       }
 
       .caption-container-3 {
         position: relative;
-        width: 20vw;
-        left: 65%;
+        width: 26vw;
+        left: 60%;
         height: auto;
+        bottom: 0;
         min-height: 20vh;
         max-height: 100vh;
         text-align: left;
-        bottom: 6rem;
 
         .dot {
           position: relative;
@@ -187,19 +204,17 @@
           width: 2.5rem;
           right: 5rem;
           top: 4rem;
-          background-color: #81cb60;
+          background-color: $color-light-green;
           border-radius: 50%;
           display: inline-block;
         }
 
         &-title {
-          width: 153.4px;
-          height: 11.5rem;
-          font-size: 2.2rem;
+          font-size: $font-size-4w;
           font-weight: 900;
           line-height: 1.15;
           text-align: left;
-          color: #ffffff;
+          color: $color-white;
         }
       }
     }
@@ -207,73 +222,60 @@
     .carousel-indicators li {
       height: 1.5rem;
       width: 1.5rem;
-      background-color: #bbb;
+      background-color: $color-white;
       border-radius: 50%;
       display: inline-block;
     }
   }
 
   @media (max-width: 767px) {
-    #carouselExampleIndicators {
+    #carousel_slide_indicator {
+      .slide-one-img {
+        height: 4.5rem;
+        width: 9rem;
+        display: block;
+      }
+
       .first-slide {
         .img-container {
-          position: relative;
-          width: 100%;
-
           img {
-            position: relative;
-            float: right;
-            width: 39vw;
-            height: 39vh;
-            top: 5rem;
+            top: 8rem;
             right: 5rem;
           }
         }
 
         .caption-container {
-          position: relative;
           width: auto;
-          max-width: 85%;
-          top: 45%;
-          left: 4rem;
+          max-width: 95%;
+          top: 40%;
+          left: 6rem;
           padding: 0;
 
-          &-title {
-            width: 294.3px;
-            height: 58.1px;
-            font-family: Avenir;
-            font-size: 2.1rem;
-            font-weight: 900;
-            line-height: 1.15;
-            text-align: left;
-            color: #ffffff;
+          .dot {
+            height: 1.8rem;
+            width: 1.8rem;
+            min-width: 1.8rem;
+            right: 3rem;
           }
 
-          &-paragraphContainer {
-            &-paragraph {
-              width: 290.8px;
-              height: 72.7px;
-              font-size: 1.1rem;
-              line-height: 1.1;
-              letter-spacing: normal;
-              text-align: left;
-              color: #ffffff;
-            }
+          &-title {
+            font-size: $font-size-xxl;
+          }
+
+          &-paragraph {
+            font-size: $font-size-s;
           }
         }
       }
 
       .second-slide {
         .img-container {
-          position: relative;
-          width: 100%;
-
           img {
             position: relative;
             float: right;
             height: 25vh;
-            top: 6rem;
-            right: 2rem;
+            top: 13rem;
+            left: -5rem;
           }
         }
 
@@ -285,66 +287,55 @@
           width: min-content;
 
           .dot {
-            position: relative;
-            width: 1.6rem;
-            height: 1.6rem;
-            right: 2.2rem;
-            top: 2.5rem;
-            background-color: #ffcb03;
+            width: 1.8rem;
+            height: 1.8rem;
+            right: 3rem;
+            top: 3rem;
           }
 
           &-title {
-            width: 159.6px;
-            height: 88.6px;
-            font-family: Avenir;
-            font-size: 2.2rem;
-            font-weight: 900;
-            line-height: 1.15;
-            letter-spacing: normal;
-            color: #ffffff;
+            font-size: $font-size-xxl;
+          }
+
+          &-more {
+            display: flex;
+            justify-content: space-around;
+
+            &-text {
+              font-size: $font-size-m;
+              font-weight: normal;
+              line-height: 1.2;
+              text-align: left;
+            }
           }
         }
       }
 
       .third-slide {
         .img-container {
-          position: relative;
-          width: 100%;
-
           img {
-            position: relative;
             width: 20vh;
-            top: 6.5rem;
+            top: 13rem;
             float: right;
-            right: 4rem;
+            left: -5rem;
           }
         }
 
         .caption-container-3 {
-          position: relative;
           max-width: 85%;
           top: 44%;
           left: 11rem;
           width: min-content;
 
           .dot {
-            position: relative;
-            width: 1.6rem;
-            height: 1.6rem;
-            right: 2.2rem;
-            top: 2.5rem;
-            background-color: #82cc60;
+            width: 1.8rem;
+            height: 1.8rem;
+            right: 3rem;
+            top: 3rem;
           }
 
           &-title {
-            width: 159.6px;
-            height: 88.6px;
-            font-family: Avenir;
-            font-size: 2.2rem;
-            font-weight: 900;
-            line-height: 1.15;
-            letter-spacing: normal;
-            color: #ffffff;
+            font-size: $font-size-xxl;
           }
         }
       }

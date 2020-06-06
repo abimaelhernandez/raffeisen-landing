@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: center;
   padding: .75rem;
-  border-top: 1px solid $color-grey-light;
+  border-top: 1px solid $geyser-grey;
 }
 
 .defaultFont {
@@ -91,11 +91,11 @@
       text-align: left;
       height: 2.2rem;
       margin: auto;
-      color: $color-black-font;
+      color: $dim-grey;
 
       &:hover {
         cursor: pointer;
-        color: $color-blue-dark;
+        color: $cobalt-blue;
       }
     }
   }
@@ -119,7 +119,7 @@
     }
 
     &-lang {
-      color: $color-black-font;
+      color: $dim-grey;
       cursor: pointer;
       font-size: $font-size-ml;
       font-weight: normal;
@@ -260,7 +260,7 @@
         &::after {
           width: 3rem;
           height: 0.2rem;
-          background-color: $color-grey-dark;
+          background-color: $night-rider-grey;
           display: inline-block;
         }
 

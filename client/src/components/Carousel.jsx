@@ -8,6 +8,7 @@ export default class Slider extends Component {
     const { slidesInfo } = this.props
     return (
       <div className="slider-container" id="inicio">
+        <div className="slider-container-overlay" />
         <video className="slider-container-webVideo" playsInline autoPlay muted loop>
           <source src="../../assets/videos/RowingBoats.mp4" type="video/mp4" />
             Your browser does not support HTML5 video.
@@ -17,7 +18,7 @@ export default class Slider extends Component {
             Your browser does not support HTML5 video.
         </video>
         <div
-          id="carouselExampleIndicators"
+          id="carousel_slide_indicator"
           className="carousel slide"
           data-ride="carousel"
           data-interval="false"
@@ -28,7 +29,7 @@ export default class Slider extends Component {
                 <div className="img-container">
                   <img
                     src="../../assets/icons/Orange-Plus.svg"
-                    alt="..."/>
+                    alt={slidesInfo[0].title}/>
                 </div>
               </Fade>
               <Fade left>
@@ -44,6 +45,7 @@ export default class Slider extends Component {
                     <p className="caption-container-paragraph">
                       {slidesInfo[0].secondaryParagraph}
                     </p>
+                    <img className="slide-one-img" src="../../assets/logos/logo-die-geno.svg" alt="Die Genossenschaften"/>
                   </div>
                 </div>
               </Fade>
@@ -52,9 +54,9 @@ export default class Slider extends Component {
               <div className="img-container">
                 <Fade down>
                   <img
-                    className="d-block w-50"
+                    className="d-block"
                     src="../../assets/icons/Yellow-Plant.svg"
-                    alt="..."/>
+                    alt={slidesInfo[1].title}/>
                 </Fade>
               </div>
               <Fade up>
@@ -71,7 +73,7 @@ export default class Slider extends Component {
                 <Fade left>
                   <img
                     src="../../assets/icons/Green-Arrows.svg"
-                    alt="..."/>
+                    alt={slidesInfo[2].title}/>
                 </Fade>
               </div>
               <Roll right>
@@ -85,11 +87,11 @@ export default class Slider extends Component {
             </div>
           </div>
           <ol className="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active">
+            <li data-target="#carousel_slide_indicator" data-slide-to="0" className="active">
             </li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1">
+            <li data-target="#carousel_slide_indicator" data-slide-to="1">
             </li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2">
+            <li data-target="#carousel_slide_indicator" data-slide-to="2">
             </li>
           </ol>
         </div>
