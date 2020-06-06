@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Jump from 'react-reveal/Jump'
 import Flip from 'react-reveal/Flip'
 import ToolsSlider from './ToolsSlider'
 
@@ -42,20 +41,17 @@ resetProps = (value) => {
     }
     return (
       <div className="tools-parent" id="herramientas">
-        <Jump>
-          <div className="tools-parent-header">
-            <div className="tools-parent-header-title">
-              <h1>{toolsHeader.title}</h1>
-            </div>
-            <div className="tools-parent-header-subText">
-              <p>{toolsHeader.subText}</p>
-            </div>
+        <div className="tools-parent-header">
+          <div className="tools-parent-header-title">
+            <h1>{toolsHeader.title}</h1>
           </div>
-          </Jump>
-
+          <div className="tools-parent-header-subText">
+            <p>{toolsHeader.subText}</p>
+          </div>
+        </div>
         <div className="tools-parent-desktop">
           <div className="tools-parent-desktop-cards">
-          {toolsObject.map((item) => 
+          {toolsObject.map((item) =>
             <Flip right>
               <div key={item.id} className="tools-parent-desktop-cards-card" style={{ background: item.backgroundColor }}>
                 <div className="tools-parent-desktop-cards-card-content" >
@@ -78,7 +74,7 @@ resetProps = (value) => {
           )}
         </div>
         </div>
-        
+
         <div className="tools-parent-mobile">
           {
             toolsObject.map((item) =>

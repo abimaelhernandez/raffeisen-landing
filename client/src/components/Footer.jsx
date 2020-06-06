@@ -24,8 +24,8 @@ export default class PageFooter extends Component {
             <img src="../assets/icons/Phone.svg" alt="phone-logo" className="footer-icons footer-icons-phone"/>
 
             <div>
-              <span>Ciudad de México, México 
-                <a href="tel:+52-55-5037-5992"> +52.55.5037.5992 </a> | 
+              <span>Ciudad de México, México
+                <a href="tel:+52-55-5037-5992"> +52.55.5037.5992 </a> |
                 <a href="tel:+52-55-6273-8897"> +52.55.6273.8897</a>
               </span>
               <p>
@@ -40,10 +40,10 @@ export default class PageFooter extends Component {
             <img src="../assets/icons/Phone.svg" alt="phone-logo" className="footer-icons footer-icons-phone"/>
 
             <div>
-              <span>Ciudad de México, México 
+              <span>Ciudad de México, México
               </span>
               <p>
-                <a href="tel:+52-55-5037-5992"> +52.55.5037.5992 </a> | 
+                <a href="tel:+52-55-5037-5992"> +52.55.5037.5992 </a> |
                 <a href="tel:+52-55-6273-8897">   +52.55.6273.8897</a>
               </p>
             </div>
@@ -67,7 +67,7 @@ export default class PageFooter extends Component {
           </div>
         </Slide>
           <div className="footer-items">
-            <Bounce top cascade>
+            <Bounce>
               <div className="footer-dots">
                 <span className="footer-dots-dot dot-blue"></span>
                 <span className="footer-dots-dot dot-green"></span>

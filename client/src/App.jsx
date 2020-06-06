@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Fade from 'react-reveal/Fade'
 import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share'
 import FacebookIcon from 'react-share/lib/FacebookIcon'
 import TwitterIcon from 'react-share/lib/TwitterIcon'
@@ -140,9 +139,7 @@ export default class App extends Component {
           </div>
         </div>
         <Slider slidesInfo={messages[locale].mainCarouselInfo} />
-        <Fade right>
-          <InovationBanner inovationInfo={messages[locale].inovationBanner} />
-        </Fade>
+        <InovationBanner inovationInfo={messages[locale].inovationBanner} />
         <Servicios serviceObj={messages[locale].servicesObject} />
         <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader} />
         <PageFooter />
