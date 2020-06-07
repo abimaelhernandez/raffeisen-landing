@@ -1,7 +1,7 @@
-.servicios-parent {
+.services-parent {
   position: relative;
   width: 100%;
-
+  height: auto;
   &-title {
     position: absolute;
     padding: 2rem 0 0 2rem;
@@ -17,19 +17,24 @@
 
   &-container {
     display: flex;
-    padding: 0;
+    border: red 3px solid;
 
     &-item {
-      height: inherit;
-      padding: 0;
-      overflow: hidden;
+      position: relative;
+      float:left;
+      width: 30%;
+      padding-bottom : 30%;
+      background-position:center center;
+      background-repeat:no-repeat;
+      background-size:cover;
+      border: blue 3px solid;
 
-      &-img {
-        width: 100%;
-        min-height: 36.4rem;
-        max-height: 60rem;
-        height: 100%;
-      }
+      // &-img {
+      //   width: 100%;
+      //   min-height: 36.4rem;
+      //   max-height: 60rem;
+      //   height: 100%;
+      // }
 
       &-logo-container {
         position: absolute;
