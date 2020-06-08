@@ -52,7 +52,10 @@ export default class Services extends Component {
                    src={item.icon}
                    alt={item.alt}/>
                  <div className="clickHandler">
-                   <button type="button" onClick={this.clickHandler.bind(this, item.id)}>
+                   <button
+                     type="button"
+                     onClick={this.clickHandler.bind(this, item.id)}
+                   >
                      {item.button}
                    </button>
                  </div>
