@@ -4,13 +4,13 @@ const projectBody = {
     learnMore: 'Learn more about Raiffeisen! #Raiffeisen',
     close: 'Close',
     navigation: {
-      inicio: 'Home',
-      nosotros: 'About us',
-      servicios: 'Services',
-      herramientas: 'Tools',
-      cobertura: 'Coverage',
-      contacto: 'Contact',
-      buscar: 'Search'
+      home: 'Home',
+      aboutUs: 'About us',
+      services: 'Services',
+      tools: 'Tools',
+      coverage: 'Coverage',
+      contact: 'Contact',
+      search: 'Search'
     },
     mainCarouselInfo: [
       {
@@ -168,13 +168,13 @@ const projectBody = {
     learnMore: '¡Conoce más sobre Raiffeisen! #Raiffeisen',
     close: 'Cerrar',
     navigation: {
-      inicio: 'Inicio',
-      nosotros: 'Nosotros',
-      servicios: 'Servicios',
-      herramientas: 'Herramientas',
-      cobertura: 'Cobertura',
-      contacto: 'Contacto',
-      buscar: 'Buscar'
+      home: 'Inicio',
+      aboutUs: 'Nosotros',
+      services: 'Servicios',
+      tools: 'Herramientas',
+      coverage: 'Cobertura',
+      contact: 'Contacto',
+      search: 'Buscar'
     },
     mainCarouselInfo: [
       {

@@ -52,11 +52,11 @@ export default class App extends Component {
               <img src="../assets/logos/Mobile-R.svg" alt="Raiffeisen Main Logo" className="rl-navigation-bar-logo-small" />
             </a>
             <div className="rl-navigation-bar-items">
-              <a className="rl-navigation-bar-items-single" href="/">{messages[locale].navigation.inicio}</a>
-              <a className="rl-navigation-bar-items-single" href="#nosotros">{messages[locale].navigation.nosotros}</a>
-              <a className="rl-navigation-bar-items-single" href="#servicios">{messages[locale].navigation.servicios}</a>
-              <a className="rl-navigation-bar-items-single" href="#herramientas">{messages[locale].navigation.herramientas}</a>
-              <a className="rl-navigation-bar-items-single" href="#cobertura">{messages[locale].navigation.cobertura}</a>
+              <a className="rl-navigation-bar-items-single" href="/">{messages[locale].navigation.home}</a>
+              <a className="rl-navigation-bar-items-single" href="#nosotros">{messages[locale].navigation.aboutUs}</a>
+              <a className="rl-navigation-bar-items-single" href="#servicios">{messages[locale].navigation.services}</a>
+              <a className="rl-navigation-bar-items-single" href="#herramientas">{messages[locale].navigation.tools}</a>
+              <a className="rl-navigation-bar-items-single" href="#cobertura">{messages[locale].navigation.coverage}</a>
             </div>
             <div className="rl-navigation-bar-search">
               <form action="#">
@@ -70,7 +70,7 @@ export default class App extends Component {
               </form>
             </div>
             <div className="rl-navigation-bar-contacts">
-              <a className="rl-navigation-bar-items-single" href="#contacto">{messages[locale].navigation.contacto}</a>
+              <a className="rl-navigation-bar-items-single" href="#contacto">{messages[locale].navigation.contact}</a>
               <button type="button" data-toggle="modal" data-target="#myModal" >
                 <img src="../assets/icons/Desktop-share.svg" alt="Raiffeisen page share" className="rl-navigation-bar-contacts-share" />
               </button>
@@ -90,12 +90,12 @@ export default class App extends Component {
               <nav className="rl-navigation-bar-menu-nav">
                 <button type="button" name="button" onClick={this.toggleMenu}>
                   <div className="rl-navigation-bar-menu-items">
-                    <a className="rl-navigation-bar-items-single" href="/">{messages[locale].navigation.inicio}</a>
-                    <a className="rl-navigation-bar-items-single" href="#nosotros">{messages[locale].navigation.nosotros}</a>
-                    <a className="rl-navigation-bar-items-single" href="#servicios">{messages[locale].navigation.servicios}</a>
-                    <a className="rl-navigation-bar-items-single" href="#herramientas">{messages[locale].navigation.herramientas}</a>
-                    <a className="rl-navigation-bar-items-single" href="#buscar">{messages[locale].navigation.buscar}</a>
-                    <a className="rl-navigation-bar-items-single" href="#cobertura">{messages[locale].navigation.cobertura}</a>
+                    <a className="rl-navigation-bar-items-single" href="/">{messages[locale].navigation.home}</a>
+                    <a className="rl-navigation-bar-items-single" href="#nosotros">{messages[locale].navigation.aboutUs}</a>
+                    <a className="rl-navigation-bar-items-single" href="#servicios">{messages[locale].navigation.services}</a>
+                    <a className="rl-navigation-bar-items-single" href="#herramientas">{messages[locale].navigation.tools}</a>
+                    <a className="rl-navigation-bar-items-single" href="#buscar">{messages[locale].navigation.search}</a>
+                    <a className="rl-navigation-bar-items-single" href="#cobertura">{messages[locale].navigation.coverage}</a>
                   </div>
                 </button>
                 <div className="rl-navigation-bar-menu-bottom">
