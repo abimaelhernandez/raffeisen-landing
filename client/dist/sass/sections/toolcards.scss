@@ -77,10 +77,14 @@
           border-radius: 50%;
           height: 2vw;
           width: 2vw;
+          padding: 0;
           
           .nextArrrow {
             color: $color-white;
-            width: 1.5vw;
+            width: 2vw;
+            height: 2vw;
+            padding: 0.3rem;
+            background-position: center;
           }
         }
       }
