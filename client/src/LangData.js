@@ -1,6 +1,7 @@
 const projectBody = {
   en: {
     shareTo: 'To where would you like to share?',
+    learnMore: 'Learn more about Raiffeisen! #Raiffeisen',
     navigation: {
       inicio: 'Home',
       nosotros: 'About us',
@@ -163,6 +164,7 @@ const projectBody = {
   },
   es: {
     shareTo: '¿A donde quisieras compartirme?',
+    learnMore: '¡Conoce más sobre Raiffeisen! #Raiffeisen',
     navigation: {
       inicio: 'Inicio',
       nosotros: 'Nosotros',
