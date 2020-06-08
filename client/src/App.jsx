@@ -142,7 +142,7 @@ export default class App extends Component {
         <InovationBanner inovationInfo={messages[locale].inovationBanner} />
         <Servicios serviceObj={messages[locale].servicesObject} />
         <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader} />
-        <PageFooter />
+        <PageFooter footerObject={messages[locale].footerObject} />
       </div>
     )
   }
