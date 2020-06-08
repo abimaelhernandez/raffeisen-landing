@@ -1,6 +1,8 @@
 const projectBody = {
   en: {
     shareTo: 'To where would you like to share?',
+    learnMore: 'Learn more about Raiffeisen! #Raiffeisen',
+    close: 'Close',
     navigation: {
       inicio: 'Home',
       nosotros: 'About us',
@@ -154,10 +156,17 @@ const projectBody = {
         bodyContent: 'A computer system to support planning, execution and applicable monitoring in internal and external audits and supervision of financial institutions.',
         backgroundColor: '#c0e6af'
       }
-    ]
+    ],
+    footerObject: {
+      mx: 'Mexico City, Mexico',
+      py: 'Asuncion, Paraguay',
+      globe: 'German Confederation of Cooperatives'
+    }
   },
   es: {
     shareTo: '¿A donde quisieras compartirme?',
+    learnMore: '¡Conoce más sobre Raiffeisen! #Raiffeisen',
+    close: 'Cerrar',
     navigation: {
       inicio: 'Inicio',
       nosotros: 'Nosotros',
@@ -311,7 +320,12 @@ const projectBody = {
         bodyContent: 'Sistema informático para el soporte de la planeación, ejecución y seguimiento aplicable en auditorías internas, externas y supervisión de instituciones financieras.',
         backgroundColor: '#c0e6af'
       }
-    ]
+    ],
+    footerObject: {
+      mx: 'Ciudad de México, México',
+      py: 'Asunción, Paraguay',
+      globe: 'Confederación Alemana de Cooperativas'
+    }
   }
 }
 

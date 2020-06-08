@@ -121,18 +121,18 @@ export default class App extends Component {
                   <button type="button" className="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div className="modal-body d-flex justify-content-around">
-                  <FacebookShareButton quote="Learn more about Raiffeisen! #Raiffeisen" url="https://infinite-tor-93660.herokuapp.com">
+                  <FacebookShareButton quote={messages[locale].learnMore} url="https://infinite-tor-93660.herokuapp.com">
                     <FacebookIcon size={32} />
                   </FacebookShareButton>
-                  <TwitterShareButton title="Learn more about Raiffeisen!" url="https://infinite-tor-93660.herokuapp.com" hashtags={['Raiffeisen']}>
+                  <TwitterShareButton title={messages[locale].learnMore} url="https://infinite-tor-93660.herokuapp.com">
                     <TwitterIcon size={32} />
                   </TwitterShareButton>
-                  <WhatsappShareButton title="Learn more about Raiffeisen!" url="https://infinite-tor-93660.herokuapp.com">
+                  <WhatsappShareButton title={messages[locale].learnMore} url="https://infinite-tor-93660.herokuapp.com">
                     <WhatsappIcon size={32} />
                   </WhatsappShareButton>
                 </div>
                 <div className="modal-footer justify-content-center">
-                  <button type="button" className="btn btn-secondary btn-sm defaultFont" data-dismiss="modal">Close</button>
+                  <button type="button" className="btn btn-secondary btn-sm defaultFont" data-dismiss="modal">{messages[locale].close}</button>
                 </div>
               </div>
             </div>
@@ -142,7 +142,7 @@ export default class App extends Component {
         <InovationBanner inovationInfo={messages[locale].inovationBanner} />
         <Servicios serviceObj={messages[locale].servicesObject} />
         <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader} />
-        <PageFooter />
+        <PageFooter footerObject={messages[locale].footerObject} />
       </div>
     )
   }
