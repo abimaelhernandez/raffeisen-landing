@@ -132,7 +132,7 @@ export default class App extends Component {
                   </WhatsappShareButton>
                 </div>
                 <div className="modal-footer justify-content-center">
-                  <button type="button" className="btn btn-secondary btn-sm defaultFont" data-dismiss="modal">Close</button>
+                  <button type="button" className="btn btn-secondary btn-sm defaultFont" data-dismiss="modal">{messages[locale].close}</button>
                 </div>
               </div>
             </div>
