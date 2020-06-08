@@ -5,33 +5,27 @@ export default class InovationBanner extends Component {
   render (){
     const {inovationInfo} = this.props
     return (
-      <div className="inovation-banner" id="nosotros">
-        <img
-          className="circleImage"
-          src="../../assets/icons/Orange-Plus.svg"
-          alt="Orange Plus Sign"/>
-        <div id="mainTitle" className="inovation-banner-main-container">
-            <span className="inovation-banner-main-container-title">
-              {inovationInfo.topPhrase}
-            </span>
-          </div>
-          <div id="content" className="inovation-banner-contentContainer">
-            <span className="dot"></span>
-            <div className="inovation-banner-contentContainer-title">
-             {inovationInfo.title}
-            </div>
-            <p className="inovation-banner-contentContainer-paragraph">
-             {inovationInfo.mainParahraph}
-            </p>
-            <p>
-             {inovationInfo.secondaryParagraph}
-            </p>
-          </div>
-          <img
-            className="squareImage"
-            src="../../assets/icons/Yellow-Plant.svg"
-            alt="ellow Plant Icon"/>
+    <div className="about-us_inovation" id="nosotros">
+      <img
+        className="about-us_inovation-icon circle"
+        src="../../assets/icons/Circulo_rojo.svg"
+        alt={inovationInfo.topPhrase}
+      />
+      <h2 className="about-us_inovation-title">{ inovationInfo.topPhrase } </h2>
+      <div id="content" className="about-us_inovation-conatiner">
+        <span className="bullet-point" />
+        <div className="about-us_inovation-content-wrap">
+          <p className="about-us_inovation-description-title">{ inovationInfo.title }</p>
+          <p className="about-us_inovation-description">{ inovationInfo.mainParahraph } </p>
+          <p className="about-us_inovation-description">{ inovationInfo.secondaryParagraph }</p>
+        </div>
       </div>
+      <img
+        className="about-us_inovation-icon triangle"
+        src="../../assets/icons/Triangle-green.svg"
+        alt={inovationInfo.title}
+      />
+    </div>
     )
   }
 }
