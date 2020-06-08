@@ -41,8 +41,22 @@ export default class Services extends Component {
           {serviceObj.map((item) =>
             <div
               className="col-sm-12 col-md-4 services-parent-container-item"
-              style={{backgroundImage: 'url(../../assets/images/servicios_light_bulm_full.jpg)'}}
-              key={item.id}>
+              style={{backgroundImage: `url(${item.imageBackground})`}}
+              key={item.id}
+            >
+              <div
+                className="services-parent-container-item-logo-container"
+              >
+                 <img
+                   className="services-parent-container-item-logo-container-asset"
+                   src={item.icon}
+                   alt={item.alt}/>
+                 <div className="clickHandler">
+                   <button type="button" onClick={this.clickHandler.bind(this, item.id)}>
+                     {item.button}
+                   </button>
+                 </div>
+               </div>
             </div>
           )}
         </div>
@@ -50,6 +64,7 @@ export default class Services extends Component {
     )
   }
 }
+
 
 Services.propTypes = {
   serviceObj: PropTypes.instanceOf(Object)
