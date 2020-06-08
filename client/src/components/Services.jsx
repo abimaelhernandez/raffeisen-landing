@@ -42,25 +42,25 @@ export default class Servicios extends Component {
         </Slide>
         <div className="container-fluid servicios-parent-container">
           {serviceObj.map((item) =>
-            <Fade top>
-              <div className="col-sm-12 col-md-4 servicios-parent-container-item" key={item.id}>
-                <img
-                  className="servicios-parent-container-item-img"
-                  src={item.imageBackground}
-                  alt="no hello"/>
-                <div className="servicios-parent-container-item-logo-container">
-                  <img
-                    className="servicios-parent-container-item-logo-container-asset"
-                    src={item.icon}
-                    alt={item.alt}/>
-                  <div className="clickHandler">
-                    <button type="button" onClick={this.clickHandler.bind(this, item.id)}>
-                      {item.button}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </Fade>
+            <div
+              className="col-sm-12 col-md-4 services-parent-container-item"
+              style={{backgroundImage: `url(${item.imageBackground})`}}
+              key={item.id}
+            >
+              <div
+                className="services-parent-container-item-logo-container"
+              >
+                 <img
+                   className="services-parent-container-item-logo-container-asset"
+                   src={item.icon}
+                   alt={item.alt}/>
+                 <div className="clickHandler">
+                   <button type="button" onClick={this.clickHandler.bind(this, item.id)}>
+                     {item.button}
+                   </button>
+                 </div>
+               </div>
+            </div>
           )}
         </div>
       </div>
@@ -68,6 +68,7 @@ export default class Servicios extends Component {
   }
 }
 
-Servicios.propTypes = {
+
+Services.propTypes = {
   serviceObj: PropTypes.instanceOf(Object)
 }
