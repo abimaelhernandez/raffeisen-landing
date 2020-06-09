@@ -17,7 +17,7 @@ export default class ServicesSlider extends Component {
     return false
   }
 
-  render(){
+  render() {
     const {passedObj} = this.props
     return (
       <div className="servicesSlider-parent">

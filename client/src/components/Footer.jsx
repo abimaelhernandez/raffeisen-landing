@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import Slide from 'react-reveal/Fade'
 import Bounce from 'react-reveal/Bounce'
+import PropTypes from 'prop-types'
 
 export default class PageFooter extends Component {
   render() {
+    const { footerObject } = this.props
     return (
       <footer className="footer" id="contacto">
         <Slide right>
@@ -19,17 +21,17 @@ export default class PageFooter extends Component {
           </div>
         </Slide>
         <Slide right>
-          <div className="footer-items displayFlex addressD">
+          <div className="footer-items displayFlex displayNone">
 
             <img src="../assets/icons/Phone.svg" alt="phone-logo" className="footer-icons footer-icons-phone"/>
 
             <div>
-              <span>Ciudad de México, México
+              <span>{footerObject.mx}
                 <a href="tel:+52-55-5037-5992"> +52.55.5037.5992 </a> |
                 <a href="tel:+52-55-6273-8897"> +52.55.6273.8897</a>
               </span>
               <p>
-                <span>Asunción, Paraguay <a href="tel:+595-21-62-996">+595.21.62.996</a></span>
+                <span>{footerObject.py} <a href="tel:+595-21-62-996">+595.21.62.996</a></span>
               </p>
             </div>
           </div>
@@ -40,11 +42,11 @@ export default class PageFooter extends Component {
             <img src="../assets/icons/Phone.svg" alt="phone-logo" className="footer-icons footer-icons-phone"/>
 
             <div>
-              <span>Ciudad de México, México
+              <span>{footerObject.mx}
               </span>
               <p>
                 <a href="tel:+52-55-5037-5992"> +52.55.5037.5992 </a> |
-                <a href="tel:+52-55-6273-8897">   +52.55.6273.8897</a>
+                <a href="tel:+52-55-6273-8897"> +52.55.6273.8897</a>
               </p>
             </div>
           </div>
@@ -55,7 +57,7 @@ export default class PageFooter extends Component {
 
             <div>
               <p>
-                <span>Asunción, Paraguay <a href="tel:+595-21-62-996">+595.21.62.996</a></span>
+                <span>{footerObject.py} <a href="tel:+595-21-62-996">+595.21.62.996</a></span>
               </p>
             </div>
           </div>
@@ -63,7 +65,7 @@ export default class PageFooter extends Component {
         <Slide right>
           <div className="footer-items displayFlex">
             <img src="../assets/icons/Globe.svg" alt="globe-logo" className="footer-icons footer-icons-globe"/>
-            <span>Confederación Alemana de Cooperativas <strong><a href="https://www.dgrv.org" target="_blank" rel="noopener noreferrer">www.dgrv.org</a></strong></span>
+            <span>{footerObject.globe} <strong><a href="https://www.dgrv.org" target="_blank" rel="noopener noreferrer">www.dgrv.org</a></strong></span>
           </div>
         </Slide>
           <div className="footer-items">
@@ -80,4 +82,8 @@ export default class PageFooter extends Component {
       </footer>
     )
   }
+}
+
+PageFooter.propTypes = {
+  footerObject: PropTypes.instanceOf(Object)
 }

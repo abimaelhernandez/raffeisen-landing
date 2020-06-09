@@ -33,14 +33,14 @@
   z-index: 1000;
 
   &-mainContainer {
-    &-mainLogo {
-      width: 45%;
-    }
-
     top: 40%;
     position: relative;
     text-align: center;
     width: 100%;
+
+    &-mainLogo {
+      width: 45%;
+    }
   }
 
   &-secondaryContainer {
@@ -50,17 +50,17 @@
     justify-content: center;
     width: 100%;
 
-    &-analitica {
+    &-analytics {
       margin-right: 1.2rem;
       width: 15%;
     }
 
-    &-consultoria {
+    &-consultancy {
       margin-right: 1.2rem;
       width: 15%;
     }
 
-    &-capacitacion {
+    &-training {
       width: 15%;
     }
   }
