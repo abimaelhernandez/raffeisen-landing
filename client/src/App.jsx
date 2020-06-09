@@ -8,7 +8,7 @@ import projectBody from './LangData'
 import LandingBanner from './components/LandingBanner'
 import Slider from './components/Carousel'
 import InovationBanner from './components/Inovation'
-import Servicios from './components/Servicios'
+import Services from './components/Services'
 import PageFooter from './components/Footer'
 
 import '../dist/sass/mains.scss'
@@ -52,11 +52,11 @@ export default class App extends Component {
               <img src="../assets/logos/Mobile-R.svg" alt="Raiffeisen Main Logo" className="rl-navigation-bar-logo-small" />
             </a>
             <div className="rl-navigation-bar-items">
-              <a className="rl-navigation-bar-items-single" href="/">{messages[locale].navigation.inicio}</a>
-              <a className="rl-navigation-bar-items-single" href="#nosotros">{messages[locale].navigation.nosotros}</a>
-              <a className="rl-navigation-bar-items-single" href="#servicios">{messages[locale].navigation.servicios}</a>
-              <a className="rl-navigation-bar-items-single" href="#herramientas">{messages[locale].navigation.herramientas}</a>
-              <a className="rl-navigation-bar-items-single" href="#cobertura">{messages[locale].navigation.cobertura}</a>
+              <a className="rl-navigation-bar-items-single" href="/">{messages[locale].navigation.home}</a>
+              <a className="rl-navigation-bar-items-single" href="#nosotros">{messages[locale].navigation.aboutUs}</a>
+              <a className="rl-navigation-bar-items-single" href="#servicios">{messages[locale].navigation.services}</a>
+              <a className="rl-navigation-bar-items-single" href="#herramientas">{messages[locale].navigation.tools}</a>
+              <a className="rl-navigation-bar-items-single" href="#cobertura">{messages[locale].navigation.coverage}</a>
             </div>
             <div className="rl-navigation-bar-search">
               <form action="#">
@@ -70,7 +70,7 @@ export default class App extends Component {
               </form>
             </div>
             <div className="rl-navigation-bar-contacts">
-              <a className="rl-navigation-bar-items-single" href="#contacto">{messages[locale].navigation.contacto}</a>
+              <a className="rl-navigation-bar-items-single" href="#contacto">{messages[locale].navigation.contact}</a>
               <button type="button" data-toggle="modal" data-target="#myModal" >
                 <img src="../assets/icons/Desktop-share.svg" alt="Raiffeisen page share" className="rl-navigation-bar-contacts-share" />
               </button>
@@ -90,12 +90,12 @@ export default class App extends Component {
               <nav className="rl-navigation-bar-menu-nav">
                 <button type="button" name="button" onClick={this.toggleMenu}>
                   <div className="rl-navigation-bar-menu-items">
-                    <a className="rl-navigation-bar-items-single" href="/">{messages[locale].navigation.inicio}</a>
-                    <a className="rl-navigation-bar-items-single" href="#nosotros">{messages[locale].navigation.nosotros}</a>
-                    <a className="rl-navigation-bar-items-single" href="#servicios">{messages[locale].navigation.servicios}</a>
-                    <a className="rl-navigation-bar-items-single" href="#herramientas">{messages[locale].navigation.herramientas}</a>
-                    <a className="rl-navigation-bar-items-single" href="#buscar">{messages[locale].navigation.buscar}</a>
-                    <a className="rl-navigation-bar-items-single" href="#cobertura">{messages[locale].navigation.cobertura}</a>
+                    <a className="rl-navigation-bar-items-single" href="/">{messages[locale].navigation.home}</a>
+                    <a className="rl-navigation-bar-items-single" href="#nosotros">{messages[locale].navigation.aboutUs}</a>
+                    <a className="rl-navigation-bar-items-single" href="#servicios">{messages[locale].navigation.services}</a>
+                    <a className="rl-navigation-bar-items-single" href="#herramientas">{messages[locale].navigation.tools}</a>
+                    <a className="rl-navigation-bar-items-single" href="#buscar">{messages[locale].navigation.search}</a>
+                    <a className="rl-navigation-bar-items-single" href="#cobertura">{messages[locale].navigation.coverage}</a>
                   </div>
                 </button>
                 <div className="rl-navigation-bar-menu-bottom">
@@ -121,18 +121,18 @@ export default class App extends Component {
                   <button type="button" className="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div className="modal-body d-flex justify-content-around">
-                  <FacebookShareButton quote="Learn more about Raiffeisen! #Raiffeisen" url="https://infinite-tor-93660.herokuapp.com">
+                  <FacebookShareButton quote={messages[locale].learnMore} url="https://infinite-tor-93660.herokuapp.com">
                     <FacebookIcon size={32} />
                   </FacebookShareButton>
-                  <TwitterShareButton title="Learn more about Raiffeisen!" url="https://infinite-tor-93660.herokuapp.com" hashtags={['Raiffeisen']}>
+                  <TwitterShareButton title={messages[locale].learnMore} url="https://infinite-tor-93660.herokuapp.com">
                     <TwitterIcon size={32} />
                   </TwitterShareButton>
-                  <WhatsappShareButton title="Learn more about Raiffeisen!" url="https://infinite-tor-93660.herokuapp.com">
+                  <WhatsappShareButton title={messages[locale].learnMore} url="https://infinite-tor-93660.herokuapp.com">
                     <WhatsappIcon size={32} />
                   </WhatsappShareButton>
                 </div>
                 <div className="modal-footer justify-content-center">
-                  <button type="button" className="btn btn-secondary btn-sm defaultFont" data-dismiss="modal">Close</button>
+                  <button type="button" className="btn btn-secondary btn-sm defaultFont" data-dismiss="modal">{messages[locale].close}</button>
                 </div>
               </div>
             </div>
@@ -140,9 +140,9 @@ export default class App extends Component {
         </div>
         <Slider slidesInfo={messages[locale].mainCarouselInfo} />
         <InovationBanner inovationInfo={messages[locale].inovationBanner} />
-        <Servicios serviceObj={messages[locale].servicesObject} />
+        <Services serviceObj={messages[locale].servicesObject} />
         <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader} />
-        <PageFooter />
+        <PageFooter footerObject={messages[locale].footerObject} />
       </div>
     )
   }

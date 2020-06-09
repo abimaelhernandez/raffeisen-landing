@@ -1,14 +1,16 @@
 const projectBody = {
   en: {
     shareTo: 'To where would you like to share?',
+    learnMore: 'Learn more about Raiffeisen! #Raiffeisen',
+    close: 'Close',
     navigation: {
-      inicio: 'Home',
-      nosotros: 'About us',
-      servicios: 'Services',
-      herramientas: 'Tools',
-      cobertura: 'Coverage',
-      contacto: 'Contact',
-      buscar: 'Search'
+      home: 'Home',
+      aboutUs: 'About us',
+      services: 'Services',
+      tools: 'Tools',
+      coverage: 'Coverage',
+      contact: 'Contact',
+      search: 'Search'
     },
     mainCarouselInfo: [
       {
@@ -36,8 +38,8 @@ const projectBody = {
       {
         id: 1,
         backgroundColor: '#81cc60',
-        imageBackground: '../../assets/images/servicios_light_bulm_full.jpg',
-        icon: '../assets/icons/Consultoria.svg',
+        imageBackground: '../../assets/images/services_light_bulm_full.jpg',
+        icon: '../assets/icons/Consultancy.svg',
         button:'KNOW MORE',
         alt: 'Consulting',
         mainParahraph: 'Based on balanced scorecard methodology, four key perspectives strategically cover:',
@@ -51,8 +53,8 @@ const projectBody = {
       {
         id: 2,
         backgroundColor: '#ff8300',
-        imageBackground: '../../assets/images/servicios_chalk_board.jpg',
-        icon: '../assets/icons/Analitica.svg',
+        imageBackground: '../../assets/images/services_chalk_board.jpg',
+        icon: '../assets/icons/Analytics.svg',
         button:'KNOW MORE',
         alt: 'Analitics',
         mainParahraph: 'Platforms for the analysis of information accurately representing the operative, commercial, and financial reality of the organization.',
@@ -66,8 +68,8 @@ const projectBody = {
       {
         id: 3,
         backgroundColor: '#6ab3d5',
-        imageBackground: '../../assets/images/servicios_wooden_stair.jpg',
-        icon: '../assets/icons/Capacitacion.svg',
+        imageBackground: '../../assets/images/services_wooden_stair.jpg',
+        icon: '../assets/icons/Training.svg',
         button:'KNOW MORE',
         alt: 'Training',
         mainParahraph: 'Portfolio of modular topics that promote capacitation in strategic areas relevant to cooperatives.',
@@ -154,18 +156,25 @@ const projectBody = {
         bodyContent: 'A computer system to support planning, execution and applicable monitoring in internal and external audits and supervision of financial institutions.',
         backgroundColor: '#c0e6af'
       }
-    ]
+    ],
+    footerObject: {
+      mx: 'Mexico City, Mexico',
+      py: 'Asuncion, Paraguay',
+      globe: 'German Confederation of Cooperatives'
+    }
   },
   es: {
     shareTo: '¿A donde quisieras compartirme?',
+    learnMore: '¡Conoce más sobre Raiffeisen! #Raiffeisen',
+    close: 'Cerrar',
     navigation: {
-      inicio: 'Inicio',
-      nosotros: 'Nosotros',
-      servicios: 'Servicios',
-      herramientas: 'Herramientas',
-      cobertura: 'Cobertura',
-      contacto: 'Contacto',
-      buscar: 'Buscar'
+      home: 'Inicio',
+      aboutUs: 'Nosotros',
+      services: 'Servicios',
+      tools: 'Herramientas',
+      coverage: 'Cobertura',
+      contact: 'Contacto',
+      search: 'Buscar'
     },
     mainCarouselInfo: [
       {
@@ -193,8 +202,8 @@ const projectBody = {
       {
         id: 1,
         backgroundColor: '#81cc60',
-        imageBackground: '../../assets/images/servicios_light_bulm_full.jpg',
-        icon: '../assets/icons/Consultoria.svg',
+        imageBackground: '../../assets/images/services_light_bulm_full.jpg',
+        icon: '../assets/icons/Consultancy.svg',
         button:'CONOCE MAS',
         alt:'Consultoria',
         mainParahraph: 'Con fundamento en la metodología de cuadro de mando integral, desde cuatro perspectivas claves que busca cubrir de manera estratégica:',
@@ -208,8 +217,8 @@ const projectBody = {
       {
         id: 2,
         backgroundColor: '#ff8300',
-        imageBackground: '../../assets/images/servicios_chalk_board.jpg',
-        icon: '../assets/icons/Analitica.svg',
+        imageBackground: '../../assets/images/services_chalk_board.jpg',
+        icon: '../assets/icons/Analytics.svg',
         button:'CONOCE MAS',
         alt:'Analitica',
         mainParahraph: 'Plataformas para el análisis de información representativa de la realidad operativa, comercial y financiera de una organización.',
@@ -223,8 +232,8 @@ const projectBody = {
       {
         id: 3,
         backgroundColor: '#6ab3d5',
-        imageBackground: '../../assets/images/servicios_wooden_stair.jpg',
-        icon: '../assets/icons/Capacitacion.svg',
+        imageBackground: '../../assets/images/services_wooden_stair.jpg',
+        icon: '../assets/icons/Training.svg',
         button:'CONOCE MAS',
         alt:'Capacitación',
         mainParahraph: 'Portafolio de temas modulares para la promoción de competencias y habilidades, en áreas estratégicas corporativas.',
@@ -311,7 +320,12 @@ const projectBody = {
         bodyContent: 'Sistema informático para el soporte de la planeación, ejecución y seguimiento aplicable en auditorías internas, externas y supervisión de instituciones financieras.',
         backgroundColor: '#c0e6af'
       }
-    ]
+    ],
+    footerObject: {
+      mx: 'Ciudad de México, México',
+      py: 'Asunción, Paraguay',
+      globe: 'Confederación Alemana de Cooperativas'
+    }
   }
 }
 
