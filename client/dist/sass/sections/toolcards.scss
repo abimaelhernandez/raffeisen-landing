@@ -28,28 +28,30 @@
     }
 
     &-subText {
-      font-size: 3rem;
+      font-size: $font-size-mw;
       margin-bottom: 2.2rem;
       line-height: 1.3;
+      padding: 4rem 0;
 
       @media(max-width: 767px) { 
         font-size: 1.4rem;
         line-height: 1.57;
+        padding: 1rem 0;
       }
     }
   }
 
   &-desktop {
     width: 100%;
-    padding: 0 2vw;
+    padding: 0 4.1vw;
     margin-bottom: 3vh;
 
     &-cards {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(2, 18vw);
+      grid-template-rows: repeat(2, 17.14vw);
       gap: 1.5vw;
-
+      row-gap: 2.5vw;
 
     @media(max-width: 767px) {
       display: none;
@@ -77,10 +79,14 @@
           border-radius: 50%;
           height: 2vw;
           width: 2vw;
+          padding: 0;
           
           .nextArrrow {
             color: $color-white;
-            width: 1.5vw;
+            width: 2vw;
+            height: 2vw;
+            padding: 0.3rem;
+            background-position: center;
           }
         }
       }
