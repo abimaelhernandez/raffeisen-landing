@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 
 export default class InovationBanner extends Component {
-  render (){
+  render() {
     const {inovationInfo} = this.props
     return (
       <div className="inovation-banner" id="nosotros">
