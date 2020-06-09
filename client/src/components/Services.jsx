@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Fade from 'react-reveal/Fade'
-import Slide from 'react-reveal/Slide'
+// import Fade from 'react-reveal/Fade'
 import ServicesSlider from './ServicesSlider'
 
-export default class Servicios extends Component {
+export default class Services extends Component {
   constructor(){
     super()
     this.state = {
@@ -25,9 +24,9 @@ export default class Servicios extends Component {
    }
  }
 
-  render() {
+  render(){
     const { clickedId , hasBeenClicked} = this.state
-    const { serviceObj } = this.props
+    const { serviceObj, serviceTitle } = this.props
     if (hasBeenClicked && clickedId ) {
       return <ServicesSlider
               passedObj={serviceObj}
@@ -36,31 +35,35 @@ export default class Servicios extends Component {
             />
     }
     return (
-      <div className="servicios-parent" id="servicios">
-        <Slide left>
-          <p className="servicios-parent-title">Servicios</p>
-        </Slide>
-        <div className="container-fluid servicios-parent-container">
+      <div className="services-parent" id="servicios">
+        <p className="services-parent-title">{serviceTitle}</p>
+        <div className="services-parent-container">
           {serviceObj.map((item) =>
-            <Fade top>
-              <div className="col-sm-12 col-md-4 servicios-parent-container-item" key={item.id}>
-                <img
-                  className="servicios-parent-container-item-img"
-                  src={item.imageBackground}
-                  alt="no hello"/>
-                <div className="servicios-parent-container-item-logo-container">
-                  <img
-                    className="servicios-parent-container-item-logo-container-asset"
-                    src={item.icon}
-                    alt={item.alt}/>
-                  <div className="clickHandler">
-                    <button type="button" onClick={this.clickHandler.bind(this, item.id)}>
+            <div
+              className="col-sm-12 col-md-4 services-parent-container-item"
+              style={{backgroundImage: `url(${item.imageBackground})`}}
+              key={item.id}
+            >
+              <div
+                className="services-parent-container-item-logo-container"
+              >
+                 <img
+                   className="services-parent-container-item-logo-container-asset"
+                   src={item.icon}
+                   alt={item.alt}/>
+                 <div className="clickHandler">
+                    <button
+                      type="button"
+                      className="service-info-more" onClick={this.clickHandler.bind(this, item.id)}
+                    >
                       {item.button}
+                      <svg className="service-info-more-icon" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M4.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L10.293 8 4.646 2.354a.5.5 0 010-.708z"/>
+                      </svg>
                     </button>
                   </div>
-                </div>
-              </div>
-            </Fade>
+               </div>
+            </div>
           )}
         </div>
       </div>
@@ -68,6 +71,8 @@ export default class Servicios extends Component {
   }
 }
 
-Servicios.propTypes = {
-  serviceObj: PropTypes.instanceOf(Object)
+
+Services.propTypes = {
+  serviceObj: PropTypes.instanceOf(Object),
+  serviceTitle: PropTypes.instanceOf(Object)
 }

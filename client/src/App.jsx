@@ -140,7 +140,7 @@ export default class App extends Component {
         </div>
         <Slider slidesInfo={messages[locale].mainCarouselInfo} />
         <InovationBanner inovationInfo={messages[locale].inovationBanner} />
-        <Services serviceObj={messages[locale].servicesObject} />
+        <Services serviceObj={messages[locale].servicesObject}  serviceTitle={messages[locale].navigation.services}/>
         <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader} />
         <PageFooter footerObject={messages[locale].footerObject} />
       </div>

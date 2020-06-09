@@ -38,7 +38,7 @@ const projectBody = {
       {
         id: 1,
         backgroundColor: '#81cc60',
-        imageBackground: '../../assets/images/services_light_bulm_full.jpg',
+        imageBackground: '../../assets/images/light_version_bulb.jpg',
         icon: '../assets/icons/Consultancy.svg',
         button:'KNOW MORE',
         alt: 'Consulting',
@@ -53,7 +53,7 @@ const projectBody = {
       {
         id: 2,
         backgroundColor: '#ff8300',
-        imageBackground: '../../assets/images/services_chalk_board.jpg',
+        imageBackground: '../../assets/images/light_chalk_board.jpg',
         icon: '../assets/icons/Analytics.svg',
         button:'KNOW MORE',
         alt: 'Analitics',
@@ -68,7 +68,7 @@ const projectBody = {
       {
         id: 3,
         backgroundColor: '#6ab3d5',
-        imageBackground: '../../assets/images/services_wooden_stair.jpg',
+        imageBackground: '../../assets/images/light_wooden_stair.jpg',
         icon: '../assets/icons/Training.svg',
         button:'KNOW MORE',
         alt: 'Training',
@@ -202,7 +202,7 @@ const projectBody = {
       {
         id: 1,
         backgroundColor: '#81cc60',
-        imageBackground: '../../assets/images/services_light_bulm_full.jpg',
+        imageBackground: '../../assets/images/light_version_bulb.jpg',
         icon: '../assets/icons/Consultancy.svg',
         button:'CONOCE MAS',
         alt:'Consultoria',
@@ -217,7 +217,7 @@ const projectBody = {
       {
         id: 2,
         backgroundColor: '#ff8300',
-        imageBackground: '../../assets/images/services_chalk_board.jpg',
+        imageBackground: '../../assets/images/light_chalk_board.jpg',
         icon: '../assets/icons/Analytics.svg',
         button:'CONOCE MAS',
         alt:'Analitica',
@@ -232,7 +232,7 @@ const projectBody = {
       {
         id: 3,
         backgroundColor: '#6ab3d5',
-        imageBackground: '../../assets/images/services_wooden_stair.jpg',
+        imageBackground: '../../assets/images/light_wooden_stair.jpg',
         icon: '../assets/icons/Training.svg',
         button:'CONOCE MAS',
         alt:'Capacitación',
