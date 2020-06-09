@@ -42,10 +42,10 @@
           background-color: #fff;
           border: none;
           &-icon {
-          width: 2rem;
-          height: 3.8rem;
-          background-position: right;
-          padding: 0.4rem 0.3rem 0.8rem;
+            width: 2rem;
+            height: 3.8rem;
+            background-position: right;
+            padding: 0.4rem 0.3rem 0.8rem;
           }
         }
       }
@@ -58,20 +58,21 @@
     display: flex;
     flex-wrap: wrap;
 
-    &-tite {
-      padding: 2rem 0 0 2rem;
-      font-size: 5rem;
+    .services-parent-title {
+      width: 100%;
+      padding: 2rem 2rem 0 0;
+      font-size: 4rem;
       font-weight: 900;
-      line-height: 1.01;
-      text-align: left;
-      color: #ffffff;
+      color: $dim-grey;
       z-index: 1;
+      background-color: $color-white;
     }
 
     &-container {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
+      margin-top: 10rem;
 
       &-item {
         width: 100%;

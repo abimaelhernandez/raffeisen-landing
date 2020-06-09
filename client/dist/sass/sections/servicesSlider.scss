@@ -51,10 +51,28 @@
     }
   }
 
-  @media (max-width: 767px) {
-    height: auto;
-
+  @media (min-width: 1020px) {
     #servicios-slider-id {
+       .image {
+         padding: 0;
+         height: 40rem;
+         width: 50%;
+       }
+
+      .caption {
+        position: relative;
+        z-index: 0;
+        color: $color-white;
+        width: 50%;
+        height: 40rem;
+        padding: 2rem;
+      }
+    }
+  }
+
+  @media (max-width: 790px) {
+    #servicios-slider-id {
+
        .image {
          width: 100%;
          padding: 0;

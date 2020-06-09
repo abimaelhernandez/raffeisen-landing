@@ -17,6 +17,10 @@ export default class ServicesSlider extends Component {
     return false
   }
 
+  checkId = ()=> {
+
+  }
+
   render() {
     const {passedObj} = this.props
     return (
@@ -33,7 +37,6 @@ export default class ServicesSlider extends Component {
             { passedObj.map((item) =>
               <div key={item.id} className={`carousel-item ${this.getActive(item) ? 'active': ''}`}>
                 <img src={item.imageBackground} className="col-sm-12 image" alt="..."/>
-
                 <div className="caption" style={{background : item.backgroundColor}}>
                   <img
                     className="icon"
