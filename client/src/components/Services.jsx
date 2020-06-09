@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Fade from 'react-reveal/Fade'
-import Slide from 'react-reveal/Slide'
+// import Fade from 'react-reveal/Fade'
 import ServicesSlider from './ServicesSlider'
 
-export default class Servicios extends Component {
+export default class Services extends Component {
   constructor(){
     super()
     this.state = {
@@ -25,7 +24,7 @@ export default class Servicios extends Component {
    }
  }
 
-  render() {
+  render(){
     const { clickedId , hasBeenClicked} = this.state
     const { serviceObj } = this.props
     if (hasBeenClicked && clickedId ) {
@@ -36,11 +35,9 @@ export default class Servicios extends Component {
             />
     }
     return (
-      <div className="servicios-parent" id="servicios">
-        <Slide left>
-          <p className="servicios-parent-title">Servicios</p>
-        </Slide>
-        <div className="container-fluid servicios-parent-container">
+      <div className="services-parent" id="services">
+        <p className="services-parent-title">Servicios</p>
+        <div className="services-parent-container">
           {serviceObj.map((item) =>
             <div
               className="col-sm-12 col-md-4 services-parent-container-item"
