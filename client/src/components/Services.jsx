@@ -52,13 +52,15 @@ export default class Services extends Component {
                    src={item.icon}
                    alt={item.alt}/>
                  <div className="clickHandler">
-                   <button
-                     type="button"
-                     onClick={this.clickHandler.bind(this, item.id)}
-                   >
-                     {item.button}
-                   </button>
-                 </div>
+                    <button
+                      type="button"
+                      className="service-info-more" onClick={this.clickHandler.bind(this, item.id)}>
+                      {item.button}
+                      <svg className="service-info-more-icon" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M4.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L10.293 8 4.646 2.354a.5.5 0 010-.708z"/>
+                      </svg>
+                    </button>
+                  </div>
                </div>
             </div>
           )}

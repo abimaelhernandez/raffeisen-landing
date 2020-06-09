@@ -32,7 +32,8 @@ export default class ServicesSlider extends Component {
           <div className="carousel-inner">
             { passedObj.map((item) =>
               <div key={item.id} className={`carousel-item ${this.getActive(item) ? 'active': ''}`}>
-                <img src={item.imageBackground} className="image" alt="..."/>
+                <img src={item.imageBackground} className="col-sm-12 image" alt="..."/>
+
                 <div className="caption" style={{background : item.backgroundColor}}>
                   <img
                     className="icon"
