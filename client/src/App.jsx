@@ -8,7 +8,7 @@ import projectBody from './LangData'
 import LandingBanner from './components/LandingBanner'
 import Slider from './components/Carousel'
 import InovationBanner from './components/Inovation'
-import Servicios from './components/Servicios'
+import Services from './components/Services'
 import PageFooter from './components/Footer'
 
 import '../dist/sass/mains.scss'
@@ -140,7 +140,7 @@ export default class App extends Component {
         </div>
         <Slider slidesInfo={messages[locale].mainCarouselInfo} />
         <InovationBanner inovationInfo={messages[locale].inovationBanner} />
-        <Servicios serviceObj={messages[locale].servicesObject} />
+        <Services serviceObj={messages[locale].servicesObject} />
         <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader} />
         <PageFooter footerObject={messages[locale].footerObject} />
       </div>
