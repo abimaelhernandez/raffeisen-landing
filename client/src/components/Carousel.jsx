@@ -4,7 +4,7 @@ import Roll from 'react-reveal/Roll'
 import PropTypes from 'prop-types'
 
 export default class Slider extends Component {
-  render (){
+  render() {
     const { slidesInfo } = this.props
     return (
       <div className="slider-container" id="inicio">

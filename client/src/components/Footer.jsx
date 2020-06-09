@@ -21,7 +21,7 @@ export default class PageFooter extends Component {
           </div>
         </Slide>
         <Slide right>
-          <div className="footer-items displayFlex addressD">
+          <div className="footer-items displayFlex displayNone">
 
             <img src="../assets/icons/Phone.svg" alt="phone-logo" className="footer-icons footer-icons-phone"/>
 

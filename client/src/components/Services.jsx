@@ -25,7 +25,7 @@ export default class Servicios extends Component {
    }
  }
 
-  render(){
+  render() {
     const { clickedId , hasBeenClicked} = this.state
     const { serviceObj } = this.props
     if (hasBeenClicked && clickedId ) {

@@ -24,7 +24,7 @@ export default class ToolsSlider extends Component {
     resetProps(true)
   }
 
-  render(){
+  render() {
     const { toolsObject } = this.props
     const { value } = this.state
 
