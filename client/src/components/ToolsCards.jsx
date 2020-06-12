@@ -53,7 +53,7 @@ resetProps = (value) => {
           <div className="tools-parent-desktop-cards">
           {toolsObject.map((item) =>
             <Flip right>
-              <div key={item.id} className="tools-parent-desktop-cards-card" style={{ background: item.backgroundColor }}>
+              <div key={item.id} role="button" tabIndex="0" onKeyPress={this.clickHandler.bind(this, item.id)} onClick={this.clickHandler.bind(this, item.id)} className="tools-parent-desktop-cards-card" style={{ background: item.backgroundColor }}>
                 <div className="tools-parent-desktop-cards-card-content" >
                   <button
                     type="button"

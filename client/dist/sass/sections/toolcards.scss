@@ -4,7 +4,7 @@
   width: 100%;
 
   &-header {
-    padding-top: 11.1rem;
+    padding-top: 13rem;
     margin-left: 5vw;
     width: 80%;
 
@@ -58,17 +58,24 @@
     }
     
     &-card {
+      &:focus{
+        outline: none;
+      }
+
       font-weight: 500;
       width: 100%;
       
       &-content {
+        width: 89%;
         position: relative;
-        top: 4vw;
+        top: 3vw;
         left: 2vw;
 
         .card-title {
+          line-height: 1.2;
           overflow-wrap: break-word;
           word-wrap: break-word;
+          margin-top: 1vh;
           font-size: 2vw;
           color: $color-white;
           width: 80%;
@@ -83,8 +90,8 @@
           
           .nextArrrow {
             color: $color-white;
-            width: 2vw;
-            height: 2vw;
+            width: 1.3vw;
+            height: 1.3vw;
             padding: 0.3rem;
             background-position: center;
           }
