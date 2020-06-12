@@ -20,8 +20,15 @@ export default class App extends Component {
     this.state = {
       locale: 'es',
       messages: projectBody,
-      openMenu: false
+      openMenu: false,
+      scrolled: 1000,
+      navbarLogo: '../assets/logos/Raiffeisen-Blue.svg',
+      navbarLogoClass: 'rl-navigation-bar-logo-large'
     }
+  }
+
+  componentDidMount() {
+    this.changeLogo()
   }
 
   handleSpanish = (e) => {
@@ -39,15 +46,24 @@ export default class App extends Component {
     this.setState({ openMenu: !openMenu })
   }
 
+  changeLogo = () => {
+    window.addEventListener('scroll', () => {
+      const { scrolled } = this.state
+      const logoImg = scrolled > window.scrollY ? '../assets/logos/Raiffeisen-Blue.svg' : '../assets/logos/Blue-R.svg'
+      const logoImgClass = scrolled > window.scrollY ? 'rl-navigation-bar-logo-large' : 'rl-navigation-bar-logoChange'
+      this.setState({navbarLogo: logoImg, navbarLogoClass: logoImgClass})
+    })
+  }
+    
   render() {
-    const { locale, messages, openMenu } = this.state
+    const { locale, messages, openMenu, navbarLogo, navbarLogoClass } = this.state
     return (
       <div>
         <LandingBanner />
         <div className="rl-navigation-bar">
           <div className="rl-navigation-bar-wrapper">
             <a className="rl-navigation-bar-logo" href="/">
-              <img src="../assets/logos/Raiffeisen-Blue.svg" alt="Raiffeisen Main Logo" className="rl-navigation-bar-logo-large" />
+              <img src={ navbarLogo } alt="Raiffeisen Main Logo" className={ navbarLogoClass } />
               <img src="../assets/logos/Blue-R.svg" alt="Raiffeisen Main Logo" className="rl-navigation-bar-logo-medium" />
               <img src="../assets/logos/Mobile-R.svg" alt="Raiffeisen Main Logo" className="rl-navigation-bar-logo-small" />
             </a>

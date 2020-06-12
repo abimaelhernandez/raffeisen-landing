@@ -35,6 +35,12 @@
   background-color: $color-white;
   z-index: 200;
 
+  &-logoChange {
+    width: 24%;
+    margin-left: 2.5vw;
+    cursor: pointer;
+  }
+
   &-logo {
     width: 17%;
     height: auto;
@@ -132,6 +138,10 @@
 
 @media (max-width: 990px) {
   .rl-navigation-bar {
+    &-logoChange {
+      display: none;
+    }
+
     &-logo {
       width: auto;
 
