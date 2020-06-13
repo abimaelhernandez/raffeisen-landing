@@ -52,8 +52,8 @@ resetProps = (value) => {
         <div className="tools-parent-desktop">
           <div className="tools-parent-desktop-cards">
           {toolsObject.map((item) =>
-            <Flip right>
-              <div key={item.id} role="button" tabIndex="0" onKeyPress={this.clickHandler.bind(this, item.id)} onClick={this.clickHandler.bind(this, item.id)} className="tools-parent-desktop-cards-card" style={{ background: item.backgroundColor }}>
+            <Flip right key={item.id}>
+              <div role="button" tabIndex="0" onKeyPress={this.clickHandler.bind(this, item.id)} onClick={this.clickHandler.bind(this, item.id)} className="tools-parent-desktop-cards-card" style={{ background: item.backgroundColor }}>
                 <div className="tools-parent-desktop-cards-card-content" >
                   <span
                     className="btn"
@@ -75,8 +75,8 @@ resetProps = (value) => {
         <div className="tools-parent-mobile">
           {
             toolsObject.map((item) =>
-            <Flip top>
-                <div key={item.id} className="tools-parent-mobile-dropdown">
+            <Flip top key={item.id}>
+                <div className="tools-parent-mobile-dropdown">
                   <button className="btn tools-parent-mobile-dropdown-button" style={{ background: item.backgroundColor }} type="button" data-toggle="collapse" data-target={`#${item.mobileId}`} aria-expanded="false">
                     <i>{item.mainTitle}</i>
                     <svg className="bi bi-chevron-down tools-parent-mobile-dropdown-button-drop" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
