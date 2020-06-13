@@ -52,19 +52,16 @@ resetProps = (value) => {
         <div className="tools-parent-desktop">
           <div className="tools-parent-desktop-cards">
           {toolsObject.map((item) =>
-            <Flip right>
-              <div key={item.id} className="tools-parent-desktop-cards-card" style={{ background: item.backgroundColor }}>
+            <Flip right key={item.id}>
+              <div role="button" tabIndex="0" onKeyPress={this.clickHandler.bind(this, item.id)} onClick={this.clickHandler.bind(this, item.id)} className="tools-parent-desktop-cards-card" style={{ background: item.backgroundColor }}>
                 <div className="tools-parent-desktop-cards-card-content" >
-                  <button
-                    type="button"
+                  <span
                     className="btn"
-                    onClick={this.clickHandler.bind(this, item.id)}
                   >
                     <svg className="bi bi-chevron-right nextArrrow" viewBox="0 0 16 16" fill="currentColor">
                       <path d="M4.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L10.293 8 4.646 2.354a.5.5 0 010-.708z"/>
                     </svg>
-                  </button>
-
+                  </span>
                   <div className="card-title">
                     <p>{item.mainTitle}</p>
                   </div>
@@ -78,8 +75,8 @@ resetProps = (value) => {
         <div className="tools-parent-mobile">
           {
             toolsObject.map((item) =>
-            <Flip top>
-                <div key={item.id} className="tools-parent-mobile-dropdown">
+            <Flip top key={item.id}>
+                <div className="tools-parent-mobile-dropdown">
                   <button className="btn tools-parent-mobile-dropdown-button" style={{ background: item.backgroundColor }} type="button" data-toggle="collapse" data-target={`#${item.mobileId}`} aria-expanded="false">
                     <i>{item.mainTitle}</i>
                     <svg className="bi bi-chevron-down tools-parent-mobile-dropdown-button-drop" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

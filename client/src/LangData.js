@@ -247,7 +247,7 @@ const projectBody = {
     ],
     toolsHeader: {
       title: 'Herramientas',
-      subText: 'Buscando consolidar los procesos de gestión y consultoría integral, Raiffeisen Latina propone un grupo de herramientas sistematizadas conceptualizadas y desarrolladas por DGRV para el sector cooperativo y de finanzas incluyentes.'
+      subText: 'Buscando consolidar los procesos de gestión y consultoría integral, Raiffeisen Latina propone un grupo de herramientas sistematizadas, conceptualizadas y desarrolladas por DGRV para el sector cooperativo y de finanzas incluyentes.'
     },
     toolsObject: [
       {

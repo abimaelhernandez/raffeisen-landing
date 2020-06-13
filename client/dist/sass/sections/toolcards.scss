@@ -4,7 +4,7 @@
   width: 100%;
 
   &-header {
-    padding-top: 11.1rem;
+    padding-top: 13rem;
     margin-left: 5vw;
     width: 80%;
 
@@ -58,23 +58,35 @@
     }
     
     &-card {
+      &:focus{
+        outline: none;
+      }
+
+      cursor: pointer;
       font-weight: 500;
       width: 100%;
       
       &-content {
+        padding: 0 0 0 2.1vw;
+        width: 100%;
         position: relative;
-        top: 4vw;
-        left: 2vw;
+        top: 20%;
+        // left: 2vw;
 
         .card-title {
+          line-height: 1.2;
           overflow-wrap: break-word;
           word-wrap: break-word;
+          margin-top: 1vh;
           font-size: 2vw;
           color: $color-white;
           width: 80%;
         }
 
         .btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           background-color: rgba($color-white, .3);
           border-radius: 50%;
           height: 2vw;
@@ -83,8 +95,8 @@
           
           .nextArrrow {
             color: $color-white;
-            width: 2vw;
-            height: 2vw;
+            width: 1.3vw;
+            height: 1.3vw;
             padding: 0.3rem;
             background-position: center;
           }
