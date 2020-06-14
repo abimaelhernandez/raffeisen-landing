@@ -56,7 +56,7 @@
 
         &.country {
           &-gt {
-            margin: 0.2rem 0 0 2rem;
+            margin: 0.2rem 0 0 1.5rem;
           }
 
           &-hn {
@@ -73,12 +73,27 @@
             }
           }
           &-ni {
+            margin-left: .5rem;
+            margin-top: -1rem;
+          }
+          &-sv {
             margin-left: 3.5rem;
             margin-top: -.5rem;
           }
           &-cr {
-            margin-left: .3rem;
-            margin-top: -1rem;
+            margin-left: 6.3rem;
+          }
+          &-ec {
+            margin-left: 7.5rem;
+            margin-top: .2rem;
+          }
+          &-gy {
+            margin-left: 4rem;
+            margin-top: -2rem;
+          }
+          &-pe {
+            margin-left: 9rem;
+            margin-top: 4rem;
           }
         }
       }
@@ -122,6 +137,15 @@
     .dot {
       width: 1.6rem;
       height: 1.6rem;
+
+      &.country {
+        &-ec {
+          margin-top: 1rem;
+        }
+        &-gy {
+          margin-top: -1rem;
+        }
+      }
     }
   }
 }
@@ -151,13 +175,14 @@
           }
 
           &-do {
-            margin-left: 4.8rem;
+            margin-left: 5rem;
+            margin-top: 0;
+
           }
           &-ni {
-            margin-top: -.3rem;
+            margin-top: -.8rem;
           }
-          &-cr {
-            margin-left: .8rem;
+          &-sv {
             margin-top: -.3rem;
           }
         }
@@ -190,10 +215,10 @@
       &-countries {
         .dot {
           width: 1.1rem;
+          min-width: 1.1rem;
           height: 1.1rem;
           &.country {
             &-gt {
-              margin-top: 0;
               margin-left: 1.2rem;
             }
             &-hn {
@@ -203,15 +228,39 @@
               margin-left: 2.5rem;
 
               @media(max-width: 418px) and (min-width: 400px) {
-                margin-left: 3rem;
+                margin-left: 3.5rem;
               }
             }
-            &-ni {
-              margin-left: 2.5rem;
-              margin-top: 0;
+            &-sv {
+              margin-left: 2rem;
+              margin-top: -.3rem;
+
+              @media(max-width: 418px) and (min-width: 400px) {
+                margin-left: 2.5rem;
+              }
             }
             &-cr {
-              margin-left: .3rem;
+              margin-left: 4rem;
+              @media(max-width: 418px) and (min-width: 400px) {
+                margin-left: 4.5rem;
+                margin-top: .5rem;
+              }
+
+            }
+            &-ec {
+              margin-top: .5rem;
+              margin-left: 5rem;
+            }
+            &-gy {
+              margin-top: -.5rem;
+              margin-left: 3rem;
+              @media(max-width: 418px) and (min-width: 400px) {
+                margin-left: 4.5rem;
+              }
+            }
+            &-pe {
+              margin-left: 5.6rem;
+              margin-top: 1.8rem;
             }
           }
         }

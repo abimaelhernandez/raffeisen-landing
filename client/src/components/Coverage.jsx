@@ -21,10 +21,10 @@ export default class Coverage extends Component {
           coverageInfo.countries.map((country) =>
           country.sections ? <div className="rl_coverage-map-countries-section">
           {country.sections.map((place) =>
-            <span className={`dot ${place.style}`}><span className="country-name">{ place.name }</span></span>
+            <span key={`${place.name}-${place.style}`} className={`dot ${place.style}`}><span className="country-name">{ place.name }</span></span>
           )}
           </div>:
-          <span className={`dot ${country.style}`}><span className="country-name">{ country.name }</span></span>)
+          <span key={`${country.name}-${country.style}`} className={`dot ${country.style}`}><span className="country-name">{ country.name }</span></span>)
         }
       </div>
 

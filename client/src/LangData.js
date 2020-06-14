@@ -339,10 +339,19 @@ const projectBody = {
         },
         {
           sections: [
+            { name: 'El Salvador', style: 'country-sv'},
             { name: 'Nicaragua', style: 'country-ni' },
-            { name: 'Costa Rica', style: 'country-cr'}
           ]
-        }
+        },
+        { name: 'Costa Rica', style: 'country-cr'},
+        {
+          sections: [
+            { name: 'Ecuador', style: 'country-ec'},
+            { name: 'Guyana', style: 'country-gy' },
+          ]
+        },
+        { name: 'Perú', style: 'country-pe' },
+        { name: 'Paraguay', style: 'country-py' },
       ]
     },
     footerObject: {
