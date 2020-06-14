@@ -1,7 +1,7 @@
 .rl_coverage {
   height: 90vh;
   display: flex;
-  margin: 10rem 8rem;
+  margin: 10rem 8rem 2rem;
   justify-content: space-between;
 
   &-map {
@@ -190,6 +190,12 @@
     &_description {
       max-width: 100%;
       margin-bottom: 3rem;
+      &-icon {
+        width: 9rem;
+        height: 10rem;
+        margin-bottom: 3rem;
+      }
+
     }
 
     &-title {
@@ -241,12 +247,6 @@
     display: block;
     margin: 5rem 2.5rem 0;
     height: auto;
-
-    &_description-icon {
-      width: 9rem;
-      height: 10rem;
-      margin-bottom: 3rem;
-    }
 
     &-text {
       font-size: $font-size-s;
