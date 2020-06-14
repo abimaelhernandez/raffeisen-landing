@@ -159,7 +159,6 @@ const projectBody = {
     ],
     coverageObject: {
       title: 'Coverage',
-      mapImg: '../assets/images/coverage_map',
       description: 'Our assistance//work includes a wide diversity of mandates in the Latin America region, having collaborated with multilateral organizations, international funders, representative and supervisory organizations, development banks, as well as cooperative and financial companies in several countries in the region; thus contributing to a more efficient and sustainable model of cooperatives that benefit the most vulnerable in the population'
     },
     footerObject: {
@@ -328,8 +327,23 @@ const projectBody = {
     ],
     coverageObject: {
       title: 'Cobertura',
-      mapImg: '../assets/images/coverage_map',
-      description: 'Nuestra gestión incluye una amplia diversidad de mandatos en la región latinoamericana, habiendo colaborado con organismos multilatelares, fondeadores internacionales, organismos de representación y supervisión, instituciones de la banca de desarrollo, así como sociedades cooperativas y financieras en varios países de la región; contribuyendo así con un modelo más eficiente y sustentable en beneficio de su población vulnerable.'
+      description: 'Nuestra gestión incluye una amplia diversidad de mandatos en la región latinoamericana, habiendo colaborado con organismos multilaterales, fondeadores internacionales, organismos de representación y supervisión, instituciones de la banca de desarrollo, así como sociedades cooperativas y financieras en varios países de la región; contribuyendo así con un modelo más eficiente y sustentable en beneficio de su población vulnerable.',
+      countries: [
+        { name: 'México', style: 'country-mx' },
+        {
+          sections: [
+            { name: 'Guatemala', style: 'country-gt' },
+            { name: 'Honduras', style: 'country-hn' },
+            { name: 'República Dominicana', style: 'country-do' },
+          ]
+        },
+        {
+          sections: [
+            { name: 'Nicaragua', style: 'country-ni' },
+            { name: 'Costa Rica', style: 'country-cr'}
+          ]
+        }
+      ]
     },
     footerObject: {
       mx: 'Ciudad de México, México',

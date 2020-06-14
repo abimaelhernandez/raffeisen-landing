@@ -3,7 +3,7 @@ import React,{ Component } from 'react'
 // import Roll from 'react-reveal/Roll'
 import PropTypes from 'prop-types'
 
-export default class Slider extends Component {
+export default class Coverage extends Component {
   render() {
     const { coverageInfo } = this.props
     return (<div className="rl_coverage" id="cobertura">
@@ -16,18 +16,16 @@ export default class Slider extends Component {
         className="rl_coverage-map-img"
         style={{backgroundImage: 'url("../assets/images/coverage_map.svg")'}}
       >
-      <div className="rl_coverage-map-dots">
-        <span className="dot"><span className="dot-hover">DOT 1</span></span>
-        <div className="rl_coverage-map-dots-section">
-          <span className="dot dot-2"><span className="dot-hover">DOT 2</span></span>
-          <span className="dot dot-3"><span className="dot-hover">DOT 3</span></span>
-        </div>
-        <span className="dot"><span className="dot-hover">MEXICO</span></span>
-        <span className="dot"><span className="dot-hover">MEXICO</span></span>
-        <span className="dot"><span className="dot-hover">NICARAGUA</span></span>
-        <span className="dot"><span className="dot-hover">MEXICO</span></span>
-        <span className="dot"><span className="dot-hover">MEXICO</span></span>
-
+      <div className="rl_coverage-map-countries">
+        {
+          coverageInfo.countries.map((country) =>
+          country.sections ? <div className="rl_coverage-map-countries-section">
+          {country.sections.map((place) =>
+            <span className={`dot ${place.style}`}><span className="country-name">{ place.name }</span></span>
+          )}
+          </div>:
+          <span className={`dot ${country.style}`}><span className="country-name">{ country.name }</span></span>)
+        }
       </div>
 
     </div>
@@ -36,6 +34,6 @@ export default class Slider extends Component {
   }
 }
 
-Slider.propTypes = {
+Coverage.propTypes = {
   coverageInfo: PropTypes.instanceOf(Object),
 }

@@ -4,8 +4,8 @@
   margin: 10rem 8rem;
   justify-content: space-between;
   &-map {
-    &-dots {
-      padding-top: 58%;
+    &-countries {
+      padding-top: 57%;
       padding-left: 41%;
       height: 70%;
       width: 80%;
@@ -20,9 +20,9 @@
         display: flex;
         border-radius: 50%;
         background-color: #ffcb03;
-        .dot-hover {
+        .country-name {
           width: fit-content;
-          min-width: 10rem;
+          min-width: max-content;
           height: fit-content;
           padding: 0.3rem 1rem;
           border-radius: 10.5px;
@@ -48,18 +48,38 @@
           }
         }
         &:hover {
-          .dot-hover {
+          background-color: #7ac943;
+          .country-name {
             display: block;
           }
         }
 
-        &.dot-2 {
-          margin: 0.2rem 0 0 2rem;
-        }
+        &.country {
+          &-gt {
+            margin: 0.2rem 0 0 2rem;
+          }
 
-        &.dot-3 {
-          margin-top: -0.3rem;
-          margin-left: 0.3rem;
+          &-hn {
+            margin-top: -0.3rem;
+            margin-left: 0.3rem;
+          }
+
+          &-do {
+            margin-top: -0.3rem;
+            margin-left: 4.2rem;
+
+            .country-name {
+              right: 4.5rem;
+            }
+          }
+          &-ni {
+            margin-left: 3.5rem;
+            margin-top: -.5rem;
+          }
+          &-cr {
+            margin-left: .3rem;
+            margin-top: -1rem;
+          }
         }
       }
     }
@@ -98,7 +118,7 @@
 }
 
 @media(max-width: 1025px) {
-  .rl_coverage-map-dots {
+  .rl_coverage-map-countries {
     .dot {
       width: 1.6rem;
       height: 1.6rem;
@@ -120,12 +140,26 @@
         float: none;
         margin: auto;
       }
-      &-dots .dot {
-        &.dot-2 {
-          margin-top: 0.3rem;
-        }
-        &.dot-3 {
-          margin-top: 0;
+      &-countries .dot {
+        &.country {
+          &-gt {
+            margin-top: 0.3rem;
+          }
+
+          &-hn {
+            margin-top: 0;
+          }
+
+          &-do {
+            margin-left: 4.8rem;
+          }
+          &-ni {
+            margin-top: -.3rem;
+          }
+          &-cr {
+            margin-left: .8rem;
+            margin-top: -.3rem;
+          }
         }
       }
     }
@@ -153,16 +187,32 @@
         min-width: 30rem;
         min-height: 45rem;
       }
-      &-dots {
+      &-countries {
         .dot {
           width: 1.1rem;
           height: 1.1rem;
-          &.dot-2 {
-            margin-top: 0;
-            margin-left: 1.5rem;
-          }
-          &.dot-3 {
-            margin-top: -0.3rem;
+          &.country {
+            &-gt {
+              margin-top: 0;
+              margin-left: 1.2rem;
+            }
+            &-hn {
+              margin-top: -0.3rem;
+            }
+            &-do {
+              margin-left: 2.5rem;
+
+              @media(max-width: 418px) and (min-width: 400px) {
+                margin-left: 3rem;
+              }
+            }
+            &-ni {
+              margin-left: 2.5rem;
+              margin-top: 0;
+            }
+            &-cr {
+              margin-left: .3rem;
+            }
           }
         }
       }
