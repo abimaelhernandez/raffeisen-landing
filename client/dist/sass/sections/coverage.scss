@@ -95,6 +95,16 @@
             margin-left: 9rem;
             margin-top: 4rem;
           }
+          &-py {
+            margin-left: 15rem;
+          }
+          &-uy {
+            margin-left: 17.2rem;
+            margin-top: 1.8rem;
+          }
+          &-cl {
+            margin-left: 10rem;
+          }
         }
       }
     }
@@ -226,26 +236,13 @@
             }
             &-do {
               margin-left: 2.5rem;
-
-              @media(max-width: 418px) and (min-width: 400px) {
-                margin-left: 3.5rem;
-              }
             }
             &-sv {
               margin-left: 2rem;
               margin-top: -.3rem;
-
-              @media(max-width: 418px) and (min-width: 400px) {
-                margin-left: 2.5rem;
-              }
             }
             &-cr {
               margin-left: 4rem;
-              @media(max-width: 418px) and (min-width: 400px) {
-                margin-left: 4.5rem;
-                margin-top: .5rem;
-              }
-
             }
             &-ec {
               margin-top: .5rem;
@@ -254,15 +251,55 @@
             &-gy {
               margin-top: -.5rem;
               margin-left: 3rem;
-              @media(max-width: 418px) and (min-width: 400px) {
-                margin-left: 4.5rem;
-              }
             }
             &-pe {
               margin-left: 5.6rem;
               margin-top: 1.8rem;
             }
+            &-py {
+              margin-left: 9.3rem;
+            }
+            &-uy {
+              margin-left: 10.6rem;
+              margin-top: .8rem;
+            }
+            &-cl {
+              margin-left: 6rem;
+              margin-top: 1rem;
+            }
           }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 418px) and (min-width: 400px) {
+  .rl_coverage-map-countries {
+    .dot {
+      &.country {
+        &-cl {
+          margin-left: 7rem;
+        }
+        &-uy {
+          margin-left: 12rem;
+        }
+        &-py {
+          margin-left: 10.5rem;
+          margin-top: 1.2rem;
+        }
+        &-gy {
+          margin-left: 4.5rem;
+        }
+        &-cr {
+          margin-left: 4.5rem;
+          margin-top: .5rem;
+        }
+        &-sv {
+          margin-left: 2.5rem;
+        }
+        &-do {
+          margin-left: 3.5rem;
         }
       }
     }
