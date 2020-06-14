@@ -31,6 +31,7 @@
   display: none;
 }
 
+
 .rl-navigation-bar {
   display: block;
   position: fixed;
@@ -130,8 +131,10 @@
       display: block;
       cursor: pointer;
     }
+  }
 
-
+  .bold-text {
+    font-weight: bold;
   }
 }
 

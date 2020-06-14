@@ -41,6 +41,11 @@ export default class App extends Component {
     this.setState({ locale: 'en' })
   }
 
+  boldLang = (lang) => {
+    const { locale } = this.state
+    return lang === locale ? 'bold-text' : ''
+  }
+
   toggleMenu = () => {
     const { openMenu } = this.state
     this.setState({ openMenu: !openMenu })
@@ -54,7 +59,7 @@ export default class App extends Component {
       this.setState({navbarLogo: logoImg, navbarLogoClass: logoImgClass})
     })
   }
-    
+
   render() {
     const { locale, messages, openMenu, navbarLogo, navbarLogoClass } = this.state
     return (
@@ -79,8 +84,8 @@ export default class App extends Component {
               <a className="rl-navigation-bar-items-single" href="#contacto">{messages[locale].navigation.contact}</a>
             </div>
             <div className="rl-navigation-bar-lang">
-              <button type="button" className="rl-navigation-bar-items-single" name="es" onClick={this.handleSpanish}>Es</button>
-              <button type="button" className="rl-navigation-bar-items-single" name="es" onClick={this.handleEnglish}>En</button>
+              <button type="button" className={`rl-navigation-bar-items-single ${this.boldLang('es')}`} name="es" onClick={this.handleSpanish}>Es</button>
+              <button type="button" className={`rl-navigation-bar-items-single ${this.boldLang('en')}`} name="en" onClick={this.handleEnglish}>En</button>
             </div>
             <div className="rl-navigation-bar-shareOptions">
               <button type="button" data-toggle="modal" data-target="#shareModal" >
@@ -115,8 +120,8 @@ export default class App extends Component {
                   <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer" className="rl-navigation-bar-items-single">
                     <img src="../assets/icons/Twitter-white.svg" alt="Raiffeisen Twitter" className="rl-navigation-bar-contacts-share" />
                   </a>
-                  <button type="button" className="rl-navigation-bar-items-single" name="es" onClick={this.handleSpanish}>Es</button>
-                  <button type="button" className="rl-navigation-bar-items-single" name="es" onClick={this.handleEnglish}>En</button>
+                  <button type="button" className={`rl-navigation-bar-items-single ${this.boldLang('es')}`} name="es" onClick={this.handleSpanish}>Es</button>
+                  <button type="button" className={`rl-navigation-bar-items-single ${this.boldLang('en')}`} name="en" onClick={this.handleEnglish}>En</button>
                 </div>
               </nav>
             </div>
