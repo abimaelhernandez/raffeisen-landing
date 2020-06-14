@@ -157,6 +157,11 @@ const projectBody = {
         backgroundColor: '#c0e6af'
       }
     ],
+    coverageObject: {
+      title: 'Coverage',
+      mapImg: '../assets/images/coverage_map',
+      description: 'Our assistance//work includes a wide diversity of mandates in the Latin America region, having collaborated with multilateral organizations, international funders, representative and supervisory organizations, development banks, as well as cooperative and financial companies in several countries in the region; thus contributing to a more efficient and sustainable model of cooperatives that benefit the most vulnerable in the population'
+    },
     footerObject: {
       mx: 'Mexico City, Mexico',
       py: 'Asuncion, Paraguay',
@@ -321,6 +326,11 @@ const projectBody = {
         backgroundColor: '#c0e6af'
       }
     ],
+    coverageObject: {
+      title: 'Cobertura',
+      mapImg: '../assets/images/coverage_map',
+      description: 'Nuestra gestión incluye una amplia diversidad de mandatos en la región latinoamericana, habiendo colaborado con organismos multilatelares, fondeadores internacionales, organismos de representación y supervisión, instituciones de la banca de desarrollo, así como sociedades cooperativas y financieras en varios países de la región; contribuyendo así con un modelo más eficiente y sustentable en beneficio de su población vulnerable.'
+    },
     footerObject: {
       mx: 'Ciudad de México, México',
       py: 'Asunción, Paraguay',
