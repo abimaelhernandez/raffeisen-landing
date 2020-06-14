@@ -157,6 +157,38 @@ const projectBody = {
         backgroundColor: '#c0e6af'
       }
     ],
+    coverageObject: {
+      title: 'Coverage',
+      description: 'Our assistance//work includes a wide diversity of mandates in the Latin America region, having collaborated with multilateral organizations, international funders, representative and supervisory organizations, development banks, as well as cooperative and financial companies in several countries in the region; thus contributing to a more efficient and sustainable model of cooperatives that benefit the most vulnerable in the population',
+      countries: [
+        { name: 'Mexico', style: 'country-mx' },
+        {
+          sections: [
+            { name: 'Guatemala', style: 'country-gt' },
+            { name: 'Honduras', style: 'country-hn' },
+            { name: 'Dominican Republic', style: 'country-do' },
+          ]
+        },
+        {
+          sections: [
+            { name: 'El Salvador', style: 'country-sv'},
+            { name: 'Nicaragua', style: 'country-ni' },
+          ]
+        },
+        { name: 'Costa Rica', style: 'country-cr'},
+        {
+          sections: [
+            { name: 'Ecuador', style: 'country-ec'},
+            { name: 'Guyana', style: 'country-gy' },
+          ]
+        },
+        { name: 'Peru', style: 'country-pe' },
+        { name: 'Paraguay', style: 'country-py' },
+        { name: 'Uruguay', style: 'country-uy' },
+        { name: 'Chile', style: 'country-cl' }
+      ]
+
+    },
     footerObject: {
       mx: 'Mexico City, Mexico',
       py: 'Asuncion, Paraguay',
@@ -321,6 +353,37 @@ const projectBody = {
         backgroundColor: '#c0e6af'
       }
     ],
+    coverageObject: {
+      title: 'Cobertura',
+      description: 'Nuestra gestión incluye una amplia diversidad de mandatos en la región latinoamericana, habiendo colaborado con organismos multilaterales, fondeadores internacionales, organismos de representación y supervisión, instituciones de la banca de desarrollo, así como sociedades cooperativas y financieras en varios países de la región; contribuyendo así con un modelo más eficiente y sustentable en beneficio de su población vulnerable.',
+      countries: [
+        { name: 'México', style: 'country-mx' },
+        {
+          sections: [
+            { name: 'Guatemala', style: 'country-gt' },
+            { name: 'Honduras', style: 'country-hn' },
+            { name: 'República Dominicana', style: 'country-do' },
+          ]
+        },
+        {
+          sections: [
+            { name: 'El Salvador', style: 'country-sv'},
+            { name: 'Nicaragua', style: 'country-ni' },
+          ]
+        },
+        { name: 'Costa Rica', style: 'country-cr'},
+        {
+          sections: [
+            { name: 'Ecuador', style: 'country-ec'},
+            { name: 'Guyana', style: 'country-gy' },
+          ]
+        },
+        { name: 'Perú', style: 'country-pe' },
+        { name: 'Paraguay', style: 'country-py' },
+        { name: 'Uruguay', style: 'country-uy' },
+        { name: 'Chile', style: 'country-cl' }
+      ]
+    },
     footerObject: {
       mx: 'Ciudad de México, México',
       py: 'Asunción, Paraguay',

@@ -9,6 +9,7 @@ import LandingBanner from './components/LandingBanner'
 import Slider from './components/Carousel'
 import InovationBanner from './components/Inovation'
 import Services from './components/Services'
+import Coverage from './components/Coverage'
 import PageFooter from './components/Footer'
 
 import '../dist/sass/mains.scss'
@@ -54,7 +55,7 @@ export default class App extends Component {
       this.setState({navbarLogo: logoImg, navbarLogoClass: logoImgClass})
     })
   }
-    
+
   render() {
     const { locale, messages, openMenu, navbarLogo, navbarLogoClass } = this.state
     return (
@@ -158,6 +159,7 @@ export default class App extends Component {
         <InovationBanner inovationInfo={messages[locale].inovationBanner} />
         <Services serviceObj={messages[locale].servicesObject}  serviceTitle={messages[locale].navigation.services}/>
         <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader} />
+        <Coverage coverageInfo={messages[locale].coverageObject} />
         <PageFooter footerObject={messages[locale].footerObject} />
       </div>
     )
