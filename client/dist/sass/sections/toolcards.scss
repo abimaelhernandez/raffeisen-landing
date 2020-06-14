@@ -8,7 +8,7 @@
     margin-left: 5vw;
     width: 80%;
 
-    @media(max-width: 767px) { 
+    @media (max-width: 767px) { 
       padding-top: 0;
     }
 
@@ -16,18 +16,19 @@
 
       h1 {
         color: $cobalt-blue;
-        font-size: 5.13rem;
+        font-size: $font-size-jumbo;
         font-weight: 900;
         line-height: 1.01;
 
-        @media(max-width: 767px) { 
-          font-size: 2.8rem;
+        @media (max-width: 767px) {
+          font-size: $font-size-xxxl;
           line-height: 1.8;
         }
       }
     }
 
     &-subText {
+      color: $color-charcoal-grey;
       font-size: $font-size-mw;
       margin-bottom: 2.2rem;
       line-height: 1.3;
