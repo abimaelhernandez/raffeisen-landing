@@ -20,7 +20,7 @@ export default class Slider extends Component {
         <span className="dot"><span className="dot-hover">DOT 1</span></span>
         <div className="rl_coverage-map-dots-section">
           <span className="dot dot-2"><span className="dot-hover">DOT 2</span></span>
-          <span className="dot dot-3"><span className="dot-hover">MEXICO</span></span>
+          <span className="dot dot-3"><span className="dot-hover">DOT 3</span></span>
         </div>
         <span className="dot"><span className="dot-hover">MEXICO</span></span>
         <span className="dot"><span className="dot-hover">MEXICO</span></span>
