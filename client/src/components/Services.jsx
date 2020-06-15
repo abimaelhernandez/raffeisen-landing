@@ -35,7 +35,7 @@ export default class Services extends Component {
             />
     }
     return (
-      <div className="services-parent" id="servicios">
+      <div className="services-parent" id="services">
         <p className="services-parent-title">{serviceTitle}</p>
         <div className="services-parent-container">
           {serviceObj.map((item) =>
@@ -54,9 +54,12 @@ export default class Services extends Component {
                  <div className="clickHandler">
                     <button
                       type="button"
-                      className="service-info-more" onClick={this.clickHandler.bind(this, item.id)}
+                      className="service-info-more"
+                      onClick={this.clickHandler.bind(this, item.id)}
                     >
-                      {item.button}
+                      <span>
+                        {item.button}
+                      </span>
                       <svg className="service-info-more-icon" viewBox="0 0 16 16" fill="currentColor">
                         <path d="M4.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L10.293 8 4.646 2.354a.5.5 0 010-.708z"/>
                       </svg>
@@ -74,5 +77,5 @@ export default class Services extends Component {
 
 Services.propTypes = {
   serviceObj: PropTypes.instanceOf(Object),
-  serviceTitle: PropTypes.instanceOf(Object)
+  serviceTitle: PropTypes.string
 }

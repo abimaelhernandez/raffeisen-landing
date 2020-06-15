@@ -17,10 +17,6 @@ export default class ServicesSlider extends Component {
     return false
   }
 
-  checkId = ()=> {
-
-  }
-
   render() {
     const {passedObj} = this.props
     return (
@@ -32,23 +28,31 @@ export default class ServicesSlider extends Component {
           onClick={this.closeSliderView}>
           <span aria-hidden="true">&times;</span>
         </button>
-        <div id="servicios-slider-id" className="carousel slide" data-ride="carousel">
+        <div id="servicios-slider-id" className="carousel slide" data-ride="carousel" data-interval="false">
           <div className="carousel-inner">
             { passedObj.map((item) =>
-              <div key={item.id} className={`carousel-item ${this.getActive(item) ? 'active': ''}`}>
-                <img src={item.imageBackground} className="col-sm-12 image" alt="..."/>
-                <div className="caption" style={{background : item.backgroundColor}}>
-                  <img
-                    className="icon"
-                    src={item.icon}
-                    alt={item.alt}/>
-                  <p className="paragraph">{item.mainParahraph}</p>
-                  <div className="list-items-container">
-                    <li>{Object.values(item.listItems)[0]}</li>
-                    <li>{Object.values(item.listItems)[1]}</li>
-                    <li>{Object.values(item.listItems)[2]}</li>
+              <div key={item.id} className={`carousel-item ${this.getActive(item) ? 'active': ''}`}
+              >
+              <div className="inner-container">
+                <div
+                  className="image"
+                  style={{backgroundImage: `url(${item.imageBackground})`}}
+                />
+                  <div className="caption" style={{background : item.backgroundColor}}>
+                      <div
+                        className="icon"
+                        style={{backgroundImage: `url(${item.icon})`}}
+                        alt={item.alt}/>
+                      <div className="co">
+                      <p className="paragraph">{item.mainParahraph}</p>
+                      <div className="list-items-container">
+                        <li>{Object.values(item.listItems)[0]}</li>
+                        <li>{Object.values(item.listItems)[1]}</li>
+                        <li>{Object.values(item.listItems)[2]}</li>
+                      </div>
+                      <p className="clause">{item.secondaryParagraph}</p>
+                    </div>
                   </div>
-                  <p className="clause">{item.mainParahraph}</p>
                 </div>
               </div>
             )}

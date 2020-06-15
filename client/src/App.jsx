@@ -71,7 +71,7 @@ export default class App extends Component {
             <div className="rl-navigation-bar-items">
               <a className="rl-navigation-bar-items-single" href="/">{messages[locale].navigation.home}</a>
               <a className="rl-navigation-bar-items-single" href="#nosotros">{messages[locale].navigation.aboutUs}</a>
-              <a className="rl-navigation-bar-items-single" href="#servicios">{messages[locale].navigation.services}</a>
+              <a className="rl-navigation-bar-items-single" href="#services">{messages[locale].navigation.services}</a>
               <a className="rl-navigation-bar-items-single" href="#herramientas">{messages[locale].navigation.tools}</a>
               <a className="rl-navigation-bar-items-single" href="#cobertura">{messages[locale].navigation.coverage}</a>
             </div>
@@ -109,7 +109,7 @@ export default class App extends Component {
                   <div className="rl-navigation-bar-menu-items">
                     <a className="rl-navigation-bar-items-single" href="/">{messages[locale].navigation.home}</a>
                     <a className="rl-navigation-bar-items-single" href="#nosotros">{messages[locale].navigation.aboutUs}</a>
-                    <a className="rl-navigation-bar-items-single" href="#servicios">{messages[locale].navigation.services}</a>
+                    <a className="rl-navigation-bar-items-single" href="#services">{messages[locale].navigation.services}</a>
                     <a className="rl-navigation-bar-items-single" href="#herramientas">{messages[locale].navigation.tools}</a>
                     <a className="rl-navigation-bar-items-single" href="#buscar">{messages[locale].navigation.search}</a>
                     <a className="rl-navigation-bar-items-single" href="#cobertura">{messages[locale].navigation.coverage}</a>

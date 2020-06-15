@@ -23,28 +23,39 @@
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
+      overflow: hidden;
 
       &-logo-container {
         position: absolute;
-        top: 72%;
-        display: block;
         text-align: center;
+        width: 100%;
+        top: 64%;
 
         &-asset {
           width: 68%;
         }
+
         .service-info-more {
           height: 3.5rem;
           padding: 0 1.5rem;
-          opacity: 0.3;
           border-radius: 14.2px;
-          background-color: $color-white;
           border: none;
+          margin-top: 1.6rem;
+          min-width: 30%;
+          background: rgba($color-white, .3);
+
+          span {
+            color: $color-white;
+          }
+
           &-icon {
             width: 2rem;
-            height: 3.8rem;
             background-position: right;
             padding: 0.4rem 0.3rem 0.8rem;
+            margin: 0 0 0 1.5rem;
+            float: right;
+            background-color: transparent;
+            color: $color-white;
           }
         }
       }
@@ -59,7 +70,7 @@
 
     .services-parent-title {
       width: 100%;
-      padding-top: 2rem;
+      padding-top: 3rem;
       font-size: 4rem;
       font-weight: 900;
       color: $dim-grey;
@@ -80,10 +91,13 @@
         &-logo-container {
           left: 0;
           width: 100%;
-          top: 25%;
+          top: 26%;
 
           &-asset {
             width: 60vw;
+          }
+          .service-info-more {
+            width: auto;
           }
         }
       }
