@@ -9,8 +9,7 @@ const projectBody = {
       services: 'Services',
       tools: 'Tools',
       coverage: 'Coverage',
-      contact: 'Contact',
-      search: 'Search'
+      contact: 'Contact'
     },
     mainCarouselInfo: [
       {
@@ -205,8 +204,7 @@ const projectBody = {
       services: 'Servicios',
       tools: 'Herramientas',
       coverage: 'Cobertura',
-      contact: 'Contacto',
-      search: 'Buscar'
+      contact: 'Contacto'
     },
     mainCarouselInfo: [
       {

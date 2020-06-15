@@ -6,6 +6,12 @@
 
 .mt-modal {
   margin-top: 40vh;
+
+  button {
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 .footer-modal {
@@ -25,6 +31,7 @@
   display: none;
 }
 
+
 .rl-navigation-bar {
   display: block;
   position: fixed;
@@ -34,6 +41,15 @@
   text-align: left;
   background-color: $color-white;
   z-index: 200;
+
+  button {
+    background: transparent;
+    border: none;
+  
+    &:focus {
+      outline: none;
+    }
+  }
 
   &-logoChange {
     width: 24%;
@@ -59,24 +75,6 @@
     }
   }
 
-  &-search {
-    width: 18%;
-    margin: 0 0.5rem;
-
-    &-box,
-    &:focus {
-      border: none;
-      border-bottom: .5px solid blacK;
-      position: relative;
-      width: 85%;
-    }
-
-    &-button {
-      width: 5%;
-      margin-left: 1rem;
-    }
-  }
-
   &-wrapper {
     display: flex;
     justify-content: flex-start;
@@ -87,7 +85,7 @@
     display: flex;
     justify-content: space-between;
     width: 40%;
-    margin: 0 1rem;
+    margin-right: 20%;
 
     &-single {
       font-size: $font-size-ml;
@@ -109,13 +107,23 @@
   &-contacts {
     display: flex;
     justify-content: space-between;
-    width: 25%;
-    margin-left: 0.5rem;
+    width: 10%;
+  }
 
-    button {
-      background: transparent;
-      border: none;
-    }
+  &-lang {
+    margin-right: 3%;
+    width: 6%;
+    display: flex;
+    justify-content: space-between;
+    color: $dim-grey;
+    cursor: pointer;
+    font-size: $font-size-ml;
+  }
+
+  &-shareOptions {
+    display: flex;
+    justify-content: space-between;
+    width: 8%;
 
     &-share {
       height: 2.2rem;
@@ -123,16 +131,10 @@
       display: block;
       cursor: pointer;
     }
+  }
 
-    &-lang {
-      color: $dim-grey;
-      cursor: pointer;
-      font-size: $font-size-ml;
-      font-weight: normal;
-      font-style: normal;
-      line-height: 1.2;
-      margin: 0 0.5rem;
-    }
+  .bold-text {
+    font-weight: bold;
   }
 }
 
@@ -155,14 +157,6 @@
         object-fit: fill;
         width: 1.9rem;
         display: block;
-      }
-    }
-
-    &-search {
-      width: 14%;
-
-      &-button {
-        margin-left: 0.5rem;
       }
     }
 
@@ -200,13 +194,19 @@
     background-color: transparent;
     z-index: 200;
 
+    button {
+      background: transparent;
+      border: none;
+    }
+
     &-contacts-share {
       margin-left: 0;
     }
 
     &-items,
-    &-search,
     &-contacts,
+    &-lang,
+    &-shareOptions,
     &-logo-medium {
       display: none;
     }
@@ -242,11 +242,6 @@
 
     &-menu {
       display: block;
-
-      button {
-        background: transparent;
-        border: none;
-      }
 
       &-button {
         height: 7rem;

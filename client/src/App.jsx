@@ -42,6 +42,11 @@ export default class App extends Component {
     this.setState({ locale: 'en' })
   }
 
+  boldLang = (lang) => {
+    const { locale } = this.state
+    return lang === locale ? 'bold-text' : ''
+  }
+
   toggleMenu = () => {
     const { openMenu } = this.state
     this.setState({ openMenu: !openMenu })
@@ -75,29 +80,24 @@ export default class App extends Component {
               <a className="rl-navigation-bar-items-single" href="#herramientas">{messages[locale].navigation.tools}</a>
               <a className="rl-navigation-bar-items-single" href="#cobertura">{messages[locale].navigation.coverage}</a>
             </div>
-            <div className="rl-navigation-bar-search">
-              <form action="#">
-                <input type="text" name="search" className="rl-navigation-bar-search-box" />
-                <span type="submit" className="rl-navigation-bar-search-button">
-                  <svg width="1em" height="1em">
-                    <path fillRule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clipRule="evenodd" />
-                    <path fillRule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clipRule="evenodd" />
-                  </svg>
-                </span>
-              </form>
-            </div>
+
             <div className="rl-navigation-bar-contacts">
               <a className="rl-navigation-bar-items-single" href="#contacto">{messages[locale].navigation.contact}</a>
-              <button type="button" data-toggle="modal" data-target="#myModal" >
-                <img src="../assets/icons/Desktop-share.svg" alt="Raiffeisen page share" className="rl-navigation-bar-contacts-share" />
+            </div>
+            <div className="rl-navigation-bar-lang">
+              <button type="button" className={`rl-navigation-bar-items-single ${this.boldLang('es')}`} name="es" onClick={this.handleSpanish}>Es</button>
+              <button type="button" className={`rl-navigation-bar-items-single ${this.boldLang('en')}`} name="en" onClick={this.handleEnglish}>En</button>
+            </div>
+            <div className="rl-navigation-bar-shareOptions">
+              <button type="button" data-toggle="modal" data-target="#shareModal" >
+                <img src="../assets/icons/Desktop-share.svg" alt="Raiffeisen page share" className="rl-navigation-bar-shareOptions-share" />
               </button>
-              <button type="button" className="rl-navigation-bar-items-single" name="es" onClick={this.handleSpanish}>Es</button>
-              <button type="button" className="rl-navigation-bar-items-single" name="es" onClick={this.handleEnglish}>En</button>
               <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer" className="rl-navigation-bar-items-single">
-                <img src="../assets/icons/Twitter-grey.svg" alt="Raiffeisen Twitter" className="rl-navigation-bar-contacts-share" />
+                <img src="../assets/icons/Twitter-grey.svg" alt="Raiffeisen Twitter" className="rl-navigation-bar-shareOptions-share" />
               </a>
             </div>
 
+              { /* This is the mobile navbar */ }
             <div className="rl-navigation-bar-menu">
               <input type="checkbox" onChange={this.toggleMenu} checked={openMenu} className="rl-navigation-bar-menu-checkbox" id="navi-toggle" />
               <label htmlFor="navi-toggle" className="rl-navigation-bar-menu-button">
@@ -111,26 +111,26 @@ export default class App extends Component {
                     <a className="rl-navigation-bar-items-single" href="#nosotros">{messages[locale].navigation.aboutUs}</a>
                     <a className="rl-navigation-bar-items-single" href="#services">{messages[locale].navigation.services}</a>
                     <a className="rl-navigation-bar-items-single" href="#herramientas">{messages[locale].navigation.tools}</a>
-                    <a className="rl-navigation-bar-items-single" href="#buscar">{messages[locale].navigation.search}</a>
                     <a className="rl-navigation-bar-items-single" href="#cobertura">{messages[locale].navigation.coverage}</a>
                   </div>
                 </button>
                 <div className="rl-navigation-bar-menu-bottom">
-                  <button type="button" data-toggle="modal" data-target="#myModal" >
+                  <button type="button" data-toggle="modal" data-target="#shareModal" >
                     <img src="../assets/icons/Mobile-share.svg" alt="Raiffeisen page share" className="rl-navigation-bar-contacts-share" />
                   </button>
                   <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer" className="rl-navigation-bar-items-single">
                     <img src="../assets/icons/Twitter-white.svg" alt="Raiffeisen Twitter" className="rl-navigation-bar-contacts-share" />
                   </a>
-                  <button type="button" className="rl-navigation-bar-items-single" name="es" onClick={this.handleSpanish}>Es</button>
-                  <button type="button" className="rl-navigation-bar-items-single" name="es" onClick={this.handleEnglish}>En</button>
+                  <button type="button" className={`rl-navigation-bar-items-single ${this.boldLang('es')}`} name="es" onClick={this.handleSpanish}>Es</button>
+                  <button type="button" className={`rl-navigation-bar-items-single ${this.boldLang('en')}`} name="en" onClick={this.handleEnglish}>En</button>
                 </div>
               </nav>
             </div>
           </div>
         </div>
+        
         <div className="container">
-          <div className="modal fade" id="myModal" role="dialog">
+          <div className="modal fade" id="shareModal" role="dialog">
             <div className="modal-dialog modal-sm mt-modal">
               <div className="modal-content">
                 <div className="modal-header">
