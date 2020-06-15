@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 
 export default class PageFooter extends Component {
   render() {
-    const { footerObject } = this.props
+    const { footerObject, sectionRef } = this.props
     return (
-      <footer className="footer" id="contacto">
+      <footer className="footer" id={sectionRef}>
         <Slide right>
           <div className="footer-items">
             <img src="../assets/icons/Twitter-white.svg" alt="twitter-logo" className="footer-icons footer-icons-twitter"/>
@@ -85,5 +85,6 @@ export default class PageFooter extends Component {
 }
 
 PageFooter.propTypes = {
-  footerObject: PropTypes.instanceOf(Object)
+  footerObject: PropTypes.instanceOf(Object),
+  sectionRef: PropTypes.string
 }

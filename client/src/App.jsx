@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share'
+import React, {Component} from 'react'
+import {FacebookShareButton, TwitterShareButton, WhatsappShareButton} from 'react-share'
 import FacebookIcon from 'react-share/lib/FacebookIcon'
 import TwitterIcon from 'react-share/lib/TwitterIcon'
 import WhatsappIcon from 'react-share/lib/WhatsappIcon'
@@ -21,31 +21,34 @@ export default class App extends Component {
     this.state = {
       locale: 'es',
       messages: projectBody,
+      currentView: 'inicio',
       openMenu: false,
       scrolled: 1000,
       navbarLogo: '../assets/logos/Raiffeisen-Blue.svg',
-      navbarLogoClass: 'rl-navigation-bar-logo-large'
+      navbarLogoClass: 'rl-navigation-bar-logo-large',
+      menuSections: projectBody.es.navigation.sections
     }
   }
 
   componentDidMount() {
+    const { hash } = window.location
+    this.setState({
+      currentView: hash || !hash.includes('home')
+        ? hash.substring(1) : projectBody.es.navigation.sections[0].ref
+      })
     this.changeLogo()
   }
 
-  handleSpanish = (e) => {
-    e.preventDefault()
-    this.setState({ locale: 'es' })
+  handleLanguage = (lang) => {
+    this.setState({
+      locale: lang,
+      menuSections: projectBody[lang].navigation.sections,
+      currentView: projectBody[lang].navigation.sections[0].ref
+    })
+    window.scrollTo({top: 0, behavior: 'smooth'})
   }
 
-  handleEnglish = (e) => {
-    e.preventDefault()
-    this.setState({ locale: 'en' })
-  }
-
-  boldLang = (lang) => {
-    const { locale } = this.state
-    return lang === locale ? 'bold-text' : ''
-  }
+  updateClass = (state, value) => value === state ? 'bold-text' : ''
 
   toggleMenu = () => {
     const { openMenu } = this.state
@@ -58,38 +61,55 @@ export default class App extends Component {
       const logoImg = scrolled > window.scrollY ? '../assets/logos/Raiffeisen-Blue.svg' : '../assets/logos/Blue-R.svg'
       const logoImgClass = scrolled > window.scrollY ? 'rl-navigation-bar-logo-large' : 'rl-navigation-bar-logoChange'
       this.setState({navbarLogo: logoImg, navbarLogoClass: logoImgClass})
-    })
-  }
+      })
+    }
 
-  render() {
-    const { locale, messages, openMenu, navbarLogo, navbarLogoClass } = this.state
-    return (
-      <div>
+    render() {
+      const { locale, messages, openMenu, navbarLogo, navbarLogoClass, currentView, menuSections } = this.state
+
+      return (<div>
         <LandingBanner />
         <div className="rl-navigation-bar">
           <div className="rl-navigation-bar-wrapper">
             <a className="rl-navigation-bar-logo" href="/">
-              <img src={ navbarLogo } alt="Raiffeisen Main Logo" className={ navbarLogoClass } />
-              <img src="../assets/logos/Blue-R.svg" alt="Raiffeisen Main Logo" className="rl-navigation-bar-logo-medium" />
-              <img src="../assets/logos/Mobile-R.svg" alt="Raiffeisen Main Logo" className="rl-navigation-bar-logo-small" />
+              <img src={navbarLogo} alt="Raiffeisen Main Logo" className={navbarLogoClass}/>
+              <img src="../assets/logos/Blue-R.svg" alt="Raiffeisen Main Logo" className="rl-navigation-bar-logo-medium"/>
+              <img src="../assets/logos/Mobile-R.svg" alt="Raiffeisen Main Logo" className="rl-navigation-bar-logo-small"/>
             </a>
             <div className="rl-navigation-bar-items">
-              <a className="rl-navigation-bar-items-single" href="/">{messages[locale].navigation.home}</a>
-              <a className="rl-navigation-bar-items-single" href="#nosotros">{messages[locale].navigation.aboutUs}</a>
-              <a className="rl-navigation-bar-items-single" href="#services">{messages[locale].navigation.services}</a>
-              <a className="rl-navigation-bar-items-single" href="#herramientas">{messages[locale].navigation.tools}</a>
-              <a className="rl-navigation-bar-items-single" href="#cobertura">{messages[locale].navigation.coverage}</a>
+              {
+                menuSections.map((section) =>
+                  <a
+                    key={section.ref}
+                    className={`rl-navigation-bar-items-single ${this.updateClass(currentView, section.ref)}`}
+                    onClick={() => this.setState({currentView: section.ref})}
+                    href={`#${section.ref}`}>{section.title}
+                  </a>)
+              }
             </div>
 
             <div className="rl-navigation-bar-contacts">
-              <a className="rl-navigation-bar-items-single" href="#contacto">{messages[locale].navigation.contact}</a>
+              <a
+                className={`rl-navigation-bar-items-single ${this.updateClass(currentView, messages[locale].navigation.contact.ref)}`}
+                href={`#${messages[locale].navigation.contact.ref}`}
+              >{messages[locale].navigation.contact.title}</a>
             </div>
             <div className="rl-navigation-bar-lang">
-              <button type="button" className={`rl-navigation-bar-items-single ${this.boldLang('es')}`} name="es" onClick={this.handleSpanish}>Es</button>
-              <button type="button" className={`rl-navigation-bar-items-single ${this.boldLang('en')}`} name="en" onClick={this.handleEnglish}>En</button>
+              <button
+                type="button"
+                className={`rl-navigation-bar-items-single ${this.updateClass(locale, 'es')}`}
+                name="es"
+                onClick={() => this.handleLanguage('es')}
+              >Es</button>
+              <button
+                type="button"
+                className={`rl-navigation-bar-items-single ${this.updateClass(locale, 'en')}`}
+                name="en"
+                onClick={() => this.handleLanguage('en')}
+              >En</button>
             </div>
             <div className="rl-navigation-bar-shareOptions">
-              <button type="button" data-toggle="modal" data-target="#shareModal" >
+              <button type="button" data-toggle="modal" data-target="#shareModal">
                 <img src="../assets/icons/Desktop-share.svg" alt="Raiffeisen page share" className="rl-navigation-bar-shareOptions-share" />
               </button>
               <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer" className="rl-navigation-bar-items-single">
@@ -97,7 +117,7 @@ export default class App extends Component {
               </a>
             </div>
 
-              { /* This is the mobile navbar */ }
+            {/* This is the mobile navbar */}
             <div className="rl-navigation-bar-menu">
               <input type="checkbox" onChange={this.toggleMenu} checked={openMenu} className="rl-navigation-bar-menu-checkbox" id="navi-toggle" />
               <label htmlFor="navi-toggle" className="rl-navigation-bar-menu-button">
@@ -107,28 +127,46 @@ export default class App extends Component {
               <nav className="rl-navigation-bar-menu-nav">
                 <button type="button" name="button" onClick={this.toggleMenu}>
                   <div className="rl-navigation-bar-menu-items">
-                    <a className="rl-navigation-bar-items-single" href="/">{messages[locale].navigation.home}</a>
-                    <a className="rl-navigation-bar-items-single" href="#nosotros">{messages[locale].navigation.aboutUs}</a>
-                    <a className="rl-navigation-bar-items-single" href="#services">{messages[locale].navigation.services}</a>
-                    <a className="rl-navigation-bar-items-single" href="#herramientas">{messages[locale].navigation.tools}</a>
-                    <a className="rl-navigation-bar-items-single" href="#cobertura">{messages[locale].navigation.coverage}</a>
+                    {
+                      menuSections.map((section) =>
+                      <a
+                        key={`mobile-${section.ref}`}
+                        className={`rl-navigation-bar-items-single ${this.updateClass(currentView, section.ref)}`}
+                        onClick={() => this.setState({currentView: section.ref})}
+                        href={`#${section.ref}`}
+                      >{section.title}</a>)
+                    }
+                    <a
+                      className="rl-navigation-bar-items-single"
+                      href={`#${messages[locale].navigation.contact.ref}`}
+                    >{messages[locale].navigation.contact.title}</a>
                   </div>
                 </button>
                 <div className="rl-navigation-bar-menu-bottom">
-                  <button type="button" data-toggle="modal" data-target="#shareModal" >
+                  <button type="button" data-toggle="modal" data-target="#shareModal">
                     <img src="../assets/icons/Mobile-share.svg" alt="Raiffeisen page share" className="rl-navigation-bar-contacts-share" />
                   </button>
                   <a href="https://twitter.com/RaiffeisenLatam" target="_blank" rel="noopener noreferrer" className="rl-navigation-bar-items-single">
                     <img src="../assets/icons/Twitter-white.svg" alt="Raiffeisen Twitter" className="rl-navigation-bar-contacts-share" />
                   </a>
-                  <button type="button" className={`rl-navigation-bar-items-single ${this.boldLang('es')}`} name="es" onClick={this.handleSpanish}>Es</button>
-                  <button type="button" className={`rl-navigation-bar-items-single ${this.boldLang('en')}`} name="en" onClick={this.handleEnglish}>En</button>
+                  <button
+                    type="button"
+                    className={`rl-navigation-bar-items-single ${this.updateClass(locale, 'es')}`}
+                    name="es"
+                    onClick={() => this.handleLanguage('es')}
+                  >Es</button>
+                  <button
+                    type="button"
+                    className={`rl-navigation-bar-items-single ${this.updateClass(locale, 'en')}`}
+                    name="en"
+                    onClick={() => this.handleLanguage('en')}
+                  >En</button>
                 </div>
               </nav>
             </div>
           </div>
         </div>
-        
+
         <div className="container">
           <div className="modal fade" id="shareModal" role="dialog">
             <div className="modal-dialog modal-sm mt-modal">
@@ -155,13 +193,45 @@ export default class App extends Component {
             </div>
           </div>
         </div>
-        <Slider slidesInfo={messages[locale].mainCarouselInfo} />
-        <InovationBanner inovationInfo={messages[locale].inovationBanner} />
-        <Services serviceObj={messages[locale].servicesObject}  serviceTitle={messages[locale].navigation.services}/>
-        <ToolsCard toolsObject={messages[locale].toolsObject} toolsHeader={messages[locale].toolsHeader} />
-        <Coverage coverageInfo={messages[locale].coverageObject} />
-        <PageFooter footerObject={messages[locale].footerObject} />
-      </div>
-    )
+        <div onMouseEnter={() => this.setState({currentView: menuSections[0].ref})}>
+          <Slider
+            slidesInfo={messages[locale].mainCarouselInfo}
+            sectionRef={menuSections[0].ref}
+          />
+        </div>
+        <div onMouseEnter={() => this.setState({currentView: menuSections[1].ref})}>
+          <InovationBanner
+            inovationInfo={messages[locale].inovationBanner}
+            animationReady={currentView}
+            sectionRef={menuSections[1].ref}
+          />
+        </div>
+        <div onMouseEnter={() => this.setState({currentView: menuSections[2].ref})}>
+          <Services
+            serviceObj={messages[locale].servicesObject}
+            serviceTitle={menuSections[2].title}
+            sectionRef={menuSections[2].ref}
+          />
+        </div>
+        <div onMouseEnter={() => this.setState({currentView: menuSections[3].ref})}>
+          <ToolsCard
+            toolsObject={messages[locale].toolsObject}
+            toolsHeader={messages[locale].toolsHeader}
+            sectionRef={menuSections[3].ref}
+          />
+        </div>
+        <div onMouseEnter={() => this.setState({currentView: menuSections[4].ref})}>
+          <Coverage
+            coverageInfo={messages[locale].coverageObject}
+            sectionRef={menuSections[4].ref}
+          />
+        </div>
+        <div onMouseEnter={() => this.setState({currentView: messages[locale].navigation.contact.ref})}>
+          <PageFooter
+            footerObject={messages[locale].footerObject}
+            sectionRef={messages[locale].navigation.contact.ref}
+          />
+        </div>
+      </div>)
+    }
   }
-}

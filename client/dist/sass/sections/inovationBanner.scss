@@ -1,7 +1,7 @@
 .inovation-banner {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 85vh;
   background-color: $inovation-blue;
 
   .circleImage {
@@ -10,7 +10,11 @@
     width: 13rem;
     left: 14%;
     top: 26%;
-    animation: circle 2.5s ease-out 3s forwards;
+    animation-name: none;
+    &.start-animation,
+     {
+      animation: circle 2.5s ease-out 3s forwards;
+    }
   }
 
   .squareImage {
@@ -19,8 +23,11 @@
     width: 14rem;
     left: 81%;
     top: 66%;
-    animation: square 2.5s ease-out 3s forwards;
-    animation-fill-mode: forwards;
+    animation-name: none;
+    &.start-animation {
+      animation: square 2.5s ease-out 3s forwards;
+      animation-fill-mode: forwards;
+    }
   }
 
   @keyframes square {
@@ -48,6 +55,11 @@
     display: flex;
     text-align: center;
     top: 42%;
+    animation-name: none;
+    &.start-animation {
+      animation: mainTittleAnimation 2s ease-out 2.5s forwards;
+      animation-fill-mode: forwards;
+    }
 
     &-title {
       position: relative;
@@ -67,6 +79,14 @@
     text-align: left;
     top: 33%;
     left: 32%;
+    animation-name: none;
+    opacity: 0;
+
+    &.start-animation {
+      animation: contentAnimation 2s ease-out 5s forwards;
+      animation-fill-mode: forwards;
+    }
+
 
     .dot {
       position: relative;
@@ -100,11 +120,6 @@
     }
   }
 
-  #mainTitle {
-    animation: mainTittleAnimation 2s ease-out 2.5s forwards;
-    animation-fill-mode: forwards;
-  }
-
   @keyframes mainTittleAnimation {
     25% {
       opacity: .7;
@@ -117,12 +132,6 @@
     100% {
       opacity: 0;
     }
-  }
-
-  #content {
-    animation: contentAnimation 2s ease-out 5s forwards;
-    animation-fill-mode: forwards;
-    opacity: 0;
   }
 
   @keyframes contentAnimation {
@@ -166,12 +175,18 @@
     }
 
     .circleImage {
-      animation: circleMobile 2.5s ease-out 3s forwards;
+      animation-name: none;
+      &.start-animation {
+        animation: circleMobile 2.5s ease-out 3s forwards;
+      }
     }
 
     .squareImage {
       left: 71%;
-      animation: squareMobile 2.5s ease-out 3s forwards;
+      animation-name: none;
+      &.start-animation {
+        animation: squareMobile 2.5s ease-out 3s forwards;
+      }
     }
 
     @keyframes squareMobile {
@@ -205,8 +220,11 @@
       top: 21%;
       height: 5rem;
       width: 5rem;
-      animation: circleMobile 2.5s ease-out 3s forwards;
-      animation-fill-mode: forwards;
+      animation-name: none;
+      &.start-animation {
+        animation: circleMobile 2.5s ease-out 3s forwards;
+        animation-fill-mode: forwards;
+      }
     }
 
     .squareImage {
@@ -214,8 +232,11 @@
       top: 83%;
       height: 5.4rem;
       width: 5.4rem;
-      animation: squareMobile 2.5s ease-out 3s forwards;
-      animation-fill-mode: forwards;
+      animation-name: none;
+      &.start-animation {
+        animation: squareMobile 2.5s ease-out 3s forwards;
+        animation-fill-mode: forwards;
+      }
     }
 
     @keyframes squareMobile {

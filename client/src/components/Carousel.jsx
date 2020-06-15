@@ -1,13 +1,12 @@
 import React,{ Component } from 'react'
 import Fade from 'react-reveal/Fade'
-import Roll from 'react-reveal/Roll'
 import PropTypes from 'prop-types'
 
 export default class Slider extends Component {
   render() {
-    const { slidesInfo } = this.props
+    const { slidesInfo, sectionRef } = this.props
     return (
-      <div className="slider-container" id="inicio">
+      <div className="slider-container" id={sectionRef}>
         <div className="slider-container-overlay" />
         <video className="slider-container-webVideo" playsInline autoPlay muted loop>
           <source src="../../assets/videos/RowingBoats.mp4" type="video/mp4" />
@@ -76,14 +75,14 @@ export default class Slider extends Component {
                     alt={slidesInfo[2].title}/>
                 </Fade>
               </div>
-              <Roll right>
+              <Fade left>
                 <div className="carousel-caption caption-container-3">
                   <span className="dot"></span>
                   <div className="caption-container-3-title">
                     {slidesInfo[2].title}
                   </div>
                 </div>
-              </Roll >
+              </Fade>
             </div>
           </div>
           <ol className="carousel-indicators">
@@ -102,5 +101,6 @@ export default class Slider extends Component {
 
 
 Slider.propTypes = {
-  slidesInfo: PropTypes.instanceOf(Object)
+  slidesInfo: PropTypes.instanceOf(Object),
+  sectionRef: PropTypes.string
 }

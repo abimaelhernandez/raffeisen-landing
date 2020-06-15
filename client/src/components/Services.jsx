@@ -26,7 +26,7 @@ export default class Services extends Component {
 
   render(){
     const { clickedId , hasBeenClicked} = this.state
-    const { serviceObj, serviceTitle } = this.props
+    const { serviceObj, serviceTitle, sectionRef } = this.props
     if (hasBeenClicked && clickedId ) {
       return <ServicesSlider
               passedObj={serviceObj}
@@ -35,7 +35,7 @@ export default class Services extends Component {
             />
     }
     return (
-      <div className="services-parent" id="services">
+      <div className="services-parent" id={sectionRef}>
         <p className="services-parent-title">{serviceTitle}</p>
         <div className="services-parent-container">
           {serviceObj.map((item) =>
@@ -77,5 +77,6 @@ export default class Services extends Component {
 
 Services.propTypes = {
   serviceObj: PropTypes.instanceOf(Object),
-  serviceTitle: PropTypes.string
+  serviceTitle: PropTypes.string,
+  sectionRef: PropTypes.string
 }

@@ -4,12 +4,30 @@ const projectBody = {
     learnMore: 'Learn more about Raiffeisen! #Raiffeisen',
     close: 'Close',
     navigation: {
-      home: 'Home',
-      aboutUs: 'About us',
-      services: 'Services',
-      tools: 'Tools',
-      coverage: 'Coverage',
-      contact: 'Contact'
+      sections: [{
+        title: 'Home',
+        ref: 'home'
+      },
+      {
+        title: 'About us',
+        ref: 'about-us'
+      },
+      {
+        title: 'Services',
+        ref: 'services'
+      },
+      {
+        title: 'Tools',
+        ref: 'tools'
+      },
+      {
+        title: 'Coverage',
+        ref: 'coverage'
+      }],
+      contact: {
+        title: 'Contact',
+        ref: 'contact'
+      }
     },
     mainCarouselInfo: [
       {
@@ -28,7 +46,7 @@ const projectBody = {
       }
     ],
     inovationBanner: {
-      title: 'Modelo de gestión',
+      title: 'Management model-DGRV',
       mainParahraph: 'We base our services on tested methods that are tailored to the needs of our clients resulting from years of experience in the sector and a dedicated, specialized team of consultants.',
       secondaryParagraph: 'Supporting our process are technologically innovative tools that promote strategic and integral management.',
       topPhrase: 'Innovation for strategic development-DGRV'
@@ -199,12 +217,30 @@ const projectBody = {
     learnMore: '¡Conoce más sobre Raiffeisen! #Raiffeisen',
     close: 'Cerrar',
     navigation: {
-      home: 'Inicio',
-      aboutUs: 'Nosotros',
-      services: 'Servicios',
-      tools: 'Herramientas',
-      coverage: 'Cobertura',
-      contact: 'Contacto'
+      sections: [{
+        title: 'Inicio',
+        ref: 'inicio'
+      },
+      {
+        title: 'Nosotros',
+        ref: 'nosotros'
+      },
+      {
+        title: 'Servicios',
+        ref: 'servicios'
+      },
+      {
+        title: 'Herramientas',
+        ref: 'herramientas'
+      },
+      {
+        title: 'Cobertura',
+        ref: 'cobertura'
+      }],
+      contact: {
+        title: 'Contacto',
+        ref: 'contacto'
+      }
     },
     mainCarouselInfo: [
       {

@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 
 export default class Coverage extends Component {
   render() {
-    const {coverageInfo} = this.props
-    return (<div className="rl_coverage" id="cobertura">
+    const { coverageInfo, sectionRef} = this.props
+    return (<div className="rl_coverage" id={sectionRef}>
 
       <div className="rl_coverage_description">
         <div className="rl_coverage_description-icon" style={{
             backgroundImage: 'url("../assets/icons/square-icon.svg")'
-          }}/>
+          }} />
         <h2 className="rl_coverage-title">{coverageInfo.title}</h2>
         <p className="rl_coverage-text">{coverageInfo.description}</p>
       </div>
@@ -20,7 +20,7 @@ export default class Coverage extends Component {
           {
             coverageInfo.countries.map(
               (country) => country.sections
-              ? <div className="rl_coverage-map-countries-section">
+              ? <div key={`sections-${country.sections[0].style}`} className="rl_coverage-map-countries-section">
                 {
                   country.sections.map((place) => <span key={`${place.name}-${place.style}`} className={`dot ${place.style}`}>
                     <span className="country-name">{place.name}</span>
@@ -38,5 +38,6 @@ export default class Coverage extends Component {
 }
 
 Coverage.propTypes = {
-  coverageInfo: PropTypes.instanceOf(Object)
+  coverageInfo: PropTypes.instanceOf(Object),
+  sectionRef: PropTypes.string
 }

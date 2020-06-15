@@ -22,11 +22,11 @@ resetProps = (value) => {
 
   render() {
     const { clickedId, hasBeenClicked } = this.state
-    const { toolsObject, toolsHeader } = this.props
+    const { toolsObject, toolsHeader, sectionRef } = this.props
 
     if (hasBeenClicked) {
       return (
-        <div className="tools-parent" id="herramientas">
+        <div className="tools-parent" id={sectionRef}>
           <div className="tools-parent-header">
             <div className="tools-parent-header-title">
               <h1>{toolsHeader.title}</h1>
@@ -40,7 +40,7 @@ resetProps = (value) => {
       )
     }
     return (
-      <div className="tools-parent" id="herramientas">
+      <div className="tools-parent" id={sectionRef}>
         <div className="tools-parent-header">
           <div className="tools-parent-header-title">
             <h1>{toolsHeader.title}</h1>
@@ -99,5 +99,6 @@ resetProps = (value) => {
 
 ToolsCard.propTypes = {
   toolsObject: PropTypes.instanceOf(Object),
-  toolsHeader: PropTypes.instanceOf(Object)
+  toolsHeader: PropTypes.instanceOf(Object),
+  sectionRef: PropTypes.string
 }
