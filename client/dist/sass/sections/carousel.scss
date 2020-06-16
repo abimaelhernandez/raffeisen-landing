@@ -54,6 +54,25 @@
 
     .carousel-item {
       position: relative;
+
+      .aboutus{
+        top: 60%;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 4rem;
+        width: 100%;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .shorterAboutus {
+        top: 55%;
+      }
     }
 
     // slide one

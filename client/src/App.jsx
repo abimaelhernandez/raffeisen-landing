@@ -62,7 +62,13 @@ export default class App extends Component {
       const logoImgClass = scrolled > window.scrollY ? 'rl-navigation-bar-logo-large' : 'rl-navigation-bar-logoChange'
       this.setState({navbarLogo: logoImg, navbarLogoClass: logoImgClass})
       })
-    }
+  }
+
+  aboutUsSlider = () => {
+    const { menuSections } = this.state
+    this.setState({ currentView: menuSections[1].ref })
+    return document.getElementById(menuSections[1].ref).scrollIntoView()
+  }
 
     render() {
       const { locale, messages, openMenu, navbarLogo, navbarLogoClass, currentView, menuSections } = this.state
@@ -197,6 +203,7 @@ export default class App extends Component {
           <Slider
             slidesInfo={messages[locale].mainCarouselInfo}
             sectionRef={menuSections[0].ref}
+            aboutUsSlider={() => this.aboutUsSlider}
           />
         </div>
         <div onMouseEnter={() => this.setState({currentView: menuSections[1].ref})}>
