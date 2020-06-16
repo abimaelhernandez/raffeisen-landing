@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 export default class Slider extends Component {
   render() {
-    const { slidesInfo, sectionRef } = this.props
+    const { slidesInfo, sectionRef, aboutUsSlider } = this.props
     return (
       <div className="slider-container" id={sectionRef}>
         <div className="slider-container-overlay" />
@@ -49,6 +49,7 @@ export default class Slider extends Component {
                 </div>
               </Fade>
             </div>
+
             <div className="carousel-item second-slide">
               <div className="img-container">
                 <Fade down>
@@ -66,7 +67,16 @@ export default class Slider extends Component {
                   </div>
                 </div>
               </Fade>
+              <div
+                  className="aboutus shorterAboutus"
+                  style={{backgroundImage: `url(../../assets/icons/AboutUs-ES.svg)`}}
+                  onClick={aboutUsSlider()}
+                  onKeyDown={aboutUsSlider()}
+                  role="button" 
+                  tabIndex={0}
+                />
             </div>
+
             <div className="carousel-item third-slide">
               <div className="img-container">
                 <Fade left>
@@ -83,7 +93,16 @@ export default class Slider extends Component {
                   </div>
                 </div>
               </Fade>
+                <div
+                  className="aboutus shorterAboutus"
+                  style={{backgroundImage: `url(../../assets/icons/AboutUs-ES.svg)`}}
+                  onClick={aboutUsSlider()}
+                  onKeyDown={aboutUsSlider()}
+                  role="button" 
+                  tabIndex={0}
+                />
             </div>
+          
           </div>
           <ol className="carousel-indicators">
             <li data-target="#carousel_slide_indicator" data-slide-to="0" className="active">
@@ -102,5 +121,6 @@ export default class Slider extends Component {
 
 Slider.propTypes = {
   slidesInfo: PropTypes.instanceOf(Object),
-  sectionRef: PropTypes.string
+  sectionRef: PropTypes.string,
+  aboutUsSlider: PropTypes.instanceOf(Object)
 }

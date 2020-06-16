@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-// import Fade from 'react-reveal/Fade'
+import Fade from 'react-reveal/Fade'
 import ServicesSlider from './ServicesSlider'
 
 export default class Services extends Component {
@@ -44,9 +44,10 @@ export default class Services extends Component {
               style={{backgroundImage: `url(${item.imageBackground})`}}
               key={item.id}
             >
-              <div
-                className="services-parent-container-item-logo-container"
-              >
+              <Fade left>
+                <div
+                  className="services-parent-container-item-logo-container"
+                >
                  <img
                    className="services-parent-container-item-logo-container-asset"
                    src={item.icon}
@@ -65,7 +66,8 @@ export default class Services extends Component {
                       </svg>
                     </button>
                   </div>
-               </div>
+                </div>
+              </Fade>
             </div>
           )}
         </div>
