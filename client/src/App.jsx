@@ -76,7 +76,7 @@ export default class App extends Component {
       return (<div>
         <LandingBanner />
         <div className="rl-navigation-bar">
-         sure
+         sure thing here it is
           <div className="rl-navigation-bar-wrapper">
             <a className="rl-navigation-bar-logo" href="/">
               <img src={navbarLogo} alt="Raiffeisen Main Logo" className={navbarLogoClass}/>
