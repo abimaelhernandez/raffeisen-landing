@@ -77,7 +77,8 @@ export default class App extends Component {
         <LandingBanner />
         <div className="rl-navigation-bar">
         Hello World here is the change
-          <div className="rl-navigation-bar-wrapper">
+        And here is another one
+          <div className="rl-navigation-ba r-wrapper">
             <a className="rl-navigation-bar-logo" href="/">
               <img src={navbarLogo} alt="Raiffeisen Main Logo" className={navbarLogoClass}/>
               <img src="../assets/logos/Blue-R.svg" alt="Raiffeisen Main Logo" className="rl-navigation-bar-logo-medium"/>
