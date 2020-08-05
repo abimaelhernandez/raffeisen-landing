@@ -8,10 +8,6 @@ export default class Slider extends Component {
     return (
       <div className="slider-container" id={sectionRef}>
         <div className="slider-container-overlay" />
-        <video className="slider-container-webVideo" playsInline autoPlay muted loop>
-          <source src="../../assets/videos/RowingBoats.mp4" type="video/mp4" />
-            Your browser does not support HTML5 video.
-        </video>
         <video className="slider-container-mobileVideo" playsInline autoPlay muted loop>
           <source src="../../assets/videos/GlassSphere.mp4" type="video/mp4" />
             Your browser does not support HTML5 video.
@@ -21,9 +17,12 @@ export default class Slider extends Component {
           className="carousel slide"
           data-ride="carousel"
           data-interval="false"
-          >
+        >
           <div className="carousel-inner">
-            <div className="carousel-item active first-slide">
+            <div
+              className="carousel-item active first-slide"
+              style={{backgroundImage: `url(../../assets/images/sphere-on-stump.jpg)`}}
+            >
               <Fade left>
                 <div className="img-container">
                   <img
@@ -49,8 +48,10 @@ export default class Slider extends Component {
                 </div>
               </Fade>
             </div>
-
-            <div className="carousel-item second-slide">
+            <div
+              className="carousel-item second-slide"
+              style={{backgroundImage: `url(../../assets/images/sewing-machine.jpeg)`}}
+            >
               <div className="img-container">
                 <Fade down>
                   <img
@@ -68,16 +69,19 @@ export default class Slider extends Component {
                 </div>
               </Fade>
               <div
-                  className="aboutus shorterAboutus"
-                  style={{backgroundImage: `url(../../assets/icons/AboutUs-ES.svg)`}}
-                  onClick={aboutUsSlider()}
-                  onKeyDown={aboutUsSlider()}
-                  role="button" 
-                  tabIndex={0}
-                />
+                className="aboutus shorterAboutus"
+                style={{backgroundImage: `url(../../assets/icons/AboutUs-ES.svg)`}}
+                onClick={aboutUsSlider()}
+                onKeyDown={aboutUsSlider()}
+                role="button"
+                tabIndex={0}
+              />
             </div>
 
-            <div className="carousel-item third-slide">
+            <div
+              className="carousel-item third-slide"
+              style={{backgroundImage: `url(../../assets/images/slowed-arrow.jpg)`}}
+            >
               <div className="img-container">
                 <Fade left>
                   <img
@@ -98,11 +102,11 @@ export default class Slider extends Component {
                   style={{backgroundImage: `url(../../assets/icons/AboutUs-ES.svg)`}}
                   onClick={aboutUsSlider()}
                   onKeyDown={aboutUsSlider()}
-                  role="button" 
+                  role="button"
                   tabIndex={0}
                 />
             </div>
-          
+
           </div>
           <ol className="carousel-indicators">
             <li data-target="#carousel_slide_indicator" data-slide-to="0" className="active">

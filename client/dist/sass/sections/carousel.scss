@@ -16,17 +16,6 @@
     z-index: 1;
   }
 
-  &-webVideo {
-    position: absolute;
-    width: 100%;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: fill;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
   &-mobileVideo {
     position: absolute;
     width: 173%;
@@ -80,6 +69,9 @@
       position: relative;
       width: 100%;
       height: inherit;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
 
       .img-container {
         position: relative;
@@ -142,6 +134,9 @@
       position: relative;
       width: 100%;
       height: inherit;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
 
       .img-container {
         position: relative;
@@ -193,6 +188,9 @@
       position: relative;
       width: 100%;
       height: inherit;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
 
       .img-container {
         position: relative;
@@ -358,10 +356,6 @@
           }
         }
       }
-    }
-
-    &-webVideo {
-      display: none;
     }
   }
 
