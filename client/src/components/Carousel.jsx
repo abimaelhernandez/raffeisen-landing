@@ -13,7 +13,7 @@ export default class Slider extends Component {
             Your browser does not support HTML5 video.
         </video>
         <div
-          id="carousel_slide_indicator"
+          id="main_carousel"
           className="carousel slide"
           data-ride="carousel"
           data-interval="false"
@@ -77,7 +77,6 @@ export default class Slider extends Component {
                 tabIndex={0}
               />
             </div>
-
             <div
               className="carousel-item third-slide"
               style={{backgroundImage: `url(../../assets/images/slowed-arrow.jpg)`}}
@@ -106,14 +105,21 @@ export default class Slider extends Component {
                   tabIndex={0}
                 />
             </div>
-
           </div>
+          <a className="carousel-control-prev" href="#main_carousel" role="button" data-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="sr-only">Previous</span>
+          </a>
+          <a className="carousel-control-next" href="#main_carousel" role="button" data-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="sr-only">Next</span>
+          </a>
           <ol className="carousel-indicators">
-            <li data-target="#carousel_slide_indicator" data-slide-to="0" className="active">
+            <li data-target="#main_carousel" data-slide-to="0" className="active">
             </li>
-            <li data-target="#carousel_slide_indicator" data-slide-to="1">
+            <li data-target="#main_carousel" data-slide-to="1">
             </li>
-            <li data-target="#carousel_slide_indicator" data-slide-to="2">
+            <li data-target="#main_carousel" data-slide-to="2">
             </li>
           </ol>
         </div>
