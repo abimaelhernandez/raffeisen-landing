@@ -113,16 +113,16 @@ const projectBody = {
       {
         id: 2,
         mobileId: 'second',
-        mainTitle: 'Early Warning System',
-        bodyContent: 'A system with parameters that allow monitoring the financial situation of the evaluated / supervised entities, through the analysis of financial indicators incorporating signaling system.',
-        backgroundColor: '#87c3de'
+        mainTitle: 'Financial planning',
+        bodyContent: 'It facilitates the development of a financial plan and budget through forecasts based on past data. It allows documenting budgetary spreadsheets, controlling resources and monitoring compliance with the plan.',
+        backgroundColor: '#82ce60'
       },
       {
         id: 3,
         mobileId: 'third',
-        mainTitle: 'Social Balance',
-        bodyContent: 'Seeks to make the fulfillment of the organization\'s social role visible by evaluating a set of signalized indicators. It fosters the creation of social responsibility goals and generates a technical report evaluating the compliance with the principles analyzed. It allows adaptation to any type to evaluation methodology.',
-        backgroundColor: '#96cae2'
+        mainTitle: 'Early Warning System',
+        bodyContent: 'A system with parameters that allow monitoring the financial situation of the evaluated / supervised entities, through the analysis of financial indicators incorporating signaling system.',
+        backgroundColor: '#87c3de'
       },
       {
         id: 4,
@@ -134,44 +134,44 @@ const projectBody = {
       {
         id: 5,
         mobileId: 'fifth',
+        mainTitle: 'Social Balance',
+        bodyContent: 'Seeks to make the fulfillment of the organization\'s social role visible by evaluating a set of signalized indicators. It fosters the creation of social responsibility goals and generates a technical report evaluating the compliance with the principles analyzed. It allows adaptation to any type to evaluation methodology.',
+        backgroundColor: '#96cae2'
+      },
+      {
+        id: 6,
+        mobileId: 'sixth',
         mainTitle: 'Rural Microscore',
         bodyContent: 'It evaluates the main agricultural and / or livestock products with an expert score supported by profile variables, productive activity, capacity and payment behavior in accordance with the policies and risk levels of each financial institution.',
         backgroundColor: '#b4d9ea'
       },
       {
-        id: 6,
-        mobileId: 'sixth',
-        mainTitle: 'Financial planning',
-        bodyContent: 'It facilitates the development of a financial plan and budget through forecasts based on past data. It allows documenting budgetary spreadsheets, controlling resources and monitoring compliance with the plan.',
-        backgroundColor: '#82ce60'
-      },
-      {
         id: 7,
         mobileId: 'seventh',
-        mainTitle: 'Internal Control',
-        bodyContent: 'Evaluation of internal control allowing the correction and improvement of different aspects where necessary.  It applies COSO-based questionnaires with parameters that can adapted to any other evaluation methodology.',
-        backgroundColor: '#9bd77f'
-      },
-      {
-        id: 8,
-        mobileId: 'eightth',
         mainTitle: 'Costs and Profitability',
         bodyContent: 'Determines the profitability of products and services, guides the analysis of cost coverage and the definition of rates. It incorporates methodology that assigns costs by offices, departments, products and services, promoting the efficient management of resources.',
         backgroundColor: '#a7dc8f'
       },
       {
+        id: 8,
+        mobileId: 'eighth',
+        mainTitle: 'Internal Control',
+        bodyContent: 'Evaluation of internal control allowing the correction and improvement of different aspects where necessary.  It applies COSO-based questionnaires with parameters that can adapted to any other evaluation methodology.',
+        backgroundColor: '#9bd77f'
+      },
+      {
         id: 9,
         mobileId: 'ninth',
-        mainTitle: 'Microscore 4.0',
-        bodyContent: 'It constructs a score on the basis of variables assessing profile, capacity and payment behavior, determined by the financial institution in accordance with its policies and risk levels. It supports the mitigation of credit risk and compliance with the microcredit methodology.',
-        backgroundColor: '#b4e19f'
+        mainTitle: 'Corporate Audit',
+        bodyContent: 'A computer system to support planning, execution and applicable monitoring in internal and external audits and supervision of financial institutions.',
+        backgroundColor: '#c0e6af'
       },
       {
         id: 10,
         mobileId: 'tenth',
-        mainTitle: 'Corporate Audit',
-        bodyContent: 'A computer system to support planning, execution and applicable monitoring in internal and external audits and supervision of financial institutions.',
-        backgroundColor: '#c0e6af'
+        mainTitle: 'Microscore 4.0',
+        bodyContent: 'It constructs a score on the basis of variables assessing profile, capacity and payment behavior, determined by the financial institution in accordance with its policies and risk levels. It supports the mitigation of credit risk and compliance with the microcredit methodology.',
+        backgroundColor: '#b4e19f'
       }
     ],
     coverageObject: {
@@ -326,16 +326,16 @@ const projectBody = {
       {
         id: 2,
         mobileId: 'second',
-        mainTitle: 'Alerta temprana',
-        bodyContent: 'Sistema parametrizable que permite monitorear la situación financiera de las entidades evaluadas/supervisadas, a través del análisis de indicadores financieros semaforizados.',
-        backgroundColor: '#87c3de'
+        mainTitle: 'Planificación financiera',
+        bodyContent: 'Facilita el desarrollo del plan financiero y del presupuesto a través de pronósticos basados en información histórica. Permite documentar las cédulas presupuestarias, controlar los recursos y hacer el seguimiento del cumplimiento del plan.',
+        backgroundColor: '#82ce60'
       },
       {
         id: 3,
         mobileId: 'third',
-        mainTitle: 'Balance social',
-        bodyContent: 'Busca visibilizar el cumplimiento del rol social de la organización a través de la evaluación de un set de indicadores semaforizados. Fomenta la creación de metas de responsabilidad social y genera un informe técnico con la interpretación del cumplimiento de los principios analizados. Permite la adaptación a cualquier tipo de metodología de evaluación.',
-        backgroundColor: '#96cae2'
+        mainTitle: 'Alerta temprana',
+        bodyContent: 'Sistema parametrizable que permite monitorear la situación financiera de las entidades evaluadas/supervisadas, a través del análisis de indicadores financieros semaforizados.',
+        backgroundColor: '#87c3de'
       },
       {
         id: 4,
@@ -347,44 +347,44 @@ const projectBody = {
       {
         id: 5,
         mobileId: 'fifth',
+        mainTitle: 'Balance social',
+        bodyContent: 'Busca visibilizar el cumplimiento del rol social de la organización a través de la evaluación de un set de indicadores semaforizados. Fomenta la creación de metas de responsabilidad social y genera un informe técnico con la interpretación del cumplimiento de los principios analizados. Permite la adaptación a cualquier tipo de metodología de evaluación.',
+        backgroundColor: '#96cae2'
+      },
+      {
+        id: 6,
+        mobileId: 'sixth',
         mainTitle: 'Microscore rural',
         bodyContent: 'Evalúa los principales productos agrícolas y/o ganaderos con un score experto soportado en variables de perfil, actividad productiva, capacidad y comportamiento de pago conforme a las políticas y niveles de riesgo de cada entidad financiera.',
         backgroundColor: '#b4d9ea'
       },
       {
-        id: 6,
-        mobileId: 'sixth',
-        mainTitle: 'Planificación financiera',
-        bodyContent: 'Facilita el desarrollo del plan financiero y del presupuesto a través de pronósticos basados en información histórica. Permite documentar las cédulas presupuestarias, controlar los recursos y hacer el seguimiento del cumplimiento del plan.',
-        backgroundColor: '#82ce60'
-      },
-      {
         id: 7,
         mobileId: 'seventh',
-        mainTitle: 'Control interno',
-        bodyContent: 'Evalúa la razonabilidad del control interno y permitiendo llevar un seguimiento de aspectos que deben subsanarse o mejorar. Aplica cuestionarios basados en COSO, parametrizables a cualquier otra metodología de evaluación.',
-        backgroundColor: '#9bd77f'
-      },
-      {
-        id: 8,
-        mobileId: 'eightth',
         mainTitle: 'Costos y rentabilidad',
         bodyContent: 'Determina la rentabilidad de productos y servicios, orienta el análisis de la cobertura de costos y la definición de tasas. Trabaja bajo la metodología de asignación de costos por oficinas, departamentos, productos y servicios, propiciando el manejo eficiente de los recursos.',
         backgroundColor: '#a7dc8f'
       },
       {
+        id: 8,
+        mobileId: 'eightth',
+        mainTitle: 'Control interno',
+        bodyContent: 'Evalúa la razonabilidad del control interno y permitiendo llevar un seguimiento de aspectos que deben subsanarse o mejorar. Aplica cuestionarios basados en COSO, parametrizables a cualquier otra metodología de evaluación.',
+        backgroundColor: '#9bd77f'
+      },
+      {
         id: 9,
         mobileId: 'ninth',
-        mainTitle: 'Microscore 4.0',
-        bodyContent: 'Construye un score soportado en variables de perfil, capacidad y comportamiento de pago, determinadas por la entidad financiera conforme a sus políticas y niveles de riesgo. Apuntala la mitigación del riesgo de crédito y el cumplimiento de la metodología de microcrédito.',
-        backgroundColor: '#b4e19f'
+        mainTitle: 'Auditoria corporativa',
+        bodyContent: 'Sistema informático para el soporte de la planeación, ejecución y seguimiento aplicable en auditorías internas, externas y supervisión de instituciones financieras.',
+        backgroundColor: '#c0e6af'
       },
       {
         id: 10,
         mobileId: 'tenth',
-        mainTitle: 'Auditoria corporativa',
-        bodyContent: 'Sistema informático para el soporte de la planeación, ejecución y seguimiento aplicable en auditorías internas, externas y supervisión de instituciones financieras.',
-        backgroundColor: '#c0e6af'
+        mainTitle: 'Microscore 4.0',
+        bodyContent: 'Construye un score soportado en variables de perfil, capacidad y comportamiento de pago, determinadas por la entidad financiera conforme a sus políticas y niveles de riesgo. Apuntala la mitigación del riesgo de crédito y el cumplimiento de la metodología de microcrédito.',
+        backgroundColor: '#b4e19f'
       }
     ],
     coverageObject: {
