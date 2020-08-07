@@ -86,6 +86,9 @@ resetProps = (value) => {
                   <div className="collapse tools-parent-mobile-dropdown-content" id={`${item.mobileId}`}>
                     <div className="card card-body" style={{ background: item.backgroundColor }}>
                       <p>{item.bodyContent}</p>
+                      <div className="tools-parent-mobile-dropdown-content-iconContainer">
+                        <img src={item.icon} alt={item.alt} className="tools-parent-mobile-dropdown-content-iconContainer-icon"/>
+                      </div>
                     </div>
                   </div>
                 </div>
