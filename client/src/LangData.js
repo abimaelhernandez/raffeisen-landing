@@ -151,15 +151,6 @@ const projectBody = {
       {
         id: 6,
         mobileId: 'sixth',
-        mainTitle: 'Rural Microscore',
-        bodyContent: 'It evaluates the main agricultural and / or livestock products with an expert score supported by profile variables, productive activity, capacity and payment behavior in accordance with the policies and risk levels of each financial institution.',
-        backgroundColor: '#64AD34',
-        icon: '../assets/icons/RuralMicroscore.svg',
-        alt: 'Rural Microscore Icon'
-      },
-      {
-        id: 7,
-        mobileId: 'seventh',
         mainTitle: 'Costs and Profitability',
         bodyContent: 'Determines the profitability of products and services, guides the analysis of cost coverage and the definition of rates. It incorporates methodology that assigns costs by offices, departments, products and services, promoting the efficient management of resources.',
         backgroundColor: '#69B53C',
@@ -167,8 +158,8 @@ const projectBody = {
         alt: 'Costs and Profitability Icon'
       },
       {
-        id: 8,
-        mobileId: 'eighth',
+        id: 7,
+        mobileId: 'seventh',
         mainTitle: 'Internal Control',
         bodyContent: 'Evaluation of internal control allowing the correction and improvement of different aspects where necessary.  It applies COSO-based questionnaires with parameters that can adapted to any other evaluation methodology.',
         backgroundColor: '#76C34F',
@@ -176,8 +167,8 @@ const projectBody = {
         alt: 'Internal Control Icon'
       },
       {
-        id: 9,
-        mobileId: 'ninth',
+        id: 8,
+        mobileId: 'eighth',
         mainTitle: 'Corporate Audit',
         bodyContent: 'A computer system to support planning, execution and applicable monitoring in internal and external audits and supervision of financial institutions.',
         backgroundColor: '#81CB60',
@@ -185,9 +176,18 @@ const projectBody = {
         alt: 'Corporate Audit Icon'
       },
       {
+        id: 9,
+        mobileId: 'ninth',
+        mainTitle: 'Rural Microscore',
+        bodyContent: 'It evaluates the main agricultural and / or livestock products with an expert score supported by profile variables, productive activity, capacity and payment behavior in accordance with the policies and risk levels of each financial institution.',
+        backgroundColor: '#64AD34',
+        icon: '../assets/icons/RuralMicroscore.svg',
+        alt: 'Rural Microscore Icon'
+      },
+      {
         id: 10,
         mobileId: 'tenth',
-        mainTitle: 'Microscore 4.0',
+        mainTitle: 'Microscore',
         bodyContent: 'It constructs a score on the basis of variables assessing profile, capacity and payment behavior, determined by the financial institution in accordance with its policies and risk levels. It supports the mitigation of credit risk and compliance with the microcredit methodology.',
         backgroundColor: '#9AD57F',
         icon: '../assets/icons/Microscore.svg',
@@ -384,15 +384,6 @@ const projectBody = {
       {
         id: 6,
         mobileId: 'sixth',
-        mainTitle: 'Microscore rural',
-        bodyContent: 'Evalúa los principales productos agrícolas y/o ganaderos con un score experto soportado en variables de perfil, actividad productiva, capacidad y comportamiento de pago conforme a las políticas y niveles de riesgo de cada entidad financiera.',
-        backgroundColor: '#64AD34',
-        icon: '../assets/icons/RuralMicroscore.svg',
-        alt: 'Icono Microscore Rural'
-      },
-      {
-        id: 7,
-        mobileId: 'seventh',
         mainTitle: 'Costos y rentabilidad',
         bodyContent: 'Determina la rentabilidad de productos y servicios, orienta el análisis de la cobertura de costos y la definición de tasas. Trabaja bajo la metodología de asignación de costos por oficinas, departamentos, productos y servicios, propiciando el manejo eficiente de los recursos.',
         backgroundColor: '#69B53C',
@@ -400,8 +391,8 @@ const projectBody = {
         alt: 'Icono Costos y Rentabilidad'
       },
       {
-        id: 8,
-        mobileId: 'eightth',
+        id: 7,
+        mobileId: 'seventh',
         mainTitle: 'Control interno',
         bodyContent: 'Evalúa la razonabilidad del control interno y permitiendo llevar un seguimiento de aspectos que deben subsanarse o mejorar. Aplica cuestionarios basados en COSO, parametrizables a cualquier otra metodología de evaluación.',
         backgroundColor: '#76C34F',
@@ -409,22 +400,31 @@ const projectBody = {
         alt: 'Icono Control Interno'
       },
       {
-        id: 9,
-        mobileId: 'ninth',
-        mainTitle: 'Auditoria corporativa',
+        id: 8,
+        mobileId: 'eighth',
+        mainTitle: 'Auditoría corporativa',
         bodyContent: 'Sistema informático para el soporte de la planeación, ejecución y seguimiento aplicable en auditorías internas, externas y supervisión de instituciones financieras.',
         backgroundColor: '#81CB60',
         icon: '../assets/icons/CorporateAudit.svg',
         alt: 'Icono Auditoria Corporativa'
       },
       {
-        id: 10,
-        mobileId: 'tenth',
-        mainTitle: 'Microscore 4.0',
+        id: 9,
+        mobileId: 'ninth',
+        mainTitle: 'Microscore',
         bodyContent: 'Construye un score soportado en variables de perfil, capacidad y comportamiento de pago, determinadas por la entidad financiera conforme a sus políticas y niveles de riesgo. Apuntala la mitigación del riesgo de crédito y el cumplimiento de la metodología de microcrédito.',
         backgroundColor: '#9AD57F',
         icon: '../assets/icons/Microscore.svg',
         alt: 'Icono Microscore'
+      },
+      {
+        id: 10,
+        mobileId: 'tenth',
+        mainTitle: 'Microscore Rural',
+        bodyContent: 'Evalúa los principales productos agrícolas y/o ganaderos con un score experto soportado en variables de perfil, actividad productiva, capacidad y comportamiento de pago conforme a las políticas y niveles de riesgo de cada entidad financiera.',
+        backgroundColor: '#64AD34',
+        icon: '../assets/icons/RuralMicroscore.svg',
+        alt: 'Icono Microscore Rural'
       }
     ],
     coverageObject: {

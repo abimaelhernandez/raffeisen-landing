@@ -84,24 +84,6 @@
           width: 80%;
         }
 
-        .btn {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: rgba($color-white, .3);
-          border-radius: 50%;
-          height: 2vw;
-          width: 2vw;
-          padding: 0;
-          
-          .nextArrrow {
-            color: $color-white;
-            width: 1.3vw;
-            height: 1.3vw;
-            padding: 0.3rem;
-            background-position: center;
-          }
-        }
       }
     }
     }  
