@@ -71,15 +71,14 @@
         padding: 0 0 0 2.1vw;
         width: 100%;
         position: relative;
-        top: 20%;
-        // left: 2vw;
+        top: 15%;
 
         .card-title {
           line-height: 1.2;
           overflow-wrap: break-word;
           word-wrap: break-word;
           margin-top: 1vh;
-          font-size: 2vw;
+          font-size: $font-size-lsw;
           color: $color-white;
           width: 80%;
         }

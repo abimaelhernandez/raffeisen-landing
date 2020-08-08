@@ -339,7 +339,7 @@ const projectBody = {
       {
         id: 1,
         mobileId: 'first',
-        mainTitle: 'Planificación estratégica',
+        mainTitle: 'Planificación Estratégica',
         bodyContent: 'Se fundamentada en el cuadro de mando integral que facilita el diseño y seguimiento de la planificación estratégica y operativa. Permite documentar y sistematizar el proceso de planificación, definir las metas e indicadores de medición de los objetivos y estrategias, y fomentar la cultura del seguimiento constante.',
         backgroundColor: '#268DA5',
         icon: '../assets/icons/StrategicPlanning.svg',
@@ -348,7 +348,7 @@ const projectBody = {
       {
         id: 2,
         mobileId: 'second',
-        mainTitle: 'Planificación financiera',
+        mainTitle: 'Planificación Financiera',
         bodyContent: 'Facilita el desarrollo del plan financiero y del presupuesto a través de pronósticos basados en información histórica. Permite documentar las cédulas presupuestarias, controlar los recursos y hacer el seguimiento del cumplimiento del plan.',
         backgroundColor: '#379CB7',
         icon: '../assets/icons/FinancialPlanning.svg',
@@ -357,7 +357,7 @@ const projectBody = {
       {
         id: 3,
         mobileId: 'third',
-        mainTitle: 'Alerta temprana',
+        mainTitle: 'Alerta Temprana',
         bodyContent: 'Sistema parametrizable que permite monitorear la situación financiera de las entidades evaluadas/supervisadas, a través del análisis de indicadores financieros semaforizados.',
         backgroundColor: '#50A9C9',
         icon: '../assets/icons/EarlyWarningSystem.svg',
@@ -375,7 +375,7 @@ const projectBody = {
       {
         id: 5,
         mobileId: 'fifth',
-        mainTitle: 'Balance social',
+        mainTitle: 'Balance Social',
         bodyContent: 'Busca visibilizar el cumplimiento del rol social de la organización a través de la evaluación de un set de indicadores semaforizados. Fomenta la creación de metas de responsabilidad social y genera un informe técnico con la interpretación del cumplimiento de los principios analizados. Permite la adaptación a cualquier tipo de metodología de evaluación.',
         backgroundColor: '#86C2DD',
         icon: '../assets/icons/SocialBalance.svg',
@@ -386,25 +386,25 @@ const projectBody = {
         mobileId: 'sixth',
         mainTitle: 'Costos y rentabilidad',
         bodyContent: 'Determina la rentabilidad de productos y servicios, orienta el análisis de la cobertura de costos y la definición de tasas. Trabaja bajo la metodología de asignación de costos por oficinas, departamentos, productos y servicios, propiciando el manejo eficiente de los recursos.',
-        backgroundColor: '#69B53C',
+        backgroundColor: '#64AD34',
         icon: '../assets/icons/CostsandProfitability.svg',
         alt: 'Icono Costos y Rentabilidad'
       },
       {
         id: 7,
         mobileId: 'seventh',
-        mainTitle: 'Control interno',
+        mainTitle: 'Control Interno',
         bodyContent: 'Evalúa la razonabilidad del control interno y permitiendo llevar un seguimiento de aspectos que deben subsanarse o mejorar. Aplica cuestionarios basados en COSO, parametrizables a cualquier otra metodología de evaluación.',
-        backgroundColor: '#76C34F',
+        backgroundColor: '#69B53C',
         icon: '../assets/icons/InternalControl.svg',
         alt: 'Icono Control Interno'
       },
       {
         id: 8,
         mobileId: 'eighth',
-        mainTitle: 'Auditoría corporativa',
+        mainTitle: 'Auditoría Corporativa',
         bodyContent: 'Sistema informático para el soporte de la planeación, ejecución y seguimiento aplicable en auditorías internas, externas y supervisión de instituciones financieras.',
-        backgroundColor: '#81CB60',
+        backgroundColor: '#76C34F',
         icon: '../assets/icons/CorporateAudit.svg',
         alt: 'Icono Auditoria Corporativa'
       },
@@ -413,7 +413,7 @@ const projectBody = {
         mobileId: 'ninth',
         mainTitle: 'Microscore',
         bodyContent: 'Construye un score soportado en variables de perfil, capacidad y comportamiento de pago, determinadas por la entidad financiera conforme a sus políticas y niveles de riesgo. Apuntala la mitigación del riesgo de crédito y el cumplimiento de la metodología de microcrédito.',
-        backgroundColor: '#9AD57F',
+        backgroundColor: '#81CB60',
         icon: '../assets/icons/Microscore.svg',
         alt: 'Icono Microscore'
       },
@@ -422,7 +422,7 @@ const projectBody = {
         mobileId: 'tenth',
         mainTitle: 'Microscore Rural',
         bodyContent: 'Evalúa los principales productos agrícolas y/o ganaderos con un score experto soportado en variables de perfil, actividad productiva, capacidad y comportamiento de pago conforme a las políticas y niveles de riesgo de cada entidad financiera.',
-        backgroundColor: '#64AD34',
+        backgroundColor: '#9AD57F',
         icon: '../assets/icons/RuralMicroscore.svg',
         alt: 'Icono Microscore Rural'
       }
