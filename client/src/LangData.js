@@ -144,7 +144,7 @@ const projectBody = {
         mobileId: 'fifth',
         mainTitle: 'Social Balance',
         bodyContent: 'Seeks to make the fulfillment of the organization\'s social role visible by evaluating a set of signalized indicators. It fosters the creation of social responsibility goals and generates a technical report evaluating the compliance with the principles analyzed. It allows adaptation to any type to evaluation methodology.',
-        backgroundColor: '#68B3D5',
+        backgroundColor: '#86C2DD',
         icon: '../assets/icons/SocialBalance.svg',
         alt: 'Social Balance Icon'
       },
@@ -189,7 +189,7 @@ const projectBody = {
         mobileId: 'tenth',
         mainTitle: 'Microscore 4.0',
         bodyContent: 'It constructs a score on the basis of variables assessing profile, capacity and payment behavior, determined by the financial institution in accordance with its policies and risk levels. It supports the mitigation of credit risk and compliance with the microcredit methodology.',
-        backgroundColor: '#81CB60',
+        backgroundColor: '#9AD57F',
         icon: '../assets/icons/Microscore.svg',
         alt: 'Microscore Icon'
       }
@@ -377,7 +377,7 @@ const projectBody = {
         mobileId: 'fifth',
         mainTitle: 'Balance social',
         bodyContent: 'Busca visibilizar el cumplimiento del rol social de la organización a través de la evaluación de un set de indicadores semaforizados. Fomenta la creación de metas de responsabilidad social y genera un informe técnico con la interpretación del cumplimiento de los principios analizados. Permite la adaptación a cualquier tipo de metodología de evaluación.',
-        backgroundColor: '#68B3D5',
+        backgroundColor: '#86C2DD',
         icon: '../assets/icons/SocialBalance.svg',
         alt: 'Icono Balance Social'
       },
@@ -422,7 +422,7 @@ const projectBody = {
         mobileId: 'tenth',
         mainTitle: 'Microscore 4.0',
         bodyContent: 'Construye un score soportado en variables de perfil, capacidad y comportamiento de pago, determinadas por la entidad financiera conforme a sus políticas y niveles de riesgo. Apuntala la mitigación del riesgo de crédito y el cumplimiento de la metodología de microcrédito.',
-        backgroundColor: '#81CB60',
+        backgroundColor: '#9AD57F',
         icon: '../assets/icons/Microscore.svg',
         alt: 'Icono Microscore'
       }
