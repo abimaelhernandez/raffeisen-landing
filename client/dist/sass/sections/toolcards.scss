@@ -54,39 +54,50 @@
       gap: 1.5vw;
       row-gap: 2.5vw;
 
-    @media(max-width: 767px) {
-      display: none;
-    }
-    
-    &-card {
-      &:focus{
-        outline: none;
+      @media(max-width: 767px) {
+        display: none;
       }
-
-      cursor: pointer;
-      font-weight: 500;
-      width: 100%;
-      
-      &-content {
-        padding: 0 0 0 2.1vw;
-        width: 100%;
-        position: relative;
-        top: 15%;
-
-        .card-title {
-          line-height: 1.2;
-          overflow-wrap: break-word;
-          word-wrap: break-word;
-          margin-top: 1vh;
-          font-size: $font-size-lsw;
-          color: $color-white;
-          width: 80%;
+    
+      &-card {
+        &:focus {
+          outline: none;
         }
 
+        cursor: pointer;
+        font-weight: 500;
+        width: 100%;
+
+        &-content {
+          padding: 0 0 0 2.1vw;
+          width: 100%;
+          position: relative;
+          top: 15%;
+
+          .card-title {
+            line-height: 1.2;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            margin-top: 1vh;
+            font-size: $font-size-lsw;
+            color: $color-white;
+            width: 80%;
+          }
+
+          .iconContainer {
+            position: relative;
+            height: 100%;
+
+            &-icon {
+              position: fixed;
+              bottom: 2vh;
+              margin-left: 11.5vw;
+              max-height: 4vh;
+              width: 2.5vw;
+            }
+          }
+        }
       }
     }
-    }  
-
   }
 
   &-mobile {

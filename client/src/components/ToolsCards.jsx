@@ -58,6 +58,9 @@ resetProps = (value) => {
                 <div className="tools-parent-desktop-cards-card-content">
                   <div className="card-title">
                     <p>{item.mainTitle}</p>
+                    <div className="iconContainer">
+                      <img src={item.icon} alt={item.alt} className="iconContainer-icon"/>
+                    </div>
                   </div>
                 </div>
               </div>
