@@ -83,6 +83,14 @@
     }
     
   }
+
+  &-icon {
+    position: absolute;
+    width: 3vw;
+    right: 2vw;
+    bottom: 5vh;
+    max-height: 7vh;
+  }
 }
 
 .BrainhubCarouselItem--active {

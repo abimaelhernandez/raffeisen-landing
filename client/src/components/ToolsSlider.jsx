@@ -46,6 +46,7 @@ export default class ToolsSlider extends Component {
                     <h1 className="individual-slide-body-title">{toolsObject[0].mainTitle}</h1>
                     <p className="card-text individual-slide-body-subText">{toolsObject[0].bodyContent}</p>
                   </div>
+                  <img className="individual-slide-icon" src={toolsObject[0].icon} alt={toolsObject[0].alt}/>
                 </div>
               </div>),
               (<div key={2}>
@@ -57,6 +58,7 @@ export default class ToolsSlider extends Component {
                   <h1 className="individual-slide-body-title">{toolsObject[1].mainTitle}</h1>
                     <p className="card-text individual-slide-body-subText">{toolsObject[1].bodyContent}</p>
                   </div>
+                  <img className="individual-slide-icon" src={toolsObject[1].icon} alt={toolsObject[1].alt}/>
                 </div>
               </div>),
               (<div key={3}>
@@ -68,6 +70,7 @@ export default class ToolsSlider extends Component {
                   <h1 className="individual-slide-body-title">{toolsObject[2].mainTitle}</h1>
                     <p className="card-text individual-slide-body-subText">{toolsObject[2].bodyContent}</p>
                   </div>
+                  <img className="individual-slide-icon" src={toolsObject[2].icon} alt={toolsObject[2].alt}/>
                 </div>
               </div>),
               (<div key={4}>
@@ -79,6 +82,7 @@ export default class ToolsSlider extends Component {
                   <h1 className="individual-slide-body-title">{toolsObject[3].mainTitle}</h1>
                     <p className="card-text individual-slide-body-subText">{toolsObject[3].bodyContent}</p>
                   </div>
+                  <img className="individual-slide-icon" src={toolsObject[3].icon} alt={toolsObject[3].alt}/>
                 </div>
               </div>),
               (<div key={5}>
@@ -90,6 +94,7 @@ export default class ToolsSlider extends Component {
                   <h1 className="individual-slide-body-title">{toolsObject[4].mainTitle}</h1>
                     <p className="card-text individual-slide-body-subText">{toolsObject[4].bodyContent}</p>
                   </div>
+                  <img className="individual-slide-icon" src={toolsObject[4].icon} alt={toolsObject[4].alt}/>
                 </div>
               </div>),
               (<div key={6}>
@@ -101,6 +106,7 @@ export default class ToolsSlider extends Component {
                   <h1 className="individual-slide-body-title">{toolsObject[5].mainTitle}</h1>
                     <p className="card-text individual-slide-body-subText">{toolsObject[5].bodyContent}</p>
                   </div>
+                  <img className="individual-slide-icon" src={toolsObject[5].icon} alt={toolsObject[5].alt}/>
                 </div>
               </div>),
               (<div key={7}>
@@ -112,6 +118,7 @@ export default class ToolsSlider extends Component {
                   <h1 className="individual-slide-body-title">{toolsObject[6].mainTitle}</h1>
                     <p className="card-text individual-slide-body-subText">{toolsObject[6].bodyContent}</p>
                   </div>
+                  <img className="individual-slide-icon" src={toolsObject[6].icon} alt={toolsObject[6].alt}/>
                 </div>
               </div>),
               (<div key={8}>
@@ -123,6 +130,7 @@ export default class ToolsSlider extends Component {
                   <h1 className="individual-slide-body-title">{toolsObject[7].mainTitle}</h1>
                     <p className="card-text individual-slide-body-subText">{toolsObject[7].bodyContent}</p>
                   </div>
+                  <img className="individual-slide-icon" src={toolsObject[7].icon} alt={toolsObject[7].alt}/>
                 </div>
               </div>),
               (<div key={9}>
@@ -134,6 +142,7 @@ export default class ToolsSlider extends Component {
                   <h1 className="individual-slide-body-title">{toolsObject[8].mainTitle}</h1>
                     <p className="card-text individual-slide-body-subText">{toolsObject[8].bodyContent}</p>
                   </div>
+                  <img className="individual-slide-icon" src={toolsObject[8].icon} alt={toolsObject[8].alt}/>
                 </div>
               </div>),
               (<div key={10}>
@@ -145,6 +154,7 @@ export default class ToolsSlider extends Component {
                   <h1 className="individual-slide-body-title">{toolsObject[9].mainTitle}</h1>
                     <p className="card-text individual-slide-body-subText">{toolsObject[9].bodyContent}</p>
                   </div>
+                  <img className="individual-slide-icon" src={toolsObject[9].icon} alt={toolsObject[9].alt}/>
                 </div>
               </div>)
             ]}
