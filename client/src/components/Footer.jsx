@@ -45,19 +45,14 @@ export default class PageFooter extends Component {
               <span>{footerObject.mx}
               </span>
               <p>
-                <a href="tel:+52-55-5037-5992"> +52.55.5037.5992 </a> |
+                <a href="tel:+52-55-5037-5992"> +52.55.5037.5992 </a> &middot;
                 <a href="tel:+52-55-6273-8897"> +52.55.6273.8897</a>
               </p>
-            </div>
-          </div>
-
-          <div className="footer-items displayFlex addressMobile">
-
-            <img src="../assets/icons/Phone.svg" alt="phone-logo" className="footer-icons footer-icons-phone"/>
-
-            <div>
               <p>
-                <span>{footerObject.py} <a href="tel:+595-21-62-996">+595.21.62.996</a></span>
+                <span>{footerObject.py}</span>
+              <p>
+                <span><a href="tel:+595-21-62-996">+595.21.62.996</a></span>
+              </p>
               </p>
             </div>
           </div>
