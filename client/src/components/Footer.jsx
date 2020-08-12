@@ -65,7 +65,7 @@ export default class PageFooter extends Component {
         <Slide right>
           <div className="footer-items displayFlex">
             <img src="../assets/icons/Globe.svg" alt="globe-logo" className="footer-icons footer-icons-globe"/>
-            <span>{footerObject.globe} <strong><a href="https://www.dgrv.org" target="_blank" rel="noopener noreferrer">www.dgrv.org</a></strong></span>
+            <span>{footerObject.globe} &middot; <strong><a href="https://www.dgrv.org" target="_blank" rel="noopener noreferrer">www.dgrv.org</a></strong></span>
           </div>
         </Slide>
           <div className="footer-items">
