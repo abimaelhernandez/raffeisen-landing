@@ -21,7 +21,7 @@ export default class PageFooter extends Component {
           </div>
         </Slide>
         <Slide right>
-          <div className="footer-items displayFlex displayNone">
+          <div className="footer-items displayFlex displayNoneD">
 
             <img src="../assets/icons/Phone.svg" alt="phone-logo" className="footer-icons footer-icons-phone"/>
 
@@ -37,7 +37,7 @@ export default class PageFooter extends Component {
           </div>
         </Slide>
         <Slide right>
-          <div className="footer-items displayFlex addressMobile">
+          <div className="footer-items displayFlex displayNoneM">
 
             <img src="../assets/icons/Phone.svg" alt="phone-logo" className="footer-icons footer-icons-phone"/>
 
@@ -60,7 +60,8 @@ export default class PageFooter extends Component {
         <Slide right>
           <div className="footer-items displayFlex">
             <img src="../assets/icons/Globe.svg" alt="globe-logo" className="footer-icons footer-icons-globe"/>
-            <span>{footerObject.globe} &middot; <strong><a href="https://www.dgrv.org" target="_blank" rel="noopener noreferrer">www.dgrv.org</a></strong></span>
+            <span className="displayNoneD">{footerObject.globe} &middot; <strong><a href="https://www.dgrv.org" target="_blank" rel="noopener noreferrer">www.dgrv.org</a></strong></span>
+            <span className="displayNoneM">{footerObject.globe} <br/> <a href="https://www.dgrv.org" target="_blank" rel="noopener noreferrer">www.dgrv.org</a></span>
           </div>
         </Slide>
           <div className="footer-items">
