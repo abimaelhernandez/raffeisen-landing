@@ -27,7 +27,7 @@ export default class PageFooter extends Component {
 
             <div>
               <span>{footerObject.mx}
-                <a href="tel:+52-55-5037-5992"> +52.55.5037.5992 </a> |
+                <a href="tel:+52-55-5037-5992"> +52.55.5037.5992 </a> &middot;
                 <a href="tel:+52-55-6273-8897"> +52.55.6273.8897</a>
               </span>
               <p>
