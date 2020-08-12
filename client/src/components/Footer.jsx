@@ -17,7 +17,7 @@ export default class PageFooter extends Component {
         <Slide right>
           <div className="footer-items">
             <img src="../assets/icons/Email.svg" alt="email-logo" className="footer-icons footer-icons-email"/>
-            <span><strong><a href="mailto:info@rflatina.com" target="_blank" rel="noopener noreferrer">info@rflatina.com</a></strong></span>
+            <span><a href="mailto:info@rflatina.com" target="_blank" rel="noopener noreferrer">info@rflatina.com</a></span>
           </div>
         </Slide>
         <Slide right>
