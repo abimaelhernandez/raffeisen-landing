@@ -30,12 +30,6 @@
   #main_carousel {
     height: 100%;
 
-    .slide-one-img {
-      height: 5rem;
-      width: 12rem;
-      display: block;
-    }
-
     .carousel-inner {
       height: inherit;
       z-index: 2;
@@ -74,56 +68,56 @@
       background-repeat: no-repeat;
       background-size: cover;
 
-      .img-container {
+      &-content {
         position: relative;
         width: 100%;
+        display: flex;
         top: 30%;
+        padding: 0rem 10rem;
 
-        img {
+        &-text {
           position: relative;
-          float: right;
-          width: 35vw;
-          height: 35vh;
-          right: 9rem;
-        }
-      }
+          width: 100%;
+          min-height: 20vh;
+          padding: 0 5rem;
 
-      .caption-container {
-        position: relative;
-        width: 45vw;
-        height: auto;
-        min-height: 20vh;
-        max-height: 100vh;
-        top: 26%;
-        left: 7%;
-        text-align: left;
-        padding: 0 0 0 3rem;
+          .dot {
+            position: absolute;
+            height: 2.5rem;
+            width: 2.5rem;
+            background-color: $neon-carrot-orange;
+            border-radius: 50%;
+            display: inline-block;
+            left: 0;
+          }
 
-        .dot {
-          position: relative;
-          height: 2.5rem;
-          width: 2.5rem;
-          right: 5rem;
-          top: 4rem;
-          background-color: $neon-carrot-orange;
-          border-radius: 50%;
-          display: inline-block;
-        }
+          &-title {
+            padding: 0 0 2rem 0;
+            font-size: $font-size-4w;
+            font-weight: 900;
+            line-height: 1.03;
+            text-align: left;
+            color: $color-white;
+          }
 
-        &-title {
-          position: relative;
-          padding: 0 0 2rem 0;
-          font-size: $font-size-4w;
-          font-weight: 900;
-          line-height: 1.03;
-          text-align: left;
-          color: $color-white;
+          &-logo {
+            width: 30rem;
+            height: 5rem;
+            background-position: initial;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin: 2px;
+          }
         }
 
-        &-paragraphContainer {
-          &-paragraph {
-            font-family: Avenir-Roman;
-            font-size: 0.7vw;
+        .img-container {
+          position: relative;
+          width: 100%;
+
+          img {
+            float: right;
+            width: 35vw;
+            height: 35vh;
           }
         }
       }
@@ -259,7 +253,7 @@
     }
   }
 
-  @media (max-width: 767px) {
+  @media only screen and (max-width: 767px) {
     #carousel_slide_indicator {
       .slide-one-img {
         height: 4.5rem;

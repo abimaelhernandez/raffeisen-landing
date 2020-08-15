@@ -8,7 +8,9 @@ export default class Slider extends Component {
     return (
       <div className="slider-container" id={sectionRef}>
         <div className="slider-container-overlay" />
-        <video className="slider-container-mobileVideo" playsInline autoPlay muted loop>
+        <video
+          className="slider-container-mobileVideo"
+          playsInline autoPlay muted loop>
           <source src="../../assets/videos/GlassSphere.mp4" type="video/mp4" />
             Your browser does not support HTML5 video.
         </video>
@@ -23,30 +25,36 @@ export default class Slider extends Component {
               className="carousel-item active first-slide"
               style={{backgroundImage: `url(../../assets/images/sphere-on-stump.jpg)`}}
             >
-              <Fade left>
-                <div className="img-container">
-                  <img
-                    src="../../assets/icons/Orange-Plus.svg"
-                    alt={slidesInfo[0].title}/>
-                </div>
-              </Fade>
-              <Fade left>
-                <div className="carousel-caption caption-container">
-                  <span className="dot"></span>
-                  <div className="caption-container-title">
-                    {slidesInfo[0].title}
+              <div className="first-slide-content">
+                <Fade left>
+                  <div className="first-slide-content-text">
+                    <span className="dot"></span>
+                    <div className="first-slide-content-text-title">
+                      {slidesInfo[0].title}
+                    </div>
+                    <div className="first-slide-content-text-body">
+                      <p className="first-slide-content-text-body-paragraph">
+                        {slidesInfo[0].mainParahraph}
+                      </p>
+                      <p className="first-slide-content-text-body-paragraph">
+                        {slidesInfo[0].secondaryParagraph}
+                      </p>
+                    </div>
+                    <div
+                      className="first-slide-content-text-logo"
+                      style={{backgroundImage: `url(../../assets/logos/white_logo.svg)`}}
+                    >
+                    </div>
                   </div>
-                  <div className="caption-container-paragraphContainer">
-                    <p className="caption-container-paragraph">
-                      {slidesInfo[0].mainParahraph}
-                    </p>
-                    <p className="caption-container-paragraph">
-                      {slidesInfo[0].secondaryParagraph}
-                    </p>
-                    <img className="slide-one-img" src="../../assets/logos/logo-die-geno.svg" alt="Die Genossenschaften"/>
+                </Fade>
+                <Fade left>
+                  <div className="img-container">
+                    <img
+                      src="../../assets/icons/Orange-Plus.svg"
+                      alt={slidesInfo[0].title}/>
                   </div>
-                </div>
-              </Fade>
+                </Fade>
+              </div>
             </div>
             <div
               className="carousel-item second-slide"
