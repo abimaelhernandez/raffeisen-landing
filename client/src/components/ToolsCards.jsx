@@ -49,21 +49,18 @@ resetProps = (value) => {
             <p>{toolsHeader.subText}</p>
           </div>
         </div>
+        
         <div className="tools-parent-desktop">
           <div className="tools-parent-desktop-cards">
           {toolsObject.map((item) =>
             <Flip right key={item.id}>
               <div role="button" tabIndex="0" onKeyPress={this.clickHandler.bind(this, item.id)} onClick={this.clickHandler.bind(this, item.id)} className="tools-parent-desktop-cards-card" style={{ background: item.backgroundColor }}>
-                <div className="tools-parent-desktop-cards-card-content" >
-                  <span
-                    className="btn"
-                  >
-                    <svg className="bi bi-chevron-right nextArrrow" viewBox="0 0 16 16" fill="currentColor">
-                      <path d="M4.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L10.293 8 4.646 2.354a.5.5 0 010-.708z"/>
-                    </svg>
-                  </span>
+                <div className="tools-parent-desktop-cards-card-content">
                   <div className="card-title">
                     <p>{item.mainTitle}</p>
+                    <div className="iconContainer">
+                      <img src={item.icon} alt={item.alt} className="iconContainer-icon"/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -86,6 +83,9 @@ resetProps = (value) => {
                   <div className="collapse tools-parent-mobile-dropdown-content" id={`${item.mobileId}`}>
                     <div className="card card-body" style={{ background: item.backgroundColor }}>
                       <p>{item.bodyContent}</p>
+                      <div className="tools-parent-mobile-dropdown-content-iconContainer">
+                        <img src={item.icon} alt={item.alt} className="tools-parent-mobile-dropdown-content-iconContainer-icon"/>
+                      </div>
                     </div>
                   </div>
                 </div>

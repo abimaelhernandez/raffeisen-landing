@@ -17,17 +17,17 @@ export default class PageFooter extends Component {
         <Slide right>
           <div className="footer-items">
             <img src="../assets/icons/Email.svg" alt="email-logo" className="footer-icons footer-icons-email"/>
-            <span><strong><a href="mailto:info@rflatina.com" target="_blank" rel="noopener noreferrer">info@rflatina.com</a></strong></span>
+            <span><a href="mailto:info@rflatina.com" target="_blank" rel="noopener noreferrer">info@rflatina.com</a></span>
           </div>
         </Slide>
         <Slide right>
-          <div className="footer-items displayFlex displayNone">
+          <div className="footer-items displayFlex displayNoneD">
 
             <img src="../assets/icons/Phone.svg" alt="phone-logo" className="footer-icons footer-icons-phone"/>
 
             <div>
               <span>{footerObject.mx}
-                <a href="tel:+52-55-5037-5992"> +52.55.5037.5992 </a> |
+                <a href="tel:+52-55-5037-5992"> +52.55.5037.5992 </a> &middot;
                 <a href="tel:+52-55-6273-8897"> +52.55.6273.8897</a>
               </span>
               <p>
@@ -37,7 +37,7 @@ export default class PageFooter extends Component {
           </div>
         </Slide>
         <Slide right>
-          <div className="footer-items displayFlex addressMobile">
+          <div className="footer-items displayFlex displayNoneM">
 
             <img src="../assets/icons/Phone.svg" alt="phone-logo" className="footer-icons footer-icons-phone"/>
 
@@ -45,19 +45,14 @@ export default class PageFooter extends Component {
               <span>{footerObject.mx}
               </span>
               <p>
-                <a href="tel:+52-55-5037-5992"> +52.55.5037.5992 </a> |
+                <a href="tel:+52-55-5037-5992"> +52.55.5037.5992 </a> &middot;
                 <a href="tel:+52-55-6273-8897"> +52.55.6273.8897</a>
               </p>
-            </div>
-          </div>
-
-          <div className="footer-items displayFlex addressMobile">
-
-            <img src="../assets/icons/Phone.svg" alt="phone-logo" className="footer-icons footer-icons-phone"/>
-
-            <div>
               <p>
-                <span>{footerObject.py} <a href="tel:+595-21-62-996">+595.21.62.996</a></span>
+                <span>{footerObject.py}</span>
+              <p>
+                <span><a href="tel:+595-21-62-996">+595.21.62.996</a></span>
+              </p>
               </p>
             </div>
           </div>
@@ -65,7 +60,8 @@ export default class PageFooter extends Component {
         <Slide right>
           <div className="footer-items displayFlex">
             <img src="../assets/icons/Globe.svg" alt="globe-logo" className="footer-icons footer-icons-globe"/>
-            <span>{footerObject.globe} <strong><a href="https://www.dgrv.org" target="_blank" rel="noopener noreferrer">www.dgrv.org</a></strong></span>
+            <span className="displayNoneD">{footerObject.globe} &middot; <strong><a href="https://www.dgrv.org" target="_blank" rel="noopener noreferrer">www.dgrv.org</a></strong></span>
+            <span className="displayNoneM">{footerObject.globe} <br/> <a href="https://www.dgrv.org" target="_blank" rel="noopener noreferrer">www.dgrv.org</a></span>
           </div>
         </Slide>
           <div className="footer-items">
