@@ -60,22 +60,25 @@ export default class Slider extends Component {
               className="carousel-item second-slide"
               style={{backgroundImage: `url(../../assets/images/sewing-machine.jpeg)`}}
             >
-              <div className="img-container">
-                <Fade down>
-                  <img
-                    className="d-block"
-                    src="../../assets/icons/Yellow-Plant.svg"
-                    alt={slidesInfo[1].title}/>
-                </Fade>
-              </div>
-              <Fade up>
-                <div className="carousel-caption caption-container-2">
-                  <span className="dot"></span>
-                  <div className="caption-container-2-title">
-                    {slidesInfo[1].title}
-                  </div>
+              <div className="second-slide-content">
+                <div className="second-slide-content-img-container">
+                  <Fade down>
+                    <img
+                      className="d-block"
+                      src="../../assets/icons/Yellow-Plant.svg"
+                      alt={slidesInfo[1].title}
+                    />
+                  </Fade>
                 </div>
-              </Fade>
+                <div className="second-slide-content-text">
+                  <Fade up>
+                    <span className="dot"/>
+                    <div className="carousel-caption second-slide-content-text-title">
+                      {slidesInfo[1].title}
+                    </div>
+                  </Fade>
+                </div>
+              </div>
               <div
                 className="aboutus shorterAboutus"
                 style={{backgroundImage: `url(../../assets/icons/AboutUs-ES.svg)`}}
@@ -89,29 +92,32 @@ export default class Slider extends Component {
               className="carousel-item third-slide"
               style={{backgroundImage: `url(../../assets/images/slowed-arrow.jpg)`}}
             >
-              <div className="img-container">
+            <div className="third-slide-content">
+              <div className="third-slide-content-img-container">
                 <Fade left>
                   <img
                     src="../../assets/icons/Green-Arrows.svg"
-                    alt={slidesInfo[2].title}/>
+                    alt={slidesInfo[2].title}
+                  />
                 </Fade>
               </div>
-              <Fade left>
-                <div className="carousel-caption caption-container-3">
+              <div className="third-slide-content-text">
+                <Fade left>
                   <span className="dot"></span>
-                  <div className="caption-container-3-title">
+                  <div className="third-slide-content-text-title">
                     {slidesInfo[2].title}
                   </div>
-                </div>
-              </Fade>
-                <div
-                  className="aboutus shorterAboutus"
-                  style={{backgroundImage: `url(../../assets/icons/AboutUs-ES.svg)`}}
-                  onClick={aboutUsSlider()}
-                  onKeyDown={aboutUsSlider()}
-                  role="button"
-                  tabIndex={0}
-                />
+                </Fade>
+              </div>
+            </div>
+              <div
+                className="aboutus shorterAboutus"
+                style={{backgroundImage: `url(../../assets/icons/AboutUs-ES.svg)`}}
+                onClick={aboutUsSlider()}
+                onKeyDown={aboutUsSlider()}
+                role="button"
+                tabIndex={0}
+              />
             </div>
           </div>
           <a className="carousel-control-prev" href="#main_carousel" role="button" data-slide="prev">

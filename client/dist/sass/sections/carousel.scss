@@ -58,7 +58,6 @@
       }
     }
 
-    // slide one
     .first-slide {
       position: relative;
       width: 100%;
@@ -93,7 +92,7 @@
 
           &-title {
             padding: 0 0 2rem 0;
-            font-size: $font-size-4w;
+            font-size: $font-size-title;
             font-weight: 900;
             line-height: 1.03;
             text-align: left;
@@ -123,7 +122,6 @@
       }
     }
 
-    // slide two
     .second-slide {
       position: relative;
       width: 100%;
@@ -133,47 +131,44 @@
       background-repeat: no-repeat;
       background-size: cover;
 
-      .img-container {
+      &-content {
         position: relative;
         width: 100%;
-        top: 33%;
+        display: flex;
+        top: 30%;
+        padding: 0rem 10rem;
 
-        img {
+        &-img-container {
           position: relative;
-          width: 30%;
-          height: 47vh;
-          left: 17%;
-        }
-      }
-
-      .caption-container-2 {
-        position: relative;
-        width: 22vw;
-        left: 60%;
-        height: auto;
-        min-height: 20vh;
-        max-height: 100vh;
-        text-align: left;
-
-        .dot {
-          position: relative;
-          height: 2.5rem;
-          width: 2.5rem;
-          right: 5rem;
-          top: 4rem;
-          border-radius: 50%;
-          display: inline-block;
-          background-color: $color-light-yellow;
+          width: 100%;
+          padding-left: 21%;
+          img {
+            height: 25vw;
+          }
         }
 
-        &-title {
+        &-text {
           position: relative;
-          padding: 0 0 2rem 0;
-          font-size: $font-size-4w;
-          font-weight: 900;
-          line-height: 1.03;
-          text-align: left;
-          color: $color-white;
+          width: 100%;
+          height: auto;
+          min-height: 20vh;
+
+          .dot {
+            position: absolute;
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: $color-light-yellow;
+          }
+
+          &-title {
+            font-size: $font-size-title;
+            font-weight: 900;
+            line-height: 1.03;
+            color: $color-white;
+            top: 0;
+          }
         }
       }
     }
@@ -188,46 +183,48 @@
       background-repeat: no-repeat;
       background-size: cover;
 
-      .img-container {
+      &-content {
         position: relative;
         width: 100%;
+        display: flex;
+        justify-content: space-between;
         top: 38%;
 
-        img {
-          position: relative;
-          width: 30vw;
-          height: 30vh;
-          left: 14%;
-        }
-      }
+        &-img-container {
+          width: 100%;
 
-      .caption-container-3 {
-        position: relative;
-        width: 26vw;
-        left: 60%;
-        height: auto;
-        bottom: 0;
-        min-height: 20vh;
-        max-height: 100vh;
-        text-align: left;
-
-        .dot {
-          position: relative;
-          height: 2.5rem;
-          width: 2.5rem;
-          right: 5rem;
-          top: 4rem;
-          background-color: $color-light-green;
-          border-radius: 50%;
-          display: inline-block;
+          img {
+            position: relative;
+            width: 30vw;
+            height: 30vh;
+            left: 14%;
+          }
         }
 
-        &-title {
-          font-size: $font-size-4w;
-          font-weight: 900;
-          line-height: 1.15;
+        &-text {
+          position: relative;
+          width: 100%;
+          height: auto;
+          min-height: 20vh;
+          max-height: 100vh;
           text-align: left;
-          color: $color-white;
+
+          .dot {
+            position: relative;
+            height: 2.5rem;
+            width: 2.5rem;
+            background-color: $color-light-green;
+            border-radius: 50%;
+            display: inline-block;
+          }
+
+          &-title {
+            font-size: $font-size-title;
+            font-weight: 900;
+            line-height: 1.15;
+            text-align: left;
+            color: $color-white;
+          }
         }
       }
     }
