@@ -250,62 +250,48 @@
     }
   }
 
-  @media only screen and (max-width: 767px) {
-    #carousel_slide_indicator {
-      .slide-one-img {
-        height: 4.5rem;
-        width: 9rem;
-        display: block;
-      }
-
+  @media only screen and (max-width: 780px) {
+    #main_carousel {
       .first-slide {
-        background-image: none !important;
+        background-image: none;
+        background-attachment: none;
+        background-repeat: no-repeat;
+        background-size: 0;
 
-        .img-container {
-          img {
-            top: 8rem;
-            right: 5rem;
-          }
-        }
+        &-content {
+          display: flex;
+          height: 100%;
+          flex-wrap: wrap;
+          top: 0;
 
-        .caption-container {
-          width: auto;
-          max-width: 95%;
-          top: 40%;
-          left: 6rem;
-          padding: 0;
+          .text {
+            padding: 1rem;
 
-          .dot {
-            height: 1.8rem;
-            width: 1.8rem;
-            min-width: 1.8rem;
-            right: 3rem;
-          }
+            .dot {
+              height: 1.8rem;
+              width: 1.8rem;
+              min-width: 1.8rem;
+              right: 3rem;
+            }
 
-          &-title {
-            font-size: $font-size-xxl;
-          }
+            &-title {
+              font-size: $font-size-xxl;
+            }
 
-          &-paragraph {
-            font-size: $font-size-s;
+            &-paragraph {
+              font-size: $font-size-s;
+            }
           }
         }
       }
 
       .second-slide {
         background-image: none;
-
-        .img-container {
-          img {
-            position: relative;
-            float: right;
-            height: 25vh;
-            top: 13rem;
-            left: -5rem;
-          }
+        .shorterAboutus {
+          position: absolute;
         }
 
-        .caption-container-2 {
+        &-text{
           position: relative;
           max-width: 85%;
           top: 45%;
@@ -369,10 +355,7 @@
       }
     }
   }
-
-  @media (min-width: 768px) {
-    &-mobileVideo {
-      display: none;
-    }
-  }
+  // &-mobileVideo {
+  //   display: none;
+  // }
 }
