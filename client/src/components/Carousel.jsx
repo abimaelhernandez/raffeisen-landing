@@ -55,6 +55,14 @@ export default class Slider extends Component {
                   </div>
                 </Fade>
               </div>
+              <div
+                className="aboutus shorterAboutus"
+                style={{backgroundImage: `url(../../assets/icons/AboutUs-ES.svg)`}}
+                onClick={aboutUsSlider()}
+                onKeyDown={aboutUsSlider()}
+                role="button"
+                tabIndex={0}
+              />
             </div>
             <div
               className="carousel-item second-slide"

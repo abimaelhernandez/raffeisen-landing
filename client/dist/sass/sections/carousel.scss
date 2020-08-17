@@ -39,23 +39,23 @@
       position: relative;
 
       .aboutus{
-        top: 60%;
+        position: absolute;
+        width: 100%;
+        height: 4rem;
+        bottom: 4rem;
         display: flex;
-        position: relative;
         justify-content: center;
         background-position: center;
         background-repeat: no-repeat;
-        height: 4rem;
-        width: 100%;
 
         &:focus {
           outline: none;
         }
       }
 
-      .shorterAboutus {
-        top: 55%;
-      }
+      // .shorterAboutus {
+      //   top: 55%;
+      // }
     }
 
     .first-slide {
@@ -142,6 +142,7 @@
           position: relative;
           width: 100%;
           padding-left: 21%;
+
           img {
             height: 25vw;
           }
