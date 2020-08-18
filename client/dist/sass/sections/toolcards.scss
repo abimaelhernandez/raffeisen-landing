@@ -2,13 +2,14 @@
   position: relative;
   height: 100%;
   width: 100%;
+  background-color: $color-white;
 
   &-header {
     padding-top: 13rem;
     margin-left: 5vw;
     width: 90%;
 
-    @media (max-width: 767px) { 
+    @media (max-width: 767px) {
       padding-top: 0;
     }
 
@@ -34,7 +35,7 @@
       line-height: 1.3;
       padding: 4rem 0;
 
-      @media(max-width: 767px) { 
+      @media(max-width: 767px) {
         font-size: 1.4rem;
         line-height: 1.57;
         padding: 1rem 0;
@@ -45,7 +46,6 @@
   &-desktop {
     width: 100%;
     padding: 0 4.1vw;
-    margin-bottom: 3vh;
 
     &-cards {
       display: grid;
@@ -57,7 +57,7 @@
       @media(max-width: 767px) {
         display: none;
       }
-    
+
       &-card {
         &:focus {
           outline: none;
@@ -139,7 +139,7 @@
       &-content {
         color: $color-white;
         font-size: 1.4rem;
-        
+
         p {
           position: relative;
           left: 8.6vw;

@@ -258,6 +258,12 @@
     }
   }
 
+  @media only screen and (min-width: 781px) {
+    &-mobileVideo {
+      display: none;
+    }
+  }
+
   @media only screen and (max-width: 780px) {
     #main_carousel {
       .first-slide {
@@ -414,7 +420,4 @@
       }
     }
   }
-  // &-mobileVideo {
-  //   display: none;
-  // }
 }

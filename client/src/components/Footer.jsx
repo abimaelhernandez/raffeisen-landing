@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Slide from 'react-reveal/Fade'
-import Bounce from 'react-reveal/Bounce'
+import Fade from 'react-reveal/Bounce'
 import PropTypes from 'prop-types'
 
 export default class PageFooter extends Component {
@@ -65,7 +65,7 @@ export default class PageFooter extends Component {
           </div>
         </Slide>
           <div className="footer-items">
-            <Bounce>
+            <Fade>
               <div className="footer-dots">
                 <span className="footer-dots-dot dot-blue"></span>
                 <span className="footer-dots-dot dot-green"></span>
@@ -73,7 +73,7 @@ export default class PageFooter extends Component {
                 <span className="footer-dots-dot dot-orange"></span>
                 <span className="footer-dots-dot dot-red"></span>
               </div>
-            </Bounce>
+            </Fade>
           </div>
       </footer>
     )
