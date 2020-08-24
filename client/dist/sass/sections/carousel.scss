@@ -16,19 +16,8 @@
     z-index: 1;
   }
 
-  &-webVideo {
-    position: absolute;
-    width: 100%;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: fill;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
   &-mobileVideo {
-    position: absolute;
+    position: fixed;
     width: 173%;
     min-width: 100%;
     min-height: 100%;
@@ -38,14 +27,8 @@
     transform: translate(-50%, -50%);
   }
 
-  #carousel_slide_indicator {
+  #main_carousel {
     height: 100%;
-
-    .slide-one-img {
-      height: 5rem;
-      width: 12rem;
-      display: block;
-    }
 
     .carousel-inner {
       height: inherit;
@@ -56,186 +39,207 @@
       position: relative;
 
       .aboutus{
-        top: 60%;
+        position: absolute;
+        width: 100%;
+        height: 4rem;
+        bottom: 4rem;
         display: flex;
-        position: relative;
         justify-content: center;
         background-position: center;
         background-repeat: no-repeat;
-        height: 4rem;
-        width: 100%;
 
         &:focus {
           outline: none;
         }
       }
-
-      .shorterAboutus {
-        top: 55%;
-      }
     }
 
-    // slide one
     .first-slide {
       position: relative;
       width: 100%;
       height: inherit;
+      background-attachment: fixed;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
 
-      .img-container {
+      &-content {
         position: relative;
         width: 100%;
+        display: flex;
+        top: 30%;
+        padding: 0rem 10rem;
 
-        img {
+        &-text {
           position: relative;
-          float: right;
-          width: 35vw;
-          height: 35vh;
-          top: 23rem;
-          right: 9rem;
-        }
-      }
+          width: 100%;
+          min-height: 20vh;
+          padding: 0 5rem;
 
-      .caption-container {
-        position: relative;
-        width: 45vw;
-        height: auto;
-        min-height: 20vh;
-        max-height: 100vh;
-        top: 38%;
-        left: 8rem;
-        text-align: left;
-        bottom: 8rem;
-        padding: 0 0 0 3rem;
+          .dot {
+            position: absolute;
+            height: 2.5rem;
+            width: 2.5rem;
+            background-color: $neon-carrot-orange;
+            border-radius: 50%;
+            display: inline-block;
+            left: 0;
+          }
 
-        .dot {
-          position: relative;
-          height: 2.5rem;
-          width: 2.5rem;
-          right: 5rem;
-          top: 4rem;
-          background-color: $neon-carrot-orange;
-          border-radius: 50%;
-          display: inline-block;
-        }
+          &-title {
+            padding: 0 0 2rem 0;
+            font-size: $font-size-title;
+            font-weight: 900;
+            line-height: 1.03;
+            text-align: left;
+            color: $color-white;
+          }
 
-        &-title {
-          position: relative;
-          padding: 0 0 2rem 0;
-          font-size: $font-size-4w;
-          font-weight: 900;
-          line-height: 1.03;
-          text-align: left;
-          color: $color-white;
+          &-logo {
+            width: 30rem;
+            height: 5rem;
+            background-position: initial;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin: 2px;
+          }
         }
 
-        &-paragraphContainer {
-          &-paragraph {
-            font-family: Avenir-Roman;
-            font-size: 0.7vw;
+        .img-container {
+          position: relative;
+          width: 100%;
+
+          img {
+            float: right;
+            width: 35vw;
+            height: 35vh;
           }
         }
       }
     }
 
-    // slide two
     .second-slide {
       position: relative;
       width: 100%;
       height: inherit;
+      background-attachment: fixed;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
 
-      .img-container {
+      &-content {
         position: relative;
         width: 100%;
+        display: flex;
+        top: 30%;
+        padding: 0rem 10rem;
 
-        img {
+        &-img-container {
           position: relative;
-          width: 30vw;
-          height: 35vh;
-          left: 8rem;
-          top: 23rem;
-        }
-      }
+          width: 100%;
+          padding-left: 21%;
 
-      .caption-container-2 {
-        position: relative;
-        width: 22vw;
-        left: 60%;
-        height: auto;
-        min-height: 20vh;
-        max-height: 100vh;
-        text-align: left;
-
-        .dot {
-          position: relative;
-          height: 2.5rem;
-          width: 2.5rem;
-          right: 5rem;
-          top: 4rem;
-          border-radius: 50%;
-          display: inline-block;
-          background-color: $color-light-yellow;
+          img {
+            height: 25vw;
+          }
         }
 
-        &-title {
+        &-text {
           position: relative;
-          padding: 0 0 2rem 0;
-          font-size: $font-size-4w;
-          font-weight: 900;
-          line-height: 1.03;
-          text-align: left;
-          color: $color-white;
+          width: 100%;
+          height: auto;
+          min-height: 20vh;
+          font-size: 3.8vw;
+
+          .dot {
+            position: absolute;
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: $color-light-yellow;
+          }
+
+          &-title {
+            font-size: $font-size-title;
+            font-weight: 900;
+            line-height: 1.03;
+            color: $color-white;
+            top: 0;
+            max-width: 10ch;
+            text-align: left;
+          }
         }
       }
     }
 
-    // slide Three
     .third-slide {
       position: relative;
       width: 100%;
       height: inherit;
+      background-attachment: fixed;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
 
-      .img-container {
+      &-content {
         position: relative;
         width: 100%;
+        display: flex;
+        justify-content: space-between;
+        top: 38%;
 
-        img {
+        &-img-container {
+          width: 100%;
+          text-align: center;
+
+          img {
+            position: relative;
+            min-width: 3rem;
+            max-width: 33rem;
+            left: 12%;
+          }
+        }
+
+        &-text {
           position: relative;
-          width: 30vw;
-          height: 30vh;
-          left: 8rem;
-          top: 30rem;
+          width: 100%;
+          height: auto;
+          text-align: center;
+
+          .dot {
+            position: relative;
+            height: 2.5rem;
+            width: 2.5rem;
+            background-color: $color-light-green;
+            border-radius: 50%;
+            display: inline-block;
+            right: 35%;
+          }
+
+          &-title {
+            font-size: $font-size-title;
+            font-weight: 850;
+            line-height: 0.9;
+            color: $color-white;
+            max-width: 12ch;
+            margin: auto;
+            text-align: left;
+          }
         }
       }
+    }
 
-      .caption-container-3 {
-        position: relative;
-        width: 26vw;
-        left: 60%;
-        height: auto;
-        bottom: 0;
-        min-height: 20vh;
-        max-height: 100vh;
-        text-align: left;
+    .carousel-control-prev {
+      width: auto;
+      position: absolute;
+      z-index: 5;
+    }
 
-        .dot {
-          position: relative;
-          height: 2.5rem;
-          width: 2.5rem;
-          right: 5rem;
-          top: 4rem;
-          background-color: $color-light-green;
-          border-radius: 50%;
-          display: inline-block;
-        }
-
-        &-title {
-          font-size: $font-size-4w;
-          font-weight: 900;
-          line-height: 1.15;
-          text-align: left;
-          color: $color-white;
-        }
-      }
+    .carousel-control-next {
+      width: auto;
+      position: absolute;
+      z-index: 5;
     }
 
     .carousel-indicators li {
@@ -247,127 +251,177 @@
     }
   }
 
-  @media (max-width: 767px) {
-    #carousel_slide_indicator {
-      .slide-one-img {
-        height: 4.5rem;
-        width: 9rem;
-        display: block;
-      }
+  @media only screen and (min-width: 781px) {
+    &-mobileVideo {
+      display: none;
+    }
+  }
 
+  @media only screen and (max-width: 780px) {
+    #main_carousel {
       .first-slide {
-        .img-container {
-          img {
-            top: 8rem;
-            right: 5rem;
-          }
-        }
+        background-image: none;
+        background-attachment: none;
+        background-repeat: no-repeat;
+        background-size: 0;
 
-        .caption-container {
-          width: auto;
-          max-width: 95%;
-          top: 40%;
-          left: 6rem;
+        &-content {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          top: 0%;
           padding: 0;
 
-          .dot {
-            height: 1.8rem;
-            width: 1.8rem;
-            min-width: 1.8rem;
-            right: 3rem;
+          &-text {
+            position: relative;
+            height: 50%;
+            padding: 26% 0 0 11%;
+
+            .dot {
+              height: 2.5rem;
+              width: 2.5rem;
+              background-color: $neon-carrot-orange;
+              border-radius: 50%;
+              display: inline-block;
+              left: 0;
+            }
+
+            &-title {
+              padding: 0 0 2rem 0;
+              font-size: 6.8vw;
+              font-weight: 900;
+              line-height: 1.03;
+              text-align: left;
+              color: $color-white;
+              max-width: 18ch;
+            }
+
+            &-logo {
+              width: 30rem;
+              height: 3rem;
+            }
           }
 
-          &-title {
-            font-size: $font-size-xxl;
-          }
+          .img-container {
+            position: relative;
+            width: 100%;
+            height: 50%;
+            padding: 2rem;
 
-          &-paragraph {
-            font-size: $font-size-s;
+            img {
+              float: right;
+              width: 35vw;
+              height: 35vh;
+            }
           }
         }
       }
 
       .second-slide {
-        .img-container {
-          img {
-            position: relative;
-            float: right;
-            height: 25vh;
-            top: 13rem;
-            left: -5rem;
-          }
-        }
+        background-image: none;
+        background-attachment: none;
+        background-repeat: no-repeat;
+        background-size: 0;
 
-        .caption-container-2 {
+        &-content {
           position: relative;
-          max-width: 85%;
-          top: 45%;
-          left: 11rem;
-          width: min-content;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-wrap: wrap-reverse;
+          padding: 0;
+          top: 0;
 
-          .dot {
-            width: 1.8rem;
-            height: 1.8rem;
-            right: 3rem;
-            top: 3rem;
+          &-img-container {
+            position: relative;
+            width: 100%;
+            height: 50%;
+
+            img {
+              height: 43vw;
+              position: relative;
+              float: right;
+              padding: 0 21% 0 0;
+              top: 10%;
+            }
           }
 
-          &-title {
-            font-size: $font-size-xxl;
-          }
+          &-text {
+            width: 100%;
+            height: 50%;
+            padding: 30% 0 0 0;
 
-          &-more {
-            display: flex;
-            justify-content: space-around;
+            .dot {
+              position: absolute;
+              height: 2.5rem;
+              width: 2.5rem;
+              border-radius: 50%;
+              display: inline-block;
+              background-color: $color-light-yellow;
+            }
 
-            &-text {
-              font-size: $font-size-m;
-              font-weight: normal;
-              line-height: 1.2;
-              text-align: left;
+            &-title {
+              position: relative;
+              width: 100%;
+              font-size: 6.8vw;
+              font-weight: 900;
+              line-height: 1.03;
+              color: $color-white;
+              max-width: 17ch;
+              padding: 0;
             }
           }
         }
       }
 
       .third-slide {
-        .img-container {
-          img {
-            width: 20vh;
-            top: 13rem;
-            float: right;
-            left: -5rem;
+        background-image: none;
+        background-attachment: none;
+        background-repeat: no-repeat;
+        background-size: 0;
+
+        &-content {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-wrap: wrap-reverse;
+          padding: 0;
+          top: 0;
+
+          &-img-container {
+            width: 100%;
+
+            img {
+              width: 50%;
+            }
           }
-        }
 
-        .caption-container-3 {
-          max-width: 85%;
-          top: 44%;
-          left: 11rem;
-          width: min-content;
+          &-text {
+            width: 100%;
 
-          .dot {
-            width: 1.8rem;
-            height: 1.8rem;
-            right: 3rem;
-            top: 3rem;
-          }
+            .dot {
+              position: absolute;
+              top: 36%;
+              left: 6%;
+            }
 
-          &-title {
-            font-size: $font-size-xxl;
+            &-title {
+              position: relative;
+              font-size: 6.2vw;
+              font-weight: 850;
+              line-height: 0.9;
+              color: #ffffff;
+              max-width: 19ch;
+              margin: auto;
+              text-align: left;
+              top: 39%;
+            }
           }
         }
       }
-    }
-
-    &-webVideo {
-      display: none;
-    }
-  }
-
-  @media (min-width: 768px) {
-    &-mobileVideo {
-      display: none;
     }
   }
 }

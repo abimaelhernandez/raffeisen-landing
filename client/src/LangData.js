@@ -271,7 +271,7 @@ const projectBody = {
       },
       {
         id: 2,
-        title: 'Diseño de soluciones a medida'
+        title: 'Diseño de soluciones a la medida'
       },
       {
         id: 3,
