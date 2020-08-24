@@ -25,7 +25,6 @@
     top: 50%;
     left: 60%;
     transform: translate(-50%, -50%);
-    // background-attachment: fixed;
   }
 
   #main_carousel {
@@ -167,14 +166,13 @@
             line-height: 1.03;
             color: $color-white;
             top: 0;
-            max-width: 9ch;
+            max-width: 10ch;
             text-align: left;
           }
         }
       }
     }
 
-    // slide Three
     .third-slide {
       position: relative;
       width: 100%;
@@ -193,12 +191,13 @@
 
         &-img-container {
           width: 100%;
+          text-align: center;
 
           img {
             position: relative;
-            width: 30vw;
-            height: 30vh;
-            left: 14%;
+            min-width: 3rem;
+            max-width: 33rem;
+            left: 12%;
           }
         }
 
@@ -220,11 +219,9 @@
 
           &-title {
             font-size: $font-size-title;
-            font-weight: 900;
-            line-height: 1.15;
+            font-weight: 850;
+            line-height: 0.9;
             color: $color-white;
-            max-width: 12ch;
-            margin: auto;
             max-width: 12ch;
             margin: auto;
             text-align: left;
@@ -304,10 +301,6 @@
             &-logo {
               width: 30rem;
               height: 3rem;
-              // background-position: initial;
-              // background-repeat: no-repeat;
-              // background-size: contain;
-              // margin: 2px;
             }
           }
 
@@ -389,30 +382,43 @@
         background-repeat: no-repeat;
         background-size: 0;
 
-        .img-container {
-          img {
-            width: 20vh;
-            top: 13rem;
-            float: right;
-            left: -5rem;
-          }
-        }
+        &-content {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-wrap: wrap-reverse;
+          padding: 0;
+          top: 0;
 
-        .caption-container-3 {
-          max-width: 85%;
-          top: 44%;
-          left: 11rem;
-          width: min-content;
+          &-img-container {
+            width: 100%;
 
-          .dot {
-            width: 1.8rem;
-            height: 1.8rem;
-            right: 3rem;
-            top: 3rem;
+            img {
+              width: 50%;
+            }
           }
 
-          &-title {
-            font-size: $font-size-xxl;
+          &-text {
+            width: 100%;
+
+            .dot {
+              position: absolute;
+              top: 36%;
+              left: 6%;
+            }
+
+            &-title {
+              position: relative;
+              font-size: 6.2vw;
+              font-weight: 850;
+              line-height: 0.9;
+              color: #ffffff;
+              max-width: 19ch;
+              margin: auto;
+              text-align: left;
+              top: 39%;
+            }
           }
         }
       }

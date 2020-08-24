@@ -128,8 +128,15 @@ export default class Slider extends Component {
               />
             </div>
           </div>
-          <a className="carousel-control-prev" href="#main_carousel" role="button" data-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <a
+            className="carousel-control-prev"
+            href="#main_carousel"
+            role="button"
+            data-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"></span>
             <span className="sr-only">Previous</span>
           </a>
           <a className="carousel-control-next" href="#main_carousel" role="button" data-slide="next">
