@@ -55,9 +55,9 @@ const projectBody = {
       {
         id: 1,
         backgroundColor: '#81cc60',
-        imageBackground: '../../assets/images/light_version_bulb.jpg',
-        icon: '../assets/icons/Consultancy.svg',
-        button:'KNOW MORE',
+        imageBackground: '../../assets/images/red_light_bulb.jpg',
+        icon: '../assets/icons/Consultoria_new.svg',
+        title:'Consulting',
         alt: 'Consulting',
         mainParahraph: 'Based on balanced scorecard methodology, four key perspectives strategically cover:',
         secondaryParagraph: 'that together promote reasoned and intelligent decision-making at all levels.',
@@ -70,8 +70,8 @@ const projectBody = {
       {
         id: 2,
         backgroundColor: '#ff8300',
-        imageBackground: '../../assets/images/light_chalk_board.jpg',
-        icon: '../assets/icons/Analytics.svg',
+        imageBackground: '../../assets/images/graph.jpg',
+        icon: '../assets/icons/Analytics_new.svg',
         button:'KNOW MORE',
         alt: 'Analitics',
         mainParahraph: 'Platforms for the analysis of information accurately representing the operative, commercial, and financial reality of the organization.',
@@ -85,7 +85,7 @@ const projectBody = {
       {
         id: 3,
         backgroundColor: '#6ab3d5',
-        imageBackground: '../../assets/images/light_wooden_stair.jpg',
+        imageBackground: '../../assets/images/ladder.jpg',
         icon: '../assets/icons/Training.svg',
         button:'KNOW MORE',
         alt: 'Training',
@@ -288,8 +288,8 @@ const projectBody = {
       {
         id: 1,
         backgroundColor: '#81cc60',
-        imageBackground: '../../assets/images/light_version_bulb.jpg',
-        icon: '../assets/icons/Consultancy.svg',
+        imageBackground: '../../assets/images/red_light_bulb.jpg',
+        icon: '../assets/icons/Consultoria_new.svg',
         button:'CONOCE MÁS',
         alt:'Consultoria',
         mainParahraph: 'Con fundamento en la metodología de cuadro de mando integral, desde cuatro perspectivas claves que busca cubrir de manera estratégica:',
@@ -303,8 +303,8 @@ const projectBody = {
       {
         id: 2,
         backgroundColor: '#ff8300',
-        imageBackground: '../../assets/images/light_chalk_board.jpg',
-        icon: '../assets/icons/Analytics.svg',
+        imageBackground: '../../assets/images/graph.jpg',
+        icon: '../assets/icons/Analytics_new.svg',
         button:'CONOCE MÁS',
         alt:'Analitica',
         mainParahraph: 'Plataformas para el análisis de información representativa de la realidad operativa, comercial y financiera de una organización.',
@@ -318,7 +318,7 @@ const projectBody = {
       {
         id: 3,
         backgroundColor: '#6ab3d5',
-        imageBackground: '../../assets/images/light_wooden_stair.jpg',
+        imageBackground: '../../assets/images/ladder.jpg',
         icon: '../assets/icons/Training.svg',
         button:'CONOCE MÁS',
         alt:'Capacitación',

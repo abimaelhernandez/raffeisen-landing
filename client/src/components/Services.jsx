@@ -27,6 +27,7 @@ export default class Services extends Component {
   render(){
     const { clickedId , hasBeenClicked} = this.state
     const { serviceObj, serviceTitle, sectionRef } = this.props
+    console.log('serv title :', serviceTitle)
     if (hasBeenClicked && clickedId ) {
       return <ServicesSlider
               passedObj={serviceObj}
@@ -35,35 +36,32 @@ export default class Services extends Component {
             />
     }
     return (
-      <div className="services-parent" id={sectionRef}>
-        <p className="services-parent-title">{serviceTitle}</p>
-        <div className="services-parent-container">
+      <div className="services" id={sectionRef}>
+        <div className="services-title">
+          {serviceTitle}
+        </div>
+        <div className="services-container">
           {serviceObj.map((item) =>
             <div
-              className="col-sm-12 col-md-4 services-parent-container-item"
+              className="col-sm-12 col-md-4 services-container-item"
               style={{backgroundImage: `url(${item.imageBackground})`}}
               key={item.id}
             >
               <Fade left>
                 <div
-                  className="services-parent-container-item-logo-container"
+                  className="services-container-item-logo-container"
                 >
                  <img
-                   className="services-parent-container-item-logo-container-asset"
+                   className="services-container-item-logo-container-asset"
                    src={item.icon}
-                   alt={item.alt}/>
+                   alt={item.alt}
+                  />
                  <div className="clickHandler">
                     <button
                       type="button"
                       className="service-info-more"
                       onClick={this.clickHandler.bind(this, item.id)}
                     >
-                      <span>
-                        {item.button}
-                      </span>
-                      <svg className="service-info-more-icon" viewBox="0 0 16 16" fill="currentColor">
-                        <path d="M4.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L10.293 8 4.646 2.354a.5.5 0 010-.708z"/>
-                      </svg>
                     </button>
                   </div>
                 </div>
