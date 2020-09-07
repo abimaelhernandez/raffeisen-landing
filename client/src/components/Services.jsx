@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Fade from 'react-reveal/Fade'
+// import Fade from 'react-reveal/Fade'
 import ServicesSlider from './ServicesSlider'
 
 export default class Services extends Component {
@@ -37,35 +37,26 @@ export default class Services extends Component {
     }
     return (
       <div className="services" id={sectionRef}>
-        <div className="services-title">
-          {serviceTitle}
-        </div>
         <div className="services-container">
           {serviceObj.map((item) =>
             <div
-              className="col-sm-12 col-md-4 services-container-item"
+              className={`col-sm-12 col-md-4 services-container-item ${item.name}`}
               style={{backgroundImage: `url(${item.imageBackground})`}}
               key={item.id}
+              onClick={this.clickHandler.bind(this, item.id)}
+              onKeyDown={this.clickHandler.bind(this, item.id)}
+              role="button"
+              tabIndex={0}
             >
-              <Fade left>
+              <div className="services-container-item-title">
                 <div
-                  className="services-container-item-logo-container"
-                >
-                 <img
-                   className="services-container-item-logo-container-asset"
-                   src={item.icon}
-                   alt={item.alt}
-                  />
-                 <div className="clickHandler">
-                    <button
-                      type="button"
-                      className="service-info-more"
-                      onClick={this.clickHandler.bind(this, item.id)}
-                    >
-                    </button>
-                  </div>
-                </div>
-              </Fade>
+                  className="services-container-item-title-logo"
+                  style={{backgroundImage: `url(${item.icon})`}}
+                />
+                <p className="services-container-item-title-text">
+                  {item.alt}
+                </p>
+              </div>
             </div>
           )}
         </div>

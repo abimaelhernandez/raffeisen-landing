@@ -2,105 +2,87 @@
   position: relative;
   width: 100%;
 
-  &-title {
-    position: absolute;
-    top: 9%;
-    left: 4%;
-    font-size: $font-size-xlw;
-    font-weight: 900;
-    line-height: 1.01;
-    text-align: left;
-    color: $color-white;
-    z-index: 1;
-  }
-
   &-container {
     display: flex;
 
     &-item {
       float: left;
       width: 30%;
-      padding-bottom : 30%;
+      padding-bottom : 25%;
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
-      overflow: hidden;
 
-      &-logo-container {
-        position: absolute;
-        text-align: center;
+      &.analytics {
+         background-position: right;
+      }
+
+      &-title {
+        position: relative;
         width: 100%;
-        top: 64%;
+        display: flex;
+        margin: 2rem 0 0 0;
 
-        &-asset {
-          width: 68%;
+        &-logo {
+          position: relative;
+          width: 5rem;
+          height: 5rem;
+          display: flex;
+          align-items: center;
+          background-position: center;
+          background-repeat: no-repeat;
+          margin: 0 3rem;
         }
 
-        .service-info-more {
-          height: 3.5rem;
-          padding: 0 1.5rem;
-          border-radius: 14.2px;
-          border: none;
-          margin-top: 1.6rem;
-          min-width: 30%;
-          background: rgba($color-white, .3);
-
-          span {
-            color: $color-white;
-          }
-
-          &-icon {
-            width: 2rem;
-            background-position: right;
-            padding: 0.4rem 0.3rem 0.8rem;
-            margin: 0 0 0 1.5rem;
-            float: right;
-            background-color: transparent;
-            color: $color-white;
-          }
+        &-text {
+          display: flex;
+          align-items: center;
+          height: 62px;
+          font-family: Avenir;
+          font-size: 51.3px;
+          font-weight: 900;
+          line-height: 0.98;
+          text-align: left;
+          color: white;
         }
       }
     }
   }
 
   @media (max-width: 767px) {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-
-    .services-title {
-      width: 100%;
-      top: 0;
-      left: 0;
-      padding-top: 3rem;
-      font-size: 4rem;
-      font-weight: 900;
-      color: $dim-grey;
-      z-index: 1;
-      background-color: $color-white;
-    }
-
     &-container {
       width: 100%;
+      height: 100vh;
       display: flex;
       flex-wrap: wrap;
-      margin-top: 10rem;
 
       &-item {
+        position: relative;
         width: 100%;
-        min-height: 30%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0;
 
-        &-logo-container {
-          left: 0;
-          width: 100%;
-          top: 26%;
-
-          &-asset {
-            width: 60vw;
+        &-title {
+          &-logo {
+            position: relative;
+            width: 4rem;
+            align-items: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0 2rem;
           }
-          .service-info-more {
-            width: auto;
+
+          &-text {
+            display: flex;
+            align-items: center;
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 0.98;
+            text-align: left;
+            color: white;
+            margin: 0;
           }
         }
       }
