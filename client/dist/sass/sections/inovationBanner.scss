@@ -11,6 +11,7 @@
     left: 14%;
     top: 26%;
     animation-name: none;
+
     &.start-animation,
      {
       animation: circle 2.5s ease-out 3s forwards;
@@ -24,6 +25,7 @@
     left: 81%;
     top: 66%;
     animation-name: none;
+
     &.start-animation {
       animation: square 2.5s ease-out 3s forwards;
       animation-fill-mode: forwards;
@@ -36,6 +38,7 @@
       top: 50%;
       height: 8.9rem;
       width: 8.9rem;
+      transform: rotate(200deg);
     }
   }
 
@@ -45,6 +48,7 @@
       left: 12%;
       height: 8.2rem;
       width: 8.2rem;
+      transform: rotate(200deg);
     }
   }
 

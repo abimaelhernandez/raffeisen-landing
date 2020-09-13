@@ -40,7 +40,7 @@ export default class InovationBanner extends Component {
   render() {
     const {inovationInfo, sectionRef} = this.props
     return (<div className="inovation-banner" id={sectionRef}>
-      <img className={this.changeClassName('circleImage')} src="../../assets/icons/Circulo_rojo.svg" alt="Circles Icon"/>
+      <img className={this.changeClassName('circleImage')} src="../../assets/icons/blue-gear.svg" alt="Circles Icon"/>
       <div id="mainTitle" className={this.changeClassName('inovation-banner-main-container')}>
         <span className="inovation-banner-main-container-title">
           {inovationInfo.topPhrase}
@@ -58,7 +58,7 @@ export default class InovationBanner extends Component {
           {inovationInfo.secondaryParagraph}
         </p>
       </div>
-      <img className={this.changeClassName('squareImage')} src="../../assets/icons/Triangle-green.svg" alt="Triangle Icon"/>
+      <img className={this.changeClassName('squareImage')} src="../../assets/icons/red-gear.svg" alt="Triangle Icon"/>
     </div>)
   }
 }
