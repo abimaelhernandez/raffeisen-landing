@@ -58,7 +58,12 @@ export default class InovationBanner extends Component {
           {inovationInfo.secondaryParagraph}
         </p>
       </div>
-      <img className={this.changeClassName('squareImage')} src="../../assets/icons/red-gear.svg" alt="Triangle Icon"/>
+      <img
+        className={this.changeClassName('squareImage')}
+        src="../../assets/icons/red-gear.svg"
+        alt="Triangle Icon"
+        id="rightgear"
+      />
     </div>)
   }
 }
