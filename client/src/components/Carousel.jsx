@@ -136,11 +136,19 @@ export default class Slider extends Component {
           >
             <span
               className="carousel-control-prev-icon"
-              aria-hidden="true"></span>
+              aria-hidden="true"
+              style={{backgroundImage: `url(../../assets/icons/Flecha-blanca.svg)`}}
+            >
+            </span>
             <span className="sr-only">Previous</span>
           </a>
           <a className="carousel-control-next" href="#main_carousel" role="button" data-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+              style={{backgroundImage: `url(../../assets/icons/Flecha-blanca.svg)`}}
+            >
+            </span>
             <span className="sr-only">Next</span>
           </a>
           <ol className="carousel-indicators">

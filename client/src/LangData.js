@@ -78,7 +78,7 @@ const projectBody = {
         secondaryParagraph: 'Through the design of dashboards, the visualization of information enables timely and efficient decision-making that favorably impacts the reality analyzed.',
         listItems: {
           1: '',
-          2: '',
+          2: 'Through the design of control panels, aleema visualizes information for the timely and efficient decision-making that favorably impacts the analyzed reality.',
           3: ''
         }
       },
@@ -310,8 +310,7 @@ const projectBody = {
         mainParahraph: 'Plataformas para el análisis de información representativa de la realidad operativa, comercial y financiera de una organización.',
         secondaryParagraph: 'A través del diseño de tableros de control se busca la visualización de información para la oportuna y eficiente toma de decisiones que impacten favorablemente en la realidad analizada.',
         listItems: {
-          1: '',
-          2: '',
+          2: 'A través del diseño de tableros de control, aleema visualiza información para la oportuna y eficiente toma de decisiones que impacten favorablemente en la realidad analizada.',
           3: ''
         }
       },

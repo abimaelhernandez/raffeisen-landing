@@ -29,6 +29,25 @@
 
   #main_carousel {
     height: 100%;
+   .carousel-control-prev,
+     .carousel-control-next {
+       position: absolute;
+       width: 5rem !important;
+       height: 13rem;
+       top: 45%;
+       z-index: 1;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       color: #fff;
+       opacity: .5;
+       transition: opacity .15s ease;
+       background-color: #737373;
+      }
+
+    .carousel-control-prev-icon {
+      transform: rotate(180deg);
+    }
 
     .carousel-inner {
       height: inherit;
@@ -75,6 +94,7 @@
           width: 100%;
           min-height: 20vh;
           padding: 0 5rem;
+          color: $color-white;
 
           .dot {
             position: absolute;
@@ -150,6 +170,7 @@
           height: auto;
           min-height: 20vh;
           font-size: 3.8vw;
+          color: $color-white;
 
           .dot {
             position: absolute;
@@ -206,6 +227,7 @@
           width: 100%;
           height: auto;
           text-align: center;
+          color: $color-white;
 
           .dot {
             position: relative;
