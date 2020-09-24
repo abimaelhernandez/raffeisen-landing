@@ -7,7 +7,6 @@ export default class Slider extends Component {
     const { slidesInfo, sectionRef, aboutUsSlider } = this.props
     return (
       <div className="slider-container" id={sectionRef}>
-        <div className="slider-container-overlay" />
         <video
           className="slider-container-mobileVideo"
           playsInline autoPlay muted loop>
@@ -21,6 +20,7 @@ export default class Slider extends Component {
           data-interval="false"
         >
           <div className="carousel-inner">
+          <div className="overlay" />
             <div
               className="carousel-item active first-slide"
               style={{backgroundImage: `url(../../assets/images/sphere-on-stump.jpg)`}}
