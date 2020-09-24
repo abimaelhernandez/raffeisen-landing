@@ -23,7 +23,7 @@ export default class Slider extends Component {
           <div className="overlay" />
             <div
               className="carousel-item active first-slide"
-              style={{backgroundImage: `url(../../assets/images/sphere-on-stump.jpg)`}}
+              style={{backgroundImage: `url(../../assets/images/sphere-on-stump-min.jpg)`}}
             >
               <div className="first-slide-content">
                 <Fade left>
@@ -66,7 +66,7 @@ export default class Slider extends Component {
             </div>
             <div
               className="carousel-item second-slide"
-              style={{backgroundImage: `url(../../assets/images/sewing-machine.jpeg)`}}
+              style={{backgroundImage: `url(../../assets/images/sewing-machine-min.jpg)`}}
             >
               <div className="second-slide-content">
                 <div className="second-slide-content-img-container">
@@ -98,7 +98,7 @@ export default class Slider extends Component {
             </div>
             <div
               className="carousel-item third-slide"
-              style={{backgroundImage: `url(../../assets/images/slowed-arrow.jpg)`}}
+              style={{backgroundImage: `url(../../assets/images/slowed-arrow-min.jpg)`}}
             >
             <div className="third-slide-content">
               <div className="third-slide-content-img-container">
