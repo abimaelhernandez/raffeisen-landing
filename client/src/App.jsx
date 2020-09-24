@@ -182,13 +182,13 @@ export default class App extends Component {
                   <button type="button" className="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div className="modal-body d-flex justify-content-around">
-                  <FacebookShareButton quote={messages[locale].learnMore} url="https://sleepy-escarpment-58626.herokuapp.com">
+                  <FacebookShareButton quote={messages[locale].learnMore} url="https://fierce-scrubland-10633.herokuapp.com">
                     <FacebookIcon size={32} />
                   </FacebookShareButton>
-                  <TwitterShareButton title={messages[locale].learnMore} url="https://sleepy-escarpment-58626.herokuapp.com">
+                  <TwitterShareButton title={messages[locale].learnMore} url="https://fierce-scrubland-10633.herokuapp.com">
                     <TwitterIcon size={32} />
                   </TwitterShareButton>
-                  <WhatsappShareButton title={messages[locale].learnMore} url="https://sleepy-escarpment-58626.herokuapp.com">
+                  <WhatsappShareButton title={messages[locale].learnMore} url="https://fierce-scrubland-10633.herokuapp.com">
                     <WhatsappIcon size={32} />
                   </WhatsappShareButton>
                 </div>
