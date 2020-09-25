@@ -10,7 +10,7 @@ export default class Slider extends Component {
         <video
           className="slider-container-mobileVideo"
           playsInline autoPlay muted loop>
-          <source src="../../assets/videos/GlassSphere.mp4" type="video/mp4" />
+          <source src="../../assets/videos/sphere.mp4" type="video/mp4" />
             Your browser does not support HTML5 video.
         </video>
         <div
@@ -27,7 +27,6 @@ export default class Slider extends Component {
               <div className="first-slide-content">
                 <Fade left>
                   <div className="first-slide-content-text">
-                    <span className="dot"></span>
                     <div className="first-slide-content-text-title">
                       {slidesInfo[0].title}
                     </div>
@@ -79,7 +78,6 @@ export default class Slider extends Component {
                 </div>
                 <div className="second-slide-content-text">
                   <Fade up>
-                    <span className="dot"/>
                     <div className="carousel-caption second-slide-content-text-title">
                       {slidesInfo[1].title}
                     </div>
@@ -110,7 +108,6 @@ export default class Slider extends Component {
                 </div>
                 <div className="third-slide-content-text">
                   <Fade left>
-                    <span className="dot"></span>
                     <div className="third-slide-content-text-title">
                       {slidesInfo[2].title}
                     </div>

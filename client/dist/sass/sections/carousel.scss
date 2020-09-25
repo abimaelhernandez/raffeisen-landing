@@ -104,16 +104,6 @@
           padding: 0 5rem;
           color: $color-white;
 
-          .dot {
-            position: absolute;
-            height: 2.5rem;
-            width: 2.5rem;
-            background-color: $neon-carrot-orange;
-            border-radius: 50%;
-            display: inline-block;
-            left: 0;
-          }
-
           &-title {
             padding: 0 0 2rem 0;
             font-size: $font-size-title;
@@ -121,6 +111,17 @@
             line-height: 1.03;
             text-align: left;
             color: $color-white;
+
+            &::before {
+              content: '';
+              position: absolute;
+              display: block;
+              height: 2.5rem;
+              width: 2.5rem;
+              background-color: $neon-carrot-orange;
+              border-radius: 50%;
+              left: 0;
+            }
           }
 
           &-logo {
@@ -184,16 +185,8 @@
           font-size: 3.8vw;
           color: $color-white;
 
-          .dot {
-            position: absolute;
-            height: 2.5rem;
-            width: 2.5rem;
-            border-radius: 50%;
-            display: inline-block;
-            background-color: $color-light-yellow;
-          }
-
           &-title {
+            position: relative;
             font-size: $font-size-title;
             font-weight: 900;
             line-height: 1.03;
@@ -201,6 +194,17 @@
             top: 0;
             max-width: 10ch;
             text-align: left;
+
+            &::before {
+              content: '';
+              position: absolute;
+              display: block;
+              height: 2.5rem;
+              width: 2.5rem;
+              background-color: $color-light-yellow;
+              border-radius: 50%;
+              left: -4rem;
+            }
           }
         }
       }
@@ -245,17 +249,8 @@
           text-align: center;
           color: $color-white;
 
-          .dot {
-            position: relative;
-            height: 2.5rem;
-            width: 2.5rem;
-            background-color: $color-light-green;
-            border-radius: 50%;
-            display: inline-block;
-            right: 35%;
-          }
-
           &-title {
+            position: relative;
             font-size: $font-size-title;
             font-weight: 850;
             line-height: 0.9;
@@ -263,6 +258,17 @@
             max-width: 12ch;
             margin: auto;
             text-align: left;
+
+            &::before {
+              content: '';
+              position: absolute;
+              display: block;
+              height: 2.5rem;
+              width: 2.5rem;
+              background-color: $color-light-green;;
+              border-radius: 50%;
+              left: -4rem;
+            }
           }
         }
       }
@@ -316,15 +322,6 @@
             position: relative;
             height: 50%;
             padding: 26% 0 0 11%;
-
-            .dot {
-              height: 2.5rem;
-              width: 2.5rem;
-              background-color: $neon-carrot-orange;
-              border-radius: 50%;
-              display: inline-block;
-              left: 0;
-            }
 
             &-title {
               padding: 0 0 2rem 0;
@@ -391,15 +388,6 @@
             height: 50%;
             padding: 30% 0 0 0;
 
-            .dot {
-              position: absolute;
-              height: 2.5rem;
-              width: 2.5rem;
-              border-radius: 50%;
-              display: inline-block;
-              background-color: $color-light-yellow;
-            }
-
             &-title {
               position: relative;
               width: 100%;
@@ -439,12 +427,6 @@
 
           &-text {
             width: 100%;
-
-            .dot {
-              position: absolute;
-              top: 36%;
-              left: 6%;
-            }
 
             &-title {
               position: relative;
