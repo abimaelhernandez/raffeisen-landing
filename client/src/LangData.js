@@ -77,9 +77,7 @@ const projectBody = {
         mainParahraph: 'Platforms for the analysis of information accurately representing the operative, commercial, and financial reality of the organization.',
         secondaryParagraph: 'Through the design of dashboards, the visualization of information enables timely and efficient decision-making that favorably impacts the reality analyzed.',
         listItems: {
-          1: '',
-          2: 'Through the design of control panels, aleema visualizes information for the timely and efficient decision-making that favorably impacts the analyzed reality.',
-          3: ''
+          1: 'Through the design of control panels, aleema visualizes information for the timely and efficient decision-making that favorably impacts the analyzed reality.'
         }
       },
       {
@@ -310,8 +308,7 @@ const projectBody = {
         mainParahraph: 'Plataformas para el análisis de información representativa de la realidad operativa, comercial y financiera de una organización.',
         secondaryParagraph: 'A través del diseño de tableros de control se busca la visualización de información para la oportuna y eficiente toma de decisiones que impacten favorablemente en la realidad analizada.',
         listItems: {
-          2: 'A través del diseño de tableros de control, aleema visualiza información para la oportuna y eficiente toma de decisiones que impacten favorablemente en la realidad analizada.',
-          3: ''
+          1: 'A través del diseño de tableros de control, aleema visualiza información para la oportuna y eficiente toma de decisiones que impacten favorablemente en la realidad analizada.',
         }
       },
       {
