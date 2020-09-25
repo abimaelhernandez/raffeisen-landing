@@ -99,24 +99,24 @@ export default class Slider extends Component {
               className="carousel-item third-slide"
               style={{backgroundImage: `url(../../assets/images/slowed-arrow-min.jpg)`}}
             >
-            <div className="third-slide-content">
-              <div className="third-slide-content-img-container">
-                <Fade left>
-                  <img
-                    src="../../assets/icons/Green-Arrows.svg"
-                    alt={slidesInfo[2].title}
-                  />
-                </Fade>
+              <div className="third-slide-content">
+                <div className="third-slide-content-img-container">
+                  <Fade left>
+                    <img
+                      src="../../assets/icons/Green-Arrows.svg"
+                      alt={slidesInfo[2].title}
+                    />
+                  </Fade>
+                </div>
+                <div className="third-slide-content-text">
+                  <Fade left>
+                    <span className="dot"></span>
+                    <div className="third-slide-content-text-title">
+                      {slidesInfo[2].title}
+                    </div>
+                  </Fade>
+                </div>
               </div>
-              <div className="third-slide-content-text">
-                <Fade left>
-                  <span className="dot"></span>
-                  <div className="third-slide-content-text-title">
-                    {slidesInfo[2].title}
-                  </div>
-                </Fade>
-              </div>
-            </div>
               <div
                 className="aboutus shorterAboutus"
                 style={{backgroundImage: `url(../../assets/icons/AboutUs-ES.svg)`}}
@@ -126,7 +126,6 @@ export default class Slider extends Component {
                 tabIndex={0}
               />
             </div>
-            <div className="overlay"/>
           </div>
           <a
             className="carousel-control-prev"
