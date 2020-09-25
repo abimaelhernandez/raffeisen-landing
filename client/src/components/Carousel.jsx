@@ -20,7 +20,6 @@ export default class Slider extends Component {
           data-interval="false"
         >
           <div className="carousel-inner">
-          <div className="overlay" />
             <div
               className="carousel-item active first-slide"
               style={{backgroundImage: `url(../../assets/images/sphere-on-stump-min.jpg)`}}
@@ -127,6 +126,7 @@ export default class Slider extends Component {
                 tabIndex={0}
               />
             </div>
+            <div className="overlay"/>
           </div>
           <a
             className="carousel-control-prev"
