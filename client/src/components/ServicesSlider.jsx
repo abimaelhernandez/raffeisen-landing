@@ -23,10 +23,11 @@ export default class ServicesSlider extends Component {
       <div className="servicesSlider-parent">
         <button
           type="button"
-          className="close servicesSlider-parent-close-button"
+          className="close servicesSlider-parent-close"
           aria-label="Close"
-          onClick={this.closeSliderView}>
-          <span aria-hidden="true">&times;</span>
+          onClick={this.closeSliderView}
+          style={{backgroundImage: `url(../../assets/icons/cerrar-gris.svg)`}}
+        >
         </button>
         <div id="servicios-slider-id" className="carousel slide" data-ride="carousel" data-interval="false">
           <div className="carousel-inner">
@@ -52,9 +53,9 @@ export default class ServicesSlider extends Component {
                 >
                   <p className="paragraph">{item.mainParahraph}</p>
                   <div className="list-items">
-                    <li>{Object.values(item.listItems)[0]}</li>
-                    <li>{Object.values(item.listItems)[1]}</li>
-                    <li>{Object.values(item.listItems)[2]}</li>
+                      {Object.values(item.listItems).map(listItem =>
+                        <li> {listItem} </li>
+                      )}
                   </div>
                   <p className="clause">{item.secondaryParagraph}</p>
                 </div>
@@ -62,12 +63,32 @@ export default class ServicesSlider extends Component {
             </div>
             )}
           </div>
-          <a className="carousel-control-prev" href="#servicios-slider-id" role="button" data-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <a
+            className="carousel-control-prev"
+            href="#servicios-slider-id"
+            role="button"
+            data-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+              style={{backgroundImage: `url(../../assets/icons/flecha-gris.svg)`}}
+            >
+            </span>
             <span className="sr-only">Previous</span>
           </a>
-          <a className="carousel-control-next" href="#servicios-slider-id" role="button" data-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <a
+            className="carousel-control-next"
+            href="#servicios-slider-id"
+            role="button"
+            data-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+              style={{backgroundImage: `url(../../assets/icons/flecha-gris.svg)`}}
+            >
+            </span>
             <span className="sr-only">Next</span>
           </a>
         </div>

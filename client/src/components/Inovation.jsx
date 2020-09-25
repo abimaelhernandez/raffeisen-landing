@@ -39,32 +39,43 @@ export default class InovationBanner extends Component {
 
   render() {
     const {inovationInfo, sectionRef} = this.props
-    return (<div className="inovation-banner" id={sectionRef}>
-      <img className={this.changeClassName('circleImage')} src="../../assets/icons/blue-gear.svg" alt="Circles Icon"/>
-      <div id="mainTitle" className={this.changeClassName('inovation-banner-main-container')}>
-        <span className="inovation-banner-main-container-title">
-          {inovationInfo.topPhrase}
-        </span>
-      </div>
-      <div id="content" className={this.changeClassName('inovation-banner-contentContainer')}>
-        <span className="dot"></span>
-        <div className="inovation-banner-contentContainer-title">
-          {inovationInfo.title}
+    return (
+      <div className="inovation-banner" id={sectionRef}>
+        <div className="inovation-banner-content">
+          <img
+            className={this.changeClassName('circleImage')}
+            src="../../assets/icons/red-gear.svg"
+            alt="Circles Icon"
+          />
+          <div
+            id="mainTitle"
+            className={this.changeClassName('inovation-banner-main-container')}
+          >
+            <span className="inovation-banner-main-container-title">
+              {inovationInfo.topPhrase}
+            </span>
+          </div>
+          <div id="content" className={this.changeClassName('inovation-banner-contentContainer')}>
+            <span className="dot"></span>
+            <div className="inovation-banner-contentContainer-title">
+              {inovationInfo.title}
+            </div>
+            <p className="inovation-banner-contentContainer-paragraph">
+              {inovationInfo.mainParahraph}
+            </p>
+            <p>
+              {inovationInfo.secondaryParagraph}
+            </p>
+          </div>
+          <img
+            className={this.changeClassName('squareImage')}
+            src="../../assets/icons/blue-gear.svg"
+            alt="Triangle Icon"
+            id="rightgear"
+          />
         </div>
-        <p className="inovation-banner-contentContainer-paragraph">
-          {inovationInfo.mainParahraph}
-        </p>
-        <p>
-          {inovationInfo.secondaryParagraph}
-        </p>
       </div>
-      <img
-        className={this.changeClassName('squareImage')}
-        src="../../assets/icons/red-gear.svg"
-        alt="Triangle Icon"
-        id="rightgear"
-      />
-    </div>)
+    )
   }
 }
 

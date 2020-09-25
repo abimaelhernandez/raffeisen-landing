@@ -5,16 +5,6 @@
   overflow: hidden;
   z-index: 0;
 
-  &-overlay {
-    background-color: $inovation-blue;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0.4;
-    z-index: 1;
-  }
 
   &-mobileVideo {
     position: fixed;
@@ -52,6 +42,17 @@
     .carousel-inner {
       height: inherit;
       z-index: 2;
+
+      .overlay {
+        background-color: $inovation-blue;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.4;
+        z-index: 1;
+      }
     }
 
     .carousel-item {

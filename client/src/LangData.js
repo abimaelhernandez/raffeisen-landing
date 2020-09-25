@@ -56,7 +56,7 @@ const projectBody = {
         id: 1,
         name: 'consult',
         backgroundColor: '#fff',
-        imageBackground: '../../assets/images/red_light_bulb.jpg',
+        imageBackground: '../../assets/images/red_light_bulb-min.jpg',
         icon: '../assets/icons/Consultoria_new.svg',
         alt: 'Consulting.',
         mainParahraph: 'Based on balanced scorecard methodology, four key perspectives strategically cover:',
@@ -71,22 +71,20 @@ const projectBody = {
         id: 2,
         name: 'analytics',
         backgroundColor: '#fff',
-        imageBackground: '../../assets/images/graph.jpg',
+        imageBackground: '../../assets/images/graph-min.jpg',
         icon: '../assets/icons/Analytics_new.svg',
         alt: 'Analitics.',
         mainParahraph: 'Platforms for the analysis of information accurately representing the operative, commercial, and financial reality of the organization.',
         secondaryParagraph: 'Through the design of dashboards, the visualization of information enables timely and efficient decision-making that favorably impacts the reality analyzed.',
         listItems: {
-          1: '',
-          2: 'Through the design of control panels, aleema visualizes information for the timely and efficient decision-making that favorably impacts the analyzed reality.',
-          3: ''
+          1: 'Through the design of control panels, aleema visualizes information for the timely and efficient decision-making that favorably impacts the analyzed reality.'
         }
       },
       {
         id: 3,
         name: 'training',
         backgroundColor: '#fff',
-        imageBackground: '../../assets/images/ladder.jpg',
+        imageBackground: '../../assets/images/ladder-min.jpg',
         icon: '../assets/icons/Training_new.svg',
         alt: 'Training.',
         mainParahraph: 'Portfolio of modular topics that promote capacitation in strategic areas relevant to cooperatives.',
@@ -289,7 +287,7 @@ const projectBody = {
         id: 1,
         name: 'consult',
         backgroundColor: '#fff',
-        imageBackground: '../../assets/images/red_light_bulb.jpg',
+        imageBackground: '../../assets/images/red_light_bulb-min.jpg',
         icon: '../assets/icons/Consultoria_new.svg',
         alt:'consultoria.',
         mainParahraph: 'Con fundamento en la metodología de cuadro de mando integral, desde cuatro perspectivas claves que busca cubrir de manera estratégica:',
@@ -304,21 +302,20 @@ const projectBody = {
         id: 2,
         name: 'analytics',
         backgroundColor: '#fff',
-        imageBackground: '../../assets/images/graph.jpg',
+        imageBackground: '../../assets/images/graph-min.jpg',
         icon: '../assets/icons/Analytics_new.svg',
         alt:'analitica.',
         mainParahraph: 'Plataformas para el análisis de información representativa de la realidad operativa, comercial y financiera de una organización.',
         secondaryParagraph: 'A través del diseño de tableros de control se busca la visualización de información para la oportuna y eficiente toma de decisiones que impacten favorablemente en la realidad analizada.',
         listItems: {
-          2: 'A través del diseño de tableros de control, aleema visualiza información para la oportuna y eficiente toma de decisiones que impacten favorablemente en la realidad analizada.',
-          3: ''
+          1: 'A través del diseño de tableros de control, aleema visualiza información para la oportuna y eficiente toma de decisiones que impacten favorablemente en la realidad analizada.',
         }
       },
       {
         id: 3,
         name: 'training',
         backgroundColor: '#fff',
-        imageBackground: '../../assets/images/ladder.jpg',
+        imageBackground: '../../assets/images/ladder-min.jpg',
         icon: '../assets/icons/Training_new.svg',
         alt:'capacitación.',
         mainParahraph: 'Portafolio de temas modulares para la promoción de competencias y habilidades, en áreas estratégicas corporativas.',

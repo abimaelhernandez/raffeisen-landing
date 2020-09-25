@@ -7,7 +7,6 @@ export default class Slider extends Component {
     const { slidesInfo, sectionRef, aboutUsSlider } = this.props
     return (
       <div className="slider-container" id={sectionRef}>
-        <div className="slider-container-overlay" />
         <video
           className="slider-container-mobileVideo"
           playsInline autoPlay muted loop>
@@ -23,7 +22,7 @@ export default class Slider extends Component {
           <div className="carousel-inner">
             <div
               className="carousel-item active first-slide"
-              style={{backgroundImage: `url(../../assets/images/sphere-on-stump.jpg)`}}
+              style={{backgroundImage: `url(../../assets/images/sphere-on-stump-min.jpg)`}}
             >
               <div className="first-slide-content">
                 <Fade left>
@@ -66,7 +65,7 @@ export default class Slider extends Component {
             </div>
             <div
               className="carousel-item second-slide"
-              style={{backgroundImage: `url(../../assets/images/sewing-machine.jpeg)`}}
+              style={{backgroundImage: `url(../../assets/images/sewing-machine-min.jpg)`}}
             >
               <div className="second-slide-content">
                 <div className="second-slide-content-img-container">
@@ -98,7 +97,7 @@ export default class Slider extends Component {
             </div>
             <div
               className="carousel-item third-slide"
-              style={{backgroundImage: `url(../../assets/images/slowed-arrow.jpg)`}}
+              style={{backgroundImage: `url(../../assets/images/slowed-arrow-min.jpg)`}}
             >
             <div className="third-slide-content">
               <div className="third-slide-content-img-container">
@@ -127,6 +126,7 @@ export default class Slider extends Component {
                 tabIndex={0}
               />
             </div>
+            <div className="overlay"/>
           </div>
           <a
             className="carousel-control-prev"

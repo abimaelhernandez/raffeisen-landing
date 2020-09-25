@@ -8,20 +8,20 @@
     &-item {
       float: left;
       width: 30%;
-      padding-bottom : 25%;
+      padding-bottom : 27%;
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
 
       &.analytics {
-         background-position: right;
+        background-position: right;
       }
 
       &-title {
         position: relative;
         width: 100%;
         display: flex;
-        margin: 2rem 0 0 0;
+        top: 10%;
 
         &-logo {
           position: relative;
