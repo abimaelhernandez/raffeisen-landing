@@ -8,27 +8,43 @@ export default class Services extends Component {
     super()
     this.state = {
       clickedId: 0,
-      hasBeenClicked: false
+      hasBeenClicked: false,
+      test: false
     }
   }
 
   clickHandler = (item) => {
-  this.setState({ clickedId: item})
-  this.setState({ hasBeenClicked: true})
- }
-
- resetProps = (childValue) => {
-   if (childValue) {
-     console.log('childValue Parent is True ', childValue)
-     this.setState({hasBeenClicked: false, clickedId: 0})
+    this.setState({ clickedId: item})
+    this.setState({ hasBeenClicked: true})
    }
- }
+
+   resetProps = (childValue) => {
+     if (childValue) {
+       console.log('childValue Parent is True ', childValue)
+       this.setState({hasBeenClicked: false, clickedId: 0})
+     }
+   }
+
+   changeClass = (id) => {
+     const {hasBeenClicked, clickedId } = this.state
+     console.log('inside calss name', id)
+     if(hasBeenClicked) {
+       this.fireSetTime()
+     }
+     return hasBeenClicked && clickedId === id && 'correctId'
+   }
+
+   fireSetTime = () => {
+     // const { test } = this.state
+     console.log('test')
+     setTimeout(() => this.setState({ test: true }), 1000)
+   }
 
   render(){
-    const { clickedId , hasBeenClicked} = this.state
+    const { clickedId , hasBeenClicked, test} = this.state
     const { serviceObj, serviceTitle, sectionRef } = this.props
-    console.log('serv title :', serviceTitle)
-    if (hasBeenClicked && clickedId ) {
+    console.log('serv title :', serviceTitle, hasBeenClicked)
+    if (test) {
       return <ServicesSlider
               passedObj={serviceObj}
               clickedId={clickedId}
@@ -40,7 +56,7 @@ export default class Services extends Component {
         <div className="services-container">
           {serviceObj.map((item) =>
             <div
-              className={`col-sm-12 col-md-4 services-container-item ${item.name}`}
+              className={`col-sm-12 col-md-4 services-container-item ${item.name} ${hasBeenClicked && clickedId !== item.id && 'disabled'} ${this.changeClass(item.id)}`}
               style={{backgroundImage: `url(${item.imageBackground})`}}
               key={item.id}
               onClick={this.clickHandler.bind(this, item.id)}

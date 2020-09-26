@@ -5,6 +5,10 @@
   &-container {
     display: flex;
 
+    .disabled {
+      display: none;
+    }
+
     &-item {
       float: left;
       width: 30%;
@@ -12,6 +16,21 @@
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
+
+      &.correctId {
+        position: relative;
+        animation: mymove 800ms;
+      }
+
+      @keyframes mymove {
+        from {
+          left: 40%;
+        }
+
+        to {
+          left: 0px;
+        }
+      }
 
       &.analytics {
         background-position: right;
