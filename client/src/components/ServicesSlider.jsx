@@ -36,7 +36,7 @@ export default class ServicesSlider extends Component {
             >
               <div className="inner-container">
                 <div
-                  className="image"
+                  className={`image ${item.name}`}
                   style={{ backgroundImage: `url(${item.imageBackground})` }}
                 >
                   <p className='title'>
