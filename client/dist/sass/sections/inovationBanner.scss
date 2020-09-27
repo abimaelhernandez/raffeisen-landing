@@ -1,7 +1,9 @@
 .inovation-banner {
   position: relative;
   width: 100%;
-  height: 82vh;
+  // height: 82vh;
+  min-height: 600px;
+  max-height: auto; 
   background-color: $inovation-blue;
 
   .circleImage {
@@ -32,6 +34,7 @@
   }
 
   @keyframes square {
+
     to {
       left: 16%;
       top: 50%;

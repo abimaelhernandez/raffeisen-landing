@@ -40,16 +40,29 @@ export default class InovationBanner extends Component {
   leftGear = () =>  {
     // styles
     console.log('wondow :',window)
-    const rotate = window.scrollY / 10 * Math.PI
+    const rotate = - window.scrollY / 10 * Math.PI
     const divStyle = {
-      backgroundColor: 'purple',
-      transform: `rotate(${rotate}deg)`,
+      transform: `rotate(${rotate}deg)`
     }
     return  <img
               style={divStyle}
               className={this.changeClassName('circleImage')}
               src="../../assets/icons/red-gear.svg"
               alt="Circles Icon"
+            />
+  }
+
+  rightGear = () => {
+    const rotate = window.scrollY / 10 * Math.PI
+    const divStyle = {
+      transform: `rotate(${rotate}deg)`
+    }
+    return  <img
+              style={divStyle}
+              className={this.changeClassName('squareImage')}
+              src="../../assets/icons/blue-gear.svg"
+              alt="Triangle Icon"
+              id="rightgear"
             />
   }
 
@@ -79,12 +92,7 @@ export default class InovationBanner extends Component {
               {inovationInfo.secondaryParagraph}
             </p>
           </div>
-          <img
-            className={this.changeClassName('squareImage')}
-            src="../../assets/icons/blue-gear.svg"
-            alt="Triangle Icon"
-            id="rightgear"
-          />
+          <this.rightGear/>
         </div>
       </div>
     )
