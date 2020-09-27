@@ -37,16 +37,28 @@ export default class InovationBanner extends Component {
     return `${name} ${animationstart ? 'start-animation' : ''}`
   }
 
+  leftGear = () =>  {
+    // styles
+    console.log('wondow :',window)
+    const rotate = window.scrollY / 10 * Math.PI
+    const divStyle = {
+      backgroundColor: 'purple',
+      transform: `rotate(${rotate}deg)`,
+    }
+    return  <img
+              style={divStyle}
+              className={this.changeClassName('circleImage')}
+              src="../../assets/icons/red-gear.svg"
+              alt="Circles Icon"
+            />
+  }
+
   render() {
     const {inovationInfo, sectionRef} = this.props
     return (
       <div className="inovation-banner" id={sectionRef}>
         <div className="inovation-banner-content">
-          <img
-            className={this.changeClassName('circleImage')}
-            src="../../assets/icons/red-gear.svg"
-            alt="Circles Icon"
-          />
+          <this.leftGear/>
           <div
             id="mainTitle"
             className={this.changeClassName('inovation-banner-main-container')}

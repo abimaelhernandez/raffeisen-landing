@@ -10,7 +10,7 @@
     width: 10rem;
     left: 14%;
     top: 26%;
-    animation-name: none;
+    // animation-name: none;
 
     &.start-animation {
       animation: circle 2.5s ease-out 3s forwards;
@@ -23,7 +23,7 @@
     width: 10rem;
     left: 81%;
     top: 66%;
-    animation-name: none;
+    // animation-name: none;
 
     &.start-animation {
       animation: square 2.5s ease-out 3s forwards;
@@ -37,7 +37,7 @@
       top: 50%;
       height: 11rem;
       width: 11rem;
-      transform: rotate(200deg);
+      // transform: rotate(200deg);
     }
   }
 
@@ -47,7 +47,7 @@
       left: 12%;
       height: 11rem;
       width: 11rem;
-      transform: rotate(200deg);
+      // transform: rotate(200deg);
     }
   }
 
