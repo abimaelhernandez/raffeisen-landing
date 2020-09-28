@@ -26,8 +26,7 @@ export default class Services extends Component {
 
   render(){
     const { clickedId , hasBeenClicked} = this.state
-    const { serviceObj, serviceTitle, sectionRef } = this.props
-    console.log('serv title :', serviceTitle)
+    const { serviceObj, sectionRef } = this.props
     if (hasBeenClicked && clickedId ) {
       return <ServicesSlider
               passedObj={serviceObj}
@@ -68,6 +67,5 @@ export default class Services extends Component {
 
 Services.propTypes = {
   serviceObj: PropTypes.instanceOf(Object),
-  serviceTitle: PropTypes.string,
   sectionRef: PropTypes.string
 }

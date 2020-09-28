@@ -67,7 +67,7 @@ export default class InovationBanner extends Component {
   }
 
   render() {
-    const {inovationInfo, sectionRef} = this.props
+    const {inovationInfo, sectionRef, serviceTitle} = this.props
     return (
       <div className="inovation-banner" id={sectionRef}>
         <div className="inovation-banner-content">
@@ -93,6 +93,7 @@ export default class InovationBanner extends Component {
           </div>
           <this.rightGear/>
         </div>
+        <div className="next-title">{serviceTitle}</div>
       </div>
     )
   }
@@ -101,5 +102,6 @@ export default class InovationBanner extends Component {
 InovationBanner.propTypes = {
   inovationInfo: PropTypes.instanceOf(Object),
   animationReady: PropTypes.string,
-  sectionRef: PropTypes.string
+  sectionRef: PropTypes.string,
+  serviceTitle: PropTypes.string
 }
