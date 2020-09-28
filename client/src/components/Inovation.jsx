@@ -46,7 +46,7 @@ export default class InovationBanner extends Component {
     }
     return  <img
               style={divStyle}
-              className={this.changeClassName('circleImage')}
+              className={this.changeClassName('leftGear')}
               src="../../assets/icons/red-gear.svg"
               alt="Circles Icon"
             />
@@ -59,7 +59,7 @@ export default class InovationBanner extends Component {
     }
     return  <img
               style={divStyle}
-              className={this.changeClassName('squareImage')}
+              className={this.changeClassName('rightGear')}
               src="../../assets/icons/blue-gear.svg"
               alt="Triangle Icon"
               id="rightgear"
@@ -80,12 +80,14 @@ export default class InovationBanner extends Component {
               {inovationInfo.topPhrase}
             </span>
           </div>
-          <div id="content" className={this.changeClassName('inovation-banner-contentContainer')}>
-            <span className="dot"></span>
-            <div className="inovation-banner-contentContainer-title">
+          <div
+            id="content"
+            className={this.changeClassName('inovation-banner-secondary')}
+          >
+            <div className="inovation-banner-secondary-title">
               {inovationInfo.title}
             </div>
-            <p className="inovation-banner-contentContainer-paragraph">
+            <p className="inovation-banner-secondary-paragraph">
               {inovationInfo.mainParahraph}
             </p>
             <p>
