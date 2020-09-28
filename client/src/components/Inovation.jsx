@@ -39,7 +39,6 @@ export default class InovationBanner extends Component {
 
   leftGear = () =>  {
     // styles
-    console.log('wondow :',window)
     const rotate = - window.scrollY / 10 * Math.PI
     const divStyle = {
       transform: `rotate(${rotate}deg)`
