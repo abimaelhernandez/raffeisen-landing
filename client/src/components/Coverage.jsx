@@ -39,10 +39,6 @@ export default class Coverage extends Component {
     const { coverageInfo, sectionRef} = this.props
     return (<div className="rl_coverage" id={sectionRef}>
       <div className="rl_coverage_description">
-        <div
-          className="rl_coverage_description-icon"
-          style={{backgroundImage: 'url("../assets/icons/square-icon.svg")'}}
-        />
         <h2 className="rl_coverage-title">{coverageInfo.title}</h2>
         <p className="rl_coverage-text">{coverageInfo.description}</p>
       </div>
@@ -59,7 +55,7 @@ export default class Coverage extends Component {
                 { country.sections.map((place) =>
                   <span
                     key={`${place.name}-${place.style}`}
-                    className={`dot ${place.style}`}
+                    className={`${this.changeClassName('dot')} ${place.style}`}
                   >
                     <span className="country-name">{place.name}</span>
                   </span>)
@@ -67,7 +63,7 @@ export default class Coverage extends Component {
               </div>
               : <span
                   key={`${country.name}-${country.style}`}
-                  className={`dot ${country.style}`}
+                  className={`${this.changeClassName('dot')} ${country.style}`}
                 >
                 <span className="country-name">{country.name}</span>
               </span>)
