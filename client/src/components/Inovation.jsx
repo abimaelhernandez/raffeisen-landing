@@ -80,10 +80,7 @@ export default class InovationBanner extends Component {
               {inovationInfo.topPhrase}
             </span>
           </div>
-          <div
-            id="content"
-            className={this.changeClassName('inovation-banner-secondary')}
-          >
+          <div className={this.changeClassName('inovation-banner-secondary')}>
             <div className="inovation-banner-secondary-title">
               {inovationInfo.title}
             </div>
