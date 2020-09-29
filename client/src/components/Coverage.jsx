@@ -33,6 +33,11 @@ export default class Coverage extends Component {
     return `${name} ${animationstart ? 'start-animation' : ''}`
   }
 
+  changeClassNameSecondary = (name) => {
+    const {animationstart} = this.state
+    return `${name} ${animationstart ? 'start-animation-nd' : ''}`
+  }
+
   render() {
     const { animationstart } = this.state
     console.log(animationstart)
@@ -46,7 +51,7 @@ export default class Coverage extends Component {
         className={this.changeClassName('rl_coverage-map-img')}
         style={{backgroundImage: 'url("../assets/images/coverage_map.svg")'}}
       >
-        <div className="rl_coverage-map-countries">
+        <div className={this.changeClassName('rl_coverage-map-countries')}>
           { coverageInfo.countries.map((country) => country.sections
               ? <div
                   key={`sections-${country.sections[0].style}`}
@@ -63,7 +68,7 @@ export default class Coverage extends Component {
               </div>
               : <span
                   key={`${country.name}-${country.style}`}
-                  className={`${this.changeClassName('dot')} ${country.style}`}
+                  className={`${this.changeClassNameSecondary('dot')} ${country.style}`}
                 >
                 <span className="country-name">{country.name}</span>
               </span>)
