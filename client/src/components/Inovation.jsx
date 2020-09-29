@@ -37,16 +37,41 @@ export default class InovationBanner extends Component {
     return `${name} ${animationstart ? 'start-animation' : ''}`
   }
 
+  leftGear = () =>  {
+    // styles
+    console.log('wondow :',window)
+    const rotate = - window.scrollY / 10 * Math.PI
+    const divStyle = {
+      transform: `rotate(${rotate}deg)`
+    }
+    return  <img
+              style={divStyle}
+              className={this.changeClassName('leftGear')}
+              src="../../assets/icons/red-gear.svg"
+              alt="Circles Icon"
+            />
+  }
+
+  rightGear = () => {
+    const rotate = window.scrollY / 10 * Math.PI
+    const divStyle = {
+      transform: `rotate(${rotate}deg)`
+    }
+    return  <img
+              style={divStyle}
+              className={this.changeClassName('rightGear')}
+              src="../../assets/icons/blue-gear.svg"
+              alt="Triangle Icon"
+              id="rightgear"
+            />
+  }
+
   render() {
-    const {inovationInfo, sectionRef} = this.props
+    const {inovationInfo, sectionRef, serviceTitle} = this.props
     return (
       <div className="inovation-banner" id={sectionRef}>
         <div className="inovation-banner-content">
-          <img
-            className={this.changeClassName('circleImage')}
-            src="../../assets/icons/red-gear.svg"
-            alt="Circles Icon"
-          />
+          <this.leftGear/>
           <div
             id="mainTitle"
             className={this.changeClassName('inovation-banner-main-container')}
@@ -55,25 +80,20 @@ export default class InovationBanner extends Component {
               {inovationInfo.topPhrase}
             </span>
           </div>
-          <div id="content" className={this.changeClassName('inovation-banner-contentContainer')}>
-            <span className="dot"></span>
-            <div className="inovation-banner-contentContainer-title">
+          <div className={this.changeClassName('inovation-banner-secondary')}>
+            <div className="inovation-banner-secondary-title">
               {inovationInfo.title}
             </div>
-            <p className="inovation-banner-contentContainer-paragraph">
+            <p className="inovation-banner-secondary-paragraph">
               {inovationInfo.mainParahraph}
             </p>
             <p>
               {inovationInfo.secondaryParagraph}
             </p>
           </div>
-          <img
-            className={this.changeClassName('squareImage')}
-            src="../../assets/icons/blue-gear.svg"
-            alt="Triangle Icon"
-            id="rightgear"
-          />
+          <this.rightGear/>
         </div>
+        <div className="next-title">{serviceTitle}</div>
       </div>
     )
   }
@@ -82,5 +102,6 @@ export default class InovationBanner extends Component {
 InovationBanner.propTypes = {
   inovationInfo: PropTypes.instanceOf(Object),
   animationReady: PropTypes.string,
-  sectionRef: PropTypes.string
+  sectionRef: PropTypes.string,
+  serviceTitle: PropTypes.string
 }

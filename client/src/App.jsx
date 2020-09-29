@@ -211,12 +211,12 @@ export default class App extends Component {
             inovationInfo={messages[locale].inovationBanner}
             animationReady={currentView}
             sectionRef={menuSections[1].ref}
+            serviceTitle={menuSections[2].title}
           />
         </div>
         <div onMouseEnter={() => this.setState({currentView: menuSections[2].ref})}>
           <Services
             serviceObj={messages[locale].servicesObject}
-            serviceTitle={menuSections[2].title}
             sectionRef={menuSections[2].ref}
           />
         </div>

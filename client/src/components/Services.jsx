@@ -84,6 +84,5 @@ export default class Services extends Component {
 
 Services.propTypes = {
   serviceObj: PropTypes.instanceOf(Object),
-  serviceTitle: PropTypes.string,
   sectionRef: PropTypes.string
 }
