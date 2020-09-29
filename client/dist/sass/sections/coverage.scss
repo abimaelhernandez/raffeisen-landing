@@ -71,18 +71,18 @@
       &.start-animation {
         animation: contriesAnimation 2.5s ease-out forwards;
       }
-       @keyframes contriesAnimation {
-         from{
-           padding-top: 0%;
-           padding-left: 5%;
-         }
-         to{
-           padding-top: 57%;
-           padding-left: 41%;
-           height: 70%;
-           width: 80%;
-         }
-       }
+       // @keyframes contriesAnimation {
+       //   from{
+       //     padding-top: 0%;
+       //     padding-left: 5%;
+       //   }
+       //   to{
+       //     padding-top: 57%;
+       //     padding-left: 41%;
+       //     height: 70%;
+       //     width: 80%;
+       //   }
+       // }
 
       &-section {
         display: flex;
@@ -213,7 +213,7 @@
             transform: translate(-10%, -30%);
             margin: 2rem;
           }
-          80% {
+          87% {
             background-image: none;
             border: 1rem solid $tangerine-yellow;
             background-color: transparent;
