@@ -42,11 +42,10 @@
       opacity: 0;
 
       &.start-animation {
-        animation: animateMap 2s ease-out 0.2s forwards;
+        animation: animateMap 3s ease-out 1.5s forwards;
       }
 
       @keyframes animateMap {
-
         0% {
           transform: scale(1.2, 1.2);
           opacity: 0.3;
@@ -69,20 +68,32 @@
       width: 80%;
 
       &.start-animation {
-        animation: contriesAnimation 2.5s ease-out forwards;
+        animation: contriesAnimation 2s linear forwards;
       }
-       // @keyframes contriesAnimation {
-       //   from{
-       //     padding-top: 0%;
-       //     padding-left: 5%;
-       //   }
-       //   to{
-       //     padding-top: 57%;
-       //     padding-left: 41%;
-       //     height: 70%;
-       //     width: 80%;
-       //   }
-       // }
+       @keyframes contriesAnimation {
+         0%{
+           position: relative;
+           padding-top: 0%;
+           padding-left: 5%;
+           transform: translateY(60rem);
+           transform: translatex(10rem);
+           height: 100%;
+           width: 100%;
+           margin: auto;
+         }
+         60% {
+           padding-top: 10%;
+           padding-left: 20%;
+           transform: translateY(40rem);
+           transform: translatex(5rem);
+         }
+         100%{
+           padding-top: 57%;
+           padding-left: 41%;
+           height: 70%;
+           width: 80%;
+         }
+       }
 
       &-section {
         display: flex;
@@ -193,87 +204,82 @@
           }
         }
 
-        &.start-animation {
-          animation: dotsAnimation 3s ease-in forwards;
-        }
 
-        @keyframes dotsAnimation {
-          0% {
-            width: 14rem;
-            background-color: transparent;
-            background-image: url('../assets/icons/pin.svg');
-            background-repeat: no-repeat;
-            background-size: contain;
-            border-radius: 0;
-            transform: translateY(30%);
-            margin: 2rem;
-          }
-          25% {
-            width: 17rem;
-            transform: translate(-10%, -30%);
-            margin: 2rem;
-          }
-          87% {
-            background-image: none;
-            border: 1rem solid $tangerine-yellow;
-            background-color: transparent;
-            border-radius: 70%;
-          }
-          90% {
-            width: 8rem;
-            height: 8rem;
-            transform: translate(10%, -10%);
-            border-radius: 50%;
-          }
-          100% {
-            width: 1.8rem;
-            height: 1.8rem;
-          }
+        &.start-animation {
+          animation: dotsAnimation 5s ease-out 0.5s forwards;
         }
 
         &.start-animation-nd {
-          animation: dotsAnimationSecond 3s ease-out forwards;
-        }
-
-        @keyframes dotsAnimationSecond {
-          0% {
-            width: 12rem;
-            height: 12rem;
-            background-color: transparent;
-            background-image: url('../assets/icons/pin.svg');
-            background-repeat: no-repeat;
-            background-size: contain;
-            border-radius: 0;
-            top: -20rem;
-            transform: translateY(-30%);
-          }
-          25% {
-            width: 14rem;
-            height: 14rem;
-            transform: translateX(30rem);
-          }
-          50%  {
-            background-image: none;
-            width: 10rem;
-            height: 10rem;
-            border: 1rem solid $tangerine-yellow;
-            border-radius: 70%;
-            top: 0;
-            background-color: transparent;
-            transform: translateY(-20rem);
-          }
-          75% {
-            width: 5rem;
-            height: 5rem;
-            border-radius: 50%;
-          }
-          100% {
-            width: 1.8rem;
-            height: 1.8rem;
-            transform: none;
-          }
+          animation: dotsAnimationSecond 6s linear forwards;
         }
         // line bellow is dot
+      }
+
+      @keyframes dotsAnimation {
+        0% {
+          background-image: url('../assets/icons/pin.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 10rem;
+          height: 10rem;
+          background-color: transparent;
+          // border-radius: 0;
+          // transform: translateY(-20%);
+          // transform: translateY(-80%);
+        }
+        75% {
+          background-image: url('../assets/icons/pin.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size:contain;
+          width: 5rem;
+          height: 5rem;
+          border-radius: 50%;
+          background-color: transparent;
+          // transform: translateY(5%);
+        }
+        100% {
+          width: 1.8rem;
+          height: 1.8rem;
+          background-image: none;
+          // background-color: green;
+        }
+      }
+
+      @keyframes dotsAnimationSecond {
+        0% {
+          background-image: url('../assets/icons/pin.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 13rem;
+          height: 13rem;
+          background-color: transparent;
+          // transform: translateY(40%);
+        }
+        60% {
+          background-image: url('../assets/icons/pin.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          // border: 1rem solid $tangerine-yellow;
+          width: 8rem;
+          height: 8rem;
+        }
+        80% {
+          background-image: none;
+          border: 1rem solid $tangerine-yellow;
+          width: 5rem;
+          height: 5rem;
+          border-radius: 50%;
+        }
+        100% {
+          width: 1.8rem;
+          height: 1.8rem;
+          transform: none;
+          // background-color: red;
+        }
       }
     }
   }
