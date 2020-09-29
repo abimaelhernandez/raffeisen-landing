@@ -42,17 +42,17 @@
       opacity: 0;
 
       &.start-animation {
-        animation: animateMap 3s ease-out 1.5s forwards;
+        animation: animateMap 3s ease-out 2s forwards;
       }
 
       @keyframes animateMap {
         0% {
           transform: scale(1.2, 1.2);
-          opacity: 0.3;
+          opacity: 0.1;
         }
-        50% {
+        70% {
           transform: scale(1.1, 1.1);
-          opacity: 0.7;
+          opacity: 0.2;
         }
         100% {
           transform: none;
@@ -206,11 +206,11 @@
 
 
         &.start-animation {
-          animation: dotsAnimation 5s ease-out 0.5s forwards;
+          animation: dotsAnimation 5s ease-out forwards;
         }
 
         &.start-animation-nd {
-          animation: dotsAnimationSecond 6s linear forwards;
+          animation: dotsAnimationSecond 4s linear forwards;
         }
         // line bellow is dot
       }
@@ -243,7 +243,7 @@
           width: 1.8rem;
           height: 1.8rem;
           background-image: none;
-          // background-color: green;
+          background-color: green;
         }
       }
 
@@ -267,9 +267,14 @@
           width: 8rem;
           height: 8rem;
         }
-        80% {
+        70% {
           background-image: none;
+          // border: 1rem solid $tangerine-yellow;
+          width: 7rem;
+          height: 7rem;
           border: 1rem solid $tangerine-yellow;
+        }
+        80% {
           width: 5rem;
           height: 5rem;
           border-radius: 50%;
@@ -278,7 +283,7 @@
           width: 1.8rem;
           height: 1.8rem;
           transform: none;
-          // background-color: red;
+          background-color: red;
         }
       }
     }
@@ -341,6 +346,7 @@
 
     &-text {
       font-size: $font-size-mw;
+      max-width: 100%;
     }
 
     &-map {
@@ -468,40 +474,40 @@
   }
 }
 
-@media (max-width: 418px) and (min-width: 400px) {
-  .rl_coverage-map-countries {
-    .dot {
-      &.country {
-        &-cl {
-          margin-left: 7rem;
-        }
-
-        &-uy {
-          margin-left: 12rem;
-        }
-
-        &-py {
-          margin-left: 10.5rem;
-          margin-top: 1.2rem;
-        }
-
-        &-gy {
-          margin-left: 4.5rem;
-        }
-
-        &-cr {
-          margin-left: 4.5rem;
-          margin-top: .5rem;
-        }
-
-        &-sv {
-          margin-left: 2.5rem;
-        }
-
-        &-do {
-          margin-left: 3.5rem;
-        }
-      }
-    }
-  }
-}
+// @media (max-width: 418px) and (min-width: 400px) {
+//   .rl_coverage-map-countries {
+//     .dot {
+//       &.country {
+//         &-cl {
+//           margin-left: 7rem;
+//         }
+//
+//         &-uy {
+//           margin-left: 12rem;
+//         }
+//
+//         &-py {
+//           margin-left: 10.5rem;
+//           margin-top: 1.2rem;
+//         }
+//
+//         &-gy {
+//           margin-left: 4.5rem;
+//         }
+//
+//         &-cr {
+//           margin-left: 4.5rem;
+//           margin-top: .5rem;
+//         }
+//
+//         &-sv {
+//           margin-left: 2.5rem;
+//         }
+//
+//         &-do {
+//           margin-left: 3.5rem;
+//         }
+//       }
+//     }
+//   }
+// }
