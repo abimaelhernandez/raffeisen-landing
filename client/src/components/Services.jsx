@@ -26,8 +26,7 @@ export default class Services extends Component {
    }
 
    changeClass = (id) => {
-     const {hasBeenClicked, clickedId } = this.state
-     console.log('inside calss name', id)
+     const { hasBeenClicked, clickedId } = this.state
      if(hasBeenClicked) {
        this.fireSetTime()
      }
@@ -37,13 +36,12 @@ export default class Services extends Component {
    fireSetTime = () => {
      // const { test } = this.state
      console.log('test')
-     setTimeout(() => this.setState({ test: true }), 1000)
+     setTimeout(() => this.setState({ test: true }), 600)
    }
 
   render(){
     const { clickedId , hasBeenClicked, test} = this.state
-    const { serviceObj, serviceTitle, sectionRef } = this.props
-    console.log('serv title :', serviceTitle, hasBeenClicked)
+    const { serviceObj, sectionRef } = this.props
     if (test) {
       return <ServicesSlider
               passedObj={serviceObj}

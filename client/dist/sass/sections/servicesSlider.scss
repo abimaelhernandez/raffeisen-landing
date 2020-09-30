@@ -51,10 +51,11 @@
       .image {
         position: relative;
         width: 50%;
-        padding-bottom : 27%;
+        padding-bottom: 27%;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+        animation: fadeIn 1.6s cubic-bezier(0.04, 0.63, 0.46, 0.82) forwards;
 
          .title {
            position: relative;
@@ -92,6 +93,7 @@
         line-height: 1.3;
         text-align: left;
         border-bottom: $inovation-blue solid 1rem;
+        animation: textoo 3.3s ease;
 
         .paragraph {
           margin: 6rem 0;
@@ -102,6 +104,29 @@
           bottom: 0;
         }
       }
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      transform: scale(0.75, 1);
+      opacity: .2;
+    }
+  
+    100% {
+      width: 50%;
+      transform: scale(1);
+      opacity: .7;
+    }
+  }
+
+  @keyframes textoo {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
     }
   }
 

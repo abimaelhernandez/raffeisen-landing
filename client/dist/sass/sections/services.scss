@@ -12,7 +12,7 @@
     &-item {
       float: left;
       width: 30%;
-      padding-bottom : 27%;
+      padding-bottom: 27.5%;
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -23,17 +23,19 @@
 
       &.correctId {
         position: relative;
-        animation: mymove 800ms;
+        animation: mymove .8s ease-out;
+        width: 50%;
       }
 
       @keyframes mymove {
-        from {
+        0% {
           left: 40%;
         }
 
-        to {
-          left: 0px;
-          width: 50% !important;
+        100% {
+          left: 4%;
+          transform: scale(1.15, 1);
+          opacity: .6;
         }
       }
 
