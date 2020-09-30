@@ -33,12 +33,14 @@
       // display: block;
       // height: auto;
       width: 50%;
-      max-width: 52rem;
-      min-width: 50rem;
+      max-width: 55rem;
+      // min-width: 50rem;
       // float: right;
       background-repeat: no-repeat;
+      min-height: inherit;
       // object-fit: contain;
-      margin: 0 auto 0 23rem;
+      // margin: 0 auto 0 23rem;
+      margin: auto;
       opacity: 0;
 
       &.start-animation {
@@ -336,7 +338,7 @@
     width: 100%;
     display: block;
     margin: 0;
-    height: 96vh;
+    min-height: 88rem;
 
     // &_description {
     //   max-width: 100%;
@@ -416,7 +418,7 @@
     &-map {
       &-img {
         width: 100%;
-        min-width: 30rem;
+        // min-width: 30rem;
         min-height: 45rem;
         max-height: 30vh;
         max-width: 100%;
