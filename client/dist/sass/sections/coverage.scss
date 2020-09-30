@@ -44,20 +44,20 @@
       &.start-animation {
         animation: animateMap 3s ease-out 2s forwards;
       }
+    }
 
-      @keyframes animateMap {
-        0% {
-          transform: scale(1.2, 1.2);
-          opacity: 0.1;
-        }
-        70% {
-          transform: scale(1.1, 1.1);
-          opacity: 0.2;
-        }
-        100% {
-          transform: none;
-          opacity: 2;
-        }
+    @keyframes animateMap {
+      0% {
+        transform: scale(1.2, 1.2);
+        opacity: 0.1;
+      }
+      70% {
+        transform: scale(1.1, 1.1);
+        opacity: 0.6;
+      }
+      100% {
+        transform: none;
+        opacity: 2;
       }
     }
 
@@ -66,34 +66,6 @@
       padding-left: 41%;
       height: 70%;
       width: 80%;
-
-      &.start-animation {
-        animation: contriesAnimation 2s linear forwards;
-      }
-       @keyframes contriesAnimation {
-         0%{
-           position: relative;
-           padding-top: 0%;
-           padding-left: 5%;
-           transform: translateY(60rem);
-           transform: translatex(10rem);
-           height: 100%;
-           width: 100%;
-           margin: auto;
-         }
-         60% {
-           padding-top: 10%;
-           padding-left: 20%;
-           transform: translateY(40rem);
-           transform: translatex(5rem);
-         }
-         100%{
-           padding-top: 57%;
-           padding-left: 41%;
-           height: 70%;
-           width: 80%;
-         }
-       }
 
       &-section {
         display: flex;
@@ -117,10 +89,11 @@
           bottom: 4.5rem;
           right: 2rem;
           display: none;
-          font-size: $font-size-ml;
+          font-size: $font-size-s;
           text-align: center;
           font-weight: 800;
           color: $color-white;
+          z-index: 2;
 
           &::after {
             content: "";
@@ -206,16 +179,21 @@
 
 
         &.start-animation {
-          animation: dotsAnimation 5s ease-out forwards;
+          animation: dotsAnimation 6s ease-out forwards;
         }
 
         &.start-animation-nd {
-          animation: dotsAnimationSecond 4s linear forwards;
+          animation: dotsAnimationSecond 6s linear forwards;
         }
         // line bellow is dot
       }
 
       @keyframes dotsAnimation {
+        // starts with pin
+        // then pin goes away
+        // empty circle appears
+        // circle gets filled
+        // cirlce turns small into place
         0% {
           background-image: url('../assets/icons/pin.svg');
           background-repeat: no-repeat;
@@ -224,26 +202,32 @@
           width: 10rem;
           height: 10rem;
           background-color: transparent;
-          // border-radius: 0;
-          // transform: translateY(-20%);
-          // transform: translateY(-80%);
+          border: none;
         }
-        75% {
+        50% {
           background-image: url('../assets/icons/pin.svg');
           background-repeat: no-repeat;
           background-position: center;
           background-size:contain;
+          width: 7rem;
+          height: 7rem;
+          background-color: transparent;
+          border: none;
+        }
+        57% {
+          background-image: none;
+        }
+        70% {
+          background-color: transparent;
+          border: 0.5rem solid $tangerine-yellow;
+          border-radius: 50%;
           width: 5rem;
           height: 5rem;
-          border-radius: 50%;
-          background-color: transparent;
-          // transform: translateY(5%);
         }
         100% {
           width: 1.8rem;
           height: 1.8rem;
           background-image: none;
-          background-color: green;
         }
       }
 
@@ -256,35 +240,60 @@
           width: 13rem;
           height: 13rem;
           background-color: transparent;
-          // transform: translateY(40%);
+          border: none;
         }
-        60% {
+        50% {
           background-image: url('../assets/icons/pin.svg');
           background-repeat: no-repeat;
           background-position: center;
           background-size: contain;
-          // border: 1rem solid $tangerine-yellow;
           width: 8rem;
           height: 8rem;
+          background-color: transparent;
+          border: none;
         }
+        60% { background-image: none; }
         70% {
-          background-image: none;
-          // border: 1rem solid $tangerine-yellow;
-          width: 7rem;
-          height: 7rem;
-          border: 1rem solid $tangerine-yellow;
-        }
-        80% {
           width: 5rem;
           height: 5rem;
           border-radius: 50%;
+          border: 1rem solid $tangerine-yellow;
         }
         100% {
           width: 1.8rem;
           height: 1.8rem;
           transform: none;
-          background-color: red;
+          // background-color: red;
         }
+      }
+      &.start-animation {
+        animation: contriesAnimation 2s linear forwards;
+      }
+      //countries
+    }
+
+    @keyframes contriesAnimation {
+      0%{
+        position: relative;
+        padding-top: 0%;
+        padding-left: 5%;
+        transform: translateY(60rem);
+        transform: translatex(10rem);
+        height: 100%;
+        width: 100%;
+        margin: auto;
+      }
+      60% {
+        padding-top: 10%;
+        padding-left: 20%;
+        transform: translateY(40rem);
+        transform: translatex(5rem);
+      }
+      100%{
+        padding-top: 57%;
+        padding-left: 41%;
+        height: 70%;
+        width: 80%;
       }
     }
   }
@@ -409,6 +418,28 @@
         width: 100%;
         min-width: 30rem;
         min-height: 45rem;
+        max-height: 30vh;
+        max-width: 100%;
+        // z-index: -20;
+
+        &.start-animation {
+          animation: animateMapMobile 3s ease-out 1s forwards;
+        }
+      }
+
+      @keyframes animateMapMobile {
+        0% {
+          transform: scale(1);
+          opacity: 0.1;
+        }
+        70% {
+          transform: scale(1.01, 1.01);
+          opacity: 0.8;
+        }
+        100% {
+          transform: none;
+          opacity: 2;
+        }
       }
 
       &-countries {
@@ -416,6 +447,7 @@
           width: 1.1rem;
           min-width: 1.1rem;
           height: 1.1rem;
+          z-index: 2;
 
           &.country {
             &-gt {
@@ -459,7 +491,7 @@
             }
 
             &-uy {
-              margin-left: 10.6rem;
+              margin-left: 6.6rem;
               margin-top: .8rem;
             }
 
@@ -468,6 +500,100 @@
               margin-top: 1rem;
             }
           }
+          &.start-animation {
+            animation: dotsAnimationMobile 3s cubic-bezier(0.41,-0.01, 1, 1) forwards;
+          }
+
+          &.start-animation-nd {
+            animation: dotsAnimationSecondMobile 3s cubic-bezier(0.41,-0.01, 0.84, 1.07) forwards;
+          }
+          //next line is dot
+        }
+        @keyframes dotsAnimationMobile {
+          0% {
+            background-image: url('../assets/icons/pin.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 10rem;
+            height: 10rem;
+            border: none;
+            background-color: transparent;
+          }
+          65% {
+            background-image: url('../assets/icons/pin.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 6rem;
+            height: 6rem;
+            border-radius: 70%;
+            background-color: transparent;
+            border: none;
+          }
+          80% { background-image: none; }
+          90% {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            border: 1rem solid $tangerine-yellow;
+          }
+          100% {
+            width: 1.8rem;
+            height: 1.8rem;
+            transform: none;
+          }
+        }
+
+        @keyframes dotsAnimationSecondMobile {
+          0% {
+            background-image: url('../assets/icons/pin.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 10rem;
+            height: 10rem;
+            border: none;
+            background-color: transparent;
+          }
+          65% {
+            background-image: url('../assets/icons/pin.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 6rem;
+            height: 6rem;
+            border-radius: 70%;
+            background-color: transparent;
+            border: none;
+          }
+          80% { background-image: none; }
+          90% {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            border: 1rem solid $tangerine-yellow;
+          }
+          100% {
+            width: 1.8rem;
+            height: 1.8rem;
+            transform: none;
+          }
+        }
+
+        &.start-animation {
+          animation: contriesAnimationMobile 1s linear forwards;
+        }
+        //countries
+      }
+      @keyframes contriesAnimationMobile {
+        0%{
+          position: relative;
+          transform: none;
+        }
+        100%{
+          padding-top: 57%;
+          padding-left: 41%;
+          height: 70%;
+          width: 80%;
         }
       }
     }
