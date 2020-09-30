@@ -20,7 +20,7 @@ module.exports = {
       },
       {
         test: /\.(scss|css)$/,
-        use: 
+        use:
         [
           { loader:"style-loader" },
           { loader:"css-loader" },
@@ -28,7 +28,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg)$/,
+        test: /\.(png|jpg|svg)$/,
         loader: 'url-loader'
       }
     ],

@@ -37,6 +37,7 @@
   position: fixed;
   max-height: 14.5rem;
   width: 100%;
+  max-width: 100%;
   opacity: 0.9;
   text-align: left;
   background-color: $color-white;
@@ -45,7 +46,7 @@
   button {
     background: transparent;
     border: none;
-  
+
     &:focus {
       outline: none;
     }
@@ -86,7 +87,7 @@
     justify-content: space-between;
     width: 40%;
     margin: 0 15% 0 5%;
-    
+
     &-single {
       font-size: $font-size-ml;
       font-weight: normal;

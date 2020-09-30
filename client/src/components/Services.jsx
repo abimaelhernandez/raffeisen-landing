@@ -19,7 +19,6 @@ export default class Services extends Component {
 
  resetProps = (childValue) => {
    if (childValue) {
-     console.log('childValue Parent is True ', childValue)
      this.setState({hasBeenClicked: false, clickedId: 0})
    }
  }

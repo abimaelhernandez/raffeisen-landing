@@ -227,9 +227,13 @@ export default class App extends Component {
             sectionRef={menuSections[3].ref}
           />
         </div>
-        <div onMouseEnter={() => this.setState({currentView: menuSections[4].ref})}>
+        <div
+          onMouseEnter={() => this.setState({currentView: menuSections[4].ref})}
+          onTouchStart={() => this.setState({currentView: menuSections[4].ref})}
+        >
           <Coverage
             coverageInfo={messages[locale].coverageObject}
+            animationReady={currentView}
             sectionRef={menuSections[4].ref}
           />
         </div>

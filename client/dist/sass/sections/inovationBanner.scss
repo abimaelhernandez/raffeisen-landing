@@ -24,7 +24,7 @@
     z-index: 1;
 
     &.start-animation {
-      animation: leftGearMove 2.5s ease-out 3s forwards;
+      animation: leftGearMove 1.5s ease-out 2s forwards;
     }
   }
 
@@ -45,8 +45,8 @@
     top: 40%;
 
     &.start-animation {
-      animation: rightGearMove 2.5s ease-out 3s forwards;
-      animation-fill-mode: forwards;
+      animation: rightGearMove 1.5s ease-out 2s forwards;
+      // animation-fill-mode: forwards;
     }
   }
 
@@ -68,7 +68,7 @@
     top: 42%;
 
     &.start-animation {
-      animation: mainTittleAnimation 2s ease-out 2.5s forwards;
+      animation: mainTittleAnimation 2s ease-out 1.5s forwards;
       animation-fill-mode: forwards;
     }
 
@@ -117,7 +117,7 @@
     width: 60%;
 
     &.start-animation {
-      animation: contentAnimation 2s ease-out 5s forwards;
+      animation: contentAnimation 1.5s ease-out 3s forwards;
       animation-fill-mode: forwards;
     }
 
