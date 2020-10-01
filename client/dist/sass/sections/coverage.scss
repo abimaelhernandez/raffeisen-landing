@@ -181,11 +181,11 @@
 
 
         &.start-animation {
-          animation: dotsAnimation 10000ms cubic-bezier(0.31, 0.35, 0.58, 1) forwards;
+          animation: dotsAnimation 4500ms cubic-bezier(0.31, 0.35, 0.58, 1) forwards;
         }
 
         &.start-animation-nd {
-          animation: dotsAnimationSecond 6000ms linear forwards;
+          animation: dotsAnimationSecond 5000ms linear forwards;
         }
         // line bellow is dot
       }
@@ -286,7 +286,7 @@
         }
       }
       &.start-animation {
-        animation: contriesAnimation 2s linear forwards;
+        animation: contriesAnimation 3500ms linear forwards;
       }
       //countries
     }
@@ -296,17 +296,29 @@
         position: relative;
         padding-top: 0%;
         padding-left: 5%;
-        transform: translateY(60rem);
-        transform: translatex(10rem);
+        // transform: translateY(60rem);
+        // transform: translatex(10rem);
         height: 100%;
         width: 100%;
         margin: auto;
       }
-      60% {
+      30% {
         padding-top: 10%;
         padding-left: 20%;
-        transform: translateY(40rem);
-        transform: translatex(5rem);
+      }
+      40% {
+        padding-top: 15%;
+        padding-left: 25%;
+        // transform: translateY(40rem);
+        // transform: translatex(5rem);
+      }
+      50% {
+        padding-top: 20%;
+        padding-left: 30%;
+      }
+      87% {
+        padding-top: 35%;
+        padding-left: 30%;
       }
       100%{
         padding-top: 57%;
