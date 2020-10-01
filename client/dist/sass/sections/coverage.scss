@@ -44,22 +44,22 @@
       opacity: 0;
 
       &.start-animation {
-        animation: animateMap 3s ease-out 2s forwards;
+        animation: animateMap 2500ms ease-out 1000ms forwards;
       }
     }
 
     @keyframes animateMap {
       0% {
-        transform: scale(1.2, 1.2);
+        transform: scale(0.95, 1);
         opacity: 0.1;
       }
       70% {
-        transform: scale(1.1, 1.1);
-        opacity: 0.6;
+        transform: scale(0.98, 1);
+        opacity: 0.7;
       }
       100% {
         transform: none;
-        opacity: 2;
+        opacity: 1;
       }
     }
 
@@ -181,17 +181,17 @@
 
 
         &.start-animation {
-          animation: dotsAnimation 6s ease-out forwards;
+          animation: dotsAnimation 10000ms cubic-bezier(0.31, 0.35, 0.58, 1) forwards;
         }
 
         &.start-animation-nd {
-          animation: dotsAnimationSecond 6s linear forwards;
+          animation: dotsAnimationSecond 6000ms linear forwards;
         }
         // line bellow is dot
       }
 
       @keyframes dotsAnimation {
-        // starts with pin
+        // starts with pin and no background
         // then pin goes away
         // empty circle appears
         // circle gets filled
@@ -215,21 +215,29 @@
           height: 7rem;
           background-color: transparent;
           border: none;
+          border-radius: 50%;
         }
-        57% {
-          background-image: none;
-        }
-        70% {
+        55% { border-radius: 50%; }
+        57% { background-image: none; }
+        58% {
+          width: 3.5rem;
+          height: 3.5rem;
+          border-radius: 50%;
           background-color: transparent;
           border: 0.5rem solid $tangerine-yellow;
+        }
+        59% { border: none; backgroung-color: transparent}
+        60% { background-color: $tangerine-yellow }
+        70% {
           border-radius: 50%;
-          width: 5rem;
-          height: 5rem;
+          // width: 5rem;
+          // height: 5rem;
         }
         100% {
           width: 1.8rem;
           height: 1.8rem;
           background-image: none;
+          // background-color: red;
         }
       }
 
@@ -254,12 +262,21 @@
           background-color: transparent;
           border: none;
         }
-        60% { background-image: none; }
-        70% {
-          width: 5rem;
-          height: 5rem;
+        55% { border-radius: 50%; }
+        57% { background-image: none; }
+        58% {
+          width: 3.5rem;
+          height: 3.5rem;
           border-radius: 50%;
-          border: 1rem solid $tangerine-yellow;
+          background-color: transparent;
+          border: 0.5rem solid $tangerine-yellow;
+        }
+        59% { border: none; backgroung-color: transparent}
+        60% { background-color: $tangerine-yellow }
+        70% {
+          border-radius: 50%;
+          // width: 5rem;
+          // height: 5rem;
         }
         100% {
           width: 1.8rem;
