@@ -5,6 +5,8 @@
 
   button {
     z-index: 2;
+    border: none;
+    outline: none;
 
     span {
       font-size: $font-size-mini-jumbo;
@@ -18,7 +20,18 @@
     top: 6%;
     height: 3rem;
     text-align: center;
+    backgroundImage: url('../assets/icons/cerrar-gris.svg');
     background-repeat: no-repeat;
+
+    @media only screen and (max-width: 700px){
+      right: 1.5rem;
+      width: 3rem;
+      top: 6%;
+      height: 3rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('../assets/icons/cerrar-blanco.svg');
+    }
   }
 
   #servicios-slider-id {
@@ -37,6 +50,13 @@
         transition: opacity .15s ease;
         background-color: #e5e5e5;
       }
+
+     .carousel-control-prev-icon,
+       .carousel-control-next-icon {
+         background-image: url('../assets/icons/flecha-gris.svg');
+         background-size: cover;
+         background-repeat: no-repeat;
+     }
 
      .carousel-control-prev-icon {
        transform: rotate(180deg);
@@ -97,6 +117,25 @@
           margin: 6rem 0;
         }
 
+        .list-items {
+          margin: 1rem 0;
+          .item {
+            margin: 0 2rem;
+            display: flex;
+            align-items: center;
+
+            &::before {
+              content: '';
+              position: absolute;
+              width: 1rem;
+              height: 1rem;
+              border-radius: 50%;
+              background: black;
+              left: 3.7rem;
+            }
+          }
+        }
+
         .clause {
           margin: 1.6rem 0;
           bottom: 0;
@@ -142,7 +181,19 @@
           height: 15rem;
           color: #fff;
           text-align: center;
+          background-color: transparent;
         }
+
+      .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          background-image: url('../assets/icons/flecha-blanca.svg');
+          background-size: cover;
+          background-repeat: no-repeat;
+      }
+
+      .carousel-control-prev-icon {
+        transform: rotate(180deg);
+      }
 
       .inner-container{
         display: flex;
@@ -157,6 +208,14 @@
           background-repeat: no-repeat;
           background-size: cover;
           min-height: 3rem;
+
+          &.analytics {
+            background-position: right;
+          }
+
+          &.training {
+            background-position: center;
+          }
         }
 
         .caption {

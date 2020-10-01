@@ -109,7 +109,7 @@ export default class Slider extends Component {
             <span
               className="carousel-control-prev-icon"
               aria-hidden="true"
-              style={{backgroundImage: `url(../../assets/icons/Flecha-blanca.svg)`}}
+              style={{backgroundImage: `url(../../assets/icons/flecha-blanca.svg)`}}
             >
             </span>
             <span className="sr-only">Previous</span>
@@ -118,7 +118,7 @@ export default class Slider extends Component {
             <span
               className="carousel-control-next-icon"
               aria-hidden="true"
-              style={{backgroundImage: `url(../../assets/icons/Flecha-blanca.svg)`}}
+              style={{backgroundImage: `url(../../assets/icons/flecha-blanca.svg)`}}
             >
             </span>
             <span className="sr-only">Next</span>

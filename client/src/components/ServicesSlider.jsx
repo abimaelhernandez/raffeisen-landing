@@ -26,7 +26,6 @@ export default class ServicesSlider extends Component {
           className="close servicesSlider-parent-close"
           aria-label="Close"
           onClick={this.closeSliderView}
-          style={{backgroundImage: `url(../../assets/icons/cerrar-gris.svg)`}}
         >
         </button>
         <div id="servicios-slider-id" className="carousel slide" data-ride="carousel" data-interval="false">
@@ -36,7 +35,7 @@ export default class ServicesSlider extends Component {
             >
               <div className="inner-container">
                 <div
-                  className="image"
+                  className={`image ${item.name}`}
                   style={{ backgroundImage: `url(${item.imageBackground})` }}
                 >
                   <p className='title'>
@@ -54,7 +53,7 @@ export default class ServicesSlider extends Component {
                   <p className="paragraph">{item.mainParahraph}</p>
                   <div className="list-items">
                       {Object.values(item.listItems).map(listItem =>
-                        <li> {listItem} </li>
+                        <p className="item">{listItem}</p>
                       )}
                   </div>
                   <p className="clause">{item.secondaryParagraph}</p>
@@ -72,7 +71,6 @@ export default class ServicesSlider extends Component {
             <span
               className="carousel-control-prev-icon"
               aria-hidden="true"
-              style={{backgroundImage: `url(../../assets/icons/flecha-gris.svg)`}}
             >
             </span>
             <span className="sr-only">Previous</span>
@@ -86,7 +84,6 @@ export default class ServicesSlider extends Component {
             <span
               className="carousel-control-next-icon"
               aria-hidden="true"
-              style={{backgroundImage: `url(../../assets/icons/flecha-gris.svg)`}}
             >
             </span>
             <span className="sr-only">Next</span>
