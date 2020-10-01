@@ -4,13 +4,13 @@ import PropTypes from 'prop-types'
 
 export default class Slider extends Component {
   render() {
-    const { slidesInfo, sectionRef, aboutUsSlider } = this.props
+    const { slidesInfo, sectionRef } = this.props
     return (
       <div className="slider-container" id={sectionRef}>
         <video
           className="slider-container-mobileVideo"
           playsInline autoPlay muted loop>
-          <source src="../../assets/videos/GlassSphere.mp4" type="video/mp4" />
+          <source src="../../assets/videos/light-sphere.mp4" type="video/mp4" />
             Your browser does not support HTML5 video.
         </video>
         <div
@@ -27,7 +27,6 @@ export default class Slider extends Component {
               <div className="first-slide-content">
                 <Fade left>
                   <div className="first-slide-content-text">
-                    <span className="dot"></span>
                     <div className="first-slide-content-text-title">
                       {slidesInfo[0].title}
                     </div>
@@ -54,14 +53,6 @@ export default class Slider extends Component {
                   </div>
                 </Fade>
               </div>
-              <div
-                className="aboutus shorterAboutus"
-                style={{backgroundImage: `url(../../assets/icons/AboutUs-ES.svg)`}}
-                onClick={aboutUsSlider()}
-                onKeyDown={aboutUsSlider()}
-                role="button"
-                tabIndex={0}
-              />
             </div>
             <div
               className="carousel-item second-slide"
@@ -79,21 +70,12 @@ export default class Slider extends Component {
                 </div>
                 <div className="second-slide-content-text">
                   <Fade up>
-                    <span className="dot"/>
                     <div className="carousel-caption second-slide-content-text-title">
                       {slidesInfo[1].title}
                     </div>
                   </Fade>
                 </div>
               </div>
-              <div
-                className="aboutus shorterAboutus"
-                style={{backgroundImage: `url(../../assets/icons/AboutUs-ES.svg)`}}
-                onClick={aboutUsSlider()}
-                onKeyDown={aboutUsSlider()}
-                role="button"
-                tabIndex={0}
-              />
             </div>
             <div
               className="carousel-item third-slide"
@@ -110,21 +92,12 @@ export default class Slider extends Component {
                 </div>
                 <div className="third-slide-content-text">
                   <Fade left>
-                    <span className="dot"></span>
                     <div className="third-slide-content-text-title">
                       {slidesInfo[2].title}
                     </div>
                   </Fade>
                 </div>
               </div>
-              <div
-                className="aboutus shorterAboutus"
-                style={{backgroundImage: `url(../../assets/icons/AboutUs-ES.svg)`}}
-                onClick={aboutUsSlider()}
-                onKeyDown={aboutUsSlider()}
-                role="button"
-                tabIndex={0}
-              />
             </div>
           </div>
           <a
@@ -136,7 +109,6 @@ export default class Slider extends Component {
             <span
               className="carousel-control-prev-icon"
               aria-hidden="true"
-              style={{backgroundImage: `url(../../assets/icons/Flecha-blanca.svg)`}}
             >
             </span>
             <span className="sr-only">Previous</span>
@@ -145,7 +117,6 @@ export default class Slider extends Component {
             <span
               className="carousel-control-next-icon"
               aria-hidden="true"
-              style={{backgroundImage: `url(../../assets/icons/Flecha-blanca.svg)`}}
             >
             </span>
             <span className="sr-only">Next</span>
@@ -167,6 +138,5 @@ export default class Slider extends Component {
 
 Slider.propTypes = {
   slidesInfo: PropTypes.instanceOf(Object),
-  sectionRef: PropTypes.string,
-  aboutUsSlider: PropTypes.instanceOf(Object)
+  sectionRef: PropTypes.string
 }

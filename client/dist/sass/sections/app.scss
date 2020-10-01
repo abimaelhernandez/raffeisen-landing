@@ -41,7 +41,7 @@
   opacity: 0.9;
   text-align: left;
   background-color: $color-white;
-  z-index: 200;
+  z-index: 5000;
 
   button {
     background: transparent;
@@ -164,21 +164,34 @@
     &-wrapper {
       justify-content: space-between;
       margin: 2rem 2rem;
+
+    }
+
+    &-lang {
+      width: 9%;
+    }
+
+    &-shareOptions {
+      width: 9%;
     }
 
     &-items {
       width: 58%;
       margin: 0 0.5rem;
+
+      &-single {
+        margin: 0 0.3rem;
+      }
     }
 
     &-contacts {
-      width: 28%;
+      width: 20%;
       margin-left: 0.8rem;
 
-      &-share {
-        height: 2rem;
-        width: 2rem;
-      }
+        &-share {
+          height: 2rem;
+          width: 2rem;
+        }
 
       &-lang {
         margin: 0;

@@ -14,7 +14,7 @@
       font-weight: 900;
       line-height: 0.98;
       text-align: left;
-      color: $dim-grey;
+      color: $cobalt-blue;
       margin-bottom: 3rem;
     }
 
@@ -33,31 +33,33 @@
       // display: block;
       // height: auto;
       width: 50%;
-      max-width: 52rem;
-      min-width: 50rem;
+      max-width: 55rem;
+      // min-width: 50rem;
       // float: right;
       background-repeat: no-repeat;
+      min-height: inherit;
       // object-fit: contain;
-      margin: 0 auto 0 23rem;
+      // margin: 0 auto 0 23rem;
+      margin: auto;
       opacity: 0;
 
       &.start-animation {
-        animation: animateMap 3s ease-out 2s forwards;
+        animation: animateMap 2500ms ease-out 1000ms forwards;
       }
     }
 
     @keyframes animateMap {
       0% {
-        transform: scale(1.2, 1.2);
+        transform: scale(0.95, 1);
         opacity: 0.1;
       }
       70% {
-        transform: scale(1.1, 1.1);
-        opacity: 0.6;
+        transform: scale(0.98, 1);
+        opacity: 0.7;
       }
       100% {
         transform: none;
-        opacity: 2;
+        opacity: 1;
       }
     }
 
@@ -179,21 +181,16 @@
 
 
         &.start-animation {
-          animation: dotsAnimation 6s ease-out forwards;
+          animation: dotsAnimation 4500ms cubic-bezier(0.31, 0.35, 0.58, 1) forwards;
         }
 
         &.start-animation-nd {
-          animation: dotsAnimationSecond 6s linear forwards;
+          animation: dotsAnimationSecond 5000ms linear forwards;
         }
         // line bellow is dot
       }
 
       @keyframes dotsAnimation {
-        // starts with pin
-        // then pin goes away
-        // empty circle appears
-        // circle gets filled
-        // cirlce turns small into place
         0% {
           background-image: url('../assets/icons/pin.svg');
           background-repeat: no-repeat;
@@ -213,16 +210,21 @@
           height: 7rem;
           background-color: transparent;
           border: none;
+          border-radius: 50%;
         }
-        57% {
-          background-image: none;
-        }
-        70% {
+        55% { border-radius: 50%; }
+        57% { background-image: none; }
+        58% {
+          width: 3.5rem;
+          height: 3.5rem;
+          border-radius: 50%;
           background-color: transparent;
           border: 0.5rem solid $tangerine-yellow;
+        }
+        59% { border: none; backgroung-color: transparent}
+        60% { background-color: $tangerine-yellow }
+        70% {
           border-radius: 50%;
-          width: 5rem;
-          height: 5rem;
         }
         100% {
           width: 1.8rem;
@@ -252,22 +254,28 @@
           background-color: transparent;
           border: none;
         }
-        60% { background-image: none; }
-        70% {
-          width: 5rem;
-          height: 5rem;
+        55% { border-radius: 50%; }
+        57% { background-image: none; }
+        58% {
+          width: 3.5rem;
+          height: 3.5rem;
           border-radius: 50%;
-          border: 1rem solid $tangerine-yellow;
+          background-color: transparent;
+          border: 0.5rem solid $tangerine-yellow;
+        }
+        59% { border: none; backgroung-color: transparent}
+        60% { background-color: $tangerine-yellow }
+        70% {
+          border-radius: 50%;
         }
         100% {
           width: 1.8rem;
           height: 1.8rem;
           transform: none;
-          // background-color: red;
         }
       }
       &.start-animation {
-        animation: contriesAnimation 2s linear forwards;
+        animation: contriesAnimation 3500ms linear forwards;
       }
       //countries
     }
@@ -277,17 +285,25 @@
         position: relative;
         padding-top: 0%;
         padding-left: 5%;
-        transform: translateY(60rem);
-        transform: translatex(10rem);
         height: 100%;
         width: 100%;
         margin: auto;
       }
-      60% {
+      30% {
         padding-top: 10%;
         padding-left: 20%;
-        transform: translateY(40rem);
-        transform: translatex(5rem);
+      }
+      40% {
+        padding-top: 15%;
+        padding-left: 25%;
+      }
+      50% {
+        padding-top: 20%;
+        padding-left: 30%;
+      }
+      87% {
+        padding-top: 35%;
+        padding-left: 30%;
       }
       100%{
         padding-top: 57%;
@@ -297,18 +313,6 @@
       }
     }
   }
-
-  // &_description {
-  //   max-width: 45%;
-  //
-  //   &-icon {
-  //     width: 13rem;
-  //     height: 14rem;
-  //     object-fit: contain;
-  //     background-repeat: no-repeat;
-  //     margin-bottom: 4.5rem;
-  //   }
-  // }
 }
 
 @media (max-width: 1025px) {
@@ -336,18 +340,7 @@
     width: 100%;
     display: block;
     margin: 0;
-    height: 96vh;
-
-    // &_description {
-    //   max-width: 100%;
-    //   margin-bottom: 3rem;
-    //   &-icon {
-    //     width: 9rem;
-    //     height: 10rem;
-    //     margin-bottom: 3rem;
-    //   }
-    //
-    // }
+    min-height: 88rem;
 
     &-title {
       font-size: $font-size-xxxl;
@@ -416,25 +409,23 @@
     &-map {
       &-img {
         width: 100%;
-        min-width: 30rem;
         min-height: 45rem;
         max-height: 30vh;
         max-width: 100%;
-        // z-index: -20;
 
         &.start-animation {
-          animation: animateMapMobile 3s ease-out 1s forwards;
+          animation: animateMapMobile 2500ms ease-out 500ms forwards;
         }
       }
 
       @keyframes animateMapMobile {
         0% {
-          transform: scale(1);
+          transform: scale(0.95, 1);
           opacity: 0.1;
         }
         70% {
-          transform: scale(1.01, 1.01);
-          opacity: 0.8;
+          transform: scale(0.98, 1);
+          opacity: 0.7;
         }
         100% {
           transform: none;
@@ -501,11 +492,11 @@
             }
           }
           &.start-animation {
-            animation: dotsAnimationMobile 3s cubic-bezier(0.41,-0.01, 1, 1) forwards;
+            animation: dotsAnimationMobile 3000ms cubic-bezier(0.41,-0.01, 1, 1) forwards;
           }
 
           &.start-animation-nd {
-            animation: dotsAnimationSecondMobile 3s cubic-bezier(0.41,-0.01, 0.84, 1.07) forwards;
+            animation: dotsAnimationSecondMobile 3000ms cubic-bezier(0.41,-0.01, 0.84, 1.07) forwards;
           }
           //next line is dot
         }
@@ -599,41 +590,3 @@
     }
   }
 }
-
-// @media (max-width: 418px) and (min-width: 400px) {
-//   .rl_coverage-map-countries {
-//     .dot {
-//       &.country {
-//         &-cl {
-//           margin-left: 7rem;
-//         }
-//
-//         &-uy {
-//           margin-left: 12rem;
-//         }
-//
-//         &-py {
-//           margin-left: 10.5rem;
-//           margin-top: 1.2rem;
-//         }
-//
-//         &-gy {
-//           margin-left: 4.5rem;
-//         }
-//
-//         &-cr {
-//           margin-left: 4.5rem;
-//           margin-top: .5rem;
-//         }
-//
-//         &-sv {
-//           margin-left: 2.5rem;
-//         }
-//
-//         &-do {
-//           margin-left: 3.5rem;
-//         }
-//       }
-//     }
-//   }
-// }
