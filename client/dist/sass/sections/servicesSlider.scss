@@ -20,18 +20,10 @@
     top: 6%;
     height: 3rem;
     text-align: center;
-    backgroundImage: url('../assets/icons/cerrar-gris.svg');
+    background-image: url('../assets/icons/cerrar-gris.svg');
     background-repeat: no-repeat;
-
-    @media only screen and (max-width: 700px){
-      right: 1.5rem;
-      width: 3rem;
-      top: 6%;
-      height: 3rem;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-image: url('../assets/icons/cerrar-blanco.svg');
-    }
+    background-size: contain;
+    z-index: 1;
   }
 
   #servicios-slider-id {
@@ -170,6 +162,20 @@
  }
 
   @media (max-width: 474px) {
+
+    &-close {
+      position: absolute;
+      right: 1.5rem;
+      width: 2rem;
+      top: 3%;
+      height: 3rem;
+      text-align: center;
+      background-image: url('../assets/icons/Close.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: 6000;
+    }
+
     #servicios-slider-id {
       .carousel-control-next,
         .carousel-control-prev {

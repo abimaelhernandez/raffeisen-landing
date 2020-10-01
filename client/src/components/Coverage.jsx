@@ -9,16 +9,9 @@ export default class Coverage extends Component {
     }
   }
 
-  componentDidMount() {
-    // const { sectionRef } = this.props
-    // this.setState({ animationstart: window.location.href.includes(sectionRef) })
-    console.log('in mount log', window.location)
-  }
-
   componentDidUpdate(prevProps) {
     const { animationstart } = this.state
     const { sectionRef } = this.props
-    console.log('component did update :', prevProps.animationReady, animationstart )
     if (prevProps.animationReady === sectionRef && !animationstart) {
       this.startAnimation()
     }
@@ -39,8 +32,6 @@ export default class Coverage extends Component {
   }
 
   render() {
-    const { animationstart } = this.state
-    console.log(animationstart)
     const { coverageInfo, sectionRef} = this.props
     return (<div className="rl_coverage" id={sectionRef}>
       <div className="rl_coverage_description">
