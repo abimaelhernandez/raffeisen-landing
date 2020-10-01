@@ -35,6 +35,13 @@
        background-color: #737373;
       }
 
+    .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-image: url('../assets/icons/flecha-blanca.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
     .carousel-control-prev-icon {
       transform: rotate(180deg);
     }
