@@ -40,7 +40,6 @@ export default class Coverage extends Component {
       </div>
       <div
         className={this.changeClassName('rl_coverage-map-img')}
-        style={{backgroundImage: 'url("../assets/images/coverage_map.svg")'}}
       >
         <div className={this.changeClassName('rl_coverage-map-countries')}>
           { coverageInfo.countries.map((country) => country.sections

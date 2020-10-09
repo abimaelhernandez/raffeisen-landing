@@ -7,7 +7,7 @@
   padding: 6rem 8rem 2rem 6rem;
   justify-content: space-between;
   background-color: $color-white;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 
     &-title {
       font-size: $font-size-jumbo;
@@ -30,31 +30,40 @@
 
   &-map {
     &-img {
-      // display: block;
-      // height: auto;
       width: 50%;
       max-width: 55rem;
-      // min-width: 50rem;
-      // float: right;
+      background-image: url('../assets/images/coverage_map.svg');
       background-repeat: no-repeat;
+      background-position: center;
+      // background-size: cover;
       min-height: inherit;
-      // object-fit: contain;
-      // margin: 0 auto 0 23rem;
       margin: auto;
       opacity: 0;
 
       &.start-animation {
-        animation: animateMap 2500ms ease-out 1000ms forwards;
+        animation: animateMap 5000ms ease-out 1000ms forwards;
       }
     }
 
     @keyframes animateMap {
       0% {
-        transform: scale(0.95, 1);
-        opacity: 0.1;
+        transform: scale(0.95, 0.95);
+        background-image: none;
       }
-      70% {
-        transform: scale(0.98, 1);
+      20% {
+        transform: scale(0.95, 0.95);
+        background-image: none;
+      }
+      40% {
+        transform: scale(0.95, 0.95);
+        background-image: none;
+      }
+      60% {
+        transform: scale(0.95, 0.95);
+        opacity: 0.5;
+      }
+      80% {
+        transform: scale(0.98, 0.98);
         opacity: 0.7;
       }
       100% {
@@ -64,8 +73,8 @@
     }
 
     &-countries {
-      padding-top: 57%;
-      padding-left: 41%;
+      // padding-top: 63%;
+      // padding-left: 42%;
       height: 70%;
       width: 80%;
 
@@ -181,11 +190,11 @@
 
 
         &.start-animation {
-          animation: dotsAnimation 4500ms cubic-bezier(0.31, 0.35, 0.58, 1) forwards;
+          animation: dotsAnimation 4500ms linear forwards;
         }
 
         &.start-animation-nd {
-          animation: dotsAnimationSecond 5000ms linear forwards;
+          animation: dotsAnimationSecond 4500ms linear forwards;
         }
         // line bellow is dot
       }
@@ -196,21 +205,21 @@
           background-repeat: no-repeat;
           background-position: center;
           background-size: contain;
-          width: 10rem;
-          height: 10rem;
           background-color: transparent;
           border: none;
+          transform: translateY(-100px);
         }
         50% {
           background-image: url('../assets/icons/pin.svg');
           background-repeat: no-repeat;
           background-position: center;
           background-size:contain;
-          width: 7rem;
-          height: 7rem;
+          width: 6rem;
+          height: 6rem;
           background-color: transparent;
           border: none;
           border-radius: 50%;
+          transform: translateY(-100px);
         }
         55% { border-radius: 50%; }
         57% { background-image: none; }
@@ -229,6 +238,7 @@
         100% {
           width: 1.8rem;
           height: 1.8rem;
+          // background-color: blue;
           background-image: none;
         }
       }
@@ -239,20 +249,20 @@
           background-repeat: no-repeat;
           background-position: center;
           background-size: contain;
-          width: 13rem;
-          height: 13rem;
           background-color: transparent;
           border: none;
+          transform: translateY(-200px);
         }
         50% {
           background-image: url('../assets/icons/pin.svg');
           background-repeat: no-repeat;
           background-position: center;
           background-size: contain;
-          width: 8rem;
-          height: 8rem;
+          width: 4rem;
+          height: 4rem;
           background-color: transparent;
           border: none;
+          transform: translateY(-200px);
         }
         55% { border-radius: 50%; }
         57% { background-image: none; }
@@ -271,6 +281,7 @@
         100% {
           width: 1.8rem;
           height: 1.8rem;
+          // background-color: red;
           transform: none;
         }
       }
@@ -283,47 +294,30 @@
     @keyframes contriesAnimation {
       0%{
         position: relative;
-        padding-top: 0%;
-        padding-left: 5%;
-        height: 100%;
-        width: 100%;
-        margin: auto;
+        padding-top: 50%;
+        padding-left: 42%;
       }
-      30% {
-        padding-top: 5%;
-        padding-left: 5%;
-      }
-      40% {
-        padding-top: 10%;
-        padding-left: 10%;
-      }
-      50% {
-        padding-top: 15%;
-        padding-left: 12%;
-      }
-      60% {
-        padding-top: 20%;
-        padding-left: 15%;
-      }
-      70% {
-        padding-top: 25%;
-        padding-left: 20%;
-      }
-      80% {
-        padding-top: 30%;
-        padding-left: 25%;
-      }
-      90% {
-        padding-top: 35%;
-        padding-left: 30%;
-      }
-      90% {
-        padding-top: 40%;
-        padding-left: 35%;
-      }
+      // 30% {
+      //   padding-left: 0%;
+      // }
+      // 40% {
+      //   padding-left: 7%;
+      // }
+      // 50% {
+      //   padding-left: 14%;
+      // }
+      // 70% {
+      //   padding-left: 21%;
+      // }
+      // 80% {
+      //   padding-left: 28%;
+      // }
+      // 90% {
+      //   padding-left: 35%;
+      // }
       100%{
-        padding-top: 57%;
-        padding-left: 41%;
+        padding-top: 63%;
+        padding-left: 42%;
         height: 70%;
         width: 80%;
       }
