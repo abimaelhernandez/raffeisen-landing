@@ -35,7 +35,6 @@
       background-image: url('../assets/images/coverage_map.svg');
       background-repeat: no-repeat;
       background-position: center;
-      // background-size: cover;
       min-height: inherit;
       margin: auto;
       opacity: 0;
@@ -73,8 +72,6 @@
     }
 
     &-countries {
-      // padding-top: 63%;
-      // padding-left: 42%;
       height: 70%;
       width: 80%;
 
@@ -127,13 +124,168 @@
         }
 
         &.country {
+          @keyframes dotTop {
+            0% {
+              background-image: url('../assets/icons/pin.svg');
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              background-color: transparent;
+              border: none;
+              transform: translateY(-300px);
+              // transform: translateX(-50px);
+            }
+            50% {
+              background-image: url('../assets/icons/pin.svg');
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size:contain;
+              width: 6.5rem;
+              height: 6.5rem;
+              background-color: transparent;
+              border: none;
+              border-radius: 50%;
+              transform: translateX(-50px);
+              top: -10rem;
+            }
+            55% { border-radius: 50%; }
+            57% { background-image: none; }
+            59% { border: none; backgroung-color: transparent }
+            60% { background-color: $tangerine-yellow }
+            70% { border-radius: 50%; }
+            100% {
+              width: 1.8rem;
+              height: 1.8rem;
+              background-image: none;
+              // background-color: red;
+            }
+          }
+
+          @keyframes dotTopSmall {
+            0% {
+              background-image: url('../assets/icons/pin.svg');
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              background-color: transparent;
+              border: none;
+              transform: translateY(-200px);
+            }
+            50% {
+              background-image: url('../assets/icons/pin.svg');
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size:contain;
+              width: 2rem;
+              height: 2rem;
+              background-color: transparent;
+              border: none;
+              border-radius: 50%;
+              transform: translateX(30px);
+            }
+            55% { border-radius: 50%; }
+            57% { background-image: none; }
+            59% { border: none; backgroung-color: transparent }
+            60% { background-color: $tangerine-yellow }
+            70% { border-radius: 50%; }
+            100% {
+              width: 1.8rem;
+              height: 1.8rem;
+              background-image: none;
+              // background-color: purple;
+            }
+          }
+
+          @keyframes dotTopRight {
+            0% {
+              background-image: url('../assets/icons/pin.svg');
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              background-color: transparent;
+              border: none;
+              transform: translateY(-200px);
+            }
+            50% {
+              background-image: url('../assets/icons/pin.svg');
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size:contain;
+              width: 4.5rem;
+              height: 4.5rem;
+              background-color: transparent;
+              border: none;
+              border-radius: 50%;
+              transform: translateX(80px);
+            }
+            55% { border-radius: 50%; }
+            57% { background-image: none; }
+            59% { border: none; backgroung-color: transparent }
+            60% { background-color: $tangerine-yellow }
+            70% { border-radius: 50%; }
+            100% {
+              width: 1.8rem;
+              height: 1.8rem;
+              background-image: none;
+              // background-color: pink;
+            }
+          }
+          @keyframes dotTopLeft {
+            0% {
+              background-image: url('../assets/icons/pin.svg');
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              background-color: transparent;
+              border: none;
+              transform: translateY(-200px);
+            }
+            50% {
+              background-image: url('../assets/icons/pin.svg');
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size:contain;
+              width: 4rem;
+              height: 4rem;
+              background-color: transparent;
+              border: none;
+              border-radius: 50%;
+              transform: translateX(-60px);
+            }
+            55% { border-radius: 50%; }
+            57% { background-image: none; }
+            59% { border: none; backgroung-color: transparent }
+            60% { background-color: $tangerine-yellow }
+            70% { border-radius: 50%; }
+            100% {
+              width: 1.8rem;
+              height: 1.8rem;
+              background-image: none;
+              // background-color: brown;
+            }
+          }
+
+          &-mx {
+            &.start-animation {
+              animation: dotTopSmall 4000ms ease-out 1000ms forwards;
+            }
+          }
+
           &-gt {
             margin: 0.2rem 0 0 1.5rem;
+
+            &.start-animation {
+              animation: dotTop 4000ms ease-out 1000ms forwards;
+            }
           }
 
           &-hn {
             margin-top: -0.3rem;
             margin-left: 0.3rem;
+
+            &.start-animation {
+              animation: dotTopSmall 4000ms ease-out 1000ms forwards;
+            }
           }
 
           &-do {
@@ -143,178 +295,103 @@
             .country-name {
               right: 4.5rem;
             }
+
+            &.start-animation {
+              animation: dotTopRight 4000ms ease-out 1000ms forwards;
+            }
           }
 
           &-ni {
             margin-left: .5rem;
             margin-top: -1rem;
+
+            &.start-animation {
+              animation: dotTopLeft 4000ms ease-out 1000ms forwards;
+            }
           }
 
           &-sv {
             margin-left: 3.5rem;
             margin-top: -.5rem;
+
+            &.start-animation {
+              animation: dotTopRight 4000ms ease-out 1000ms forwards;
+            }
           }
 
           &-cr {
             margin-left: 6.3rem;
+
+            &.start-animation {
+              animation: dotTopSmall 4000ms ease-out 1000ms forwards;
+            }
           }
 
           &-ec {
             margin-left: 7.5rem;
             margin-top: .2rem;
+
+            &.start-animation {
+              animation: dotTop 4000ms ease-out 1000ms forwards;
+            }
           }
 
           &-gy {
             margin-left: 4rem;
             margin-top: -2rem;
+
+            &.start-animation {
+              animation: dotTopLeft 4000ms ease-out 1000ms forwards;
+            }
           }
 
           &-pe {
             margin-left: 9rem;
             margin-top: 4rem;
+
+            &.start-animation {
+              animation: dotTopRight 4000ms ease-out 1000ms forwards;
+            }
           }
 
           &-py {
             margin-left: 15rem;
+
+            &.start-animation {
+              animation: dotTopRight 4000ms ease-out 1000ms forwards;
+            }
           }
 
           &-uy {
             margin-left: 17.2rem;
             margin-top: 1.8rem;
+
+            &.start-animation {
+              animation: dotTopSmall 4000ms ease-out 1000ms forwards;
+            }
           }
 
           &-cl {
             margin-left: 10rem;
+
+            &.start-animation {
+              animation: dotTopSmall 4000ms ease-out 1000ms forwards;
+            }
           }
         }
-
-
-        &.start-animation {
-          animation: dotsAnimation 4500ms linear forwards;
-        }
-
-        &.start-animation-nd {
-          animation: dotsAnimationSecond 4500ms linear forwards;
-        }
-        // line bellow is dot
       }
 
-      @keyframes dotsAnimation {
-        0% {
-          background-image: url('../assets/icons/pin.svg');
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: contain;
-          background-color: transparent;
-          border: none;
-          transform: translateY(-100px);
-        }
-        50% {
-          background-image: url('../assets/icons/pin.svg');
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size:contain;
-          width: 6rem;
-          height: 6rem;
-          background-color: transparent;
-          border: none;
-          border-radius: 50%;
-          transform: translateY(-100px);
-        }
-        55% { border-radius: 50%; }
-        57% { background-image: none; }
-        // 58% {
-        //   width: 3.5rem;
-        //   height: 3.5rem;
-        //   border-radius: 50%;
-        //   background-color: transparent;
-        //   border: 0.5rem solid $tangerine-yellow;
-        // }
-        59% { border: none; backgroung-color: transparent}
-        60% { background-color: $tangerine-yellow }
-        70% {
-          border-radius: 50%;
-        }
-        100% {
-          width: 1.8rem;
-          height: 1.8rem;
-          // background-color: blue;
-          background-image: none;
-        }
-      }
-
-      @keyframes dotsAnimationSecond {
-        0% {
-          background-image: url('../assets/icons/pin.svg');
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: contain;
-          background-color: transparent;
-          border: none;
-          transform: translateY(-200px);
-        }
-        50% {
-          background-image: url('../assets/icons/pin.svg');
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: contain;
-          width: 4rem;
-          height: 4rem;
-          background-color: transparent;
-          border: none;
-          transform: translateY(-200px);
-        }
-        55% { border-radius: 50%; }
-        57% { background-image: none; }
-        // 58% {
-        //   width: 3.5rem;
-        //   height: 3.5rem;
-        //   border-radius: 50%;
-        //   background-color: transparent;
-        //   border: 0.5rem solid $tangerine-yellow;
-        // }
-        59% { border: none; backgroung-color: transparent}
-        60% { background-color: $tangerine-yellow }
-        70% {
-          border-radius: 50%;
-        }
-        100% {
-          width: 1.8rem;
-          height: 1.8rem;
-          // background-color: red;
-          transform: none;
-        }
-      }
       &.start-animation {
-        animation: contriesAnimation 3500ms linear forwards;
+        animation: contriesAnimation 4200ms linear forwards;
       }
-      //countries
     }
 
     @keyframes contriesAnimation {
       0%{
         position: relative;
-        padding-top: 50%;
+        padding-top: 30%;
         padding-left: 42%;
       }
-      // 30% {
-      //   padding-left: 0%;
-      // }
-      // 40% {
-      //   padding-left: 7%;
-      // }
-      // 50% {
-      //   padding-left: 14%;
-      // }
-      // 70% {
-      //   padding-left: 21%;
-      // }
-      // 80% {
-      //   padding-left: 28%;
-      // }
-      // 90% {
-      //   padding-left: 35%;
-      // }
       100%{
         padding-top: 63%;
         padding-left: 42%;

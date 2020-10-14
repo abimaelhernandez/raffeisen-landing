@@ -26,10 +26,10 @@ export default class Coverage extends Component {
     return `${name} ${animationstart ? 'start-animation' : ''}`
   }
 
-  changeClassNameSecondary = (name) => {
-    const {animationstart} = this.state
-    return `${name} ${animationstart ? 'start-animation-nd' : ''}`
-  }
+  // changeClassNameSecondary = (name) => {
+  //   const {animationstart} = this.state
+  //   return `${name} ${animationstart ? 'start-animation-nd' : ''}`
+  // }
 
   render() {
     const { coverageInfo, sectionRef} = this.props
@@ -50,7 +50,7 @@ export default class Coverage extends Component {
                 { country.sections.map((place) =>
                   <span
                     key={`${place.name}-${place.style}`}
-                    className={`${this.changeClassName('dot')} ${place.style}`}
+                    className={`dot ${this.changeClassName(place.style)}`}
                   >
                     <span className="country-name">{place.name}</span>
                   </span>)
@@ -58,7 +58,7 @@ export default class Coverage extends Component {
               </div>
               : <span
                   key={`${country.name}-${country.style}`}
-                  className={`${this.changeClassNameSecondary('dot')} ${country.style}`}
+                  className={`dot ${this.changeClassName(country.style)}`}
                 >
                 <span className="country-name">{country.name}</span>
               </span>)
