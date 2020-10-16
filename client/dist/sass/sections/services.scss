@@ -19,17 +19,22 @@
       background-size: cover;
       border: none;
       outline: none;
+      // max-height: 57rem;
 
       &.analytics {
         background-position: right;
       }
-      //
+
       &.clicked {
         position: relative;
-        animation: example 1000ms ease-out forwards;
+        animation: sAnimation 1000ms ease-out forwards;
       }
 
-      @keyframes example {
+      &.firstSquare {
+        animation: fAnimation 1000ms ease-out forwards;
+      }
+
+      @keyframes sAnimation {
         0% {
           left: 50%;
         }
@@ -42,32 +47,39 @@
         }
       }
 
+      @keyframes fAnimation {
+        50% {
+          width: 41.5%
+        }
+        100% {
+          left: 0%;
+          width: 50%
+        }
+      }
+
+
       &-title {
         position: relative;
-        width: 100%;
+        // width: 100%;
         display: flex;
-        top: 10%;
 
         &-logo {
-          position: relative;
           width: 4rem;
           height: 4rem;
-          display: flex;
-          align-items: center;
-          background-position: center;
+          background-position: center center;
           background-repeat: no-repeat;
+          background-size: cover;
+          margin: 0 1.6rem;
         }
 
         &-text {
           display: flex;
           align-items: center;
-          font-family: Avenir;
           font-size: 3rem;
-          font-weight: 900;
+          font-weight: 600;
           line-height: 0.98;
           text-align: left;
           color: white;
-          margin-left: 1.6rem;
         }
       }
     }

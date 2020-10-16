@@ -58,12 +58,12 @@
       position: relative;
       width: 100%;
       display: flex;
-      max-height: 57rem;
+      max-height: 62rem;
 
       .image {
         position: relative;
         width: 50%;
-        padding-bottom : 27%;
+        padding-bottom : 26.5%;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -71,7 +71,6 @@
          .title {
            position: relative;
            display: flex;
-           top: 10%;
 
            .icon {
              width: 4rem;

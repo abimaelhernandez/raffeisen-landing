@@ -28,7 +28,11 @@ export default class ServicesSlider extends Component {
           onClick={this.closeSliderView}
         >
         </button>
-        <div id="servicios-slider-id" className="carousel slide" data-ride="carousel" data-interval="false">
+        <div
+          id="servicios-slider-id"
+          className="carousel slide"
+          data-ride="carousel" data-interval="false"
+        >
           <div className="carousel-inner">
             { passedObj.map((item) =>
             <div key={item.id} className={`carousel-item ${this.getActive(item) ? 'active': ''}`}
