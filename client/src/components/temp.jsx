@@ -1,53 +1,60 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 // import Fade from 'react-reveal/Fade'
-// import ServicesSlider from './ServicesSlider'
+import ServicesSlider from './ServicesSlider'
 
 export default class Services extends Component {
   constructor(){
     super()
     this.state = {
       clickedId: 0,
-      hasBeenClicked: false
+      hasBeenClicked: false,
+      test: false
     }
   }
 
   clickHandler = (item) => {
-  this.setState({ clickedId: item})
-  this.setState({ hasBeenClicked: true})
- }
-
- resetProps = (childValue) => {
-   if (childValue) {
-     this.setState({hasBeenClicked: false, clickedId: 0})
+    this.setState({ clickedId: item})
+    this.setState({ hasBeenClicked: true})
    }
- }
 
- changeColumn (item){
-   const {clickedId, hasBeenClicked} = this.state
-   console.log('clickedId', clickedId, hasBeenClicked, item)
-    if(hasBeenClicked && clickedId === item){
-      return 6
-    }
-    return 4
- }
+   resetProps = (childValue) => {
+     if (childValue) {
+       console.log('childValue Parent is True ', childValue)
+       this.setState({hasBeenClicked: false, clickedId: 0, test:false })
+     }
+   }
+
+   changeClass = (id) => {
+     const { hasBeenClicked, clickedId } = this.state
+     if(hasBeenClicked) {
+       this.fireSetTime()
+     }
+     return hasBeenClicked && clickedId === id && 'correctId'
+   }
+
+   fireSetTime = () => {
+     // const { test } = this.state
+     console.log('test')
+     setTimeout(() => this.setState({ test: true }), 600)
+   }
 
   render(){
-    const { clickedId , hasBeenClicked} = this.state
+    const { clickedId , hasBeenClicked, test} = this.state
     const { serviceObj, sectionRef } = this.props
-    // if (hasBeenClicked && clickedId ) {
-    //   return <ServicesSlider
-    //           passedObj={serviceObj}
-    //           clickedId={clickedId}
-    //           resetProps={this.resetProps}
-    //         />
-    // }
+    if (test) {
+      return <ServicesSlider
+              passedObj={serviceObj}
+              clickedId={clickedId}
+              resetProps={this.resetProps}
+            />
+    }
     return (
       <div className="services" id={sectionRef}>
         <div className="services-container">
           {serviceObj.map((item) =>
             <div
-              className={`services-container-item ${item.name} ${hasBeenClicked && clickedId !== item.id &&  'disabled'} ${this.changeColumn(item.id)} ${hasBeenClicked && clickedId === item.id && 'clicked'}`}
+              className={`col-sm-12 col-md-4 services-container-item ${item.name} ${hasBeenClicked && clickedId !== item.id && 'disabled'} ${this.changeClass(item.id)}`}
               style={{backgroundImage: `url(${item.imageBackground})`}}
               key={item.id}
               onClick={this.clickHandler.bind(this, item.id)}
