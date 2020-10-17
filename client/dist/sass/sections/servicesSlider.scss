@@ -58,27 +58,35 @@
       position: relative;
       width: 100%;
       display: flex;
-      max-height: 62rem;
+      // max-height: 62rem;
 
       .image {
         position: relative;
         width: 50%;
-        padding-bottom : 26.5%;
+        padding-bottom : 27%;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
 
+        &.consult {
+          background-position: right 90%;
+          background-repeat: no-repeat;
+          background-size: 100%;
+        }
+
          .title {
-           position: relative;
+           position: absolute;
            display: flex;
+           top: 9%;
 
            .icon {
+             top: 1rem;
              width: 4rem;
              height: 4rem;
-             background-position: center center;
+             background-position: center;
              background-repeat: no-repeat;
              background-size: cover;
-             margin: 0 1.6rem;
+             margin: 0 1.5rem 0 3rem;
            }
 
            .text {
