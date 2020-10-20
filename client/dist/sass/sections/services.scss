@@ -1,6 +1,7 @@
 .services {
   position: relative;
   width: 100%;
+  background-color: white;
 
   &-container {
     display: flex;
@@ -11,7 +12,6 @@
 
     &-item {
       position: relative;
-      // float: left;
       width: 33.33%;
       padding-bottom : 27%;
       background-position: center center;
@@ -19,7 +19,6 @@
       background-size: cover;
       border: none;
       outline: none;
-      // max-height: 57rem;
 
       &.consult {
         background-position: right;
@@ -37,6 +36,10 @@
 
       &.firstSquare {
         animation: fAnimation 1000ms ease-out forwards;
+      }
+
+      &.lastSquare {
+        animation: sAnimation 1000ms ease-out forwards;
       }
 
       @keyframes sAnimation {
@@ -72,7 +75,6 @@
 
       &-title {
         position: absolute;
-        // width: 100%;
         display: flex;
         top: 9%;
 
@@ -99,7 +101,7 @@
     }
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 540px) {
     &-container {
       width: 100%;
       height: 100vh;
@@ -113,6 +115,69 @@
         background-repeat: no-repeat;
         background-size: cover;
         padding: 0;
+
+        &.consult {
+          background-position: left;
+          background-size: cover;
+        }
+
+        &.clicked {
+          position: relative;
+          animation: sAnimationMobile 1000ms ease-out forwards;
+        }
+
+        &.firstSquare {
+          animation: fAnimationMobile 1000ms ease-out forwards;
+        }
+
+        &.lastSquare {
+          animation: tAnimationMobile 1000ms ease-out forwards;
+        }
+
+        @keyframes tAnimationMobile {
+          0% {
+            top: 50%;
+            height: 33.33%;
+          }
+          100% {
+            top: 0%;
+            height: 50vh;
+            background-position: center;
+            background-size: cover;
+          }
+        }
+
+        @keyframes fAnimationMobile {
+          0% {
+            width: 100%;
+            top: 0;
+            height: 33.33%;
+          }
+          20% {
+            width: 100%;
+            top: 0;
+            height: 33.33%;
+            background-size: 120%;
+          }
+          100% {
+            height: 50vh;
+            background-position: right;
+            background-size: 160%;
+          }
+        }
+
+        @keyframes sAnimationMobile {
+          0% {
+            top: 50%;
+            height: 33.33%;
+          }
+          100% {
+            top: 0%;
+            height: 50vh;
+            background-position: right;
+            background-size: cover;
+          }
+        }
 
         &-title {
           &-logo {

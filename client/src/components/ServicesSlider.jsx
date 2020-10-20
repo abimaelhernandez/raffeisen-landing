@@ -29,7 +29,7 @@ export default class ServicesSlider extends Component {
         >
         </button>
         <div
-          id="servicios-slider-id"
+          id="services-slider"
           className="carousel slide"
           data-ride="carousel" data-interval="false"
         >
@@ -68,7 +68,7 @@ export default class ServicesSlider extends Component {
           </div>
           <a
             className="carousel-control-prev"
-            href="#servicios-slider-id"
+            href="#services-slider"
             role="button"
             data-slide="prev"
           >
@@ -81,7 +81,7 @@ export default class ServicesSlider extends Component {
           </a>
           <a
             className="carousel-control-next"
-            href="#servicios-slider-id"
+            href="#services-slider"
             role="button"
             data-slide="next"
           >

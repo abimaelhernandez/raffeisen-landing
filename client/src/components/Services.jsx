@@ -46,11 +46,15 @@ export default class Services extends Component {
     const {clickedId, hasBeenClicked} = this.state
     if (hasBeenClicked) {
       this.fireSetTime()
-      if (clickedId === id &&
-        clickedId !== 1) {
+      if (clickedId === id ) {
+        if (clickedId === 2) {
           return 'clicked'
         }
+        if (clickedId === 3) {
+          return 'lastSquare'
+        }
       return 'firstSquare'
+     }
     }
  }
 
