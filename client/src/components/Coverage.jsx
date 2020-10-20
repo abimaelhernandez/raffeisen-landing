@@ -26,21 +26,18 @@ export default class Coverage extends Component {
     return `${name} ${animationstart ? 'start-animation' : ''}`
   }
 
-  // changeClassNameSecondary = (name) => {
-  //   const {animationstart} = this.state
-  //   return `${name} ${animationstart ? 'start-animation-nd' : ''}`
-  // }
-
   render() {
     const { coverageInfo, sectionRef} = this.props
     return (<div className="rl_coverage" id={sectionRef}>
       <div className="rl_coverage_description">
-        <h2 className="rl_coverage-title">{coverageInfo.title}</h2>
-        <p className="rl_coverage-text">{coverageInfo.description}</p>
+        <h2 className="rl_coverage-title">
+          {coverageInfo.title}
+        </h2>
+        <p className="rl_coverage-text">
+          {coverageInfo.description}
+        </p>
       </div>
-      <div
-        className={this.changeClassName('rl_coverage-map-img')}
-      >
+      <div className={this.changeClassName('rl_coverage-map-img')}>
         <div className={this.changeClassName('rl_coverage-map-countries')}>
           { coverageInfo.countries.map((country) => country.sections
               ? <div
