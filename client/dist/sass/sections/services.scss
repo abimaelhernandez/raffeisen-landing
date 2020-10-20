@@ -31,14 +31,17 @@
 
       &.clicked {
         position: relative;
+        -webkit-animation: sAnimation 1000ms ease-out forwards;
         animation: sAnimation 1000ms ease-out forwards;
       }
 
       &.firstSquare {
+        -webkit-animation: fAnimation 1000ms ease-out forwards;
         animation: fAnimation 1000ms ease-out forwards;
       }
 
       &.lastSquare {
+        -webkit-animation: sAnimation 1000ms ease-out forwards;
         animation: sAnimation 1000ms ease-out forwards;
       }
 
@@ -113,7 +116,7 @@
       }
     }
   }
-  
+
   @media (max-width: 540px) {
     &-container {
       width: 100%;
@@ -136,14 +139,17 @@
 
         &.clicked {
           position: relative;
+          -webkit-animation: sAnimationMobile 1000ms ease-out forwards;
           animation: sAnimationMobile 1000ms ease-out forwards;
         }
 
         &.firstSquare {
+          -webkit-animation: fAnimationMobile 1000ms ease-out forwards;
           animation: fAnimationMobile 1000ms ease-out forwards;
         }
 
         &.lastSquare {
+          -webkit-animation: tAnimationMobile 1000ms ease-out forwards;
           animation: tAnimationMobile 1000ms ease-out forwards;
         }
 
