@@ -136,6 +136,7 @@
 
         .list-items {
           margin: 1rem 0;
+
           .item {
             margin: 0 2rem;
             display: flex;
@@ -254,9 +255,6 @@
             .icon {
               margin: 0 2rem;
             }
-
-            .text {
-            }
           }
         }
 
@@ -267,6 +265,7 @@
           flex-wrap: wrap;
           padding: 1rem 2rem;
           height: 50vh;
+          font-size: 1.4rem;
 
           .paragraph {
             width: 100%;
@@ -275,10 +274,18 @@
 
           .list-items {
             margin: 1rem;
+            .item {
+              &::before {
+                content: '';
+                width: 0.7rem;
+                height: 0.7rem;
+                left: 3rem;
+              }
+            }
           }
 
           .clause {
-            margin: 0.5rem 0;
+            margin: 1rem;
             width: 100%;
           }
         }
