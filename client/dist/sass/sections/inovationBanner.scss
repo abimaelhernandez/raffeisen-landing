@@ -68,7 +68,7 @@
     top: 42%;
 
     &.start-animation {
-      animation: mainTittleAnimation 2s ease-out 1.5s forwards;
+      animation: mainTittleAnimation 2s ease-out 1000ms forwards;
       animation-fill-mode: forwards;
     }
 

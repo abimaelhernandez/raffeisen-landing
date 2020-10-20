@@ -40,7 +40,7 @@
       opacity: 0;
 
       &.start-animation {
-        animation: animateMap 5000ms ease-out 1000ms forwards;
+        animation: animateMap 5000ms ease-out 500ms forwards;
       }
     }
 
@@ -124,6 +124,119 @@
         }
 
         &.country {
+          &-mx {
+            &.start-animation {
+              animation: dotTopSmall 4000ms ease-out 500ms forwards;
+            }
+          }
+
+          &-gt {
+            margin: 0.2rem 0 0 1.5rem;
+
+            &.start-animation {
+              animation: dotTop 4000ms ease-out 500ms forwards;
+            }
+          }
+
+          &-hn {
+            margin-top: -0.3rem;
+            margin-left: 0.3rem;
+
+            &.start-animation {
+              animation: dotTopSmall 4000ms ease-out 500ms forwards;
+            }
+          }
+
+          &-do {
+            margin-top: -0.3rem;
+            margin-left: 4.2rem;
+
+            .country-name {
+              right: 4.5rem;
+            }
+
+            &.start-animation {
+              animation: dotTopRight 4000ms ease-out 500ms forwards;
+            }
+          }
+
+          &-ni {
+            margin-left: .5rem;
+            margin-top: -1rem;
+
+            &.start-animation {
+              animation: dotTopLeft 4000ms ease-out 500ms forwards;
+            }
+          }
+
+          &-sv {
+            margin-left: 3.5rem;
+            margin-top: -.5rem;
+
+            &.start-animation {
+              animation: dotTopRight 4000ms ease-out 500ms forwards;
+            }
+          }
+
+          &-cr {
+            margin-left: 6.3rem;
+
+            &.start-animation {
+              animation: dotTopSmall 4000ms ease-out 500ms forwards;
+            }
+          }
+
+          &-ec {
+            margin-left: 7.5rem;
+            margin-top: .2rem;
+
+            &.start-animation {
+              animation: dotTop 4000ms ease-out 500ms forwards;
+            }
+          }
+
+          &-gy {
+            margin-left: 4rem;
+            margin-top: -2rem;
+
+            &.start-animation {
+              animation: dotTopLeft 4000ms ease-out 500ms forwards;
+            }
+          }
+
+          &-pe {
+            margin-left: 9rem;
+            margin-top: 4rem;
+
+            &.start-animation {
+              animation: dotTopRight 4000ms ease-out 500ms forwards;
+            }
+          }
+
+          &-py {
+            margin-left: 15rem;
+
+            &.start-animation {
+              animation: dotTopRight 4000ms ease-out 500ms forwards;
+            }
+          }
+
+          &-uy {
+            margin-left: 17.2rem;
+            margin-top: 1.8rem;
+
+            &.start-animation {
+              animation: dotTopSmall 4000ms ease-out 500ms forwards;
+            }
+          }
+
+          &-cl {
+            margin-left: 10rem;
+
+            &.start-animation {
+              animation: dotTopSmall 4000ms ease-out 500ms forwards;
+            }
+          }
           @keyframes dotTop {
             0% {
               background-image: url('../assets/icons/pin.svg');
@@ -133,7 +246,6 @@
               background-color: transparent;
               border: none;
               transform: translateY(-300px);
-              // transform: translateX(-50px);
             }
             50% {
               background-image: url('../assets/icons/pin.svg');
@@ -210,7 +322,7 @@
               background-image: url('../assets/icons/pin.svg');
               background-repeat: no-repeat;
               background-position: center;
-              background-size:contain;
+              background-size: contain;
               width: 4.5rem;
               height: 4.5rem;
               background-color: transparent;
@@ -262,120 +374,6 @@
               height: 1.8rem;
               background-image: none;
               // background-color: brown;
-            }
-          }
-
-          &-mx {
-            &.start-animation {
-              animation: dotTopSmall 4000ms ease-out 1000ms forwards;
-            }
-          }
-
-          &-gt {
-            margin: 0.2rem 0 0 1.5rem;
-
-            &.start-animation {
-              animation: dotTop 4000ms ease-out 1000ms forwards;
-            }
-          }
-
-          &-hn {
-            margin-top: -0.3rem;
-            margin-left: 0.3rem;
-
-            &.start-animation {
-              animation: dotTopSmall 4000ms ease-out 1000ms forwards;
-            }
-          }
-
-          &-do {
-            margin-top: -0.3rem;
-            margin-left: 4.2rem;
-
-            .country-name {
-              right: 4.5rem;
-            }
-
-            &.start-animation {
-              animation: dotTopRight 4000ms ease-out 1000ms forwards;
-            }
-          }
-
-          &-ni {
-            margin-left: .5rem;
-            margin-top: -1rem;
-
-            &.start-animation {
-              animation: dotTopLeft 4000ms ease-out 1000ms forwards;
-            }
-          }
-
-          &-sv {
-            margin-left: 3.5rem;
-            margin-top: -.5rem;
-
-            &.start-animation {
-              animation: dotTopRight 4000ms ease-out 1000ms forwards;
-            }
-          }
-
-          &-cr {
-            margin-left: 6.3rem;
-
-            &.start-animation {
-              animation: dotTopSmall 4000ms ease-out 1000ms forwards;
-            }
-          }
-
-          &-ec {
-            margin-left: 7.5rem;
-            margin-top: .2rem;
-
-            &.start-animation {
-              animation: dotTop 4000ms ease-out 1000ms forwards;
-            }
-          }
-
-          &-gy {
-            margin-left: 4rem;
-            margin-top: -2rem;
-
-            &.start-animation {
-              animation: dotTopLeft 4000ms ease-out 1000ms forwards;
-            }
-          }
-
-          &-pe {
-            margin-left: 9rem;
-            margin-top: 4rem;
-
-            &.start-animation {
-              animation: dotTopRight 4000ms ease-out 1000ms forwards;
-            }
-          }
-
-          &-py {
-            margin-left: 15rem;
-
-            &.start-animation {
-              animation: dotTopRight 4000ms ease-out 1000ms forwards;
-            }
-          }
-
-          &-uy {
-            margin-left: 17.2rem;
-            margin-top: 1.8rem;
-
-            &.start-animation {
-              animation: dotTopSmall 4000ms ease-out 1000ms forwards;
-            }
-          }
-
-          &-cl {
-            margin-left: 10rem;
-
-            &.start-animation {
-              animation: dotTopSmall 4000ms ease-out 1000ms forwards;
             }
           }
         }
@@ -542,7 +540,7 @@
                 background-image: url('../assets/icons/pin.svg');
                 background-repeat: no-repeat;
                 background-position: center;
-                background-size:contain;
+                background-size: contain;
                 width: 4rem;
                 height: 4rem;
                 background-color: transparent;
@@ -577,7 +575,7 @@
                 background-image: url('../assets/icons/pin.svg');
                 background-repeat: no-repeat;
                 background-position: center;
-                background-size:contain;
+                background-size: contain;
                 width: 2rem;
                 height: 2rem;
                 background-color: transparent;
@@ -734,6 +732,7 @@
           animation: contriesAnimationMobile 3500ms linear forwards;
         }
       }
+
       @keyframes contriesAnimationMobile {
         0%{
           padding-top: 20%;

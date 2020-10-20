@@ -1,7 +1,6 @@
 .servicesSlider-parent {
   position: relative;
   width: 100%;
-  // height: auto;
 
   button {
     z-index: 2;
@@ -26,7 +25,7 @@
     z-index: 1;
   }
 
-  #servicios-slider-id {
+  #services-slider {
     .carousel-control-next,
       .carousel-control-prev {
         position: absolute;
@@ -58,7 +57,6 @@
       position: relative;
       width: 100%;
       display: flex;
-      max-height: 57rem;
 
       .image {
         position: relative;
@@ -68,18 +66,45 @@
         background-repeat: no-repeat;
         background-size: cover;
 
+        &.consult {
+          background-position: right 90%;
+          background-size: 100%;
+          background-image: url('../assets/images/red_light_bulb_right.jpg');
+        }
+
+        &.analytics {
+          background-image: url('../assets/images/graph-min.jpg');
+        }
+
+        &.training {
+          background-image: url('../assets/images/ladder-min.jpg')
+        }
+
          .title {
-           position: relative;
+           position: absolute;
            display: flex;
-           top: 10%;
+           top: 9%;
 
            .icon {
+             top: 1rem;
              width: 4rem;
              height: 4rem;
-             background-position: center center;
+             background-position: center;
              background-repeat: no-repeat;
              background-size: cover;
-             margin: 0 1.6rem;
+             margin: 0 1.5rem 0 3rem;
+
+             &.consult {
+               background-image: url('../assets/icons/Consultoria_new.svg')
+             }
+
+             &.analytics {
+               background-image: url('../assets/icons/Analytics_new.svg');
+             }
+
+             &.training {
+               background-image: url('../assets/icons/Training_new.svg');
+             }
            }
 
            .text {
@@ -111,6 +136,7 @@
 
         .list-items {
           margin: 1rem 0;
+
           .item {
             margin: 0 2rem;
             display: flex;
@@ -136,13 +162,19 @@
     }
   }
 
- @media only screen and (max-width: 960px){
-   #servicios-slider-id {
+ @media only screen and (min-width: 768px) and (max-width: 1024px){
+   #services-slider {
      .inner-container{
-       min-height: 29.7rem;
+       min-height: 29.95rem;
        .image {
          width: 100%;
          padding: 0;
+         .title {
+
+           .icon {
+             margin: 0 1.5rem 0 1rem;
+           }
+         }
        }
 
        .caption {
@@ -161,8 +193,7 @@
    }
  }
 
-  @media (max-width: 474px) {
-
+  @media (max-width: 540px) {
     &-close {
       position: absolute;
       right: 1.5rem;
@@ -173,10 +204,10 @@
       background-image: url('../assets/icons/Close.svg');
       background-repeat: no-repeat;
       background-size: contain;
-      z-index: 6000;
+      z-index: 100;
     }
 
-    #servicios-slider-id {
+    #services-slider {
       .carousel-control-next,
         .carousel-control-prev {
           top: 20%;
@@ -193,8 +224,6 @@
       .carousel-control-prev-icon,
         .carousel-control-next-icon {
           background-image: url('../assets/icons/flecha-blanca.svg');
-          background-size: cover;
-          background-repeat: no-repeat;
       }
 
       .carousel-control-prev-icon {
@@ -204,13 +233,12 @@
       .inner-container{
         display: flex;
         flex-wrap: wrap;
-        max-height: 100vh;
+        height: 100vh;
 
         .image {
           width: 100%;
           padding: 0;
           height: 50vh;
-          background-position: left;
           background-repeat: no-repeat;
           background-size: cover;
           min-height: 3rem;
@@ -219,8 +247,14 @@
             background-position: right;
           }
 
-          &.training {
-            background-position: center;
+          &.consult {
+            background-position: right;
+            background-size: 160%;
+          }
+          .title {
+            .icon {
+              margin: 0 2rem;
+            }
           }
         }
 
@@ -231,6 +265,7 @@
           flex-wrap: wrap;
           padding: 1rem 2rem;
           height: 50vh;
+          font-size: 1.4rem;
 
           .paragraph {
             width: 100%;
@@ -239,10 +274,18 @@
 
           .list-items {
             margin: 1rem;
+            .item {
+              &::before {
+                content: '';
+                width: 0.7rem;
+                height: 0.7rem;
+                left: 3rem;
+              }
+            }
           }
 
           .clause {
-            margin: 0.5rem 0;
+            margin: 1rem;
             width: 100%;
           }
         }

@@ -97,6 +97,10 @@
           padding: 0 5rem;
           color: $color-white;
 
+          &-body-paragraph {
+            font-size: $font-size-smw;
+          }
+
           &-title {
             padding: 0 0 2rem 0;
             font-size: $font-size-title;
@@ -312,6 +316,10 @@
             position: relative;
             height: 50%;
             padding: 26% 0 0 11%;
+
+            &-body-paragraph {
+              font-size: $font-size-s;
+            }
 
             &-title {
               padding: 0 0 2rem 0;

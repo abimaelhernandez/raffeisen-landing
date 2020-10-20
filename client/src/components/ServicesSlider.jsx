@@ -28,22 +28,22 @@ export default class ServicesSlider extends Component {
           onClick={this.closeSliderView}
         >
         </button>
-        <div id="servicios-slider-id" className="carousel slide" data-ride="carousel" data-interval="false">
+        <div
+          id="services-slider"
+          className="carousel slide"
+          data-ride="carousel" data-interval="false"
+        >
           <div className="carousel-inner">
             { passedObj.map((item) =>
-            <div key={item.id} className={`carousel-item ${this.getActive(item) ? 'active': ''}`}
+            <div
+              key={item.id}
+              className={`carousel-item ${this.getActive(item) ? 'active': ''}`}
             >
               <div className="inner-container">
-                <div
-                  className={`image ${item.name}`}
-                  style={{ backgroundImage: `url(${item.imageBackground})` }}
-                >
+                <div className={`image ${item.name}`}>
                   <p className='title'>
-                    <span
-                      className='icon'
-                      style={{backgroundImage: `url(${item.icon})`}}
-                    />
-                  <span className='text'>{ item.alt } </span>
+                    <span className={`icon ${item.name}`} />
+                    <span className='text'> { item.alt } </span>
                   </p>
                 </div>
                 <div
@@ -64,7 +64,7 @@ export default class ServicesSlider extends Component {
           </div>
           <a
             className="carousel-control-prev"
-            href="#servicios-slider-id"
+            href="#services-slider"
             role="button"
             data-slide="prev"
           >
@@ -77,7 +77,7 @@ export default class ServicesSlider extends Component {
           </a>
           <a
             className="carousel-control-next"
-            href="#servicios-slider-id"
+            href="#services-slider"
             role="button"
             data-slide="next"
           >

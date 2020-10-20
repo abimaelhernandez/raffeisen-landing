@@ -1,13 +1,18 @@
 .services {
   position: relative;
   width: 100%;
+  background-color: white;
 
   &-container {
     display: flex;
 
+    .disabled {
+      display: none;
+    }
+
     &-item {
-      float: left;
-      width: 30%;
+      position: relative;
+      width: 33.33%;
       padding-bottom : 27%;
       background-position: center center;
       background-repeat: no-repeat;
@@ -15,42 +20,122 @@
       border: none;
       outline: none;
 
+      &.consult {
+        background-image: url('../assets/images/red_light_bulb_right.jpg');
+        background-position: right;
+        background-size: 147%;
+      }
+
       &.analytics {
+        background-image: url('../assets/images/graph-min.jpg');
         background-position: right;
       }
 
-      &-title {
+      &.training {
+        background-image: url('../assets/images/ladder-min.jpg')
+      }
+
+      &.clicked {
         position: relative;
-        width: 100%;
+        -webkit-animation: sAnimation 1000ms ease-out forwards;
+        animation: sAnimation 1000ms ease-out forwards;
+      }
+
+      &.firstSquare {
+        -webkit-animation: fAnimation 1000ms ease-out forwards;
+        animation: fAnimation 1000ms ease-out forwards;
+      }
+
+      &.lastSquare {
+        -webkit-animation: sAnimation 1000ms ease-out forwards;
+        animation: sAnimation 1000ms ease-out forwards;
+      }
+
+      @keyframes sAnimation {
+        0% {
+          left: 50%;
+        }
+        50% {
+          width: 41.5%
+        }
+        100% {
+          left: 0%;
+          width: 50%
+        }
+      }
+
+      @keyframes fAnimation {
+        0% {
+          width: 41.5%;
+          background-size: 134%;
+        }
+        50% {
+          width: 41.5%;
+          background-size: 100%;
+        }
+        100% {
+          left: 0%;
+          width: 50%;
+          background-position: right 90%;
+          background-size: cover;
+        }
+      }
+
+
+      &-title {
+        position: absolute;
         display: flex;
-        top: 10%;
+        top: 9%;
 
         &-logo {
-          position: relative;
           width: 4rem;
           height: 4rem;
-          display: flex;
-          align-items: center;
-          background-position: center;
+          background-position: center center;
           background-repeat: no-repeat;
+          background-size: cover;
+          margin: 0 1.5rem 0 3rem;
+
+          &.consult {
+            background-image: url('../assets/icons/Consultoria_new.svg')
+          }
+
+          &.analytics {
+            background-image: url('../assets/icons/Analytics_new.svg');
+          }
+
+          &.training {
+            background-image: url('../assets/icons/Training_new.svg');
+          }
         }
 
         &-text {
           display: flex;
           align-items: center;
-          font-family: Avenir;
           font-size: 3rem;
-          font-weight: 900;
+          font-weight: 600;
           line-height: 0.98;
           text-align: left;
           color: white;
-          margin-left: 1.6rem;
+          margin: 0;
         }
       }
     }
   }
 
-  @media (max-width: 767px) {
+  @media (min-width: 768px) and (max-width: 1024px){
+    &-container {
+      &-item {
+        padding-bottom : 39%;
+        &-title {
+          &-logo {
+            margin: 0 1.5rem 0 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 540px) {
     &-container {
       width: 100%;
       height: 100vh;
@@ -64,6 +149,72 @@
         background-repeat: no-repeat;
         background-size: cover;
         padding: 0;
+
+        &.consult {
+          background-position: left;
+          background-size: cover;
+        }
+
+        &.clicked {
+          position: relative;
+          -webkit-animation: sAnimationMobile 1000ms ease-out forwards;
+          animation: sAnimationMobile 1000ms ease-out forwards;
+        }
+
+        &.firstSquare {
+          -webkit-animation: fAnimationMobile 1000ms ease-out forwards;
+          animation: fAnimationMobile 1000ms ease-out forwards;
+        }
+
+        &.lastSquare {
+          -webkit-animation: tAnimationMobile 1000ms ease-out forwards;
+          animation: tAnimationMobile 1000ms ease-out forwards;
+        }
+
+        @keyframes tAnimationMobile {
+          0% {
+            top: 50%;
+            height: 33.33%;
+          }
+          100% {
+            top: 0%;
+            height: 50vh;
+            background-position: center;
+            background-size: cover;
+          }
+        }
+
+        @keyframes fAnimationMobile {
+          0% {
+            width: 100%;
+            top: 0;
+            height: 33.33%;
+          }
+          20% {
+            width: 100%;
+            top: 0;
+            height: 33.33%;
+            background-size: 120%;
+          }
+          100% {
+            height: 50vh;
+            background-position: right;
+            background-size: 160%;
+          }
+        }
+
+        @keyframes sAnimationMobile {
+          0% {
+            top: 50%;
+            height: 33.33%;
+          }
+          100% {
+            top: 0%;
+            height: 50vh;
+            background-position: right;
+            background-size: cover;
+          }
+        }
 
         &-title {
           &-logo {
