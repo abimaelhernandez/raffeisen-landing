@@ -74,7 +74,6 @@ export default class Services extends Component {
           {serviceObj.map((item) =>
             <div
               className={`services-container-item ${item.name} ${hasBeenClicked && clickedId !== item.id &&  'disabled'} ${this.changeColumn(item.id)} ${this.identifyId(item.id)}`}
-              style={{backgroundImage: `url(${item.imageBackground})`}}
               key={item.id}
               onClick={this.clickHandler.bind(this, item.id)}
               onKeyDown={this.clickHandler.bind(this, item.id)}
@@ -82,10 +81,7 @@ export default class Services extends Component {
               tabIndex={0}
             >
               <div className="services-container-item-title">
-                <div
-                  className="services-container-item-title-logo"
-                  style={{backgroundImage: `url(${item.icon})`}}
-                />
+                <div className={`services-container-item-title-logo ${item.name}`} />
                 <p className="services-container-item-title-text">
                   {item.alt}
                 </p>

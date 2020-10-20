@@ -68,8 +68,16 @@
 
         &.consult {
           background-position: right 90%;
-          background-repeat: no-repeat;
           background-size: 100%;
+          background-image: url('../assets/images/red_light_bulb_right.jpg');
+        }
+
+        &.analytics {
+          background-image: url('../assets/images/graph-min.jpg');
+        }
+
+        &.training {
+          background-image: url('../assets/images/ladder-min.jpg')
         }
 
          .title {
@@ -85,6 +93,18 @@
              background-repeat: no-repeat;
              background-size: cover;
              margin: 0 1.5rem 0 3rem;
+
+             &.consult {
+               background-image: url('../assets/icons/Consultoria_new.svg')
+             }
+
+             &.analytics {
+               background-image: url('../assets/icons/Analytics_new.svg');
+             }
+
+             &.training {
+               background-image: url('../assets/icons/Training_new.svg');
+             }
            }
 
            .text {
