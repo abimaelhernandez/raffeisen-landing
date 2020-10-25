@@ -14,10 +14,10 @@
 
   &-close {
     position: absolute;
-    right: 1rem;
-    width: 2rem;
+    right: 4rem;
+    width: 2.5rem;
     top: 6%;
-    height: 3rem;
+    height: 2.5rem;
     text-align: center;
     background-image: url('../assets/icons/cerrar-gris.svg');
     background-repeat: no-repeat;
@@ -69,7 +69,7 @@
         &.consult {
           background-position: right 90%;
           background-size: 100%;
-          background-image: url('../assets/images/red_light_bulb_right.jpg');
+          background-image: url('../assets/images/Consult-only-bulb.jpg');
         }
 
         &.analytics {
@@ -124,37 +124,94 @@
         z-index: 0;
         width: 50%;
         min-width: 50%;
-        padding-left: 4rem;
+        padding: 0 6rem;
         font-size: $font-size-xl;
         line-height: 1.3;
         text-align: left;
-        border-bottom: $inovation-blue solid 1rem;
+        background-color : #f1f1f1;
+        // border-bottom: $inovation-blue solid 1rem;
 
         .paragraph {
-          margin: 6rem 0;
+          margin: 5rem 0;
         }
 
         .list-items {
           margin: 1rem 0;
+          display: flex;
+          justify-content: space-around;
 
           .item {
+            width: 100%;
+            min-height: 8rem;
             margin: 0 2rem;
             display: flex;
             align-items: center;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
 
-            &::before {
-              content: '';
-              position: absolute;
-              width: 1rem;
-              height: 1rem;
-              border-radius: 50%;
-              background: black;
-              left: 3.7rem;
+          &.consult {
+            .image1 {
+              background-image: url('../assets/icons/Consult_process.svg');
+            }
+            .image2 {
+              background-image: url('../assets/icons/Consult_bullseye.svg');
+            }
+            .image3 {
+              background-image: url('../assets/icons/Consult_plan.svg');
+            }
+          }
+
+          &.analytics {
+            .image1 {
+              background-image: url('../assets/icons/Analytics_circle.svg');
+            }
+            .image2 {
+              background-image: url('../assets/icons/Analytics_pentagon.svg');
+            }
+            .image3 {
+              background-image: url('../assets/icons/Analytics_angle.svg');
+            }
+          }
+
+          &.training {
+            .image1 {
+              background-image: url('../assets/icons/Capa_teach.svg');
+            }
+            .image2 {
+              background-image: url('../assets/icons/Capa_online.svg');
+            }
+            .image3 {
+              background-image: url('../assets/icons/Capa_devide.svg');
+            }
+          }
+        }
+
+        .quotes {
+          margin: 1rem 0;
+          display: flex;
+          justify-content: space-around;
+
+          .text {
+            width: 100%;
+            margin: 0 2rem;
+            text-align: center;
+            font-size: 1vw;
+            font-weight: 400;
+
+            &.consult {
+              color: #81cb60;
+            }
+
+            &.training {
+              color: #68b3d5;
             }
           }
         }
 
         .clause {
+          position: absolute;
           margin: 1.6rem 0;
           bottom: 0;
         }
