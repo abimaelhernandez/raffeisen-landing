@@ -38,11 +38,11 @@ const projectBody = {
       },
       {
         id: 2,
-        title: 'Smart planning of decision-making processes-DGRV'
+        title: 'Smart planning of decision-making processes'
       },
       {
         id: 3,
-        title: 'Design of customized solutions-DGRV'
+        title: 'Design of customized solutions'
       }
     ],
     inovationBanner: {
@@ -188,7 +188,7 @@ const projectBody = {
     ],
     coverageObject: {
       title: 'Coverage',
-      description: 'Our assistance//work includes a wide diversity of mandates in the Latin America region, having collaborated with multilateral organizations, international funders, representative and supervisory organizations, development banks, as well as cooperative and financial companies in several countries in the region; thus contributing to a more efficient and sustainable model of cooperatives that benefit the most vulnerable in the population',
+      description: 'Our assistance includes a wide diversity of mandates in the Latin America region, having collaborated with multilateral organizations, international funders, representative and supervisory organizations, development banks, as well as cooperative and financial companies in several countries in the region; thus contributing to a more efficient and sustainable model of cooperatives that benefit the most vulnerable in the population',
       countries: [
         { name: 'Mexico', style: 'country-mx' },
         {
