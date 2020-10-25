@@ -51,9 +51,9 @@ export default class ServicesSlider extends Component {
                 >
                   <p className="paragraph">{item.mainParahraph}</p>
                   <div className={`list-items ${item.name}`}>
-                      <div className="item image1" />
-                      <div className="item image2" />
-                      <div className="item image3" />
+                    <div className="item image1" />
+                    <div className="item image2" />
+                    <div className="item image3" />
                   </div>
                   <div className="quotes">
                     {Object.values(item.listItems).map(listItem =>
