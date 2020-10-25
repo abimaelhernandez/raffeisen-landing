@@ -195,6 +195,7 @@
 
     .next-title {
       font-size: 2rem;
+      padding: 0 2rem;
     }
 
     &-content {
@@ -270,6 +271,8 @@
           width: 2rem;
           height: 2rem;
           border-radius: 50%;
+          left: -3rem;
+          top: 1rem;
         }
       }
 
