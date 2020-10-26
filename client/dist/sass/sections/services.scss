@@ -24,15 +24,30 @@
         background-image: url('../assets/images/Consult-only-bulb.jpg');
         background-position: right;
         background-size: 147%;
+
+        &:hover {
+          -webkit-filter: brightness(125%);
+          filter: brightness(125%);
+        }
       }
 
       &.analytics {
         background-image: url('../assets/images/graph-min.jpg');
         background-position: right;
+
+        &:hover {
+          -webkit-filter: brightness(115%);
+          filter: brightness(115%);
+        }
       }
 
       &.training {
-        background-image: url('../assets/images/ladder-min.jpg')
+        background-image: url('../assets/images/ladder-min.jpg');
+
+        &:hover {
+          -webkit-filter: brightness(115%);
+          filter: brightness(115%);
+        }
       }
 
       &.clicked {

@@ -170,7 +170,7 @@ const projectBody = {
         mobileId: 'ninth',
         mainTitle: 'Rural Microscore',
         bodyContent: 'It evaluates the main agricultural and / or livestock products with an expert score supported by profile variables, productive activity, capacity and payment behavior in accordance with the policies and risk levels of each financial institution.',
-        backgroundColor: '#64AD34',
+        backgroundColor: '#81CB60',
         icon: '../assets/icons/RuralMicroscore.svg',
         alt: 'Rural Microscore Icon'
       },
