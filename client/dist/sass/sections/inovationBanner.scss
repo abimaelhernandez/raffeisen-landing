@@ -10,30 +10,29 @@
     bottom: 1rem;
     width: 100%;
     color: $color-white;
-    padding: 0 2rem;
+    padding: 0 3rem;
     font-size: $font-size-jumbo;
     font-weight: bold;
   }
 
   .leftGear {
     position: absolute;
-    width: 12rem;
-    max-width: 14rem;
+    width: 14rem;
+    max-width: 16rem;
     left: 14%;
     top: 52%;
     z-index: 1;
 
     &.start-animation {
-      animation: leftGearMove 1.5s ease-out 2s forwards;
+      animation: leftGearMove 1500ms ease-out 2000ms forwards;
     }
   }
 
   @keyframes leftGearMove {
     to {
-      width: 11vw;
+      width: 11.5vw;
       top: 37%;
       left: 8%;
-      // transform: rotate(200deg);
     }
   }
 
@@ -42,20 +41,18 @@
     width: 10rem;
     max-width: 12rem;
     left: 80%;
-    top: 40%;
+    top: 25%;
 
     &.start-animation {
-      animation: rightGearMove 1.5s ease-out 2s forwards;
-      // animation-fill-mode: forwards;
+      animation: rightGearMove 1500ms ease-out 2000ms forwards;
     }
   }
 
   @keyframes rightGearMove {
     to {
       width: 9vw;
-      left: 15%;
-      top: 23%;
-      // transform: rotate(200deg);
+      left: 16%;
+      top: 20%;
     }
   }
 
@@ -65,22 +62,22 @@
     height: auto;
     display: flex;
     text-align: center;
+    justify-content: center;
     top: 42%;
 
     &.start-animation {
-      animation: mainTittleAnimation 2s ease-out 1000ms forwards;
+      animation: mainTittleAnimation 2000ms ease-out 300ms forwards;
       animation-fill-mode: forwards;
     }
 
     &-title {
       position: relative;
-      width: 50%;
-      left: 27%;
+      width: 65%;
       height: auto;
       font-size: $font-size-jumbo;
       font-weight: 500;
       line-height: 1.19;
-      text-align: left;
+      text-align: center;
       color: $color-white;
     }
   }
@@ -96,6 +93,7 @@
 
     100% {
       opacity: 0;
+      display: none;
     }
   }
 
@@ -114,10 +112,10 @@
     opacity: 0;
     display: flex;
     flex-wrap: wrap;
-    width: 60%;
+    width: 65%;
 
     &.start-animation {
-      animation: contentAnimation 1.5s ease-out 3s forwards;
+      animation: contentAnimation 1500ms ease-out 3000ms forwards;
       animation-fill-mode: forwards;
     }
 
@@ -137,7 +135,8 @@
         border-radius: 50%;
         display: inline-block;
         background-color: $mantis-green;
-        left: -3rem;
+        left: -4rem;
+        top: 3rem;
       }
     }
 
@@ -196,6 +195,7 @@
 
     .next-title {
       font-size: 2rem;
+      padding: 0 2rem;
     }
 
     &-content {
@@ -209,7 +209,7 @@
       max-width: 10rem;
 
       &.start-animation {
-        animation: leftGearMoveMobile 2.5s ease-out 3s forwards;
+        animation: leftGearMoveMobile 2500ms ease-out 3000ms forwards;
         animation-fill-mode: forwards;
       }
     }
@@ -228,7 +228,7 @@
       width: 5;
 
       &.start-animation {
-        animation: rightGearMoveMobile 2.5s ease-out 3s forwards;
+        animation: rightGearMoveMobile 2500ms ease-out 3000ms forwards;
         animation-fill-mode: forwards;
       }
     }
@@ -265,11 +265,14 @@
         font-size: $font-size-xl;
         font-weight: 900;
         line-height: 1.83;
+
         &::before {
           content: '';
           width: 2rem;
           height: 2rem;
           border-radius: 50%;
+          left: -3rem;
+          top: 1rem;
         }
       }
 

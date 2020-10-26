@@ -38,11 +38,11 @@ const projectBody = {
       },
       {
         id: 2,
-        title: 'Smart planning of decision-making processes-DGRV'
+        title: 'Smart planning of decision-making processes'
       },
       {
         id: 3,
-        title: 'Design of customized solutions-DGRV'
+        title: 'Design of customized solutions'
       }
     ],
     inovationBanner: {
@@ -72,9 +72,7 @@ const projectBody = {
         alt: 'Analitics.',
         mainParahraph: 'Platforms for the analysis of information accurately representing the operative, commercial, and financial reality of the organization.',
         secondaryParagraph: 'Through the design of dashboards, the visualization of information enables timely and efficient decision-making that favorably impacts the reality analyzed.',
-        listItems: {
-          1: 'Through the design of control panels, aleema visualizes information for the timely and efficient decision-making that favorably impacts the analyzed reality.'
-        }
+        listItems: {}
       },
       {
         id: 3,
@@ -172,7 +170,7 @@ const projectBody = {
         mobileId: 'ninth',
         mainTitle: 'Rural Microscore',
         bodyContent: 'It evaluates the main agricultural and / or livestock products with an expert score supported by profile variables, productive activity, capacity and payment behavior in accordance with the policies and risk levels of each financial institution.',
-        backgroundColor: '#64AD34',
+        backgroundColor: '#81CB60',
         icon: '../assets/icons/RuralMicroscore.svg',
         alt: 'Rural Microscore Icon'
       },
@@ -188,7 +186,7 @@ const projectBody = {
     ],
     coverageObject: {
       title: 'Coverage',
-      description: 'Our assistance//work includes a wide diversity of mandates in the Latin America region, having collaborated with multilateral organizations, international funders, representative and supervisory organizations, development banks, as well as cooperative and financial companies in several countries in the region; thus contributing to a more efficient and sustainable model of cooperatives that benefit the most vulnerable in the population',
+      description: 'Our assistance includes a wide diversity of mandates in the Latin America region, having collaborated with multilateral organizations, international funders, representative and supervisory organizations, development banks, as well as cooperative and financial companies in several countries in the region; thus contributing to a more efficient and sustainable model of cooperatives that benefit the most vulnerable in the population',
       countries: [
         { name: 'Mexico', style: 'country-mx' },
         {
@@ -286,7 +284,7 @@ const projectBody = {
         secondaryParagraph: 'Que soporten de manera argumentada e inteligente la toma de decisiones a distintos niveles.',
         listItems: {
           1: 'Procesos de diagnóstico',
-          2: 'La definición de objetivos y estrategias',
+          2: 'Definición de objetivos y estrategias',
           3: 'Proyectos o planes de acción'
         }
       },
@@ -297,9 +295,7 @@ const projectBody = {
         alt:'analitica.',
         mainParahraph: 'Plataformas para el análisis de información representativa de la realidad operativa, comercial y financiera de una organización.',
         secondaryParagraph: 'A través del diseño de tableros de control se busca la visualización de información para la oportuna y eficiente toma de decisiones que impacten favorablemente en la realidad analizada.',
-        listItems: {
-          1: 'A través del diseño de tableros de control, aleema visualiza información para la oportuna y eficiente toma de decisiones que impacten favorablemente en la realidad analizada.',
-        }
+        listItems: { }
       },
       {
         id: 3,
