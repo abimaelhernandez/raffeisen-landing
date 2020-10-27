@@ -24,7 +24,7 @@
     z-index: 1;
 
     &.start-animation {
-      animation: leftGearMove 1500ms ease-out 2000ms forwards;
+      animation: leftGearMove 1200ms ease-out 1500ms forwards;
     }
   }
 
@@ -44,7 +44,7 @@
     top: 25%;
 
     &.start-animation {
-      animation: rightGearMove 1500ms ease-out 2000ms forwards;
+      animation: rightGearMove 1200ms ease-out 1500ms forwards;
     }
   }
 
@@ -66,7 +66,7 @@
     top: 42%;
 
     &.start-animation {
-      animation: mainTittleAnimation 2000ms ease-out 300ms forwards;
+      animation: mainTittleAnimation 1000ms ease-out forwards;
       animation-fill-mode: forwards;
     }
 
@@ -115,7 +115,7 @@
     width: 65%;
 
     &.start-animation {
-      animation: contentAnimation 1500ms ease-out 3000ms forwards;
+      animation: contentAnimation 1200ms ease-out 2200ms forwards;
       animation-fill-mode: forwards;
     }
 
@@ -209,7 +209,7 @@
       max-width: 10rem;
 
       &.start-animation {
-        animation: leftGearMoveMobile 2500ms ease-out 3000ms forwards;
+        animation: leftGearMoveMobile 2000ms ease-out 1500ms forwards;
         animation-fill-mode: forwards;
       }
     }
@@ -228,7 +228,7 @@
       width: 5;
 
       &.start-animation {
-        animation: rightGearMoveMobile 2500ms ease-out 3000ms forwards;
+        animation: rightGearMoveMobile 2000ms ease-out 1500ms forwards;
         animation-fill-mode: forwards;
       }
     }
