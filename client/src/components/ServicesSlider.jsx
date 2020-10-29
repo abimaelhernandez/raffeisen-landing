@@ -18,9 +18,9 @@ export default class ServicesSlider extends Component {
   }
 
   render() {
-    const {passedObj} = this.props
+    const {passedObj, sectionRef} = this.props
     return (
-      <div className="servicesSlider-parent">
+      <div className="servicesSlider-parent" id={sectionRef}>
         <button
           type="button"
           className="close servicesSlider-parent-close"
@@ -57,7 +57,7 @@ export default class ServicesSlider extends Component {
                   </div>
                   <div className="quotes">
                     {Object.values(item.listItems).map(listItem =>
-                      <p className={`text ${item.name}`} key={listItem.id}>{listItem}</p>
+                      <p className={`text ${item.name}`} key={listItem}>{listItem}</p>
                     )}
                   </div>
                   <p className="clause">{item.secondaryParagraph}</p>
@@ -99,5 +99,6 @@ export default class ServicesSlider extends Component {
 }
 
 ServicesSlider.propTypes = {
-  clickedId:  PropTypes.number
+  clickedId:  PropTypes.number,
+  sectionRef: PropTypes.string
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-// import Fade from 'react-reveal/Fade'
+import Fade from 'react-reveal/Fade'
 import ServicesSlider from './ServicesSlider'
 
 export default class Services extends Component {
@@ -30,12 +30,10 @@ export default class Services extends Component {
 
   fireSetTime = () => {
     setTimeout(() => this.setState({ visibility: true }), 1100)
-    console.log('test')
   }
 
   changeColumn (id){
     const {clickedId, hasBeenClicked} = this.state
-    console.log('clickedId', clickedId, hasBeenClicked, id)
     if (hasBeenClicked && clickedId === id){
       return 6
     }
@@ -65,6 +63,7 @@ export default class Services extends Component {
       return <ServicesSlider
               passedObj={serviceObj}
               clickedId={clickedId}
+              sectionRef={sectionRef}
               resetProps={this.resetProps}
             />
     }
@@ -80,12 +79,14 @@ export default class Services extends Component {
               role="button"
               tabIndex={0}
             >
-              <div className="services-container-item-title">
-                <div className={`services-container-item-title-logo ${item.name}`} />
-                <p className="services-container-item-title-text">
-                  {item.alt}
-                </p>
-              </div>
+              <Fade up cascade>
+                <div className="services-container-item-title">
+                  <div className={`services-container-item-title-logo ${item.name}`} />
+                  <p className="services-container-item-title-text">
+                    {item.alt}
+                  </p>
+                </div>
+              </Fade>
             </div>
           )}
         </div>

@@ -28,41 +28,43 @@ export default class Coverage extends Component {
 
   render() {
     const { coverageInfo, sectionRef} = this.props
-    return (<div className="rl_coverage" id={sectionRef}>
-      <div className="rl_coverage_description">
-        <h2 className="rl_coverage-title">
-          {coverageInfo.title}
-        </h2>
-        <p className="rl_coverage-text">
-          {coverageInfo.description}
-        </p>
-      </div>
-      <div className={this.changeClassName('rl_coverage-map-img')}>
-        <div className={this.changeClassName('rl_coverage-map-countries')}>
-          { coverageInfo.countries.map((country) => country.sections
-              ? <div
-                  key={`sections-${country.sections[0].style}`}
-                  className="rl_coverage-map-countries-section"
-                >
-                { country.sections.map((place) =>
-                  <span
-                    key={`${place.name}-${place.style}`}
-                    className={`dot ${this.changeClassName(place.style)}`}
+    return (
+      <div className="rl_coverage" id={sectionRef}>
+        <div className="rl_coverage_description">
+          <h2 className="rl_coverage-title">
+            {coverageInfo.title}
+          </h2>
+          <p className="rl_coverage-text">
+            {coverageInfo.description}
+          </p>
+        </div>
+        <div className={this.changeClassName('rl_coverage-map-img')}>
+          <div className={this.changeClassName('rl_coverage-map-countries')}>
+            { coverageInfo.countries.map((country) => country.sections
+                ? <div
+                    key={`sections-${country.sections[0].style}`}
+                    className="rl_coverage-map-countries-section"
                   >
-                    <span className="country-name">{place.name}</span>
-                  </span>)
-                }
-              </div>
-              : <span
-                  key={`${country.name}-${country.style}`}
-                  className={`dot ${this.changeClassName(country.style)}`}
-                >
-                <span className="country-name">{country.name}</span>
-              </span>)
-          }
+                  { country.sections.map((place) =>
+                    <span
+                      key={`${place.name}-${place.style}`}
+                      className={`dot ${this.changeClassName(place.style)}`}
+                    >
+                      <span className="country-name">{place.name}</span>
+                    </span>)
+                  }
+                </div>
+                : <span
+                    key={`${country.name}-${country.style}`}
+                    className={`dot ${this.changeClassName(country.style)}`}
+                  >
+                  <span className="country-name">{country.name}</span>
+                </span>)
+            }
+          </div>
         </div>
       </div>
-    </div>)
+    )
   }
 }
 

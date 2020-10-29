@@ -17,8 +17,14 @@ html {
 body {
   width:100%;
   height: 100%;
-  font-family: "Avenir";
+  // font-family: "Avenir";
   font-size: 1.6rem;
   line-height: 1.7;
   margin: 0;
+}
+
+// window fix of font ???
+@font-face {
+  font-family: "Avenir";
+  src: url('/base/Avenir.ttc');
 }
