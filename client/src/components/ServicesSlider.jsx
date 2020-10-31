@@ -49,7 +49,9 @@ export default class ServicesSlider extends Component {
                 <div
                   className="caption"
                 >
-                  <p className="paragraph">{item.mainParahraph}</p>
+                  <p className={`paragraph ${item.name}`}>
+                    {item.mainParahraph}
+                  </p>
                   <div className={`list-items ${item.name}`}>
                     <div className="item image1" />
                     <div className="item image2" />
@@ -60,7 +62,9 @@ export default class ServicesSlider extends Component {
                       <p className={`text ${item.name}`} key={listItem}>{listItem}</p>
                     )}
                   </div>
-                  <p className="clause">{item.secondaryParagraph}</p>
+                  <p className="clause">
+                    {item.secondaryParagraph}
+                  </p>
                 </div>
               </div>
             </div>

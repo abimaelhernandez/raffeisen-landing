@@ -79,7 +79,7 @@ export default class Services extends Component {
               role="button"
               tabIndex={0}
             >
-              <Fade up cascade>
+              <Fade bottom>
                 <div className="services-container-item-title">
                   <div className={`services-container-item-title-logo ${item.name}`} />
                   <p className="services-container-item-title-text">

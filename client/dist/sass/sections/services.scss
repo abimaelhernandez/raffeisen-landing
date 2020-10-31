@@ -19,6 +19,7 @@
       background-size: cover;
       border: none;
       outline: none;
+      cursor: pointer;
 
       &.consult {
         background-image: url('../assets/images/Consult-only-bulb.jpg');
@@ -95,6 +96,8 @@
         position: absolute;
         display: flex;
         top: 9%;
+        animation-duration: 2500ms !important;
+        animation-delay: 1000ms !important;
 
         &-logo {
           width: 4rem;
