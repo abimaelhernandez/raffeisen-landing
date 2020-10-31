@@ -1,5 +1,5 @@
 #hideMe {
-  animation: cssAnimation 1s ease-out .5s forwards;
+  animation: cssAnimation 1500ms ease-out 1800ms forwards;
   animation-fill-mode: forwards;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .fade-in {
-  animation: fadeIn ease 3s;
+  animation: fadeIn ease 3000ms;
 }
 
 @keyframes fadeIn {
