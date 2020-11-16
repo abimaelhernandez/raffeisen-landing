@@ -33,12 +33,12 @@ const projectBody = {
       {
         id: 1,
         title : 'We generate processes that add value',
-        mainParahraph: 'Established in 2009 according to the standards of the German Confederation of Cooperatives (DGRV).',
+        mainParahraph: 'Established in 2009 according to the standards of the German Confederation of Cooperatives -DGRV-.',
         secondaryParagraph: 'We support the development and strengthening of the inclusive finance sector in Latin America.'
       },
       {
         id: 2,
-        title: 'Smart planning of decision-making processes'
+        title: 'Smart planning for decision-making processes'
       },
       {
         id: 3,
@@ -46,7 +46,7 @@ const projectBody = {
       }
     ],
     inovationBanner: {
-      title: 'Management model-DGRV',
+      title: 'Management model',
       mainParahraph: 'We base our services on tested methods that are tailored to the needs of our clients resulting from years of experience in the sector and a dedicated, specialized team of consultants.',
       secondaryParagraph: 'Supporting our process are technologically innovative tools that promote strategic and integral management.',
       topPhrase: 'Innovation for strategic development-DGRV'
@@ -70,7 +70,11 @@ const projectBody = {
         alt: 'Analitics.',
         mainParahraph: 'Platforms for the analysis of information accurately representing the operative, commercial, and financial reality of the organization.',
         secondaryParagraph: 'Through the design of dashboards, the visualization of information enables timely and efficient decision-making that favorably impacts the reality analyzed.',
-        listItems: {}
+        listItems: {
+          1: 'Control pannels',
+          2: 'Information Visualization',
+          3: 'Diversity of perspectives'
+        }
       },
       {
         id: 3,
@@ -290,9 +294,13 @@ const projectBody = {
         name: 'analytics',
         backgroundColor: '#fff',
         alt:'analítica.',
-        mainParahraph: 'Plataformas para el análisis de información representativa de la realidad operativa, comercial y financiera de una organización.',
+        mainParahraph: 'Plataformas para el análisis de información representativa de la realidad operativa, comercial y financiera de una organización. A través de:',
         secondaryParagraph: 'A través del diseño de tableros de control se busca la visualización de información para la oportuna y eficiente toma de decisiones que impacten favorablemente en la realidad analizada.',
-        listItems: { }
+        listItems: {
+          1: 'Tableros de control',
+          2: 'Visualizatión de informatión',
+          3: 'Diversidad de perspectivas'
+        }
       },
       {
         id: 3,

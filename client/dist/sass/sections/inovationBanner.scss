@@ -10,7 +10,7 @@
     bottom: 1rem;
     width: 100%;
     color: $color-white;
-    padding: 0 3rem;
+    padding: 0 7rem;
     font-size: $font-size-jumbo;
     font-weight: bold;
   }
@@ -19,7 +19,7 @@
     position: absolute;
     width: 14rem;
     max-width: 16rem;
-    left: 14%;
+    left: 4%;
     top: 52%;
     z-index: 1;
 
@@ -40,7 +40,7 @@
     position: absolute;
     width: 10rem;
     max-width: 12rem;
-    left: 80%;
+    left: 83%;
     top: 25%;
 
     &.start-animation {
