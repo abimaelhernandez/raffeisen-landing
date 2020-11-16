@@ -70,7 +70,11 @@ const projectBody = {
         alt: 'Analitics.',
         mainParahraph: 'Platforms for the analysis of information accurately representing the operative, commercial, and financial reality of the organization.',
         secondaryParagraph: 'Through the design of dashboards, the visualization of information enables timely and efficient decision-making that favorably impacts the reality analyzed.',
-        listItems: {}
+        listItems: {
+          1: 'Control pannels',
+          2: 'Information Visualization',
+          3: 'Diversity of perspectives'
+        }
       },
       {
         id: 3,
@@ -290,9 +294,13 @@ const projectBody = {
         name: 'analytics',
         backgroundColor: '#fff',
         alt:'analítica.',
-        mainParahraph: 'Plataformas para el análisis de información representativa de la realidad operativa, comercial y financiera de una organización.',
+        mainParahraph: 'Plataformas para el análisis de información representativa de la realidad operativa, comercial y financiera de una organización. A través de:',
         secondaryParagraph: 'A través del diseño de tableros de control se busca la visualización de información para la oportuna y eficiente toma de decisiones que impacten favorablemente en la realidad analizada.',
-        listItems: { }
+        listItems: {
+          1: 'Tableros de control',
+          2: 'Visualizatión de informatión',
+          3: 'Diversidad de perspectivas'
+        }
       },
       {
         id: 3,
