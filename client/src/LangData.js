@@ -33,12 +33,12 @@ const projectBody = {
       {
         id: 1,
         title : 'We generate processes that add value',
-        mainParahraph: 'Established in 2009 according to the standards of the German Confederation of Cooperatives (DGRV).',
+        mainParahraph: 'Established in 2009 according to the standards of the German Confederation of Cooperatives -DGRV-.',
         secondaryParagraph: 'We support the development and strengthening of the inclusive finance sector in Latin America.'
       },
       {
         id: 2,
-        title: 'Smart planning of decision-making processes'
+        title: 'Smart planning for decision-making processes'
       },
       {
         id: 3,
@@ -46,7 +46,7 @@ const projectBody = {
       }
     ],
     inovationBanner: {
-      title: 'Management model-DGRV',
+      title: 'Management model',
       mainParahraph: 'We base our services on tested methods that are tailored to the needs of our clients resulting from years of experience in the sector and a dedicated, specialized team of consultants.',
       secondaryParagraph: 'Supporting our process are technologically innovative tools that promote strategic and integral management.',
       topPhrase: 'Innovation for strategic development-DGRV'

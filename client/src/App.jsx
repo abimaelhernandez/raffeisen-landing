@@ -80,7 +80,7 @@ export default class App extends Component {
             <a className="rl-navigation-bar-logo" href="/">
               <img src={navbarLogo} alt="Raiffeisen Main Logo" className={navbarLogoClass}/>
               <img src="../assets/logos/Blue-R.svg" alt="Raiffeisen Main Logo" className="rl-navigation-bar-logo-medium"/>
-              <img src="../assets/logos/Mobile-R.svg" alt="Raiffeisen Main Logo" className="rl-navigation-bar-logo-small"/>
+              <img src="../assets/logos/Mobile-R-New.svg" alt="Raiffeisen Main Logo" className="rl-navigation-bar-logo-small"/>
             </a>
             <div className="rl-navigation-bar-items">
               {
