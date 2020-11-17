@@ -417,20 +417,70 @@
     }
   }
 }
+//
+@media (max-width: 1200px) {
+//   .rl_coverage-map-countries {
+//     .dot {
+//       width: 1.6rem;
+//       height: 1.6rem;
+//
+//       &.country {
+//         &-ec {
+//           margin-top: 1rem;
+//         }
+//
+//         &-gy {
+//           margin-top: -1rem;
+//         }
+//       }
+//     }
+//   }
+  .rl_coverage {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 0;
+    min-height: 90rem;
 
-@media (max-width: 1025px) {
-  .rl_coverage-map-countries {
-    .dot {
-      width: 1.6rem;
-      height: 1.6rem;
+    &-title {
+      font-size: $font-size-xxxl;
+    }
 
-      &.country {
-        &-ec {
-          margin-top: 1rem;
-        }
+    &-text {
+      font-size: $font-size-mw;
+      max-width: 100%;
+    }
 
-        &-gy {
-          margin-top: -1rem;
+    &-map {
+      &-img {
+        width: 62rem;
+        min-height: 70rem;
+        float: none;
+        margin: auto;
+      }
+
+      &-countries .dot {
+        &.country {
+          &-gt {
+            margin-top: 0.3rem;
+          }
+
+          &-hn {
+            margin-top: 0;
+          }
+
+          &-do {
+            margin-left: 5rem;
+            margin-top: 0;
+          }
+
+          &-ni {
+            margin-top: -.8rem;
+          }
+
+          &-sv {
+            margin-top: -.3rem;
+          }
         }
       }
     }
