@@ -153,7 +153,6 @@
       background-repeat: no-repeat;
       background-size: cover;
 
-
       &-content {
         position: relative;
         width: 100%;
@@ -247,7 +246,7 @@
             color: $color-white;
             margin: 0;
             text-align: left;
-            left: 20%;
+            left: 10%;
 
             &::before {
               content: "";
@@ -282,6 +281,30 @@
       background-color: $color-white;
       border-radius: 50%;
       display: inline-block;
+    }
+  }
+
+
+  @media only screen and (max-width: 1200px){
+    #main_carousel {
+      .first-slide {
+        background-attachment: fixed;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .second-slide {
+        background-attachment: fixed;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .third-slide {
+        background-attachment: fixed;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
     }
   }
 
