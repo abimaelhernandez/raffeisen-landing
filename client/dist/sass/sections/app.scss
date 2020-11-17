@@ -65,7 +65,7 @@
     &-large {
       display: block;
       cursor: pointer;
-      margin-right: 1.5rem;
+      // margin-right: 1.5rem;
       object-fit: fill;
     }
 
@@ -112,7 +112,7 @@
   }
 
   &-lang {
-    margin-right: 3%;
+    margin-right: 5%;
     width: 6%;
     display: flex;
     justify-content: space-between;
