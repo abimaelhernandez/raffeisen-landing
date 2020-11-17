@@ -133,7 +133,7 @@
         color: #4d4d4d;
 
         .paragraph {
-          margin: 4.5vw 0 3vw 0;
+          margin: 3.5vw 0 3vw 0;
           &.consult {
             margin: 4.5vw 0 2.1vw 0;
           }
@@ -259,6 +259,35 @@
    }
  }
 
+ @media only screen and (max-width: 767px){
+   #services-slider {
+     .inner-container{
+       .image {
+         .title {
+           .icon {
+             width: 3.5rem;
+             height: 3.5rem;
+           }
+           .text {
+             font-size: 3vw;
+           }
+         }
+       }
+       .caption {
+         padding: 0px 3vw;
+         .paragraph {
+           &.consult {
+             margin: 3.5vw 0 3vw 0;
+           }
+           &.analytics {
+             margin: 2.5vw 0 1.2vw 0;
+           }
+         }
+       }
+     }
+   }
+ }
+
   @media (max-width: 540px) {
     &-close {
       position: absolute;
@@ -319,6 +348,8 @@
           }
           .title {
             .icon {
+              width: 4rem;
+              height: 4rem;
               margin: 0 2rem;
             }
           }

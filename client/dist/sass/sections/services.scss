@@ -142,6 +142,25 @@
           &-logo {
             margin: 0 1.5rem 0 1rem;
           }
+          &-text {
+            font-size: 3.5vw;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px){
+    &-container {
+      &-item {
+        &-title {
+          &-logo {
+            width: 3.5rem;
+            height: 3.5rem;
+          }
+          &-text {
+            font-size: 3vw;
+          }
         }
       }
     }
@@ -232,6 +251,7 @@
           &-logo {
             position: relative;
             width: 4rem;
+            height: 4rem;
             align-items: center;
             background-position: center;
             background-repeat: no-repeat;
@@ -246,6 +266,7 @@
             text-align: left;
             color: white;
             margin: 0;
+            font-size: 3rem;
           }
         }
       }
