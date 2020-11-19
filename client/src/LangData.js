@@ -298,7 +298,7 @@ const projectBody = {
         secondaryParagraph: 'A través del diseño de tableros de control se busca la visualización de información para la oportuna y eficiente toma de decisiones que impacten favorablemente en la realidad analizada.',
         listItems: {
           1: 'Tableros de control',
-          2: 'Visualizatión de informatión',
+          2: 'Visualización de informatión',
           3: 'Diversidad de perspectivas'
         }
       },
