@@ -237,7 +237,7 @@
        min-height: 29.95rem;
        .image {
          width: 100%;
-         padding: 0;
+         padding-bottom: 39%;
          .title {
 
            .icon {
@@ -354,6 +354,9 @@
               width: 4rem;
               height: 4rem;
               margin: 0 2rem;
+            }
+            .text {
+              font-size: 3rem;
             }
           }
         }
