@@ -20,82 +20,54 @@ export default class Slider extends Component {
           data-interval="false"
         >
           <div className="carousel-inner">
-            <div
-              className="carousel-item active first-slide"
-              style={{backgroundImage: `url(../../assets/images/sphere-on-stump-min.jpg)`}}
-            >
+            <div className="carousel-item active first-slide">
               <div className="first-slide-content">
-                <Fade left>
-                  <div className="first-slide-content-text">
-                    <div className="first-slide-content-text-title">
-                      {slidesInfo[0].title}
-                    </div>
-                    <div className="first-slide-content-text-body">
-                      <p className="first-slide-content-text-body-paragraph">
-                        {slidesInfo[0].mainParahraph}
-                      </p>
-                      <p className="first-slide-content-text-body-paragraph">
-                        {slidesInfo[0].secondaryParagraph}
-                      </p>
-                    </div>
-                    <div
-                      className="first-slide-content-text-logo"
-                      style={{backgroundImage: `url(../../assets/logos/white_logo.svg)`}}
-                    >
-                    </div>
+                <div className="first-slide-content-text">
+                  <div className="first-slide-content-text-title">
+                    {slidesInfo[0].title}
                   </div>
-                </Fade>
-                <Fade left>
-                  <div className="img-container">
-                    <img
-                      src="../../assets/icons/Orange-Plus.svg"
-                      alt={slidesInfo[0].title}/>
+                  <div className="first-slide-content-text-body">
+                    <p className="first-slide-content-text-body-paragraph">
+                      {slidesInfo[0].mainParahraph}
+                    </p>
+                    <p className="first-slide-content-text-body-paragraph">
+                      {slidesInfo[0].secondaryParagraph}
+                    </p>
                   </div>
-                </Fade>
+                  <div
+                    className="first-slide-content-text-logo"
+                    style={{backgroundImage: `url(../../assets/logos/white_logo.svg)`}}
+                  >
+                  </div>
+                </div>
+                <div className="img-container">
+                  <div className="orage-plus" />
+                </div>
               </div>
             </div>
-            <div
-              className="carousel-item second-slide"
-              style={{backgroundImage: `url(../../assets/images/sewing-machine-min.jpg)`}}
-            >
+            <div className="carousel-item second-slide">
               <div className="second-slide-content">
-                <div className="second-slide-content-img-container">
-                  <Fade down>
-                    <img
-                      className="d-block"
-                      src="../../assets/icons/Yellow-Plant.svg"
-                      alt={slidesInfo[1].title}
-                    />
-                  </Fade>
-                </div>
                 <div className="second-slide-content-text">
-                  <Fade up>
-                    <div className="carousel-caption second-slide-content-text-title">
-                      {slidesInfo[1].title}
-                    </div>
-                  </Fade>
+                  <div className="second-slide-content-text-title">
+                    {slidesInfo[1].title}
+                  </div>
+                </div>
+                <div className="img-container">
+                  <div className="yellow-plant" />
                 </div>
               </div>
             </div>
-            <div
-              className="carousel-item third-slide"
-              style={{backgroundImage: `url(../../assets/images/slowed-arrow-min.jpg)`}}
-            >
+            <div className="carousel-item third-slide">
               <div className="third-slide-content">
-                <div className="third-slide-content-img-container">
-                  <Fade left>
-                    <img
-                      src="../../assets/icons/Green-Arrows.svg"
-                      alt={slidesInfo[2].title}
-                    />
-                  </Fade>
-                </div>
                 <div className="third-slide-content-text">
                   <Fade left>
                     <div className="third-slide-content-text-title">
                       {slidesInfo[2].title}
                     </div>
                   </Fade>
+                </div>
+                <div className="img-container">
+                  <div className="green-arrows"/>
                 </div>
               </div>
             </div>

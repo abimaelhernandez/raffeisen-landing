@@ -17,7 +17,7 @@
   }
 
   #main_carousel {
-    height: 100%;
+    height: inherit;
 
    .carousel-control-prev,
      .carousel-control-next {
@@ -75,70 +75,69 @@
       width: 100%;
       height: inherit;
       background-attachment: fixed;
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: cover;
-
-      .aboutus {
-        display: none;
-      }
+      padding: 0rem 10%;
 
       &-content {
         position: relative;
         width: 100%;
+        height: inherit;
         display: flex;
-        top: 30%;
-        padding: 0rem 10rem;
+        flex-direction: column;
 
         &-text {
           position: relative;
           width: 100%;
-          min-height: 20vh;
-          padding: 0 5rem;
+          height: 50%;
           color: $color-white;
-
-          &-body-paragraph {
-            font-size: $font-size-smw;
-          }
+          padding: 35% 0 0 0;
+          text-align: left;
 
           &-title {
-            padding: 0 0 2rem 0;
-            font-size: $font-size-title;
+            padding: 0 0 1rem 0;
+            font-size: 6vw;
             font-weight: 900;
             line-height: 1.03;
-            text-align: left;
+            max-width: 17ch;
             color: $color-white;
 
             &::before {
               content: "";
               position: absolute;
-              height: 2.5rem;
-              width: 2.5rem;
+              height: 1.5rem;
+              width: 1.5rem;
               background-color: $neon-carrot-orange;
               border-radius: 50%;
               display: inline-block;
-              left: 0;
+              left: -2rem;
             }
           }
 
+          &-body-paragraph {
+            font-size: 3vw;
+          }
+
           &-logo {
-            width: 30rem;
+            width: 20vw;
             height: 5rem;
-            background-position: initial;
+            background-position: bottom;
             background-repeat: no-repeat;
             background-size: contain;
-            margin: 2px;
           }
         }
 
         .img-container {
           position: relative;
           width: 100%;
+          height: 50%;
 
-          img {
+          .orage-plus {
+            width: 20rem;
+            height: 20rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('../assets/icons/Orange-Plus.svg');
             float: right;
-            width: 35vw;
-            height: 35vh;
           }
         }
       }
@@ -149,54 +148,55 @@
       width: 100%;
       height: inherit;
       background-attachment: fixed;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      padding: 0rem 10%;
 
       &-content {
         position: relative;
         width: 100%;
         display: flex;
-        top: 30%;
-        padding: 0rem 10rem;
-
-        &-img-container {
-          position: relative;
-          width: 100%;
-          padding-left: 21%;
-
-          img {
-            height: 25vw;
-          }
-        }
+        flex-wrap: wrap;
 
         &-text {
           position: relative;
           width: 100%;
-          height: auto;
-          min-height: 20vh;
-          font-size: 3.8vw;
+          height: 50vh;
           color: $color-white;
+          text-align: left;
+          padding: 35% 0 0 0;
 
           &-title {
-            font-size: $font-size-title;
+            position: relative;
+            font-size: 6vw;
             font-weight: 900;
             line-height: 1.03;
-            color: $color-white;
-            top: 0;
-            max-width: 10ch;
-            text-align: left;
+            max-width: 16ch;
 
             &::before {
               content: "";
               position: absolute;
-              height: 2.5rem;
-              width: 2.5rem;
+              height: 1.5rem;
+              width: 1.5rem;
               border-radius: 50%;
               display: inline-block;
               background-color: $color-light-yellow;
-              left: -4rem;
+              left: -2rem;
             }
+          }
+        }
+
+        .img-container {
+          position: relative;
+          width: 100%;
+          height: 50vh;
+
+          .yellow-plant {
+            width: 18rem;
+            height: 20rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../assets/icons/Yellow-Plant.svg');
+            float: right;
           }
         }
       }
@@ -206,58 +206,58 @@
       position: relative;
       width: 100%;
       height: inherit;
-      background-attachment: fixed;
-      background-position: bottom;
-      background-repeat: no-repeat;
-      background-size: cover;
+      padding: 0rem 10%;
 
       &-content {
         position: relative;
         width: 100%;
         display: flex;
-        justify-content: space-between;
-        top: 38%;
-
-        &-img-container {
-          width: 100%;
-          text-align: center;
-
-          img {
-            position: relative;
-            min-width: 3rem;
-            max-width: 33rem;
-            left: 12%;
-          }
-        }
+        flex-direction: column;
 
         &-text {
           position: relative;
           width: 100%;
-          height: auto;
+          height: 50vh;
           text-align: center;
           color: $color-white;
+          padding: 35% 0 0 0;
 
           &-title {
             position: relative;
-            max-width: 12ch;
-            font-size: $font-size-title;
-            font-weight: 850;
+            max-width: 17ch;
+            font-size: 6vw;
+            font-weight: 900;
             line-height: 0.9;
             color: $color-white;
             margin: 0;
             text-align: left;
-            left: 10%;
 
             &::before {
               content: "";
               position: absolute;
-              height: 2.5rem;
-              width: 2.5rem;
+              height: 1.5rem;
+              width: 1.5rem;
               background-color: $color-light-green;
               border-radius: 50%;
               display: inline-block;
-              left: -4rem;
+              left: -2rem;
             }
+          }
+        }
+
+        .img-container {
+          width: 100%;
+          height: 50vh;
+          paddin: 2rem 0 0 0;
+
+          .green-arrows {
+            width: 17rem;
+            height: 20rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../assets/icons/Green-Arrows.svg');
+            float: right;
           }
         }
       }
@@ -284,184 +284,131 @@
     }
   }
 
-
-  @media only screen and (max-width: 1200px){
-    #main_carousel {
-      .first-slide {
-        background-attachment: fixed;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      .second-slide {
-        background-attachment: fixed;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      .third-slide {
-        background-attachment: fixed;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-    }
-  }
-
-  @media only screen and (min-width: 781px) {
-    &-mobileVideo {
-      display: none;
-    }
-  }
-
-  @media only screen and (max-width: 780px) {
-    #main_carousel {
-      .carousel-item {
-        padding: 2rem;
-      }
-
-      .first-slide {
-        background-image: none;
-        background-attachment: none;
-        background-repeat: no-repeat;
-        background-size: 0;
-
-        &-content {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-wrap: wrap;
-          top: 0%;
-          padding: 0;
-
-          &-text {
-            position: relative;
-            height: 50%;
-            padding: 26% 0 0 11%;
-
-            &-body-paragraph {
-              font-size: $font-size-s;
-            }
-
-            &-title {
-              padding: 0 0 2rem 0;
-              font-size: 6.8vw;
-              font-weight: 900;
-              line-height: 1.03;
-              text-align: left;
-              color: $color-white;
-              max-width: 18ch;
-            }
-
-            &-logo {
-              width: 30rem;
-              height: 3rem;
-            }
-          }
-
-          .img-container {
-            position: relative;
-            width: 100%;
-            height: 50%;
-            padding: 2rem;
-
-            img {
-              float: right;
-              width: 35vw;
-              height: 35vh;
-            }
-          }
-        }
-      }
-
-      .second-slide {
-        background-image: none;
-        background-attachment: none;
-        background-repeat: no-repeat;
-        background-size: 0;
-
-        &-content {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-wrap: wrap-reverse;
-          padding: 0;
-          top: 0;
-
-          &-img-container {
-            position: relative;
-            width: 100%;
-            height: 50%;
-
-            img {
-              height: 43vw;
-              position: relative;
-              float: right;
-              padding: 0 21% 0 0;
-              top: 10%;
-            }
-          }
-
-          &-text {
-            width: 100%;
-            height: 50%;
-            padding: 30% 0 0 0;
-
-            &-title {
-              position: relative;
-              width: 100%;
-              font-size: 6.8vw;
-              font-weight: 900;
-              line-height: 1.03;
-              color: $color-white;
-              max-width: 17ch;
-              padding: 0;
-            }
-          }
-        }
-      }
-
-      .third-slide {
-        background-image: none;
-        background-attachment: none;
-        background-repeat: no-repeat;
-        background-size: 0;
-
-        &-content {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-wrap: wrap-reverse;
-          padding: 0;
-          top: 0;
-
-          &-img-container {
-            width: 100%;
-
-            img {
-              width: 50%;
-            }
-          }
-
-          &-text {
-            width: 100%;
-
-            &-title {
-              position: relative;
-              font-size: 6.2vw;
-              font-weight: 850;
-              line-height: 0.9;
-              color: #ffffff;
-              max-width: 19ch;
-              text-align: left;
-              top: 39%;
-            }
-          }
-        }
-      }
-    }
-  }
+  // @media only screen and (min-width: 781px) {
+  //   &-mobileVideo {
+  //     display: none;
+  //   }
+  // }
+  //
+  // @media only screen and (max-width: 780px) {
+  //   #main_carousel {
+  //     .carousel-item {
+  //       padding: 2rem;
+  //     }
+  //
+  //     .first-slide {
+  //       &-content {
+  //         &-text {
+  //           &-body-paragraph {
+  //             font-size: $font-size-s;
+  //           }
+  //
+  //           &-title {
+  //           }
+  //
+  //           &-logo {
+  //           }
+  //         }
+  //
+  //         .img-container {
+  //           padding: 2rem;
+  //
+  //           img {
+  //             float: right;
+  //             width: 35vw;
+  //             height: 35vh;
+  //           }
+  //         }
+  //       }
+  //     }
+  //
+  //     .second-slide {
+  //       background-image: none;
+  //       background-attachment: none;
+  //       background-repeat: no-repeat;
+  //       background-size: 0;
+  //
+  //       &-content {
+  //         position: relative;
+  //         width: 100%;
+  //         height: 100%;
+  //         display: flex;
+  //         flex-wrap: wrap-reverse;
+  //         padding: 0;
+  //         top: 0;
+  //
+  //         &-img-container {
+  //           position: relative;
+  //           width: 100%;
+  //           height: 50%;
+  //
+  //           img {
+  //             height: 43vw;
+  //             position: relative;
+  //             float: right;
+  //             padding: 0 21% 0 0;
+  //             top: 10%;
+  //           }
+  //         }
+  //
+  //         &-text {
+  //           width: 100%;
+  //           height: 50%;
+  //           padding: 30% 0 0 0;
+  //
+  //           &-title {
+  //             position: relative;
+  //             width: 100%;
+  //             font-size: 6.8vw;
+  //             font-weight: 900;
+  //             line-height: 1.03;
+  //             color: $color-white;
+  //             max-width: 17ch;
+  //             padding: 0;
+  //           }
+  //         }
+  //       }
+  //     }
+  //
+  //     .third-slide {
+  //       background-image: none;
+  //       background-attachment: none;
+  //       background-repeat: no-repeat;
+  //       background-size: 0;
+  //
+  //       &-content {
+  //         position: relative;
+  //         width: 100%;
+  //         height: 100%;
+  //         display: flex;
+  //         flex-wrap: wrap-reverse;
+  //         padding: 0;
+  //         top: 0;
+  //
+  //         &-img-container {
+  //           width: 100%;
+  //
+  //           img {
+  //             width: 50%;
+  //           }
+  //         }
+  //
+  //         &-text {
+  //           width: 100%;
+  //
+  //           &-title {
+  //             position: relative;
+  //             font-size: 6.2vw;
+  //             font-weight: 850;
+  //             line-height: 0.9;
+  //             color: #ffffff;
+  //             max-width: 19ch;
+  //             text-align: left;
+  //             top: 39%;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }
