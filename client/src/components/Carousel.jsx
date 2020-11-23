@@ -34,14 +34,12 @@ export default class Slider extends Component {
                       {slidesInfo[0].secondaryParagraph}
                     </p>
                   </div>
-                  <div
-                    className="first-slide-content-text-logo"
-                    style={{backgroundImage: `url(../../assets/logos/white_logo.svg)`}}
-                  >
+                  <div className="first-slide-content-text-logo">
+                    <div className="content" />
                   </div>
                 </div>
                 <div className="img-container">
-                  <div className="orage-plus" />
+                  <div className="orange-plus" />
                 </div>
               </div>
             </div>

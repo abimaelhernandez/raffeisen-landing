@@ -74,7 +74,7 @@
       position: relative;
       width: 100%;
       height: inherit;
-      background-attachment: fixed;
+      // background-attachment: fixed;
       padding: 0rem 10%;
 
       &-content {
@@ -117,11 +117,17 @@
           }
 
           &-logo {
-            width: 20vw;
+            width: 100%;
             height: 5rem;
-            background-position: bottom;
-            background-repeat: no-repeat;
-            background-size: contain;
+
+            .content {
+              width: 10rem;
+              height: inherit;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-image: url('../assets/logos/white_logo.svg');
+            }
           }
         }
 
@@ -130,7 +136,7 @@
           width: 100%;
           height: 50%;
 
-          .orage-plus {
+          .orange-plus {
             width: 20rem;
             height: 20rem;
             background-position: center;
@@ -147,14 +153,15 @@
       position: relative;
       width: 100%;
       height: inherit;
-      background-attachment: fixed;
+      // background-attachment: fixed;
       padding: 0rem 10%;
 
       &-content {
         position: relative;
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        // flex-wrap: wrap;
 
         &-text {
           position: relative;
@@ -284,131 +291,171 @@
     }
   }
 
-  // @media only screen and (min-width: 781px) {
-  //   &-mobileVideo {
-  //     display: none;
-  //   }
-  // }
-  //
-  // @media only screen and (max-width: 780px) {
-  //   #main_carousel {
-  //     .carousel-item {
-  //       padding: 2rem;
-  //     }
-  //
-  //     .first-slide {
-  //       &-content {
-  //         &-text {
-  //           &-body-paragraph {
-  //             font-size: $font-size-s;
-  //           }
-  //
-  //           &-title {
-  //           }
-  //
-  //           &-logo {
-  //           }
-  //         }
-  //
-  //         .img-container {
-  //           padding: 2rem;
-  //
-  //           img {
-  //             float: right;
-  //             width: 35vw;
-  //             height: 35vh;
-  //           }
-  //         }
-  //       }
-  //     }
-  //
-  //     .second-slide {
-  //       background-image: none;
-  //       background-attachment: none;
-  //       background-repeat: no-repeat;
-  //       background-size: 0;
-  //
-  //       &-content {
-  //         position: relative;
-  //         width: 100%;
-  //         height: 100%;
-  //         display: flex;
-  //         flex-wrap: wrap-reverse;
-  //         padding: 0;
-  //         top: 0;
-  //
-  //         &-img-container {
-  //           position: relative;
-  //           width: 100%;
-  //           height: 50%;
-  //
-  //           img {
-  //             height: 43vw;
-  //             position: relative;
-  //             float: right;
-  //             padding: 0 21% 0 0;
-  //             top: 10%;
-  //           }
-  //         }
-  //
-  //         &-text {
-  //           width: 100%;
-  //           height: 50%;
-  //           padding: 30% 0 0 0;
-  //
-  //           &-title {
-  //             position: relative;
-  //             width: 100%;
-  //             font-size: 6.8vw;
-  //             font-weight: 900;
-  //             line-height: 1.03;
-  //             color: $color-white;
-  //             max-width: 17ch;
-  //             padding: 0;
-  //           }
-  //         }
-  //       }
-  //     }
-  //
-  //     .third-slide {
-  //       background-image: none;
-  //       background-attachment: none;
-  //       background-repeat: no-repeat;
-  //       background-size: 0;
-  //
-  //       &-content {
-  //         position: relative;
-  //         width: 100%;
-  //         height: 100%;
-  //         display: flex;
-  //         flex-wrap: wrap-reverse;
-  //         padding: 0;
-  //         top: 0;
-  //
-  //         &-img-container {
-  //           width: 100%;
-  //
-  //           img {
-  //             width: 50%;
-  //           }
-  //         }
-  //
-  //         &-text {
-  //           width: 100%;
-  //
-  //           &-title {
-  //             position: relative;
-  //             font-size: 6.2vw;
-  //             font-weight: 850;
-  //             line-height: 0.9;
-  //             color: #ffffff;
-  //             max-width: 19ch;
-  //             text-align: left;
-  //             top: 39%;
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+  @media only screen and (min-width: 500px) {
+    #main_carousel {
+      .first-slide {
+        &-content {
+          &-text {
+            padding: 16% 0 0 0;
+            &-title {
+            }
+            &-logo {
+            }
+          }
+        }
+      }
+
+      .second-slide {
+        &-content {
+          &-text {
+            padding: 16% 0 0 0;
+            &-title {
+            }
+          }
+        }
+      }
+
+      .third-slide {
+        &-content {
+          &-text {
+            padding: 16% 0 0 0;
+            &-title {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 706px) {
+    &-mobileVideo {
+      display: none;
+    }
+
+    #main_carousel {
+      .first-slide {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('/../assets/images/sphere-on-stump-min.jpg');
+        padding: 0 6%;
+
+        &-content {
+          flex-direction: row;
+          padding: 0;
+          align-items: center;
+
+          &-text {
+            padding: 0;
+
+            &-title {
+              font-size: 4vw;
+              font-weight: 700;
+            }
+
+            &-body {
+              &-paragraph {
+                font-size: 2vw;
+              }
+            }
+
+            &-logo {
+              width: 6vw;
+            }
+          }
+
+          .img-container {
+            .orange-plus {
+              width: 23vw;
+              height: 23vw;
+              float: none;
+              margin: auto;
+            }
+          }
+        }
+      }
+
+      .second-slide {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('/../assets/images/sewing-machine-min.jpg');
+        padding: 0 6%;
+
+        &-content {
+          flex-direction: row-reverse;
+          align-items: center;
+          height: inherit;
+          // padding: 16% 0 0 0;
+          &-text {
+            padding: 0;
+            display: flex;
+            align-items: center;
+
+            &-title {
+              font-size: 4vw;
+              max-width: 8ch;
+              margin: auto;
+              font-weight: 700;
+            }
+          }
+
+          .img-container {
+            display: flex;
+            align-items: center;
+
+            .yellow-plant {
+              width: 20vw;
+              height: 26vw;
+              margin: auto;
+            }
+          }
+        }
+      }
+
+      .third-slide {
+        width: 100%;
+        height: 100%;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('/../assets/images/slowed-arrow-min.jpg');
+        padding: 0 6%;
+
+        &-content {
+          height: inherit;
+          flex-direction: row-reverse;
+          align-items: center;
+
+          &-text {
+            padding: 0;
+            display: flex;
+            align-items: center;
+
+            &-title {
+              font-size: 4vw;
+              font-weight: 700;
+              max-width: 10ch;
+              margin: auto;
+            }
+          }
+
+          .img-container {
+            display: flex;
+            align-items: center;
+
+            .green-arrows {
+              width: 23vw;
+              height: 23vw;
+              margin: auto;
+            }
+          }
+        }
+      }
+    }
+  }
 }
