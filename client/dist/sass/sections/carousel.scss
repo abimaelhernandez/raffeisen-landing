@@ -17,7 +17,7 @@
   }
 
   #main_carousel {
-    height: 100%;
+    height: inherit;
 
    .carousel-control-prev,
      .carousel-control-next {
@@ -74,71 +74,76 @@
       position: relative;
       width: 100%;
       height: inherit;
-      background-attachment: fixed;
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: cover;
-
-      .aboutus {
-        display: none;
-      }
+      // background-attachment: fixed;
+      padding: 0rem 10%;
 
       &-content {
         position: relative;
         width: 100%;
+        height: inherit;
         display: flex;
-        top: 30%;
-        padding: 0rem 10rem;
+        flex-direction: column;
 
         &-text {
           position: relative;
           width: 100%;
-          min-height: 20vh;
-          padding: 0 5rem;
+          height: 50%;
           color: $color-white;
-
-          &-body-paragraph {
-            font-size: $font-size-smw;
-          }
+          padding: 35% 0 0 0;
+          text-align: left;
 
           &-title {
-            padding: 0 0 2rem 0;
-            font-size: $font-size-title;
+            padding: 0 0 1rem 0;
+            font-size: 6vw;
             font-weight: 900;
             line-height: 1.03;
-            text-align: left;
+            max-width: 17ch;
             color: $color-white;
 
             &::before {
               content: "";
               position: absolute;
-              height: 2.5rem;
-              width: 2.5rem;
+              height: 1.5rem;
+              width: 1.5rem;
               background-color: $neon-carrot-orange;
               border-radius: 50%;
               display: inline-block;
-              left: 0;
+              left: -2rem;
             }
           }
 
+          &-body-paragraph {
+            font-size: 3vw;
+          }
+
           &-logo {
-            width: 30rem;
+            width: 100%;
             height: 5rem;
-            background-position: initial;
-            background-repeat: no-repeat;
-            background-size: contain;
-            margin: 2px;
+
+            .content {
+              width: 10rem;
+              height: inherit;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-image: url('../assets/logos/white_logo.svg');
+            }
           }
         }
 
         .img-container {
           position: relative;
           width: 100%;
+          height: 50%;
 
-          img {
+          .orange-plus {
+            width: 20rem;
+            height: 20rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('../assets/icons/Orange-Plus.svg');
             float: right;
-            width: 35vw;
-            height: 35vh;
           }
         }
       }
@@ -148,55 +153,57 @@
       position: relative;
       width: 100%;
       height: inherit;
-      background-attachment: fixed;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      // background-attachment: fixed;
+      padding: 0rem 10%;
 
       &-content {
         position: relative;
         width: 100%;
         display: flex;
-        top: 30%;
-        padding: 0rem 10rem;
-
-        &-img-container {
-          position: relative;
-          width: 100%;
-          padding-left: 21%;
-
-          img {
-            height: 25vw;
-          }
-        }
+        flex-direction: column;
+        // flex-wrap: wrap;
 
         &-text {
           position: relative;
           width: 100%;
-          height: auto;
-          min-height: 20vh;
-          font-size: 3.8vw;
+          height: 50vh;
           color: $color-white;
+          text-align: left;
+          padding: 35% 0 0 0;
 
           &-title {
-            font-size: $font-size-title;
+            position: relative;
+            font-size: 6vw;
             font-weight: 900;
             line-height: 1.03;
-            color: $color-white;
-            top: 0;
-            max-width: 10ch;
-            text-align: left;
+            max-width: 16ch;
 
             &::before {
               content: "";
               position: absolute;
-              height: 2.5rem;
-              width: 2.5rem;
+              height: 1.5rem;
+              width: 1.5rem;
               border-radius: 50%;
               display: inline-block;
               background-color: $color-light-yellow;
-              left: -4rem;
+              left: -2rem;
             }
+          }
+        }
+
+        .img-container {
+          position: relative;
+          width: 100%;
+          height: 50vh;
+
+          .yellow-plant {
+            width: 18rem;
+            height: 20rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../assets/icons/Yellow-Plant.svg');
+            float: right;
           }
         }
       }
@@ -206,58 +213,58 @@
       position: relative;
       width: 100%;
       height: inherit;
-      background-attachment: fixed;
-      background-position: bottom;
-      background-repeat: no-repeat;
-      background-size: cover;
+      padding: 0rem 10%;
 
       &-content {
         position: relative;
         width: 100%;
         display: flex;
-        justify-content: space-between;
-        top: 38%;
-
-        &-img-container {
-          width: 100%;
-          text-align: center;
-
-          img {
-            position: relative;
-            min-width: 3rem;
-            max-width: 33rem;
-            left: 12%;
-          }
-        }
+        flex-direction: column;
 
         &-text {
           position: relative;
           width: 100%;
-          height: auto;
+          height: 50vh;
           text-align: center;
           color: $color-white;
+          padding: 35% 0 0 0;
 
           &-title {
             position: relative;
-            max-width: 12ch;
-            font-size: $font-size-title;
-            font-weight: 850;
+            max-width: 17ch;
+            font-size: 6vw;
+            font-weight: 900;
             line-height: 0.9;
             color: $color-white;
             margin: 0;
             text-align: left;
-            left: 10%;
 
             &::before {
               content: "";
               position: absolute;
-              height: 2.5rem;
-              width: 2.5rem;
+              height: 1.5rem;
+              width: 1.5rem;
               background-color: $color-light-green;
               border-radius: 50%;
               display: inline-block;
-              left: -4rem;
+              left: -2rem;
             }
+          }
+        }
+
+        .img-container {
+          width: 100%;
+          height: 50vh;
+          paddin: 2rem 0 0 0;
+
+          .green-arrows {
+            width: 17rem;
+            height: 20rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../assets/icons/Green-Arrows.svg');
+            float: right;
           }
         }
       }
@@ -284,180 +291,167 @@
     }
   }
 
-
-  @media only screen and (max-width: 1200px){
+  @media only screen and (min-width: 500px) {
     #main_carousel {
       .first-slide {
-        background-attachment: fixed;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
+        &-content {
+          &-text {
+            padding: 16% 0 0 0;
+            &-title {
+            }
+            &-logo {
+            }
+          }
+        }
       }
+
       .second-slide {
-        background-attachment: fixed;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
+        &-content {
+          &-text {
+            padding: 16% 0 0 0;
+            &-title {
+            }
+          }
+        }
       }
+
       .third-slide {
-        background-attachment: fixed;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
+        &-content {
+          &-text {
+            padding: 16% 0 0 0;
+            &-title {
+            }
+          }
+        }
       }
     }
   }
 
-  @media only screen and (min-width: 781px) {
+  @media only screen and (min-width: 706px) {
     &-mobileVideo {
       display: none;
     }
-  }
 
-  @media only screen and (max-width: 780px) {
     #main_carousel {
-      .carousel-item {
-        padding: 2rem;
-      }
-
       .first-slide {
-        background-image: none;
-        background-attachment: none;
+        width: 100%;
+        height: 100%;
+        background-position: center;
         background-repeat: no-repeat;
-        background-size: 0;
+        background-size: cover;
+        background-image: url('/../assets/images/sphere-on-stump-min.jpg');
+        padding: 0 6%;
 
         &-content {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-wrap: wrap;
-          top: 0%;
+          flex-direction: row;
           padding: 0;
+          align-items: center;
 
           &-text {
-            position: relative;
-            height: 50%;
-            padding: 26% 0 0 11%;
-
-            &-body-paragraph {
-              font-size: $font-size-s;
-            }
+            padding: 0;
 
             &-title {
-              padding: 0 0 2rem 0;
-              font-size: 6.8vw;
-              font-weight: 900;
-              line-height: 1.03;
-              text-align: left;
-              color: $color-white;
-              max-width: 18ch;
+              font-size: 4vw;
+              font-weight: 700;
+            }
+
+            &-body {
+              &-paragraph {
+                font-size: 2vw;
+              }
             }
 
             &-logo {
-              width: 30rem;
-              height: 3rem;
+              width: 6vw;
             }
           }
 
           .img-container {
-            position: relative;
-            width: 100%;
-            height: 50%;
-            padding: 2rem;
-
-            img {
-              float: right;
-              width: 35vw;
-              height: 35vh;
+            .orange-plus {
+              width: 23vw;
+              height: 23vw;
+              float: none;
+              margin: auto;
             }
           }
         }
       }
 
       .second-slide {
-        background-image: none;
-        background-attachment: none;
+        width: 100%;
+        height: 100%;
+        background-position: center;
         background-repeat: no-repeat;
-        background-size: 0;
+        background-size: cover;
+        background-image: url('/../assets/images/sewing-machine-min.jpg');
+        padding: 0 6%;
 
         &-content {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-wrap: wrap-reverse;
-          padding: 0;
-          top: 0;
+          flex-direction: row-reverse;
+          align-items: center;
+          height: inherit;
+          // padding: 16% 0 0 0;
+          &-text {
+            padding: 0;
+            display: flex;
+            align-items: center;
 
-          &-img-container {
-            position: relative;
-            width: 100%;
-            height: 50%;
-
-            img {
-              height: 43vw;
-              position: relative;
-              float: right;
-              padding: 0 21% 0 0;
-              top: 10%;
+            &-title {
+              font-size: 4vw;
+              max-width: 8ch;
+              margin: auto;
+              font-weight: 700;
             }
           }
 
-          &-text {
-            width: 100%;
-            height: 50%;
-            padding: 30% 0 0 0;
+          .img-container {
+            display: flex;
+            align-items: center;
 
-            &-title {
-              position: relative;
-              width: 100%;
-              font-size: 6.8vw;
-              font-weight: 900;
-              line-height: 1.03;
-              color: $color-white;
-              max-width: 17ch;
-              padding: 0;
+            .yellow-plant {
+              width: 20vw;
+              height: 26vw;
+              margin: auto;
             }
           }
         }
       }
 
       .third-slide {
-        background-image: none;
-        background-attachment: none;
+        width: 100%;
+        height: 100%;
+        background-position: bottom right;
         background-repeat: no-repeat;
-        background-size: 0;
+        background-size: cover;
+        background-image: url('/../assets/images/slowed-arrow-min.jpg');
+        padding: 0 6%;
 
         &-content {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-wrap: wrap-reverse;
-          padding: 0;
-          top: 0;
+          height: inherit;
+          flex-direction: row-reverse;
+          align-items: center;
 
-          &-img-container {
-            width: 100%;
+          &-text {
+            padding: 0;
+            display: flex;
+            align-items: center;
 
-            img {
-              width: 50%;
+            &-title {
+              font-size: 4vw;
+              font-weight: 700;
+              max-width: 10ch;
+              margin: auto;
             }
           }
 
-          &-text {
-            width: 100%;
+          .img-container {
+            display: flex;
+            align-items: center;
 
-            &-title {
-              position: relative;
-              font-size: 6.2vw;
-              font-weight: 850;
-              line-height: 0.9;
-              color: #ffffff;
-              max-width: 19ch;
-              text-align: left;
-              top: 39%;
+            .green-arrows {
+              width: 23vw;
+              height: 23vw;
+              margin: auto;
             }
           }
         }
