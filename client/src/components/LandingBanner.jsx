@@ -9,9 +9,18 @@ export default class LandingBanner extends Component {
          <img src="../assets/logos/Raiffeisen-White.svg" alt="Main Logo" className="landingBanner-mainContainer-mainLogo fade-in "/>
         </div>
         <div className="landingBanner-secondaryContainer">
-          <img src="../assets/icons/Analytics.svg" alt="Analitica Logo" className="landingBanner-secondaryContainer-analytics"/>
-          <img src="../assets/icons/Consultancy.svg" alt="Consultoria Logo" className="landingBanner-secondaryContainer-consultancy"/>
-          <img src="../assets/icons/Training.svg" alt="Capacitacion Logo" className="landingBanner-secondaryContainer-training"/>
+          <div className="landingBanner-secondaryContainer-analytics">
+            <div className="logo"/>
+            <p className="text">Analtica</p>
+          </div>
+          <div className="landingBanner-secondaryContainer-consultancy">
+            <div className="logo"/>
+            <p className="text">Consultoría</p>
+          </div>
+          <div className="landingBanner-secondaryContainer-training">
+            <div className="logo"/>
+            <p className="text">Capacitación</p>
+          </div>
         </div>
       </div>
     )
