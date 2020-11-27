@@ -43,7 +43,7 @@
     width: 100%;
 
     &-mainLogo {
-      width: 45%;
+      width: 40%;
     }
   }
 
@@ -54,6 +54,7 @@
     justify-content: center;
     width: 100%;
     align-items: center;
+    color: $color-white;
 
     &-analytics {
       margin: 0 1rem;
@@ -64,15 +65,15 @@
       align-items: center;
 
       .logo {
-        width: 3vw;
-        height: 3vw;
+        width: 2vw;
+        height: 2vw;
         background-image: url("../assets/icons/Analytics.svg");
         background-repeat: no-repeat;
         background-position: center;
       }
 
       .text {
-        font-size: 3vw;
+        font-size: 2vw;
         padding: 0 1rem;
         margin: 0;
       }
@@ -87,15 +88,15 @@
       align-items: center;
 
       .logo {
-        width: 3vw;
-        height: 3vw;
+        width: 2vw;
+        height: 2vw;
         background-image: url("../assets/icons/Consultancy.svg");
         background-repeat: no-repeat;
         background-position: center;
       }
 
       .text {
-        font-size: 3vw;
+        font-size: 2vw;
         padding: 0 1rem;
         margin: 0;
       }
@@ -109,15 +110,15 @@
       align-items: center;
 
       .logo {
-        width: 3vw;
-        height: 3vw;
+        width: 2vw;
+        height: 2vw;
         background-image: url("../assets/icons/Training.svg");
         background-repeat: no-repeat;
         background-position: center;
       }
 
       .text {
-        font-size: 3vw;
+        font-size: 2vw;
         padding: 0 1rem;
         margin: 0;
       }
