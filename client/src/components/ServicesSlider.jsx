@@ -46,17 +46,10 @@ export default class ServicesSlider extends Component {
                     <span className='text'> { item.alt } </span>
                   </p>
                 </div>
-                <div
-                  className="caption"
-                >
+                <div className="caption">
                   <p className={`paragraph ${item.name}`}>
                     {item.mainParahraph}
                   </p>
-                  <div className={`list-items ${item.name}`}>
-                    <div className="item image1" />
-                    <div className="item image2" />
-                    <div className="item image3" />
-                  </div>
                   <div className="quotes">
                     {Object.values(item.listItems).map(listItem =>
                       <p className={`text ${item.name}`} key={listItem}>{listItem}</p>
