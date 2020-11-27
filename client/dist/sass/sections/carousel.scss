@@ -351,13 +351,13 @@
             padding: 0;
 
             &-title {
-              font-size: 4vw;
-              font-weight: 700;
+              font-size: $font-size-title;
+              font-weight: 900;
             }
 
             &-body {
               &-paragraph {
-                font-size: 2vw;
+                font-size: $font-size-smw;
               }
             }
 
@@ -397,10 +397,10 @@
             align-items: center;
 
             &-title {
-              font-size: 4vw;
+              font-size: $font-size-title;
               max-width: 8ch;
               margin: auto;
-              font-weight: 700;
+              font-weight: 900;
             }
           }
 
@@ -437,10 +437,11 @@
             align-items: center;
 
             &-title {
-              font-size: 4vw;
-              font-weight: 700;
+              font-size: $font-size-title;
+              font-weight: 900;
               max-width: 10ch;
               margin: auto;
+              line-height: 1;
             }
           }
 
