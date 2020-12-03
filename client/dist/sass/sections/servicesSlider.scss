@@ -152,11 +152,11 @@
           font-size: 1.25vw;
 
           .text {
+            position: relative;
             width: 100%;
             text-align: left;
             padding: 0 2rem;
             display: flex;
-            align-items: center;
             margin: 0;
 
             &::before {
@@ -166,7 +166,8 @@
               width: 0.45vw;
               background-color: black;
               border-radius: 50%;
-              left: 4vw;
+              left: 0;
+              top: 0.6rem;
             }
           }
         }
