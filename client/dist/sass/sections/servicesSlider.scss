@@ -152,21 +152,22 @@
           font-size: 1.25vw;
 
           .text {
+            position: relative;
             width: 100%;
             text-align: left;
             padding: 0 2rem;
             display: flex;
-            align-items: center;
             margin: 0;
 
             &::before {
               content: "";
               position: absolute;
-              height: 0.7vw;
-              width: 0.7vw;
+              height: 0.45vw;
+              width: 0.45vw;
               background-color: black;
               border-radius: 50%;
-              left: 4vw;
+              left: 0;
+              top: 0.6rem;
             }
           }
         }
@@ -208,14 +209,6 @@
          .paragraph {
            margin: 2rem 0;
          }
-
-         .quotes {
-           .text {
-             &::before {
-               left: 2rem;
-             }
-           }
-         }
        }
      }
    }
@@ -247,14 +240,6 @@
 
          .paragraph {
            max-width: 95%;
-         }
-
-         .quotes {
-           .text {
-             &::before {
-               left: 2.5rem;
-             }
-           }
          }
        }
      }

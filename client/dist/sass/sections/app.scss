@@ -332,6 +332,7 @@
       }
 
       &-checkbox:checked ~ &-nav {
+        padding: 7vh;
         opacity: 1;
         width: 100%;
         left: 0;

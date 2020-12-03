@@ -57,7 +57,7 @@ const projectBody = {
         name: 'consult',
         alt: 'Consulting.',
         mainParahraph: 'Based on balanced scorecard methodology, four key perspectives strategically cover:',
-        secondaryParagraph: 'that together promote reasoned and intelligent decision-making at all levels.',
+        secondaryParagraph: 'That together promote reasoned and intelligent decision-making at all levels.',
         listItems: {
           1: 'Processes of diagnosis',
           2: 'The definition of objectives and strategies',
