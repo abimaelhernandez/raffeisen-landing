@@ -209,14 +209,6 @@
          .paragraph {
            margin: 2rem 0;
          }
-
-         .quotes {
-           .text {
-             &::before {
-               left: 2rem;
-             }
-           }
-         }
        }
      }
    }
@@ -248,14 +240,6 @@
 
          .paragraph {
            max-width: 95%;
-         }
-
-         .quotes {
-           .text {
-             &::before {
-               left: 2.5rem;
-             }
-           }
          }
        }
      }
