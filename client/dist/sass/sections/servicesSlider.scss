@@ -155,8 +155,9 @@
             position: relative;
             width: 100%;
             text-align: left;
-            padding: 0 2rem;
+            padding: 0 1.5vw;
             display: flex;
+            align-items: center;
             margin: 0;
 
             &::before {
@@ -167,7 +168,6 @@
               background-color: black;
               border-radius: 50%;
               left: 0;
-              top: 1.2rem;
             }
           }
         }
@@ -339,10 +339,12 @@
             .text {
               width: 100%;
               font-weight: 400;
+              padding: 0 0 0 2rem;
+              font-size: 3.5vw;
 
               &::before {
-                width: 2vw;
-                height: 2vw;
+                width: 1.5vw;
+                height: 1.5vw;
               }
 
               &.training {
